@@ -1,0 +1,10 @@
+{
+  "n_train_gal": 104,
+  "n_hold_gal": 45,
+  "a0_rar_train": 1.1486956158021361e-10,
+  "a0_choke_train": 7.471992383495315e-11,
+  "rms_rar_train": 0.13384666549114324,
+  "rms_choke_train": 0.13804454364593804,
+  "rms_rar_hold": 0.12976038408295662,
+  "rms_choke_hold": 0.13873094513547032
+}

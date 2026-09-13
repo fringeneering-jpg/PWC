@@ -1,0 +1,16 @@
+{
+  "rho_gal": 6.849426329793507e-22,
+  "c_s0": 52940.242586066306,
+  "chi0": 0.30099353636338,
+  "rho_bg_assumed": 0.0,
+  "f_chi_form": "identity: f(chi)=chi",
+  "train_rms": 0.28968573671317055,
+  "train_all_physical": true,
+  "holdout_rms": 0.32929337193493685,
+  "holdout_all_physical": true,
+  "train_outer_MHDF_median": 6.226613659393045e+40,
+  "holdout_outer_MHDF_median": 3.97630489460498e+40,
+  "train_outer_slope_median": 0.0,
+  "holdout_outer_slope_median": 0.0,
+  "btfr_slope": 2.4215662600839174
+}

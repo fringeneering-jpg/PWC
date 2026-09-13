@@ -1,0 +1,143 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-08-13T11:26:40 [V7.5.8]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-08-13T11:26:40	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J%2fAJ%2f144%2f4%2fcatalog&-out=Name%2cSubG%2cD%2cR2%2cMass%2csigma%2a%2cM.HI&-out.max=300	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.5.8	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_51440004
+#Name: J/AJ/144/4
+#Title: Properties of dwarf galaxies in the Local Group (McConnachie+, 2012)
+#INFO	ivoid=ivo://cds.vizier/j/aj/144/4	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/j/aj/144/4	    IVOID of underlying data collection
+#INFO	creator=McConnachie A.W.	    First author or institution
+#INFO	cites=bibcode:2012AJ....144....4M	    Article or Data origin sources
+#INFO	journal=AJ	    Journal name
+#INFO	original_date=2012	    Year of the article publication
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/144/4	    Dataset landing page
+#INFO	citation=doi:10.26093/cds/vizier.51440004	    Dataset identifier that can be used for citation
+#INFO	publication_date=2025-11-24	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Table	J_AJ_144_4_catalog:
+#Name: J/AJ/144/4/catalog
+#Title: Catalog of the observed properties of dwarf galaxies in and around the Local Group (tables 1--5 of paper)
+#Column	Name	(a29)	Galaxy name	[ucd=meta.id;meta.main]
+#Column	SubG	(A4)	The galactic subgroup (MW, M31 or Rest) (1)	[ucd=meta.id.parent]
+#Column	D	(I4)	? Heliocentric distance (7)	[ucd=pos.distance;pos.heliocentric]
+#Column	R2	(I4)	? Half-light radius (17)	[ucd=phys.size.radius]
+#Column	Mass	(F10.5)	? Mass of the galaxy in stellar masses (19)	[ucd=phys.mass]
+#Column	sigma*	(F4.1)	? The observed velocity dispersion of the stellar component {sigma}* (20)	[ucd=phys.veloc.dispersion]
+#Column	M.HI	(E8.1)	? Mass of HI in each galaxy (23)	[ucd=phys.mass]
+Name	SubG	D	R2	Mass	sigma*	M.HI
+ 	 	kpc	pc	10+6Msun	km/s	10+6Msun
+-----------------------------	----	----	----	----------	----	--------
+The Galaxy                   	MW  	    	    	          	    	
+Canis Major                  	MW  	   7	    	  49.00000	20.0	
+Sagittarius dSph             	MW  	  26	2587	  21.00000	11.4	
+Segue (I)                    	MW  	  23	  29	   0.00034	 3.9	
+Ursa Major II                	MW  	  32	 149	   0.00410	 6.7	
+Bootes II                    	MW  	  42	  51	   0.00100	10.5	
+Segue II                     	MW  	  35	  35	   0.00086	 3.4	
+Willman 1                    	MW  	  38	  25	   0.00100	 4.3	
+Coma Berenices               	MW  	  44	  77	   0.00370	 4.6	
+Bootes III                   	MW  	  47	    	   0.01700	14.0	
+LMC                          	MW  	  51	    	1500.00000	20.2	 4.6e+02
+SMC                          	MW  	  64	    	 460.00000	27.6	 4.6e+02
+Bootes (I)                   	MW  	  66	 242	   0.02900	 2.4	
+Draco                        	MW  	  76	 221	   0.29000	 9.1	
+Ursa Minor                   	MW  	  76	 181	   0.29000	 9.5	
+Sculptor                     	MW  	  86	 283	   2.30000	 9.2	 2.2e-01
+Sextans (I)                  	MW  	  86	 695	   0.44000	 7.9	
+Ursa Major (I)               	MW  	  97	 319	   0.01400	 7.6	
+Carina                       	MW  	 105	 250	   0.38000	 6.6	
+Hercules                     	MW  	 132	 330	   0.03700	 3.7	
+Fornax                       	MW  	 147	 710	  20.00000	11.7	 1.7e-01
+Leo IV                       	MW  	 154	 206	   0.01900	 3.3	
+Canes Venatici II            	MW  	 160	  74	   0.00790	 4.6	
+Leo V                        	MW  	 178	 135	   0.01100	 3.7	
+Pisces II                    	MW  	 182	  58	   0.00860	    	
+Canes Venatici (I)           	MW  	 218	 564	   0.23000	 7.6	
+Leo II                       	MW  	 233	 176	   0.74000	 6.6	
+Leo I                        	MW  	 254	 251	   5.50000	 9.2	
+Andromeda                    	M31 	 783	    	          	    	
+M32                          	M31 	 805	 110	 320.00000	92.0	
+Andromeda IX                 	M31 	 766	 557	   0.15000	 4.5	
+NGC 205                      	M31 	 824	 590	 330.00000	35.0	 4.0e-01
+Andromeda XVII               	M31 	 794	 286	   0.26000	    	
+Andromeda I                  	M31 	 745	 672	   3.90000	10.6	
+Andromeda XXVII              	M31 	 828	 434	   0.12000	    	
+Andromeda III                	M31 	 748	 479	   0.83000	 4.7	
+Andromeda XXV                	M31 	 813	 709	   0.68000	    	
+Andromeda XXVI               	M31 	 762	 222	   0.06000	    	
+Andromeda XI                 	M31 	 759	 157	   0.04900	 4.6	
+Andromeda V                  	M31 	 773	 315	   0.39000	11.5	
+Andromeda X                  	M31 	 701	 265	   0.09600	 3.9	
+Andromeda XXIII              	M31 	 769	1029	   1.10000	    	
+Andromeda XX                 	M31 	 802	 124	   0.02900	    	
+Andromeda XII                	M31 	 871	 304	   0.03100	 2.6	
+NGC 147                      	M31 	 676	 623	  62.00000	16.0	
+Andromeda XXI                	M31 	 859	 875	   0.76000	    	
+Andromeda XIV                	M31 	 735	 363	   0.20000	 5.4	
+Andromeda XV                 	M31 	 631	 222	   0.49000	11.0	
+Andromeda XIII               	M31 	 912	 207	   0.04100	 9.7	
+Andromeda II                 	M31 	 652	1176	   7.60000	 7.3	
+NGC 185                      	M31 	 617	 458	  68.00000	24.0	 1.1e-01
+Andromeda XXIX               	M31 	 731	 361	   0.18000	    	
+Andromeda XIX                	M31 	 933	1683	   0.43000	    	
+Triangulum                   	M31 	 809	    	2900.00000	    	
+Andromeda XXIV               	M31 	 600	 367	   0.09300	    	
+Andromeda VII                	M31 	 762	 776	   9.50000	 9.7	
+Andromeda XXII               	M31 	 794	 217	   0.03400	    	
+IC 10                        	M31 	 794	 612	  86.00000	    	 5.0e+01
+LGS 3 (Local Group Suspect 3)	M31 	 769	 470	   0.96000	 7.9	 3.8e-01
+Andromeda VI                 	M31 	 783	 524	   2.80000	 9.4	
+Andromeda XVI                	M31 	 525	 136	   0.41000	10.0	
+Andromeda XXVIII             	Rest	 661	 213	   0.21000	    	
+IC 1613                      	Rest	 755	1496	 100.00000	    	 6.5e+01
+Phoenix                      	Rest	 415	 454	   0.77000	    	 1.2e-01
+NGC 6822                     	Rest	 459	 354	 100.00000	    	 1.3e+02
+Cetus                        	Rest	 755	 703	   2.60000	17.0	
+Pegasus dIrr                 	Rest	 920	 562	   6.61000	    	 5.9e+00
+Leo T                        	Rest	 417	 120	   0.14000	 7.5	 2.8e-01
+WLM (Wolf-Lundmark-Melotte)  	Rest	 933	2111	  43.00000	17.5	 6.1e+01
+Leo A                        	Rest	 798	 499	   6.00000	 9.3	 1.1e+01
+Andromeda XVIII              	Rest	1355	 363	   0.63000	    	
+Aquarius                     	Rest	1072	 458	   1.60000	    	 4.1e+00
+Tucana                       	Rest	 887	 284	   0.56000	15.8	
+Sagittarius dIrr             	Rest	1067	 282	   3.50000	    	 8.8e+00
+UGC 4879                     	Rest	1361	 162	   8.30000	    	 9.5e-01
+NGC 3109                     	Rest	1300	1626	  76.00000	    	 4.5e+02
+Sextans B                    	Rest	1426	 440	  52.00000	    	 5.1e+01
+Antlia                       	Rest	1349	 471	   1.30000	    	 7.3e-01
+Sextans A                    	Rest	1432	1029	  44.00000	    	 7.7e+01
+HIZSS 3(A)                   	Rest	1675	    	          	    	 1.4e+01
+HIZSS 3B                     	Rest	1675	    	          	    	 2.6e+00
+KKR 25                       	Rest	1905	 222	   1.40000	    	
+ESO 410- G 005               	Rest	1923	 280	   3.50000	    	 7.3e-01
+NGC 55                       	Rest	1932	2900	2200.00000	    	 1.3e+03
+ESO 294- G 010               	Rest	2032	 248	   2.70000	    	 3.4e-01
+NGC 300                      	Rest	2080	3025	2100.00000	    	 1.8e+03
+IC 5152                      	Rest	1950	 550	 270.00000	    	 8.7e+01
+KKH 98                       	Rest	2523	 470	   4.50000	    	 6.6e+00
+UKS 2323-326                 	Rest	2208	 578	  17.00000	    	 1.7e+01
+KKR 3                        	Rest	2188	 229	   0.54000	    	 2.5e+00
+GR 8                         	Rest	2178	 203	   6.40000	    	 1.1e+01
+UGC 9128                     	Rest	2291	 427	   7.80000	    	 1.8e+01
+UGC 8508                     	Rest	2582	 315	  19.00000	    	 2.9e+01
+IC 3104                      	Rest	2270	1327	  62.00000	    	 1.3e+01
+DDO 125                      	Rest	2582	 781	  47.00000	    	 3.5e+01
+UGCA 86                      	Rest	2965	 811	  16.00000	    	 8.6e+02
+DDO 99                       	Rest	2594	 679	  16.00000	    	 5.2e+01
+IC 4662                      	Rest	2443	 341	 190.00000	    	 1.8e+02
+DDO 190                      	Rest	2793	 520	  51.00000	    	 4.3e+01
+KKH 86                       	Rest	2582	 210	   0.82000	    	 8.8e-01
+NGC 4163                     	Rest	2858	 374	  37.00000	    	 7.9e+00
+DDO 113                      	Rest	2951	 601	   2.10000	    	 4.8e+01
+

@@ -1,0 +1,13 @@
+{
+  "rho_gal": 3.1999314640694716e-16,
+  "c_s0": 355292.9766449988,
+  "u0_fixed": 1e-06,
+  "train_rms": 0.27447947377849047,
+  "holdout_rms": 0.28009293178680156,
+  "train_all_physical": true,
+  "holdout_all_physical": true,
+  "train_outer_slope_median": -0.12939470850381632,
+  "holdout_outer_slope_median": -0.13581716063847724,
+  "btfr_slope": 2.8342179724291725,
+  "predicted_v_flat_kms": 502.4601461872647
+}

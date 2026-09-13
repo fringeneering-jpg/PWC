@@ -1,0 +1,160 @@
+# SPARC/PWC continuum-model provenance manifest
+
+Covers every domain script run tonight (M, N, R, S, T-IVP, U, U2 [killed,
+incomplete], V [BVP, convergence-tested only, not fit]). Compiled after
+the fact from the actual scripts and results files on disk -- anything
+NOT actually recorded (e.g. a full per-galaxy sweep) is stated as missing
+rather than reconstructed from memory.
+
+## Environment
+
+| Field | Value |
+|---|---|
+| git_commit | **N/A -- not a git repository.** `git rev-parse --show-toplevel` fails at both `C:\Users\jaden\cosmology\sparc` and `C:\Users\jaden\cosmology`. No commit hash exists to anchor this work. |
+| python | 3.12.10 (MSC v.1943 64 bit AMD64) |
+| scipy | 1.15.3 |
+| numpy | 2.4.6 |
+| host paths | All scripts/data under `C:\Users\jaden\cosmology\sparc\` |
+
+## Dataset
+
+| Field | Value |
+|---|---|
+| Source | Lelli, McGaugh & Schombert 2016, AJ 152, 157 ("Mass models for 175 disk galaxies with SPARC"), fetched via VizieR (J/AJ/152/157), tables 1 and 2 |
+| dataset_checksum (vizier_t1.txt, SHA256) | `997D56A52580F78C762C1A146B6BE0FD9101E420146A5C9196BB9D1D53DB48A9` |
+| dataset_checksum (vizier_t2.txt, SHA256) | `6E4B35B8F488B64AA5CA0E9D4B7B924FBB1BABCEEA50138E9AB17BB42A764093` |
+| Retrieval date recorded in file header | 2026-08-04T15:14:14/16 (VizieR query timestamp in file) |
+
+## Galaxy split
+
+| Field | Value |
+|---|---|
+| galaxy_split_seed | `np.random.default_rng(7)` -- IDENTICAL across every domain (M, N, R, S, T, U, U2, V) |
+| Split ratio | 70% train / 30% holdout, `n_train = int(0.7*len(shuffled))` |
+| Resulting counts | 104 train galaxies, 45 holdout galaxies |
+| Split method | Galaxy list sorted, then `rng.shuffle(shuffled)`, first 104 -> train, remaining 45 -> holdout (galaxy-level split, not point-level -- all radial points for a given galaxy stay in the same set) |
+
+## Quality cuts (identical across all domains)
+
+```
+m  = (R > 0) & (Vobs > 0) & isfinite(e_Vobs)
+m &= (e_Vobs/Vobs <= 0.10)      # <=10% velocity error
+m &= (inclination >= 30.0)      # deg, avoids face-on projection error
+m &= (Qual <= 2)                # SPARC quality flag: 1=high, 2=medium; excludes 3=low
+```
+Additional cut used ONLY in the ODE-based continuum domains (S, T, U, U2, V),
+not in the algebraic domains (M, N, R): galaxies with fewer than 3 tabulated
+radial points are dropped (`if len(r_kpc) < 3: continue`), since a 2-variable
+coupled ODE integration is not meaningful over fewer points.
+
+## SI unit conversions (identical across all domains)
+
+| Symbol | Value | Meaning |
+|---|---|---|
+| KPC | 3.0856775814913673e19 m | 1 kpc in metres |
+| KMS | 1.0e3 m/s | 1 km/s in m/s |
+| conv | (KMS^2)/KPC = 3.24078e-14 | converts (km/s)^2 / kpc -> m/s^2 |
+| G | 6.674e-11 m^3 kg^-1 s^-2 | Newton's constant -- **declared approximation**: CODATA recommended value is 6.67430e-11; the 4th significant figure differs. Not re-run with the more precise value. |
+| UPS_D | 0.5 | disk mass-to-light ratio at 3.6um (standard SPARC literature convention) |
+| UPS_B | 0.7 | bulge mass-to-light ratio at 3.6um (standard SPARC literature convention) |
+
+g_bar and g_obs constructed as:
+```
+g_obs = Vobs^2 / R * conv
+Vbar2 = Vgas*|Vgas| + UPS_D*Vdisk*|Vdisk| + UPS_B*Vbulge*|Vbulge|
+g_bar = Vbar2 / R * conv
+```
+
+## Model versions, equations, parameters -- one row per domain actually run
+
+### Domain M / N / R (algebraic, no ODE)
+- **model_version**: `domain_M_heldout_comparison.py`, `domain_N_medium_in_gas.py`, `domain_R_accessible_volume.py`
+- **Equations**:
+  - RAR (empirical baseline): `g_obs = g_bar/(1-exp(-sqrt(g_bar/a0)))`
+  - choke n=1/2 (PWC proxy): `g_obs = g_bar*(1+sqrt(a0/g_bar))`
+  - Domain N extension: `g_bar_ext = g_bar + k*g_gas`, k fit jointly with a0
+  - Domain R extension: `C = Pi_gas^q`, `Pi_gas = g_gas/g_bar`, applied as `g_obs = g_bar*(1+sqrt(a0/g_bar)*C)`
+- **Parameters, bounds, provenance**:
+  - a0: fit per-domain via `minimize_scalar`, bounds `10^[-12,-9]` (log-space), no fixed prior value
+  - k (Domain N): fit via Nelder-Mead jointly with a0, bounds `0<=k<=20`
+  - q (Domain R): fit via Nelder-Mead jointly with a0, bounds `-5<=q<=5`
+- **Optimizer**: `scipy.optimize.minimize_scalar` (bounded, Brent) for a0-only fits; `scipy.optimize.minimize` (Nelder-Mead, `xatol=1e-8,fatol=1e-12,maxiter=6000-8000`) for joint fits
+- **Scoring metric**: RMS of `log10(g_obs)-log10(g_pred)`, i.e. dex
+- **Results** (holdout, dex): RAR 0.1298 (train 0.1338); choke 0.1387 (train 0.1380); Domain N extended 0.13873 (k_ext~1.7e-14, statistically zero, unchanged from baseline); Domain R extended: unchanged from baseline (q_ext=0.0000)
+- **Residual-vs-gas-fraction**: rho=+0.166, p=0.0424 (Domain N/R, unchanged by either extension)
+
+### Domain S (coupled ODE, IVP, OUTWARD integration) -- REJECTED, normalization bug
+- **model_version**: `domain_S_coupled_hdf.py`
+- **Equations**: `du/dr` normalized by `(rho_max-rho_bg)` in the denominator while `rho_excess=rho_gal*chi` used a SEPARATE, independently-fit `rho_gal` -- confirmed (not assumed) via direct diagnostic: 1/|dchi/dr| ~ 7.24e33 kpc at a typical point, chi range across the full radial span of every one of 10 tested galaxies was bit-identical `[0.300994, 0.300994]` (zero evolution)
+- **Parameters/bounds**: rho_gal (fit, log10 search unconstrained via Nelder-Mead from x0=log10(1e-22)), c_s0 (fit, x0=log10(3e4)), chi0 (fit, x0=logit(0.3)) -- 3 free global parameters
+- **Fitted values**: rho_gal=6.8494e-22 kg/m^3, c_s0=5.2940e4 m/s, chi0=0.300994
+- **Initial condition**: M_HDF(r_min)=0, chi(r_min)=chi0 (fitted, universal across all galaxies)
+- **Solver**: `scipy.integrate.solve_ivp`, RK45, rtol=1e-7, atol=1e-6, max_step=(r_max-r_min)/50
+- **Optimizer**: Nelder-Mead, xatol=1e-4, fatol=1e-8, maxiter=maxfev=400
+- **Results**: train RMS 0.2897 dex, holdout RMS 0.3293 dex, outer log-log slope of rho_excess: 0.000 (median, both sets) -- confirmed uniform-density branch, M_HDF~r^3
+- **Per-galaxy raw profiles**: `domain_S_audit_profiles.json` -- 10 representative galaxies, full radial arrays (r, chi, rho_excess, M_HDF, M_bar, g_pred, g_bar, v_pred, v_obs) plus outer alpha_rho/alpha_M/alpha_v
+
+### Domain T-IVP (coupled ODE, IVP, OUTWARD integration, corrected u normalization)
+- **model_version**: `domain_T_corrected_hdf.py`
+- **Equations**:
+  ```
+  u(r) = rho_excess(r)/rho_gal, 0<=u<1
+  dM_HDF/dr = 4*pi*r^2*rho_gal*u
+  g_pred = G*(M_bar(<r)+M_HDF(<r))/r^2
+  du/dr = -(rho_bg+rho_gal*u)*g_pred*(1-u) / (rho_gal*c_s0^2)     [F(u)=1/(1-u), rho_max REMOVED from this equation entirely]
+  chi_compact(r) = rho_gal*u(r)/(rho_max-rho_bg)                   [diagnostic-only, never fed back]
+  ```
+- **Parameters/bounds**: rho_gal, c_s0 (2 free global parameters; u0 FIXED, not fit, at U0_TINY=1e-6)
+- **Fitted values**: rho_gal=3.1999e-16 kg/m^3, c_s0=3.5529e5 m/s (predicts v_flat=502.46 km/s)
+- **Initial condition**: M_HDF(r_min)=0, u(r_min)=1e-6 (fixed, universal, not fitted -- chosen to remove the "arbitrary universal chi0" problem found in Domain S)
+- **Boundary-independence check result**: FAILED -- outer M_HDF scaled exactly linearly with the choice of u0 (1e-8/1e-6/1e-4 -> M_HDF scaled 1x/100x/10000x), i.e. the system stayed in a linear (non-attracting) regime rather than reaching the claimed isothermal-sphere attractor
+- **Solver**: solve_ivp, RK45, rtol=1e-8, atol=1e-6, max_step=(r_max-r_min)/100
+- **Optimizer**: Nelder-Mead, xatol=1e-4, fatol=1e-8, maxiter=maxfev=300
+- **Results**: train RMS 0.2745 dex, holdout RMS 0.2801 dex, outer alpha_u: -0.129 (train)/-0.136 (holdout) [target -2, not reached], BTFR slope 2.834 (r=0.934, n=141) [literature ~3.5-4]
+- **rho_bg**: fixed at 0 (declared gap, not fit -- not among the listed globally-fit parameters)
+- **f(chi)/f(u) form**: identity, f(u)=u (declared gap -- not otherwise specified in the request this domain was built from)
+
+### Domain U / U2 (coupled ODE, IVP, INWARD shooting from analytic SIS boundary) -- INCOMPLETE, superseded
+- **model_version**: `domain_U_shooting_bvp.py` (first attempt, R_FAR_MULT=50, KILLED after ~14 min for pathological slowness/CPU-bound stiffness); re-run with R_FAR_MULT=15 and bounded parameter search (`domain_U_shooting_bvp.py`, edited in place -- same filename, two different configs, see git_commit caveat above for why this isn't independently version-pinned)
+- **Boundary condition**: u(r_far) = c_s0^2/(2*pi*G*rho_gal*r_far^2) (analytic SIS value, r_far=15x each galaxy's max tabulated radius), integrated INWARD to r_min; u NOT sigmoid-bounded in this version (bug, identified and only fixed in the next attempt)
+- **Fitted values (R_FAR_MULT=15 run)**: rho_gal=3.2576e-20 kg/m^3, c_s0=2.6887e5 m/s (v_flat=380.24 km/s)
+- **Results**: train RMS 1.1120 dex, holdout RMS 1.1211 dex, `all_physical=False` (u reached exactly 1.000 for the first sanity-check galaxy), BTFR slope -26.776 (nonsensical), residual-vs-gas-fraction rho=-0.822, p~0 -- **explicitly flagged as an invalid/pathological result, not a physics conclusion**, per direct instruction, since u was unbounded and hit its physical ceiling
+- **Domain U2** (`domain_U2_audited.py`): rebuilt with sigmoid-bounded u and a saturation penalty in the optimizer objective; **launched but KILLED before completion** once the requirement to use a genuine two-sided BVP (not any IVP/shooting variant) was given. No completed results exist for U2. `domain_U2_per_galaxy.json` was NOT produced (job killed before that stage).
+
+### Domain V (proper two-sided BVP, scipy.integrate.solve_bvp) -- convergence-tested only, NOT fit to SPARC
+- **model_version**: `domain_V_bvp.py`
+- **Equations** (identical physical content to Domain T-IVP/U, different solution method):
+  ```
+  du/dr     = -(rho_bg+rho_gal*u)*G*(M_bar(r)+M_HDF)/r^2*(1-u) / (rho_gal*c_s0^2)
+  dM_HDF/dr = 4*pi*r^2*rho_gal*u
+  ```
+- **Boundary conditions** (2, matching the 2 first-order ODEs):
+  1. `M_HDF(r_min) = 0`
+  2. At r_far: `RHS_du/dr(u,M_HDF,r)|_{r_far} = -2*u(r_far)/r_far` (derivative-matching to the SIS asymptotic slope, NOT a fixed value for u(r_far) -- the amplitude is left to emerge from the full nonlinear solve)
+- **u boundedness**: NOT sigmoid-transformed in this version; u clipped to (1e-12, 1-1e-12) only inside the RHS/bc evaluation, and any solution with u exiting (0,1) on the full mesh is meant to be flagged invalid (this flagging was implemented for the diagnostic prints but not yet wired into a full pass/fail gate across all 149 galaxies)
+- **Solver**: `scipy.integrate.solve_bvp`, initial mesh `np.geomspace(r_min, r_far, n_mesh)` with n_mesh=60-100, initial guess = analytic SIS profile, `tol=1e-6`, `max_nodes=20000`
+- **Mesh/r_far convergence settings tested**: R_FAR_MULT in {15, 25, 50, 100} x each galaxy's own max tabulated radius, on 3 representative galaxies (NGC2403, DDO154, NGC3198), with and without continuation (using the previous r_far's converged solution as the next initial guess)
+- **Validation control** (Mbar=0 identically): PASSED -- local log-log slope of u(r), measured away from either boundary, transitions through -0.45 -> -2.17 -> -2.51 -> -2.14 -> -2.02 approaching r_far, confirming the solver correctly reproduces the known regular-isothermal-sphere asymptotic behavior
+- **Real-galaxy r_far convergence result**: FAILED -- non-monotonic, non-convergent across r_far for 2 of 3 galaxies even with continuation; NGC2403 failed outright (mesh node limit exceeded) at mult=50; DDO154 jumped to a saturated branch (u_max=0.99996) at mult=50 then failed at mult=100; NGC3198 collapsed to a solution 4 orders of magnitude smaller at mult=50 then failed at mult=100. Only NGC3198's mult=15/25 pair (without continuation) showed values agreeing within ~20%.
+- **Parameters used for the convergence test**: rho_gal=1e-21 kg/m^3, c_s0=1e5 m/s -- **arbitrary placeholder values, NOT fit to data** (the convergence test was run to check solver behavior before any fitting was attempted; per the explicit instruction, the SPARC fit was NOT run given this non-convergence)
+- **No completed SPARC fit exists for Domain V.** No per-galaxy convergence table across all 149 galaxies exists. No raw radial output archive exists beyond the 3 manually-tested galaxies' console output (not saved to a JSON file).
+
+## Comparison baselines (all on the same 104/45 split, same quality cuts)
+
+| Model | Train RMS (dex) | Holdout RMS (dex) | Status |
+|---|---|---|---|
+| Empirical McGaugh RAR | 0.1338 | 0.1298 | baseline, a-theoretic |
+| PWC choke n=1/2 | 0.1380 | 0.1387 | baseline, PWC algebraic proxy |
+| Domain S (buggy normalization) | 0.2897 | 0.3293 | rejected -- confirmed normalization bug |
+| Domain T-IVP (corrected normalization, IVP) | 0.2745 | 0.2801 | boundary-independence check failed |
+| Domain U (IVP inward-shooting, unbounded u) | 1.1120 | 1.1211 | invalid -- u hit 1, flagged pathological |
+| Domain U2 | -- | -- | incomplete, killed before results |
+| Domain V (BVP) | -- | -- | convergence test failed before any fit attempted |
+| "Domain T" pasted claim (source script not in this repo) | 0.1344 | 0.1368 | **not independently reproduced** -- no runnable script for this specific claim has been provided or located on disk |
+
+## What this manifest does NOT contain (explicit gaps, not silently omitted)
+
+- No git commit hash exists anywhere in this project tree.
+- No completed per-galaxy convergence table exists for Domain U2 or Domain V.
+- No raw radial-output archive exists for Domain T, U, U2, or V (only Domain S has `domain_S_audit_profiles.json`).
+- The pasted "Domain T" result (RMS 0.1344/0.1368, alpha_rho=-1.986, BTFR=3.92) has no corresponding script, results JSON, or per-galaxy table on this disk -- it cannot currently be checksummed, re-run, or independently verified against this manifest's data/split/cuts.

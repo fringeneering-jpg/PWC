@@ -1,0 +1,129 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-08-13T11:26:26 [V7.5.8]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-08-13T11:26:26	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J%2fAJ%2f144%2f4%2fcatalog&-out.max=2&-out.all=2	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.5.8	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_51440004
+#Name: J/AJ/144/4
+#Title: Properties of dwarf galaxies in the Local Group (McConnachie+, 2012)
+#INFO	ivoid=ivo://cds.vizier/j/aj/144/4	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/j/aj/144/4	    IVOID of underlying data collection
+#INFO	creator=McConnachie A.W.	    First author or institution
+#INFO	cites=bibcode:2012AJ....144....4M	    Article or Data origin sources
+#INFO	journal=AJ	    Journal name
+#INFO	original_date=2012	    Year of the article publication
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/144/4	    Dataset landing page
+#INFO	citation=doi:10.26093/cds/vizier.51440004	    Dataset identifier that can be used for citation
+#INFO	publication_date=2025-11-24	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Table	J_AJ_144_4_catalog:
+#Name: J/AJ/144/4/catalog
+#Title: Catalog of the observed properties of dwarf galaxies in and around the Local Group (tables 1--5 of paper)
+#Column	SubG	(A4)	The galactic subgroup (MW, M31 or Rest) (1)	[ucd=meta.id.parent]
+#Column	n_Name	(A3)	Indicates whether the galaxy is associated with Milky Way (G), M31 (A), the Local Group (L), or is nearby neighbors (N)	[ucd=meta.note]
+#Column	Name	(a29)	Galaxy name	[ucd=meta.id;meta.main]
+#Column	OName	(a32)	Common alternative name	[ucd=meta.id]
+#Column	f_OName	(A1)	[*] Flag for NGC 4167 (2)	[ucd=meta.code]
+#Column	MType	(a9)	Morphological (Hubble) type (3)	[ucd=src.morph.type]
+#Column	RAJ2000	(A10)	? Hour of Right Ascension (J2000)	[ucd=pos.eq.ra;meta.main]
+#Column	DEJ2000	(A9)	? Degree of Declination (J2000)	[ucd=pos.eq.dec;meta.main]
+#Column	Ref1	(a7)	Original publication, in refs.dat file	[ucd=meta.ref;pos.frame]
+#Column	f_Ref1	(A1)	[abe] Notes about discovery (4)	[ucd=meta.code]
+#Column	Com1	(a51)	Comments about basic information	[ucd=meta.note]
+#Column	GLON	(F5.1)	? Galactic longitude l	[ucd=pos.galactic.lon]
+#Column	GLAT	(F5.1)	? Galactic latitude b	[ucd=pos.galactic.lat]
+#Column	E(B-V)	(F6.3)	? Foreground extinction (6)	[ucd=phot.color.excess]
+#Column	(m-M)	(F5.2)	? Distance modulus (m-M)_0_ (7)	[ucd=phot.mag.distMod]
+#Column	u_(m-M)	(A2)	[:lbk ] Uncertain or fixed distance (5)	[ucd=meta.code.error]
+#Column	E_(m-M)	(F5.2)	? Positive error in (m-M)	[ucd=stat.error;stat.max]
+#Column	e_(m-M)	(F5.2)	? Negative error in (m-M)	[ucd=stat.error]
+#Column	D	(I4)	? Heliocentric distance (7)	[ucd=pos.distance;pos.heliocentric]
+#Column	u_D	(A1)	[:] Uncertainty flag on D	[ucd=meta.code.error]
+#Column	E_D	(I3)	? Positive error in D	[ucd=stat.error;stat.max]
+#Column	e_D	(I3)	? Negative error in D	[ucd=stat.error]
+#Column	HRV	(F6.1)	? Heliocentric radial velocity (9)	[ucd=spect.dopplerVeloc;pos.heliocentric]
+#Column	f_HRV	(A1)	[cdfmpr] Flag on HRV (10)	[ucd=meta.code]
+#Column	e_HRV	(F4.1)	? Error in HRV	[ucd=stat.error]
+#Column	D(MW)	(I4)	? Distance for the Galactocentric (MW) frame of reference (10)	[ucd=pos.distance;pos.galactocentric]
+#Column	V(MW)	(I4)	? Velocity for the Galactocentric (MW) frame of reference (10)	[ucd=phys.veloc;pos.galactocentric]
+#Column	D(M31)	(I4)	? Distance for the M31 frame of reference (10)	[ucd=pos.distance]
+#Column	V(M31)	(I4)	? Velocity for the M31 frame of reference (10)	[ucd=phys.veloc]
+#Column	D(LG)	(I4)	? Distance for the Local Group frame of reference (10)	[ucd=pos.distance]
+#Column	V(LG)	(I4)	? Velocity for the Local Group frame of reference (10)	[ucd=phys.veloc]
+#Column	Ref2	(A5)	Reference, in refs.dat file	[ucd=meta.ref;pos.frame]
+#Column	f_Ref2	(A1)	Details on Ref2 (8)	[ucd=meta.code]
+#Column	S	(A1)	[h] Presence of surrounding stream (11)	[ucd=meta.code]
+#Column	Vmag	(F4.1)	? Apparent magnitude in V; VEGA system (12)	[ucd=phot.mag;em.opt.V]
+#Column	u_Vmag	(A2)	[:kl ] Uncertain or derived Vmag (13)	[ucd=meta.code.error]
+#Column	E_Vmag	(F4.1)	? Positive error in Vmag	[ucd=stat.error;stat.max]
+#Column	e_Vmag	(F4.1)	? Negative error in Vmag	[ucd=stat.error;phot.mag]
+#Column	R1	(F6.2)	? Radius containing half the light of the galaxy, measured on the semimajor axis (see Section 4 for further details)	[ucd=phys.angSize]
+#Column	u_R1	(A1)	[:] Uncertainty flag on R1	[ucd=meta.code.error]
+#Column	E_R1	(F5.2)	? Positive error in R1	[ucd=stat.error;stat.max]
+#Column	e_R1	(F5.2)	? Negative error in R1	[ucd=stat.error]
+#Column	muV	(F4.1)	? Central surface brightness {mu}_V_ (14)	[ucd=phot.mag.sb]
+#Column	f_muV	(A2)	[:befg ] Note on muV (13)	[ucd=meta.code]
+#Column	E_muV	(F4.1)	? Positive error in muV	[ucd=stat.error;stat.max]
+#Column	e_muV	(F4.1)	? Negative error in muV	[ucd=stat.error]
+#Column	PA	(I3)	[-69-330]? Position angle of major axis, measured in degrees east from north (16)	[ucd=pos.posAng]
+#Column	f_PA	(A2)	[:ci ] Note on PA (13)	[ucd=meta.code]
+#Column	e_PA	(I2)	? Error in PA	[ucd=stat.error]
+#Column	Ell	(F5.2)	? Ellipticity {epsilon}=1-b/a, where a and b are the semimajor and semiminor axes (16)	[ucd=src.ellipticity]
+#Column	f_Ell	(A1)	[:j] Note on Ell (13)	[ucd=meta.code]
+#Column	e_Ell	(F5.2)	? Uncertainty in Ell	[ucd=stat.error]
+#Column	VMag	(F5.1)	? Absolute visual magnitude M_V_ (15)	[ucd=phys.magAbs]
+#Column	f_VMag	(A1)	[:d] Flag on VMag (13)	[ucd=meta.code]
+#Column	E_VMag	(F4.1)	? Positive error in VMag	[ucd=stat.error;stat.max]
+#Column	e_VMag	(F4.1)	? Negative error in VMag	[ucd=stat.error;phot.mag]
+#Column	R2	(I4)	? Half-light radius (17)	[ucd=phys.size.radius]
+#Column	u_R2	(A1)	[:] Uncertainty flag on R2	[ucd=meta.code.error]
+#Column	E_R2	(I3)	? Positive error on R2	[ucd=stat.error;stat.max]
+#Column	e_R2	(I3)	? Negative error on R2	[ucd=stat.error]
+#Column	muEff	(F4.1)	? The mean surface brightness within the isophote defined by the half-light radius (18)	[ucd=phot.mag.sb;stat.mean]
+#Column	Ref3	(a7)	Reference, in refs.dat file	[ucd=meta.ref;pos.frame]
+#Column	Com3	(a45)	Comments about luminosity ans structure	[ucd=meta.note]
+#Column	Mass	(F10.5)	? Mass of the galaxy in stellar masses (19)	[ucd=phys.mass]
+#Column	l_sigma*	(A2)	[<=] Upper limit on sigma	[ucd=meta.code.error]
+#Column	sigma*	(F4.1)	? The observed velocity dispersion of the stellar component {sigma}* (20)	[ucd=phys.veloc.dispersion]
+#Column	f_sigma*	(A1)	[cj] Flag on sigma* (21)	[ucd=meta.code]
+#Column	E_sigma*	(F4.1)	? Positive error in sigma*	[ucd=stat.error;stat.max]
+#Column	e_sigma*	(F4.1)	? Negative error in sigma*	[ucd=stat.error]
+#Column	vsini*	(F4.1)	? The observed rotational velocity of the stellar component (22)	[ucd=phys.veloc.rotat]
+#Column	f_vsini*	(A1)	[N] No rotational signature observed (22)	[ucd=meta.code]
+#Column	e_vsini*	(F4.1)	? Error in vsini*	[ucd=stat.error;phys.veloc.rotat]
+#Column	M.HI	(E8.1)	? Mass of HI in each galaxy (23)	[ucd=phys.mass]
+#Column	f_M.HI	(A1)	[:befk] Ambiguous HI detection (24)	[ucd=meta.code]
+#Column	l_sigHI	(A1)	Upper limit on sigmaHI	[ucd=meta.code.error]
+#Column	sigHI	(F4.1)	? The observed velocity dispersion of the HI component (25)	[ucd=phys.veloc.dispersion]
+#Column	u_sigHI	(A1)	[:dg] Uncertainty flag on sigHI (26)	[ucd=meta.code.error]
+#Column	e_sigHI	(F4.1)	? Error in sigHI	[ucd=stat.error]
+#Column	l_v.HI	(A2)	[<=] Upper limit on v.HI	[ucd=meta.code.error]
+#Column	v.HI	(F5.1)	? The observed rotational velocity of the HI component (22)	[ucd=phys.veloc.rotat]
+#Column	u_v.HI	(A1)	[:iN] Uncertainty flag on v.HI (26)	[ucd=meta.code.error]
+#Column	e_v.HI	(F4.1)	? Error in v.HI	[ucd=stat.error]
+#Column	Mdyn	(F6.2)	? Dynamical mass within the observed half-light radius M_dyn_(<=r_h_) (see Section 5 for further explanations)	[ucd=phys.mass]
+#Column	Ref4	(a15)	Reference, in refs.dat file	[ucd=meta.ref;pos.frame]
+#Column	f_Ref4	(A1)	[h] Flag on Ref (h = In the reference (234), see their Note added in proof.	[ucd=meta.code]
+#Column	Com4	(a175)	Comments about masses and kinematics	[ucd=meta.note]
+#Column	[Fe/H]	(F5.2)	? Mean stellar metallicity (27)	[ucd=phys.abund.Z;stat.mean]
+#Column	u_[Fe/H]	(A1)	[:] Uncertainty flag on [Fe/H]	[ucd=meta.code.error;phys.abund.Fe]
+#Column	e_[Fe/H]	(F5.2)	? Error in [Fe/H]	[ucd=stat.error;phys.abund.Fe]
+#Column	Meth	(a20)	Technique used to estimate stellar metallicity (28)	[ucd=meta.code;obs]
+#Column	Ref5	(a7)	Reference, in refs.dat file	[ucd=meta.ref;pos.frame]
+#Column	Com5	(a67)	Comment on metallicity estimations	[ucd=meta.note]
+#Column	SimbadName	(a23)	Simbad column added by the CDS	[ucd=meta.id]
+SubG	n_Name	Name	OName	f_OName	MType	RAJ2000	DEJ2000	Ref1	f_Ref1	Com1	GLON	GLAT	E(B-V)	(m-M)	u_(m-M)	E_(m-M)	e_(m-M)	D	u_D	E_D	e_D	HRV	f_HRV	e_HRV	D(MW)	V(MW)	D(M31)	V(M31)	D(LG)	V(LG)	Ref2	f_Ref2	S	Vmag	u_Vmag	E_Vmag	e_Vmag	R1	u_R1	E_R1	e_R1	muV	f_muV	E_muV	e_muV	PA	f_PA	e_PA	Ell	f_Ell	e_Ell	VMag	f_VMag	E_VMag	e_VMag	R2	u_R2	E_R2	e_R2	muEff	Ref3	Com3	Mass	l_sigma*	sigma*	f_sigma*	E_sigma*	e_sigma*	vsini*	f_vsini*	e_vsini*	M.HI	f_M.HI	l_sigHI	sigHI	u_sigHI	e_sigHI	l_v.HI	v.HI	u_v.HI	e_v.HI	Mdyn	Ref4	f_Ref4	Com4	[Fe/H]	u_[Fe/H]	e_[Fe/H]	Meth	Ref5	Com5	SimbadName
+ 	 	 	 	 	 	"h:m:s"	"d:m:s"	 	 	 	deg	deg	mag	mag	 	mag	mag	kpc	 	kpc	kpc	km/s	 	km/s	kpc	km/s	kpc	km/s	kpc	km/s	 	 	 	mag	 	mag	mag	arcmin	 	arcmin	arcmin	mag/arcsec2	 	mag/arcsec2	mag/arcsec2	deg	 	deg	 	 	 	mag	 	mag	mag	pc	 	pc	pc	mag/arcsec2	 	 	10+6Msun	 	km/s	 	km/s	km/s	km/s	 	km/s	10+6Msun	 	 	km/s	 	km/s	 	km/s	 	km/s	10+6Msun	 	 	 	[Sun]	 	[Sun]	 	 	 	
+----	---	-----------------------------	--------------------------------	-	---------	----------	---------	-------	-	---------------------------------------------------	-----	-----	------	-----	--	-----	-----	----	-	---	---	------	-	----	----	----	----	----	----	----	-----	-	-	----	--	----	----	------	-	-----	-----	----	--	----	----	---	--	--	-----	-	-----	-----	-	----	----	----	-	---	---	----	-------	---------------------------------------------	----------	--	----	-	----	----	----	-	----	--------	-	-	----	-	----	--	-----	-	----	------	---------------	-	-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	-----	-	-----	--------------------	-------	-------------------------------------------------------------------	-----------------------
+MW  	G  	The Galaxy                   	The MW                          	 	S(B)bc   	17 45 40.0	-29 00 28	       	 	Position refers to Sgr A*                          	     	     	      	     	  	     	     	    	 	   	   	      	 	    	    	    	    	    	    	    	     	 	 	    	  	    	    	      	 	     	     	    	  	    	    	   	  	  	     	 	     	     	 	    	    	    	 	   	   	    	       	                                             	          	  	    	 	    	    	    	 	    	        	 	 	    	 	    	  	     	 	    	      	               	 	                                                                                                                                                                               	     	 	     	                    	       	                                                                   	
+MW  	G  	Canis Major                  	                                	 	????     	07 12 35.0	-27 40 00	300    	 	MW disk substructure?                              	240.0	 -8.0	 0.264	14.29	b 	 0.30	 0.30	   7	 	  1	  1	  87.0	c	 4.0	  13	-117	 786	-185	 394	-172	1,2  	 	 	-0.1	  	 0.8	 0.8	      	 	     	     	24.0	b 	 0.6	 0.6	123	:c	  	 0.80	:	     	-14.4	d	 0.8	 0.8	    	 	   	   	    	101,102	                                             	  49.00000	  	20.0	 	 3.0	 3.0	    	 	    	        	 	 	    	 	    	  	     	 	    	      	201            	 	HI measurements complex due to location!                                                                                                                                       	-0.50	 	 0.20	CMD fitting         	400    	Based primarily on MS stars                                        	Canis Major
+

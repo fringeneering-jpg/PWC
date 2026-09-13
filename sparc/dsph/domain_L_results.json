@@ -1,0 +1,297 @@
+{
+  "n": 41,
+  "a0": 1.255e-10,
+  "s": 1.51,
+  "rho": 0.7435842147248624,
+  "p": 2.5506817789693746e-08,
+  "rms_dex": 0.25302369559762644,
+  "galaxies": [
+    {
+      "name": "Sagittarius dSph",
+      "g_bar": 4.3746168530452493e-13,
+      "sigma_pred": 24.43220103099178,
+      "sigma_obs": 11.4,
+      "resid_dex": -0.33105774181608427
+    },
+    {
+      "name": "Segue (I)",
+      "g_bar": 5.6363312081836736e-14,
+      "sigma_pred": 1.54423059517723,
+      "sigma_obs": 3.9,
+      "resid_dex": 0.4023524543328763
+    },
+    {
+      "name": "Ursa Major II",
+      "g_bar": 2.5746897515133297e-14,
+      "sigma_pred": 2.8763929307401797,
+      "sigma_obs": 6.7,
+      "resid_dex": 0.36722658997607116
+    },
+    {
+      "name": "Bootes II",
+      "g_bar": 5.360104197573863e-14,
+      "sigma_pred": 2.0222115090152246,
+      "sigma_obs": 10.5,
+      "resid_dex": 0.7153627213094114
+    },
+    {
+      "name": "Segue II",
+      "g_bar": 9.787594020722508e-14,
+      "sigma_pred": 1.948439251139828,
+      "sigma_obs": 3.4,
+      "resid_dex": 0.24179204722970515
+    },
+    {
+      "name": "Willman 1",
+      "g_bar": 2.2306609628623387e-13,
+      "sigma_pred": 2.025896284228951,
+      "sigma_obs": 4.3,
+      "resid_dex": 0.32685124769452845
+    },
+    {
+      "name": "Coma Berenices",
+      "g_bar": 8.70029259001376e-14,
+      "sigma_pred": 2.805807286262018,
+      "sigma_obs": 4.6,
+      "resid_dex": 0.2146999929960608
+    },
+    {
+      "name": "Bootes (I)",
+      "g_bar": 6.903683141841385e-14,
+      "sigma_pred": 4.693667653217896,
+      "sigma_obs": 2.4,
+      "resid_dex": -0.2913010933414507
+    },
+    {
+      "name": "Draco",
+      "g_bar": 8.278030742998688e-13,
+      "sigma_pred": 8.39895966122459,
+      "sigma_obs": 9.1,
+      "resid_dex": 0.03481589689853237
+    },
+    {
+      "name": "Ursa Minor",
+      "g_bar": 1.234111594636302e-12,
+      "sigma_pred": 8.420504928926405,
+      "sigma_obs": 9.5,
+      "resid_dex": 0.052385470882826635
+    },
+    {
+      "name": "Sextans (I)",
+      "g_bar": 1.269979327751448e-13,
+      "sigma_pred": 9.269695140610475,
+      "sigma_obs": 7.9,
+      "resid_dex": -0.0694383601218278
+    },
+    {
+      "name": "Ursa Major (I)",
+      "g_bar": 1.9180514563580806e-14,
+      "sigma_pred": 3.909644202204889,
+      "sigma_obs": 7.6,
+      "resid_dex": 0.28867635612532916
+    },
+    {
+      "name": "Carina",
+      "g_bar": 8.476511658876888e-13,
+      "sigma_pred": 8.987298753677582,
+      "sigma_obs": 6.6,
+      "resid_dex": -0.13408524310405034
+    },
+    {
+      "name": "Hercules",
+      "g_bar": 4.736825965674158e-14,
+      "sigma_pred": 4.987012842825497,
+      "sigma_obs": 3.7,
+      "resid_dex": -0.129638762571473
+    },
+    {
+      "name": "Fornax",
+      "g_bar": 5.531295781745533e-12,
+      "sigma_pred": 24.75628895435187,
+      "sigma_obs": 11.7,
+      "resid_dex": -0.32549968137092145
+    },
+    {
+      "name": "Leo IV",
+      "g_bar": 6.242129072954631e-14,
+      "sigma_pred": 4.222453949656279,
+      "sigma_obs": 3.3,
+      "resid_dex": -0.1070509819485278
+    },
+    {
+      "name": "Canes Venatici II",
+      "g_bar": 2.0113017721206718e-13,
+      "sigma_pred": 3.3957369244223368,
+      "sigma_obs": 4.6,
+      "resid_dex": 0.13182379460238047
+    },
+    {
+      "name": "Leo V",
+      "g_bar": 8.414701848932005e-14,
+      "sigma_pred": 3.6841804708536716,
+      "sigma_obs": 3.7,
+      "resid_dex": 0.0018608279558133267
+    },
+    {
+      "name": "Canes Venatici (I)",
+      "g_bar": 1.0080526426344915e-13,
+      "sigma_pred": 7.8796826853432655,
+      "sigma_obs": 7.6,
+      "resid_dex": -0.015695136531204024
+    },
+    {
+      "name": "Leo II",
+      "g_bar": 3.330580757114643e-12,
+      "sigma_pred": 10.757766415219619,
+      "sigma_obs": 6.6,
+      "resid_dex": -0.21217817461380084
+    },
+    {
+      "name": "Leo I",
+      "g_bar": 1.2171071982729306e-11,
+      "sigma_pred": 18.335904384062914,
+      "sigma_obs": 9.2,
+      "resid_dex": -0.2995145082393994
+    },
+    {
+      "name": "M32",
+      "g_bar": 3.687042913822047e-09,
+      "sigma_pred": 114.68382584315552,
+      "sigma_obs": 92.0,
+      "resid_dex": -0.09571434519935118
+    },
+    {
+      "name": "Andromeda IX",
+      "g_bar": 6.740536319805842e-14,
+      "sigma_pred": 7.078264350269029,
+      "sigma_obs": 4.5,
+      "resid_dex": -0.19671426432260453
+    },
+    {
+      "name": "NGC 205",
+      "g_bar": 1.3216714265738505e-10,
+      "sigma_pred": 61.314175536168165,
+      "sigma_obs": 35.0,
+      "resid_dex": -0.24349284852737663
+    },
+    {
+      "name": "Andromeda I",
+      "g_bar": 1.2040364798081753e-12,
+      "sigma_pred": 16.122269715771626,
+      "sigma_obs": 10.6,
+      "resid_dex": -0.18212031709549104
+    },
+    {
+      "name": "Andromeda III",
+      "g_bar": 5.043367900614268e-13,
+      "sigma_pred": 10.89936942780604,
+      "sigma_obs": 4.7,
+      "resid_dex": -0.3653035150557409
+    },
+    {
+      "name": "Andromeda XI",
+      "g_bar": 2.7714711342309674e-13,
+      "sigma_pred": 5.362645302538392,
+      "sigma_obs": 4.6,
+      "resid_dex": -0.06662124101436928
+    },
+    {
+      "name": "Andromeda V",
+      "g_bar": 5.479703801438096e-13,
+      "sigma_pred": 9.026930116111501,
+      "sigma_obs": 11.5,
+      "resid_dex": 0.10515776006342992
+    },
+    {
+      "name": "Andromeda X",
+      "g_bar": 1.9058691031931697e-13,
+      "sigma_pred": 6.3394411405563655,
+      "sigma_obs": 3.9,
+      "resid_dex": -0.21098636690091777
+    },
+    {
+      "name": "Andromeda XII",
+      "g_bar": 4.676577232888008e-14,
+      "sigma_pred": 4.771191935734295,
+      "sigma_obs": 2.6,
+      "resid_dex": -0.263653539758434
+    },
+    {
+      "name": "NGC 147",
+      "g_bar": 2.227045964380802e-11,
+      "sigma_pred": 34.514831107986346,
+      "sigma_obs": 16.0,
+      "resid_dex": -0.3338857699329796
+    },
+    {
+      "name": "Andromeda XIV",
+      "g_bar": 2.1160714611008082e-13,
+      "sigma_pred": 7.617772762090879,
+      "sigma_obs": 5.4,
+      "resid_dex": -0.14943425370517127
+    },
+    {
+      "name": "Andromeda XV",
+      "g_bar": 1.3861292100409692e-12,
+      "sigma_pred": 9.608983482826396,
+      "sigma_obs": 11.0,
+      "resid_dex": 0.058715238296076944
+    },
+    {
+      "name": "Andromeda XIII",
+      "g_bar": 1.3340028279154107e-13,
+      "sigma_pred": 5.1218623406542125,
+      "sigma_obs": 9.7,
+      "resid_dex": 0.27734383242935556
+    },
+    {
+      "name": "Andromeda II",
+      "g_bar": 7.661477548125283e-13,
+      "sigma_pred": 18.99542881371172,
+      "sigma_obs": 7.3,
+      "resid_dex": -0.4153262418938264
+    },
+    {
+      "name": "NGC 185",
+      "g_bar": 4.5195119716276103e-11,
+      "sigma_pred": 37.00083973844943,
+      "sigma_obs": 24.0,
+      "resid_dex": -0.1880003388320488
+    },
+    {
+      "name": "Andromeda VII",
+      "g_bar": 2.1994482455287387e-12,
+      "sigma_pred": 20.252555872752993,
+      "sigma_obs": 9.7,
+      "resid_dex": -0.31970810471106115
+    },
+    {
+      "name": "Andromeda VI",
+      "g_bar": 1.421703530173465e-12,
+      "sigma_pred": 14.859611512240297,
+      "sigma_obs": 9.4,
+      "resid_dex": -0.1988796018345632
+    },
+    {
+      "name": "Andromeda XVI",
+      "g_bar": 3.0904350764136806e-12,
+      "sigma_pred": 9.271077182796084,
+      "sigma_obs": 10.0,
+      "resid_dex": 0.0328698033564524
+    },
+    {
+      "name": "Cetus",
+      "g_bar": 7.334597436815801e-13,
+      "sigma_pred": 14.524190174325813,
+      "sigma_obs": 17.0,
+      "resid_dex": 0.06835699461032019
+    },
+    {
+      "name": "Tucana",
+      "g_bar": 9.679767618054684e-13,
+      "sigma_pred": 9.909925553445898,
+      "sigma_obs": 15.8,
+      "resid_dex": 0.20258669501698645
+    }
+  ]
+}

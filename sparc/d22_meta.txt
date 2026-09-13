@@ -1,0 +1,70 @@
+#  
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-08-04T15:35:19 [V7.5.6]
+#   In case of problem, please report to: cds-question@unistra.fr
+# 
+#   
+#Coosys J2000: eq_FK5 J2000 
+#INFO service_protocol=ASU   IVOID of the protocol through which the data was retrieved
+#INFO request_date=2026-08-04T15:35:19   Query execution date
+#INFO request=https://vizier.cds.unistra.fr/viz-bin/asu-txt?-source=J/ApJS/265/7&-meta.all   Full request URL
+#INFO contact=cds-question@unistra.fr   Email or URL to contact publisher
+#INFO server_software=VizieR/7.5.6   Software version
+#INFO publisher=CDS   Data centre that produced the VOTable
+#INFO MaxTuples=50000 
+
+#RESOURCE=yCat_22650007
+#Name: J/ApJS/265/7
+#Title: Void catalogs from SDSS DR7 (Douglass+, 2023)
+#INFO ivoid=ivo://cds.vizier/j/apjs/265/7     IVOID of underlying data collection     
+#INFO data_ivoid=ivo://cds.vizier/j/apjs/265/7     IVOID of underlying data collection     
+#INFO creator=Douglass K.A.     First author or institution     
+#INFO cites=bibcode:2023ApJS..265....7D     Article or Data origin sources     
+#INFO journal=ApJS     Journal name     
+#INFO original_date=2023     Year of the article publication     
+#INFO reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJS/265/7     Dataset landing page     
+#INFO citation=doi:10.26093/cds/vizier.22650007     Dataset identifier that can be used for citation     
+#INFO rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html     Licence URI     
+#INFO ipopu=0.415294 popularity index   
+#INFO cpopu=933 number of calls   
+#INFO -kw.Wavelength=optical    
+#INFO -kw.Astronomy=Spectroscopy    
+#INFO -kw.Astronomy=Intergalactic_medium    
+#INFO -density=0     (link)   
+#Table yCat_22650007_1:
+#Name: J/ApJS/265/7/table1
+#INFO nrows=2347 Number of rows of the table     
+#      VoidFinder output: Maximal spheres for two cosmologies
+#    {\param      Query from a celestial position according to ASU syntax:
+#      {RA{+|-}Dec|object_name}[,eq=equinox][,ep=epoch][,rm=[min/]max]
+#      (see http://vizier.cds.unistra.fr/doc/asu.html)
+#    }      (link)       Action to Query the current RESOURCE, to be completed by PARAMs and FIELDs contents          
+#---Details of Columns:
+#Table yCat_22650007_2:
+#Name: J/ApJS/265/7/table2
+#INFO nrows=80080 Number of rows of the table     
+#      VoidFinder output: All spheres for two cosmologies
+#     (link)       Action to Query the current RESOURCE, to be completed by PARAMs and FIELDs contents          
+#---Details of Columns:
+#Table yCat_22650007_3:
+#Name: J/ApJS/265/7/table3
+#INFO nrows=2101 Number of rows of the table     
+#      V2 output: Voids for two prunings and two cosmologies
+#    {\param      Query from a celestial position according to ASU syntax:
+#      {RA{+|-}Dec|object_name}[,eq=equinox][,ep=epoch][,rm=[min/]max]
+#      (see http://vizier.cds.unistra.fr/doc/asu.html)
+#    }      (link)       Action to Query the current RESOURCE, to be completed by PARAMs and FIELDs contents          
+#---Details of Columns:
+#Table yCat_22650007_4:
+#Name: J/ApJS/265/7/table4
+#INFO nrows=4146 Number of rows of the table     
+#      V2 output: Zones for two prunings and two cosmologies
+#     (link)       Action to Query the current RESOURCE, to be completed by PARAMs and FIELDs contents          
+#---Details of Columns:
+#Table yCat_22650007_5:
+#Name: J/ApJS/265/7/table5
+#INFO nrows=776500 Number of rows of the table     
+#      V2 output: Galaxies for two prunings and two cosmologies
+#     (link)       Action to Query the current RESOURCE, to be completed by PARAMs and FIELDs contents          
+#---Details of Columns:
+#END#   ==============================================================================================================
