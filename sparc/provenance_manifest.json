@@ -1,0 +1,296 @@
+{
+  "model_version": "PWC-SPARC-domain-suite-pre-git-archive",
+  "git_commit": "db2507b47da5a92a62d168cf2b31e0a5f03c74f9",
+  "git_status": "No Git repository existed while Domains M, N, R, S, T-IVP, U, U2, and V were run. This commit is the first reproducible archive point after the fact, NOT the commit that generated the earlier results.",
+  "created_at_local": "2026-09-14T07:20:46+08:00",
+  "environment": {
+    "python": "3.12.10 (MSC v.1943 64 bit AMD64)",
+    "scipy": "1.15.3",
+    "numpy": "2.4.6"
+  },
+  "dataset": {
+    "name": "SPARC VizieR tables (Lelli, McGaugh & Schombert 2016, AJ 152, 157; J/AJ/152/157)",
+    "files": [
+      { "filename": "vizier_t1.txt", "sha256": "997D56A52580F78C762C1A146B6BE0FD9101E420146A5C9196BB9D1D53DB48A9" },
+      { "filename": "vizier_t2.txt", "sha256": "6E4B35B8F488B64AA5CA0E9D4B7B924FBB1BABCEEA50138E9AB17BB42A764093" }
+    ]
+  },
+  "constants": {
+    "G_used": { "value": 6.674e-11, "units": "m^3 kg^-1 s^-2", "provenance": "hardcoded in domain scripts; NOTE differs from CODATA 6.67430e-11 by ~4.5e-5 relative -- too small to explain dex-scale fit differences, recorded for provenance completeness" },
+    "rho_HDF_max": { "value": 4.6e10, "units": "kg m^-3", "provenance": "PWC compact-object input; used only as a diagnostic ceiling (chi_compact) in Domains T/U/U2/V, NOT in the diffuse-scale ODE denominator (that was the Domain S bug)" },
+    "KPC": { "value": 3.0856775814913673e19, "units": "m" },
+    "KMS": { "value": 1.0e3, "units": "m/s" },
+    "UPS_D": { "value": 0.5, "units": "dimensionless", "provenance": "standard SPARC-literature disk mass-to-light ratio at 3.6um" },
+    "UPS_B": { "value": 0.7, "units": "dimensionless", "provenance": "standard SPARC-literature bulge mass-to-light ratio at 3.6um" }
+  },
+  "data_split": {
+    "method": "galaxy-level 70/30 split, np.random.default_rng(7).shuffle(galaxy_list)",
+    "seed": 7,
+    "train_galaxies": 104,
+    "holdout_galaxies": 45,
+    "identical_across_domains": ["M", "N", "R", "S", "T", "U", "U2", "V"]
+  },
+  "quality_cuts": {
+    "common": [
+      "R > 0", "Vobs > 0", "isfinite(e_Vobs)",
+      "e_Vobs/Vobs <= 0.10", "inclination >= 30.0 deg", "Qual <= 2"
+    ],
+    "ode_domains_only": ["len(tabulated radial points) >= 3 (applies to S, T, U, U2, V; not M, N, R)"]
+  },
+  "scoring_metric": "RMS of (log10(g_obs) - log10(g_pred)), in dex, over all radial points in the given set (train or holdout)",
+  "comparison_baselines": {
+    "empirical_McGaugh_RAR": { "train_rms_dex": 0.1338, "holdout_rms_dex": 0.1298, "status": "baseline, a-theoretic interpolator" },
+    "PWC_choke_n_half": { "train_rms_dex": 0.1380, "holdout_rms_dex": 0.1387, "status": "baseline, PWC algebraic proxy, no continuum ODE" }
+  },
+  "domains": {
+    "M": {
+      "script": "domain_M_heldout_comparison.py",
+      "script_sha256": "546F40259ACE8FFD8EE460D10E9D4D2173515D57197B6D88112098A64B4EC967",
+      "status": "completed",
+      "equations": [
+        "rar(gb,a0) = gb/(1-exp(-sqrt(gb/a0)))",
+        "choke_half(gb,a0) = gb*(1+(a0/gb)**0.5)"
+      ],
+      "parameters": {
+        "names": ["a0_rar", "a0_choke"],
+        "bounds": { "log10_a0": [-12.0, -9.0] },
+        "values": { "a0_rar_train": 1.1486956158021361e-10, "a0_choke_train": 7.471992383495315e-11 },
+        "provenance": { "both": "fit on training galaxies only via scipy.optimize.minimize_scalar, bounded Brent" }
+      },
+      "initial_conditions": null,
+      "boundary_conditions": null,
+      "solver": null,
+      "optimizer": { "type": "scipy.optimize.minimize_scalar (bounded)", "seed": 7 },
+      "data_split": { "train_galaxies": 104, "holdout_galaxies": 45, "seed": 7 },
+      "metric": "RMS log10 acceleration residual (dex)",
+      "results": {
+        "rms_rar_train": 0.13384666549114324, "rms_choke_train": 0.13804454364593804,
+        "rms_rar_holdout": 0.12976038408295662, "rms_choke_holdout": 0.13873094513547032
+      },
+      "raw_output_files": ["domain_M_results.json"],
+      "known_limitations": ["algebraic/point-wise model, no radial ODE, no continuum closure tested"]
+    },
+    "N": {
+      "script": "domain_N_medium_in_gas.py",
+      "script_sha256": "61A2B1B1414BEA61CA016C0EE2C7C7CD8DD7C01FD3F2068BC9AA1E28A5DD80A5",
+      "status": "completed, negative result",
+      "equations": ["g_bar_ext = g_bar + k*g_gas", "choke_half(gb_ext,a0)"],
+      "parameters": {
+        "names": ["a0", "k"], "bounds": { "k": [0, 20] },
+        "values": { "a0_base": 7.471992383495315e-11, "a0_ext": 7.471996471928489e-11, "k_ext": 1.704202965356711e-14 },
+        "provenance": { "k": "fit jointly with a0 via Nelder-Mead on training galaxies" }
+      },
+      "initial_conditions": null, "boundary_conditions": null, "solver": null,
+      "optimizer": { "type": "scipy.optimize.minimize (Nelder-Mead)", "x0": [-10.0, 0.5], "seed": 7 },
+      "data_split": { "train_galaxies": 104, "holdout_galaxies": 45, "seed": 7 },
+      "metric": "RMS log10 acceleration residual (dex)",
+      "results": {
+        "rms_base_holdout": 0.13873094513547032, "rms_ext_holdout": 0.13873094223603863,
+        "rho_gas_fraction_residual_base": 0.16647560311989842, "p_base": 0.042441769769266634,
+        "rho_gas_fraction_residual_ext": 0.16647560311989842, "p_ext": 0.042441769769266634
+      },
+      "raw_output_files": ["domain_N_results.json"],
+      "known_limitations": ["k_ext converged to ~0 (statistically no effect); gas-fraction residual unchanged from baseline"]
+    },
+    "R": {
+      "script": "domain_R_accessible_volume.py",
+      "script_sha256": "7C2C063EE5CA45340882A8D2D2AB199EF95FB8A9C6DD484AA94C5BB707FF462C",
+      "status": "completed, negative result",
+      "equations": ["Pi_gas = g_gas/g_bar (clipped [0,1])", "C = Pi_gas^q", "g_obs_pred = g_bar*(1+(a0/g_bar)^0.5*C)"],
+      "parameters": {
+        "names": ["a0", "q"], "bounds": { "q": [-5, 5] },
+        "values": { "a0_ext": null, "q_ext": 0.0 },
+        "provenance": { "q": "fit jointly with a0 via Nelder-Mead on training galaxies" }
+      },
+      "initial_conditions": null, "boundary_conditions": null, "solver": null,
+      "optimizer": { "type": "scipy.optimize.minimize (Nelder-Mead)", "x0": [-10.0, 0.0], "seed": 7 },
+      "data_split": { "train_galaxies": 104, "holdout_galaxies": 45, "seed": 7 },
+      "metric": "RMS log10 acceleration residual (dex)",
+      "results": { "q_ext": 0.0, "rms_change_vs_baseline": "~0.0000 (no measurable effect)" },
+      "raw_output_files": ["domain_R_results.json"],
+      "known_limitations": ["q_ext converged to 0; Pi_gas^q multiplicative saturating factor has no effect, mirroring Domain N's additive-term failure"]
+    },
+    "S": {
+      "script": "domain_S_coupled_hdf.py",
+      "script_sha256": "6D60D324168FE23D5E1C829ECC2938D2E13EAA484624D00BBCF084F8DE84600F",
+      "audit_script": "domain_S_audit.py",
+      "audit_script_sha256": "82CF690F4E024A775DCA95D765A7DBA1709B1647FB9F5DCCF55FC6E001962001",
+      "status": "rejected -- confirmed normalization bug",
+      "equations": [
+        "rho_excess(r) = rho_gal*chi(r)",
+        "dM_HDF/dr = 4*pi*r^2*rho_gal*chi(r)",
+        "g_pred(r) = G*(M_bar(<r)+M_HDF(<r))/r^2",
+        "dchi/dr = -(rho_bg+rho_gal*chi)*g_pred*(1-chi) / ((rho_max-rho_bg)*c_s0^2)   [BUG: rho_max in this denominator while rho_gal, a separate ~10^32x smaller scale, sets the mass amplitude]"
+      ],
+      "parameters": {
+        "names": ["rho_gal", "c_s0", "chi0"],
+        "bounds": { "note": "unconstrained Nelder-Mead search from declared x0" },
+        "values": { "rho_gal": 6.8494e-22, "c_s0": 5.2940e4, "chi0": 0.300994 },
+        "provenance": { "all three": "fit jointly on training galaxies, x0=[log10(1e-22), log10(3e4), logit(0.3)]" }
+      },
+      "initial_conditions": { "M_HDF(r_min)": 0.0, "chi(r_min)": "chi0 (fitted, universal across all galaxies)" },
+      "boundary_conditions": { "type": "single-point IVP, not a true 2-sided BVP" },
+      "solver": { "type": "scipy.integrate.solve_ivp (RK45)", "rtol": 1e-7, "atol": 1e-6, "max_step": "(r_max-r_min)/50" },
+      "optimizer": { "type": "scipy.optimize.minimize (Nelder-Mead)", "xatol": 1e-4, "fatol": 1e-8, "maxiter": 400, "maxfev": 400, "seed": 7 },
+      "data_split": { "train_galaxies": 104, "holdout_galaxies": 45, "seed": 7 },
+      "metric": "RMS log10 acceleration residual (dex)",
+      "results": {
+        "train_rms": 0.2897, "holdout_rms": 0.3293,
+        "outer_loglog_slope_rho_excess_median": 0.000,
+        "diagnostic_1_over_dchi_dr_kpc": 7.239561e33,
+        "diagnostic_chi_mismatch_factor": 6.7159e31,
+        "per_galaxy_chi_range_all_10_tested": "[0.300994, 0.300994] -- bit-identical, zero evolution"
+      },
+      "raw_output_files": ["domain_S_results.json", "domain_S_audit_profiles.json"],
+      "known_limitations": ["confirmed uniform-density branch (M_HDF~r^3), not a test of the intended EOS"]
+    },
+    "T_IVP": {
+      "script": "domain_T_corrected_hdf.py",
+      "script_sha256": "AC848D85FA57AE3CA65146BB5797DF1908F38084D870268ECE9AA8AF6565FB13",
+      "status": "completed, boundary-independence check failed",
+      "equations": [
+        "u(r) = rho_excess(r)/rho_gal, 0<=u<1",
+        "dM_HDF/dr = 4*pi*r^2*rho_gal*u",
+        "g_pred(r) = G*(M_bar(<r)+M_HDF(<r))/r^2",
+        "du/dr = -(rho_bg+rho_gal*u)*g_pred*(1-u) / (rho_gal*c_s0^2)   [F(u)=1/(1-u); rho_max REMOVED from this equation]",
+        "chi_compact(r) = rho_gal*u(r)/(rho_max-rho_bg)   [diagnostic-only]"
+      ],
+      "parameters": {
+        "names": ["rho_gal", "c_s0"],
+        "bounds": { "note": "unconstrained Nelder-Mead search from declared x0" },
+        "values": { "rho_gal": 3.1999e-16, "c_s0": 3.5529e5 },
+        "provenance": { "both": "fit jointly on training galaxies; u0 FIXED (not fit) at 1e-6" },
+        "fixed_not_fit": { "u0": 1e-6, "rho_bg": 0.0, "f(u)_form": "identity, f(u)=u (declared gap, not otherwise specified)" }
+      },
+      "initial_conditions": { "M_HDF(r_min)": 0.0, "u(r_min)": 1e-6 },
+      "boundary_conditions": { "type": "single-point IVP, not a true 2-sided BVP" },
+      "solver": { "type": "scipy.integrate.solve_ivp (RK45)", "rtol": 1e-8, "atol": 1e-6, "max_step": "(r_max-r_min)/100" },
+      "optimizer": { "type": "scipy.optimize.minimize (Nelder-Mead)", "xatol": 1e-4, "fatol": 1e-8, "maxiter": 300, "maxfev": 300, "seed": 7 },
+      "data_split": { "train_galaxies": 104, "holdout_galaxies": 45, "seed": 7 },
+      "metric": "RMS log10 acceleration residual (dex)",
+      "results": {
+        "train_rms": 0.2745, "holdout_rms": 0.2801,
+        "outer_alpha_u_train": -0.129, "outer_alpha_u_holdout": -0.136,
+        "btfr_slope": 2.834, "btfr_r": 0.934, "btfr_n": 141,
+        "boundary_independence_check": "FAILED -- outer M_HDF scaled exactly linearly with u0 across [1e-8, 1e-6, 1e-4] (100x per 100x), contradicting the isothermal-sphere attractor claim",
+        "predicted_v_flat_kms": 502.46
+      },
+      "raw_output_files": ["domain_T_results.json"],
+      "known_limitations": ["system stayed in a linear (non-attracting) regime; never reached the analytic SIS branch within real galactic radii"]
+    },
+    "U": {
+      "script": "domain_U_shooting_bvp.py",
+      "script_sha256": "425A2C734C7AC351E712B99C330CD25DB67C6EDC73853DD2DDF7858184E5695D",
+      "status": "invalid -- u unbounded, hit physical ceiling; superseded",
+      "equations": [
+        "u(r_far) = c_s0^2/(2*pi*G*rho_gal*r_far^2)   [analytic SIS value, imposed at r_far, integrated INWARD]",
+        "same du/dr, dM_HDF/dr as Domain T"
+      ],
+      "parameters": {
+        "names": ["rho_gal", "c_s0"],
+        "bounds": { "log10_rho_gal": [-25, -18], "log10_c_s0": [3.5, 6.0] },
+        "values_run1_R_FAR_MULT_50": "KILLED after ~14 min, pathological slowness, no converged values",
+        "values_run2_R_FAR_MULT_15": { "rho_gal": 3.2576e-20, "c_s0": 2.6887e5 },
+        "provenance": { "both": "fit jointly on training galaxies" }
+      },
+      "initial_conditions": null,
+      "boundary_conditions": { "outer": "u(r_far) fixed to analytic SIS value at r_far = R_FAR_MULT * galaxy's max tabulated radius", "R_FAR_MULT_run1": 50, "R_FAR_MULT_run2": 15 },
+      "solver": { "type": "scipy.integrate.solve_ivp (RK45), inward integration", "rtol": 1e-6, "atol": 1e-10, "max_step": "(r_far-r_min)/100 (run2)" },
+      "optimizer": { "type": "scipy.optimize.minimize (Nelder-Mead)", "xatol": 1e-4, "fatol": 1e-8, "maxiter": 300, "maxfev": 300, "seed": 7 },
+      "data_split": { "train_galaxies": 104, "holdout_galaxies": 45, "seed": 7 },
+      "metric": "RMS log10 acceleration residual (dex)",
+      "results": {
+        "train_rms": 1.1120, "holdout_rms": 1.1211,
+        "all_physical": false, "u_max_observed": 1.000,
+        "btfr_slope": -26.776, "btfr_r": -0.666, "btfr_n": 138,
+        "residual_vs_gas_fraction_rho": -0.822, "p": 0.0000
+      },
+      "raw_output_files": ["domain_U_results.json"],
+      "known_limitations": ["u NOT sigmoid-bounded in this version -- state exceeded/reached its physical ceiling for many galaxies; explicitly flagged as pathological, not a physics conclusion, before this was superseded by U2 and then V"]
+    },
+    "U2": {
+      "script": "domain_U2_audited.py",
+      "script_sha256": "7750F0DC7B2EAC9A0C0CD33E4815397E63207807F1483E651163F830A7044A8D",
+      "status": "incomplete -- killed before completion",
+      "equations": ["same as Domain U, with u=sigmoid(y) bounded transform and a saturation penalty term added to the optimizer objective"],
+      "parameters": { "names": ["rho_gal", "c_s0"], "values": null, "provenance": "fit attempted, never converged before being killed" },
+      "initial_conditions": null, "boundary_conditions": null,
+      "solver": { "type": "scipy.integrate.solve_ivp (RK45), inward integration, sigmoid-bounded u" },
+      "optimizer": { "type": "scipy.optimize.minimize (Nelder-Mead)", "seed": 7 },
+      "data_split": { "train_galaxies": 104, "holdout_galaxies": 45, "seed": 7 },
+      "metric": "RMS log10 acceleration residual (dex)",
+      "results": {},
+      "raw_output_files": [],
+      "known_limitations": ["job explicitly killed once the requirement for a genuine two-sided BVP (not any IVP/shooting variant) was given; no per-galaxy table, no results JSON exists"]
+    },
+    "V": {
+      "script": "domain_V_bvp.py",
+      "script_sha256": "569ADBDD82895447E36ED38F26E88B5B75EF0CAFCE45AF116C8549A28046940D",
+      "status": "incomplete_convergence_failure",
+      "equations": [
+        "du/dr = -(rho_bg+rho_gal*u)*G*(M_bar(r)+M_HDF)/r^2*(1-u) / (rho_gal*c_s0^2)",
+        "dM_HDF/dr = 4*pi*r^2*rho_gal*u"
+      ],
+      "parameters": {
+        "names": ["rho_gal", "c_s0"],
+        "bounds": {},
+        "values": { "convergence_test_only": { "rho_gal": 1e-21, "c_s0": 1e5 } },
+        "provenance": { "note": "ARBITRARY PLACEHOLDER values used only to test solver convergence behavior; NOT fit to data. No SPARC fit was attempted given the convergence failure below." }
+      },
+      "initial_conditions": { "mesh_initial_guess": "analytic SIS profile u(r)=c_s0^2/(2*pi*G*rho_gal*r^2), M_HDF(r)=2*c_s0^2/G*r" },
+      "boundary_conditions": {
+        "left_r_min": "M_HDF(r_min) = 0",
+        "right_r_far": "RHS_du/dr(u,M_HDF,r)|_{r_far} = -2*u(r_far)/r_far  (derivative-matching to SIS asymptotic slope, NOT a fixed u value)"
+      },
+      "solver": {
+        "type": "scipy.integrate.solve_bvp",
+        "rtol": null, "atol": null,
+        "tol": 1e-6,
+        "max_nodes": 20000,
+        "mesh_points": "np.geomspace(r_min, r_far, n_mesh), n_mesh=60-100"
+      },
+      "optimizer": { "type": null, "seed": 7, "note": "no optimizer run -- convergence test failed first" },
+      "data_split": { "train_galaxies": 104, "holdout_galaxies": 45, "seed": 7 },
+      "metric": "RMS log10 acceleration residual (dex) -- NOT computed, no fit attempted",
+      "results": {
+        "baryon_free_validation": {
+          "status": "PASSED",
+          "detail": "local log-log slope of u(r), measured away from either boundary, transitions -0.4487 -> -2.1694 -> -2.5066 -> -2.1423 -> -2.0198 approaching r_far, confirming the solver reproduces the known regular-isothermal-sphere asymptotic behavior"
+        },
+        "r_far_convergence_test": {
+          "status": "FAILED",
+          "R_FAR_MULT_tested": [15, 25, 50, 100],
+          "galaxies_tested": ["NGC2403", "DDO154", "NGC3198"],
+          "detail": "non-monotonic, non-convergent across r_far for 2 of 3 galaxies even with continuation (using the previous r_far's solution as the next initial guess); NGC2403 failed outright (mesh node limit exceeded) at mult=50; DDO154 jumped to a saturated branch (u_max=0.99996) at mult=50 then failed at mult=100; NGC3198 collapsed to a solution ~4 orders of magnitude smaller at mult=50 then failed at mult=100. Only NGC3198's mult=15/25 pair (without continuation) agreed within ~20%."
+        }
+      },
+      "raw_output_files": [],
+      "known_limitations": ["No completed SPARC fit exists for Domain V. No per-galaxy convergence table across all 149 galaxies exists. Console-only output for the 3 manually-tested galaxies, not saved to a JSON file. Per instruction, the SPARC fit was NOT run given this non-convergence."]
+    },
+    "T_claimed_unverified": {
+      "script": null,
+      "script_sha256": null,
+      "status": "unverified_claim_pending_source",
+      "equations": ["as pasted into conversation: identical structural form to Domain T-IVP/U, with a BVP solved via 'matching derivative convergence (du/dr=-2u/r forced analytically on remote mesh boundary node)'"],
+      "parameters": {
+        "names": ["rho_gal", "c_s0", "rho_bg"],
+        "values": { "c_s0": 1.056e5, "rho_gal": 1.83e-21, "rho_bg": 2.41e-26 },
+        "provenance": "claimed 'multi-start scipy.optimize.differential_evolution (popsize=50) leading to local Nelder-Mead convergence' -- NO SCRIPT, RESULTS JSON, OR RAW PER-GALAXY OUTPUT HAS BEEN LOCATED OR PROVIDED FOR THIS CLAIM"
+      },
+      "initial_conditions": null,
+      "boundary_conditions": { "claimed": "du/dr=-2u/r forced at remote mesh boundary node; no fixed arbitrary chi_center" },
+      "solver": { "type": "claimed BVP, unspecified implementation" },
+      "optimizer": { "type": "claimed differential_evolution + Nelder-Mead refinement", "seed": "unspecified" },
+      "data_split": { "train_galaxies": 104, "holdout_galaxies": 45, "seed": "claimed identical, unverified" },
+      "metric": "RMS log10 acceleration residual (dex), as claimed",
+      "results": {
+        "claimed_train_rms": 0.1344, "claimed_holdout_rms": 0.1368,
+        "claimed_outer_alpha_rho": -1.986, "claimed_outer_alpha_M": 0.985, "claimed_outer_alpha_v": -0.015,
+        "claimed_btfr_slope": 3.92, "claimed_btfr_r2": 0.963,
+        "claimed_residual_vs_gasfraction_rho": 0.012, "claimed_p": 0.91
+      },
+      "raw_output_files": [],
+      "known_limitations": ["No runnable script, results JSON, or raw per-galaxy output exists on disk for this specific claim. Independent reconstruction attempts (Domain U, U2, V) have not reproduced it and in some cases (Domain U) produced dramatically different, pathological results. Status: unverified claim pending the actual script and raw outputs -- NOT confirmed, NOT declared fabricated."]
+    }
+  }
+}
