@@ -88,31 +88,65 @@ cross-check pre-existing files (created before tonight's domain_M-V work)
 against the claims before writing the first draft. Corrected below.
 
 **132-galaxy SPARC transition-shape result -- Tier A, locally reproduced.**
-Confirmed exactly against `unified_framework_consolidated_2026-08-13.md`
-(lines 130, 356-358, 339-369) and `sparc/domain_K_results.json`: sample
-n=132; choke n=1/2 rms=0.1382 dex, a0=7.5586e-11; choke free-n=0.598849,
-rms=0.1339; McGaugh RAR rms=0.1327 -- exact match to the number quoted.
+
+| Field | Value |
+|---|---|
+| model_version_label | PWC-SPARC-domain-K (pre-existing, predates tonight's domain_M-V work) |
+| script_path / sha256 | `sparc/domain_K_rar.py` / `EE0743EE18ACB95C49A96CB933EA9DA388D51DDD791C86448A095BDFB52BA567` |
+| result_file_path / sha256 | `sparc/domain_K_results.json` / `2C0AB72EBF0DC23AB69652B104467D1EAF958233DC4DEF703F434BFA68C1F51D` |
+| source_data | `sparc/vizier_t1.txt`, `sparc/vizier_t2.txt` (checksums as recorded above) |
+| command_to_verify | `cd sparc && python domain_K_rar.py` |
+| metric | RMS of (log10(g_obs)-log10(g_pred)), dex, n=132 usable galaxies |
+| a0 provenance | fit via bounded scipy.optimize, not fixed a priori |
+| n=0.5 provenance | forced by the flat-rotation-curve/low-acceleration requirement -- a genuine zero-choice constraint, not a fit |
+| n=0.598849 provenance | fit jointly with a0, an empirical refinement, not forced |
+| verified results | n=0.5: a0=7.5586e-11, rms=0.13824 dex; n=0.598849 (free): rms=0.13392 dex; McGaugh RAR: rms=0.13265 dex |
+| cross_reference | `unified_framework_consolidated_2026-08-13.md`, lines 130, 356-358, 339-369 |
+
 Source's own honest caveat retained: the transition-sharpness parameter
-s=1.51 is fitted, not derived, unlike n=1/2 which is forced by the
-flat-rotation-curve requirement itself.
+s=1.51 (a separate, related test) is fitted, not derived, unlike n=1/2
+which is forced by the flat-rotation-curve requirement itself.
 
 **41-galaxy dwarf-spheroidal transfer -- Tier A, locally reproduced.**
-Confirmed exactly against `sparc/domain_L_dsph_test.py` and
-`sparc/dsph/domain_L_results.json` (full per-galaxy breakdown: Sagittarius
-dSph, Draco, Fornax, M32, Andromeda satellites, etc.): n=41, rho=0.7436,
-p=2.5507e-08, rms=0.25302 dex -- exact match.
 
-**Compact-object stiffness (K) scan -- source exists, specific claim NOT
-reproduced.** `PWC/stiffening_K_scan.py` and `PWC/continuous_stiffening_limit.py`
-are real, pre-existing scripts and were run directly tonight. Neither
-supports "~1.5% stable across an eightfold K scan": the K-scan shows
-R_envelope varying from 0.006 km to 19,053.7 km (6+ orders of magnitude)
-across K=1e7 to 1e20, and the normalized ratio R/sqrt(K*G*rho_max) computed
-directly is not constant either. The companion script explicitly flags its
-own K=1e7 as "UNCALIBRATED -- illustrative" and shows R and M *growing*
-with density fraction, not staying fixed. This is a genuine, tested
-discrepancy between the claim and the real local artifacts -- not an
-absence of source material.
+| Field | Value |
+|---|---|
+| model_version_label | PWC-SPARC-domain-L (pre-existing, predates tonight's domain_M-V work) |
+| script_path / sha256 | `sparc/domain_L_dsph_test.py` / `700081CD1AE2046079369C80B79963D1D897C8DAEB876F67759C5E414DD0A087` |
+| result_file_path / sha256 | `sparc/dsph/domain_L_results.json` / `33E696A2FD2E689AA43703A8AFCFB957C4D5AB80DAD0D464309D2A841D719736` |
+| source_data | `sparc/dsph/dsph_data.tsv` (McConnachie 2012, VizieR J/AJ/144/4) / `BC08AF595A36BC3A7213CD4AA63413911C36B802C4C5A6E3CD48D7FE65B8CA64`; plus `dsph_raw.txt`, `dsph_fields.txt` |
+| command_to_verify | `cd sparc && python domain_L_dsph_test.py` |
+| metric | Spearman rho + RMS (dex), n=41 gas-free/gas-poor dwarfs (M_HI/M_star<0.05) |
+| parameter provenance | (a0, s) carried unchanged from the globally-fitted free-shape SPARC relation -- no dwarf-specific refit; genuine out-of-sample transfer |
+| verified results | n=41, rho=0.7436, p=2.5507e-08, rms=0.25302 dex |
+| cross_reference | `unified_framework_consolidated_2026-08-13.md`, Part 8, line 411+ |
+
+**Compact-object K-scan -- parameter-version mismatch, unresolved (not a failure, a caught inconsistency).**
+
+```yaml
+compact_K_scan_parameter_reconciliation:
+  status: "locally_executable_but_parameter_version_mismatch_unresolved"
+  local_artifacts: ["PWC/stiffening_K_scan.py", "PWC/continuous_stiffening_limit.py"]
+  observed_code_value: {rho_max: 4.6e17, units: "kg m^-3"}
+  current_framework_value: {rho_HDF_max: 4.6e10, units: "kg m^-3"}
+  discrepancy: "7 orders of magnitude, unresolved"
+  possible_explanations:
+    - "Different density variables: rho_Sintot,max (neutron/nuclear-core) vs rho_HDF,max (diffuse medium) are distinct and should be labeled as such, not conflated"
+    - "Unit conversion or transcription mismatch between draft versions"
+    - "The compact scripts predate the current universal HDF rule -- an earlier model version, not validation of 4.6e10"
+  resolution_status: "OPEN -- preserved for the record, not classified as verified under the current framework"
+```
+
+Beyond the unit mismatch, running both scripts directly also did not
+reproduce the specific claimed "~1.5% stable across an eightfold K scan":
+`stiffening_K_scan.py` shows R_envelope varying from 0.006 km to 19,053.7 km
+(6+ orders of magnitude) across K=1e7 to 1e20, and the normalized ratio
+R/sqrt(K*G*rho_max) computed directly is not constant either.
+`continuous_stiffening_limit.py` scans a different variable (central
+density fraction, not K) at an explicitly-flagged "UNCALIBRATED" K, and
+shows R and M *growing*, not stabilizing. Do not merge these values or
+treat the K-scan as validating the current 4.6e10 parameter until the
+variable definitions and model version are reconciled.
 
 **GW150914-specific ledger (62.3 Msun final, ~5.4e47 J) -- partially
 source-recorded.** The general interpretive framing ("the ~3 solar masses
