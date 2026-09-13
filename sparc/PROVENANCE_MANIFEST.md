@@ -1,10 +1,127 @@
-# SPARC/PWC continuum-model provenance manifest
+# PWC Universal HDF/LDF Framework v1 -- provenance manifest
 
-Covers every domain script run tonight (M, N, R, S, T-IVP, U, U2 [killed,
-incomplete], V [BVP, convergence-tested only, not fit]). Compiled after
-the fact from the actual scripts and results files on disk -- anything
-NOT actually recorded (e.g. a full per-galaxy sweep) is stated as missing
-rather than reconstructed from memory.
+The primary record leads with PWC's own stated ontology and rules,
+clearly tagged as premises (not verified or derived by any script in this
+repository). Claude's numerical surrogate tests and solver investigations
+are preserved in full but demoted to an appendix
+(`Surrogate and numerical audits`, below) -- they test specific, narrow
+proxies and closures, several of which were rejected or left unresolved.
+They do not define or redefine PWC's ontology.
+
+## Ontology (PWC premise)
+
+- **Substrate**: Space is not physical nothing. The baseline is a finite,
+  mass-bearing HDF/LDF medium with state-dependent density, stress,
+  propagation geometry, and compressibility.
+- **Sintot**: organized/condensed medium inventory -- matter is a stable
+  organized state of the same underlying medium, not an unrelated
+  ontological substance.
+- **Conservation**: matter-energy is not created from nothing, destroyed
+  at a singularity, or sent through a required separate universe. It
+  reorganizes among condensed Sintot, bound/compressed HDF, baseline HDF,
+  propagating LDF, and outward HDF/gravity-wave modes.
+- **Physical limits**: no physical zero, no physical infinity, no
+  singularity, no required hard reflecting horizon.
+
+## Rules (PWC premise, except where a specific proxy is separately rejected)
+
+- **Mass ledger**: `M_total = M_Sintot + M_HDF,bound + M_HDF,excess`
+- **Gravity**: more locally concentrated HDF corresponds to greater pull;
+  exterior constraint `a(r) = -G*M_ledger/r^2` (required match, not yet
+  independently derived from a medium functional in this session).
+- **Lensing**: LDF/light follows locally straight available paths through
+  curved/inhomogeneous HDF geometry -- path guidance, not ordinary
+  refractive drag or sub-local-limit photon slowing. No ray-equation
+  derivation was performed in this session.
+- **Redshift**: HDF density state determines local process constraint;
+  denser-HDF emission observed from lower-density HDF/LDF is redshifted.
+  No explicit state-to-process mapping was derived or tested this session.
+- **Compact objects**: a finite high-density HDF/Sintot core plus a
+  continuously descending compressed-HDF envelope, `rho_HDF_max =
+  4.6e10 kg/m^3` (distinct from neutron/nuclear matter density -- this
+  exact conflation was made and corrected earlier in this session's audit).
+- **Mergers**: `M_1+M_2 = M_final + E_HDF_wave/c^2` as an identity; the
+  emitted fraction requires the full radial density-envelope structure,
+  relative sizes, overlap geometry, and spin/flow state -- **a frozen
+  one-constant version (k~0.8525, and separately f~0.04594) was tested
+  and did NOT transfer to a held-out event (GW190412); the identity is
+  retained as premise, the frozen-fraction proxy is rejected.**
+
+## Excluded substitutions (explicitly rejected, so they cannot re-enter quietly)
+
+| Substitution | Status |
+|---|---|
+| Finite HDF core means a rigid reflective surface | Rejected -- finite continuous gradient/trapping is not a mirror |
+| HDF maximum density equals neutron-core nuclear density | Rejected -- distinct regimes; this exact error was made and corrected in this session |
+| All compact-object density is uniform at rho_HDF,max | Rejected -- PWC specifies a finite high-density centre and descending envelope |
+| Local gas pull fraction g_gas/g_bar equals accessible HDF volume | Rejected -- tested directly as Domain R; q_ext converged to 0 |
+| A frozen mass-only merger release coefficient is the PWC merger law | Rejected -- failed a held-out test (GW190412) |
+| PWC requires an empty exterior, singularity, dark-halo particle, or another universe | Rejected -- contradicts the finite-medium ledger |
+| A failed IVP or nonconverged BVP proxy falsifies the universal PWC framework | Rejected -- constrains only the specific implemented proxy (Domains S/U/U2/V) |
+
+## Current derivations
+
+**Diffuse isothermal HDF branch -- derived and verified this session.**
+Derived analytically this session and independently confirmed numerically
+via Domain V's baryon-free control run (an actual `solve_bvp` integration
+reproducing the predicted asymptotic slope, -2.02 to -2.51 near the outer
+boundary against a target of -2 -- not assumed, checked).
+```
+dP_excess/dr = -rho_excess*G*M(<r)/r^2,  dM/dr = 4*pi*r^2*rho_excess
+=> rho_HDF_excess(r) = c_s^2/(2*pi*G*r^2),  M_HDF(<r) = 2*c_s^2*r/G,  v_c^2 = 2*c_s^2
+```
+**Scope, stated plainly**: this is confirmed ONLY in the baryon-free
+control case. Whether the full baryon-coupled, finite-disk problem
+selects this branch for real galaxies is UNRESOLVED -- Domain V's
+real-galaxy convergence test found multiple competing solution branches,
+not a clean selection of this one.
+
+**Compact HDF saturation limit** (`rho_HDF_max=4.6e10 kg/m^3`, finite core
++ descending envelope, no singularity): stated as PWC's fixed physical
+rule (premise) in this record. **Not independently derived** from a
+medium functional by any script in this repository.
+
+**Unverified claims pending source** -- the following were supplied in
+conversation with no matching script, results file, or raw output located
+anywhere in this repository, and with sample sizes that do not match any
+run actually performed here (every SPARC fit in this repo used the
+104-train/45-holdout, 149-galaxy split, seed=7). Recorded for the record,
+NOT as verified results:
+- 132-galaxy fixed-n=1/2 SPARC fit: claimed 0.1382 dex, a0=7.56e-11
+- 132-galaxy free-exponent fit: claimed n=0.599, 0.1339 dex
+- McGaugh RAR on the same 132-galaxy sample: claimed 0.1327 dex
+- 41-galaxy dwarf-spheroidal transfer: claimed rho=0.744, p=2.55e-8, 0.253 dex
+- Compact-object stiffness (K) scan: claimed R~sqrt(K*G*rho_max), stable to ~1.5% over an 8x scan in K
+- GW150914-specific bookkeeping: claimed 36.2+29.1->62.3 Msun, ~3.0 Msun / ~5.4e47 J released
+
+An externally pasted, temporary AWS S3 pre-signed URL was offered as a
+supporting source for some of the above. It was NOT fetched -- a
+short-lived signed link cannot be authenticated or archived as a
+provenance source, and pulling arbitrary external content into a
+provenance document defeats the purpose of the document.
+
+---
+
+# Surrogate and numerical audits (appendix)
+
+Tests, approximations, and solver investigations performed during model
+development. These do NOT redefine the PWC ontology or replace its
+specified density-envelope and mass-ledger rules above.
+
+| Domain | Status | Do not interpret as |
+|---|---|---|
+| M | reproducible_proxy_result | a complete PWC continuum derivation -- it is an algebraic phenomenological baseline |
+| N | rejected_proxy | a test of the HDF accessible-volume mechanism -- k_ext converged to ~0 |
+| R | rejected_proxy | a test of physical gas permeability -- q_ext converged to 0 |
+| S | implementation_error | mixed compact-saturation (rho_max) and diffuse-galaxy (rho_gal) normalizations in the same equation |
+| T-IVP | numerical_nonconvergence | boundary-independence check failed -- linear, non-attracting regime |
+| U | implementation_error | u left unbounded, reached its physical ceiling (u=1); superseded |
+| U2 | numerical_nonconvergence | killed before completion once a genuine 2-sided BVP was required |
+| V | numerical_nonconvergence | baryon-free control PASSED; real-galaxy convergence FAILED (multiple branches); no SPARC fit attempted |
+| T (claimed) | unverified_external_claim | no script, results JSON, or raw output located anywhere in this repository |
+
+The detailed per-domain equations, parameters, solver settings, and
+results below are preserved in full from the original manifest.
 
 ## Environment
 
