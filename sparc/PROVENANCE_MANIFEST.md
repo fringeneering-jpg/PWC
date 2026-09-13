@@ -81,18 +81,47 @@ not a clean selection of this one.
 rule (premise) in this record. **Not independently derived** from a
 medium functional by any script in this repository.
 
-**Unverified claims pending source** -- the following were supplied in
-conversation with no matching script, results file, or raw output located
-anywhere in this repository, and with sample sizes that do not match any
-run actually performed here (every SPARC fit in this repo used the
-104-train/45-holdout, 149-galaxy split, seed=7). Recorded for the record,
-NOT as verified results:
-- 132-galaxy fixed-n=1/2 SPARC fit: claimed 0.1382 dex, a0=7.56e-11
-- 132-galaxy free-exponent fit: claimed n=0.599, 0.1339 dex
-- McGaugh RAR on the same 132-galaxy sample: claimed 0.1327 dex
-- 41-galaxy dwarf-spheroidal transfer: claimed rho=0.744, p=2.55e-8, 0.253 dex
-- Compact-object stiffness (K) scan: claimed R~sqrt(K*G*rho_max), stable to ~1.5% over an 8x scan in K
-- GW150914-specific bookkeeping: claimed 36.2+29.1->62.3 Msun, ~3.0 Msun / ~5.4e47 J released
+**Correction (post-initial-draft):** the first version of this manifest
+wrongly tagged the next two items as `unverified_claim_pending_source`.
+They were sitting in this exact repository the whole time -- I failed to
+cross-check pre-existing files (created before tonight's domain_M-V work)
+against the claims before writing the first draft. Corrected below.
+
+**132-galaxy SPARC transition-shape result -- Tier A, locally reproduced.**
+Confirmed exactly against `unified_framework_consolidated_2026-08-13.md`
+(lines 130, 356-358, 339-369) and `sparc/domain_K_results.json`: sample
+n=132; choke n=1/2 rms=0.1382 dex, a0=7.5586e-11; choke free-n=0.598849,
+rms=0.1339; McGaugh RAR rms=0.1327 -- exact match to the number quoted.
+Source's own honest caveat retained: the transition-sharpness parameter
+s=1.51 is fitted, not derived, unlike n=1/2 which is forced by the
+flat-rotation-curve requirement itself.
+
+**41-galaxy dwarf-spheroidal transfer -- Tier A, locally reproduced.**
+Confirmed exactly against `sparc/domain_L_dsph_test.py` and
+`sparc/dsph/domain_L_results.json` (full per-galaxy breakdown: Sagittarius
+dSph, Draco, Fornax, M32, Andromeda satellites, etc.): n=41, rho=0.7436,
+p=2.5507e-08, rms=0.25302 dex -- exact match.
+
+**Compact-object stiffness (K) scan -- source exists, specific claim NOT
+reproduced.** `PWC/stiffening_K_scan.py` and `PWC/continuous_stiffening_limit.py`
+are real, pre-existing scripts and were run directly tonight. Neither
+supports "~1.5% stable across an eightfold K scan": the K-scan shows
+R_envelope varying from 0.006 km to 19,053.7 km (6+ orders of magnitude)
+across K=1e7 to 1e20, and the normalized ratio R/sqrt(K*G*rho_max) computed
+directly is not constant either. The companion script explicitly flags its
+own K=1e7 as "UNCALIBRATED -- illustrative" and shows R and M *growing*
+with density fraction, not staying fixed. This is a genuine, tested
+discrepancy between the claim and the real local artifacts -- not an
+absence of source material.
+
+**GW150914-specific ledger (62.3 Msun final, ~5.4e47 J) -- partially
+source-recorded.** The general interpretive framing ("the ~3 solar masses
+conventionally described as radiated in GW150914 are interpreted as
+involving space/the medium itself") is real, at `PWC.md` line 133. The
+specific numbers (36.2+29.1->62.3 Msun, 5.4e47 J) do not appear in
+`PWC.md` or `pwc_gw150914_pipeline.py`, and no matching results file was
+located. Qualitative interpretation: Tier B. Specific quantitative ledger:
+unverified pending its actual source.
 
 An externally pasted, temporary AWS S3 pre-signed URL was offered as a
 supporting source for some of the above. It was NOT fetched -- a

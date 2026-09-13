@@ -123,41 +123,50 @@
       "endpoint_statement": "Collapse terminates in a finite high-density HDF/Sintot core and a continuous descending HDF transition envelope; no physical zero-volume singularity is used.",
       "status_note": "This is asserted, not derived from a medium functional, in this session's record."
     },
-    "unverified_claims_pending_source": {
-      "status": "unverified_claim_pending_source",
-      "note": "The following numbers were supplied in conversation with no matching script, results file, or raw output located anywhere in this repository. Sample sizes and specifics do not match any run actually performed and archived in this session (all SPARC fits in this repo used the 104-train/45-holdout, 149-galaxy split, seed=7). They are recorded here for the record, NOT as verified results, pending the actual source.",
-      "claims": [
-        {
-          "label": "132-galaxy fixed n=1/2 SPARC fit",
-          "claimed_rms_dex": 0.1382,
-          "claimed_a0": 7.56e-11
-        },
-        {
-          "label": "132-galaxy free-exponent SPARC fit",
-          "claimed_n": 0.599,
-          "claimed_rms_dex": 0.1339
-        },
-        {
-          "label": "McGaugh RAR benchmark on the same 132-galaxy sample",
-          "claimed_rms_dex": 0.1327
-        },
-        {
-          "label": "41-galaxy dwarf-spheroidal transfer",
-          "claimed_spearman_rho": 0.744,
-          "claimed_p": 2.55e-08,
-          "claimed_rms_dex": 0.253
-        },
-        {
-          "label": "compact-object stiffness (K) scan",
-          "claimed_scaling": "R ~ sqrt(K*G*rho_HDF_max)",
-          "claimed_stability": "~1.5% across an eightfold scan in K"
-        },
-        {
-          "label": "GW150914-specific bookkeeping",
-          "claimed_masses": "36.2 + 29.1 -> 62.3 Msun",
-          "claimed_release": "~3.0 Msun, ~5.4e47 J"
-        }
-      ]
+    "sparc_transition_shape_132galaxy": {
+      "status": "locally_reproduced_tier_A",
+      "verification": "Confirmed directly against real, pre-existing local files that were already in this repository before tonight's domain_M-V work began -- I failed to cross-check them before the first manifest draft; corrected here.",
+      "sources": [
+        "unified_framework_consolidated_2026-08-13.md, lines 356-358 (table) and lines 339-369 (Part 6 discussion)",
+        "sparc/domain_K_results.json (exact match: choke_n_0.5000 a0=7.5586e-11, rms=0.13824; choke_free_n n=0.598849, rms=0.13392; rar_mcgaugh rms=0.13265)",
+        "sample size 132 usable galaxies confirmed at unified_framework_consolidated_2026-08-13.md line 130"
+      ],
+      "results": {
+        "sample_n": 132,
+        "choke_n_half_rms_dex": 0.1382,
+        "choke_free_n": 0.599,
+        "choke_free_n_rms_dex": 0.1339,
+        "mcgaugh_rar_rms_dex": 0.1327
+      },
+      "honest_caveat_from_source": "s=1.51 (transition sharpness) is fitted, not derived -- unlike n=1/2 which is forced by the flat-rotation-curve requirement itself."
+    },
+    "dwarf_spheroidal_transfer_41": {
+      "status": "locally_reproduced_tier_A",
+      "verification": "Confirmed directly against real, pre-existing local files (sparc/domain_L_dsph_test.py, sparc/dsph/domain_L_results.json) -- exact match to the decimal.",
+      "sources": [
+        "sparc/dsph/domain_L_results.json: n=41, rho=0.7436, p=2.5507e-08, rms_dex=0.25302, full per-galaxy breakdown (Sagittarius dSph, Draco, Fornax, M32, Andromeda satellites, etc.)",
+        "unified_framework_consolidated_2026-08-13.md, Part 8 (line 411+), data source McConnachie 2012 (VizieR J/AJ/144/4)"
+      ],
+      "results": {
+        "n": 41,
+        "spearman_rho": 0.7436,
+        "p": 2.5507e-08,
+        "rms_dex": 0.25302
+      }
+    },
+    "compact_object_K_scan": {
+      "status": "source_exists_but_claim_not_reproduced",
+      "verification": "Real, pre-existing scripts (PWC/stiffening_K_scan.py, PWC/continuous_stiffening_limit.py) exist and were run directly. Neither reproduces the claimed '~1.5% stable across an eightfold K scan'.",
+      "actual_results": {
+        "stiffening_K_scan.py": "R_envelope varies from 0.006 km to 19053.7 km and M_excess from 1e-11 to 1.9e9 Msun across K=1e7 to 1e20 -- varies over 6+ orders of magnitude with K, not stable. The specific normalized ratio R/sqrt(K*G*rho_max) also does not come out constant (computed directly: ratio ~1e-7, not ~1).",
+        "continuous_stiffening_limit.py": "Different test (scans central-density FRACTION at fixed, explicitly UNCALIBRATED K=1e7, per the script's own comment) -- shows R and M both GROWING (0.006->0.39 km) as density fraction approaches rho_max, not staying fixed; the script's own printed interpretation says this confirms 'grows' behavior, not stability."
+      },
+      "conclusion": "Neither real, locally-run script supports the specific '~1.5% stability' claim as stated. This is a genuine unresolved discrepancy between the claim and the actual local artifacts, not an absence of source material."
+    },
+    "gw150914_specific_ledger": {
+      "status": "partially_source_recorded",
+      "verification": "The general framing ('the ~3 solar masses conventionally described as radiated in GW150914 are interpreted as involving space/the medium itself') is real and present at PWC.md line 133. The SPECIFIC numbers claimed (36.2+29.1->62.3 Msun, ~5.4e47 J) do not appear in PWC.md or pwc_gw150914_pipeline.py, and no results file with these exact figures was located.",
+      "conclusion": "The qualitative interpretation is source-recorded (Tier B); the specific quantitative ledger (62.3 Msun final, 5.4e47 J) is not found in any local file and remains unverified pending its actual source."
     }
   },
   "dataset": {
