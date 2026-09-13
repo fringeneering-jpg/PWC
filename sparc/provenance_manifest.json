@@ -205,28 +205,17 @@
       "conclusion": "The qualitative interpretation is source-recorded (Tier B); the specific quantitative ledger (62.3 Msun final, 5.4e47 J) is not found in any local file and remains unverified pending its actual source."
     },
     "compact_K_scan_parameter_reconciliation": {
-      "status": "locally_executable_but_parameter_version_mismatch_unresolved",
+      "status": "RESOLVED -- different physical variable, different model era",
+      "method": "Full read of both scripts + grep for hdf/sintot/neutron/core (zero occurrences in either) + file date comparison",
       "local_artifacts": [
-        "PWC/stiffening_K_scan.py",
-        "PWC/continuous_stiffening_limit.py"
+        "PWC/stiffening_K_scan.py (2026-09-10)",
+        "PWC/continuous_stiffening_limit.py (2026-09-10)"
       ],
-      "observed_code_value": {
-        "rho_max": 4.6e+17,
-        "units": "kg m^-3"
-      },
-      "current_framework_value": {
-        "rho_HDF_max": 46000000000.0,
-        "units": "kg m^-3"
-      },
-      "discrepancy": "7 orders of magnitude, unresolved",
-      "possible_explanations": [
-        "Different density variables: rho_Sintot,max (neutron/nuclear-core saturation) vs rho_HDF,max (diffuse-medium saturation) are distinct physical quantities that should be labeled as such, not conflated",
-        "Unit conversion or transcription mismatch between draft versions",
-        "The compact scripts predate the current universal HDF rule and represent an earlier model version -- should be archived as such, not read as validation of the current 4.6e10 value"
-      ],
-      "additional_finding_this_session": "Beyond the unit mismatch, directly running both scripts also failed to reproduce the specific claimed '~1.5% stable across an eightfold K scan' result: stiffening_K_scan.py shows R_envelope varying from 0.006 km to 19053.7 km (6+ orders of magnitude) across K=1e7 to 1e20, and the normalized ratio R/sqrt(K*G*rho_max) is not constant when computed directly. continuous_stiffening_limit.py scans a different variable (central density fraction, not K) at an explicitly-flagged 'UNCALIBRATED' K, and shows R and M growing, not stabilizing.",
-      "interpretation": "Do not merge these values or claim the local K-scan validates the current rho_HDF_max=4.6e10 parameter, and do not describe the '~1.5% stability' claim as reproduced, until the variable definitions and model version are reconciled.",
-      "resolution_status": "OPEN -- preserved for the record, not classified as verified under the current framework"
+      "reference_point": "PWC/dynamic_knot_solver.py (2026-09-13) -- where the HDF/LDF/Sintot vocabulary and rho_HDF_max=4.6e10 parameter actually originate, 3 days AFTER the compact scripts",
+      "finding": "Neither compact script contains the words hdf, sintot, neutron, or core anywhere -- they predate that vocabulary entirely. Their own comments and physical setup (real degenerate/incompressible matter, GW150914-relevant total mass ~28-36 Msun, radii checked in the tens-of-km range) unambiguously describe compact-object/nuclear-density-scale core material -- 4.6e17 kg/m^3 sits at the nuclear saturation density scale. This is a categorically different physical regime from the diffuse, kpc-scale galactic medium parameter (rho_HDF_max=4.6e10) used in tonight galaxy-scale work.",
+      "conclusion": "Combination of reconciliation explanations 1 and 3: a genuinely different density variable (compact/degenerate core density vs diffuse HDF medium density) from an earlier model version/vocabulary, not a transcription error and not a genuine parameter conflict -- neither script asserts these are the same quantity.",
+      "remaining_action": "Neither script gives its rho_max an explicit, disambiguated name (e.g. rho_Sintot_max or rho_core_max) -- recommended naming fix for future work, not a retroactive claim about what these scripts already say.",
+      "additional_finding_retained": "Independent of the naming question, running both scripts directly still does not reproduce the specific claimed \"~1.5% stable across an eightfold K scan\": stiffening_K_scan.py shows R_envelope varying from 0.006 km to 19053.7 km (6+ orders of magnitude) across K=1e7 to 1e20."
     }
   },
   "dataset": {

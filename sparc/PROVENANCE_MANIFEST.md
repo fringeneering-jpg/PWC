@@ -121,32 +121,26 @@ which is forced by the flat-rotation-curve requirement itself.
 | verified results | n=41, rho=0.7436, p=2.5507e-08, rms=0.25302 dex |
 | cross_reference | `unified_framework_consolidated_2026-08-13.md`, Part 8, line 411+ |
 
-**Compact-object K-scan -- parameter-version mismatch, unresolved (not a failure, a caught inconsistency).**
+**Compact-object K-scan parameter reconciliation -- RESOLVED.**
 
-```yaml
-compact_K_scan_parameter_reconciliation:
-  status: "locally_executable_but_parameter_version_mismatch_unresolved"
-  local_artifacts: ["PWC/stiffening_K_scan.py", "PWC/continuous_stiffening_limit.py"]
-  observed_code_value: {rho_max: 4.6e17, units: "kg m^-3"}
-  current_framework_value: {rho_HDF_max: 4.6e10, units: "kg m^-3"}
-  discrepancy: "7 orders of magnitude, unresolved"
-  possible_explanations:
-    - "Different density variables: rho_Sintot,max (neutron/nuclear-core) vs rho_HDF,max (diffuse medium) are distinct and should be labeled as such, not conflated"
-    - "Unit conversion or transcription mismatch between draft versions"
-    - "The compact scripts predate the current universal HDF rule -- an earlier model version, not validation of 4.6e10"
-  resolution_status: "OPEN -- preserved for the record, not classified as verified under the current framework"
-```
+Method: full read of both scripts, grep for `hdf|sintot|neutron|core`
+(zero occurrences in either file), and a file-date comparison against
+`dynamic_knot_solver.py` (where the HDF/LDF/Sintot vocabulary and
+`rho_HDF_max=4.6e10` actually originate).
 
-Beyond the unit mismatch, running both scripts directly also did not
-reproduce the specific claimed "~1.5% stable across an eightfold K scan":
-`stiffening_K_scan.py` shows R_envelope varying from 0.006 km to 19,053.7 km
-(6+ orders of magnitude) across K=1e7 to 1e20, and the normalized ratio
-R/sqrt(K*G*rho_max) computed directly is not constant either.
-`continuous_stiffening_limit.py` scans a different variable (central
-density fraction, not K) at an explicitly-flagged "UNCALIBRATED" K, and
-shows R and M *growing*, not stabilizing. Do not merge these values or
-treat the K-scan as validating the current 4.6e10 parameter until the
-variable definitions and model version are reconciled.
+| Field | Value |
+|---|---|
+| local_artifacts | `PWC/stiffening_K_scan.py` (2026-09-10), `PWC/continuous_stiffening_limit.py` (2026-09-10) |
+| reference_point | `PWC/dynamic_knot_solver.py` (2026-09-13) -- 3 days *after* the compact scripts |
+| finding | Neither compact script contains "hdf", "sintot", "neutron", or "core" anywhere -- they predate that vocabulary entirely. Their own comments/setup ("real degenerate/incompressible matter", GW150914-relevant total mass ~28-36 Msun, radii checked in the tens-of-km range) unambiguously describe compact-object/nuclear-density-scale core material -- 4.6e17 kg/m^3 sits at the nuclear saturation density scale, a categorically different regime from the diffuse, kpc-scale galactic medium parameter used tonight |
+| conclusion | Combination of explanations 1 and 3: a genuinely different density variable (compact/degenerate core density vs diffuse HDF medium density) from an earlier model version, not a transcription error and not a genuine parameter conflict -- neither script asserts these are the same quantity |
+| remaining_action | Neither script gives its rho_max an explicit, disambiguated name (e.g. rho_Sintot_max / rho_core_max) -- recommended naming fix going forward, not a retroactive claim about what the scripts already say |
+
+Independent of the naming question, running both scripts directly still
+does not reproduce the specific claimed "~1.5% stable across an eightfold
+K scan": `stiffening_K_scan.py` shows R_envelope varying from 0.006 km to
+19,053.7 km (6+ orders of magnitude) across K=1e7 to 1e20. That finding
+stands on its own, separate from the now-resolved naming question.
 
 **GW150914-specific ledger (62.3 Msun final, ~5.4e47 J) -- partially
 source-recorded.** The general interpretive framing ("the ~3 solar masses
