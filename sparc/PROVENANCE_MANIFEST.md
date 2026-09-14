@@ -84,6 +84,38 @@ of an equation does not imply the physical process is symmetric or free
 in both directions. This reinforces, rather than contradicts, the
 existing E_lock/exceptional-reverse-equalisation framing.
 
+**Entropy ironing mechanism (2026-09-14):** the medium (HDF) is a fluid,
+tension-bearing superfluid (see Lensing section below). It "irons
+itself into the medium" via matter (Sintot/locked structures) acting as
+the iron: matter falling into / merging with mass concentrations,
+radiating energy back into HDF (`M1+M2 = M_final + E_HDF_wave/c0^2`,
+already on record), consumed/used up irreversibly in the process --
+"kamikaze pilots," one-way, no return trip. Same entropy-favorable
+direction as the emission side of the entropy asymmetry above.
+
+**Refinement:** a single large merger/kamikaze event (the "scraper")
+only reaches gross-scale tension features in the medium. Effective
+ironing/smoothing requires the energy broken down to fine grain,
+distributed throughout the medium (the "water pick"), reaching
+irregularities a single macro-scale event cannot. Real grounding: this
+matches the established physics of turbulent energy cascade (Kolmogorov,
+1941) -- a large-scale disturbance cannot dissipate into heat directly
+at the scale it is injected; it cascades down through progressively
+smaller eddies until reaching the scale where viscosity actually
+converts motion into heat. The large event is the correct *direction*
+(entropy-favorable, one-way, consumes the matter involved) but not by
+itself the correct *grain* -- the released energy must cascade to fine,
+widely distributed interactions before the medium's tension actually
+relaxes.
+
+**Honest caveat:** qualitative and structurally coherent, not a
+derivation. No cascade rate, dissipation scale, or fine-vs-macro
+efficiency ratio has been computed or measured for HDF anywhere in
+this project. Refines, does not replace, the Mergers rule and entropy-
+asymmetry note above; may eventually bear on how HDF's tension actually
+relaxes near a mass concentration (relevant to the open lensing
+derivation below), but supplies no number yet.
+
 **Bookkeeping constraint, binding on all subsequent HDF/LDF/Sintot
 mechanics:** any energy released or absorbed as light corresponds to a
 mass change, `Delta_M = Delta_L / c0^2`. Sign: Delta_M > 0 when the
