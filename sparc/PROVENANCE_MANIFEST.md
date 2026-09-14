@@ -829,6 +829,43 @@ geometry, coupled to a genuinely irreversible, anisotropic source term
 and HDF's own real dissipation -- is substantial applied-math work not
 yet attempted. Scope stated honestly as open, not simulated.
 
+**GW event correction and the Lorentz-invariance constraint
+(2026-09-14):** GW150914 (~3 M☉ radiated as GW energy, no confirmed
+gamma-ray counterpart) and GW170817 (neutron-star merger, much less GW
+energy, *with* GRB 170817A arriving 1.7 s later) are two distinct
+events with two distinct roles -- only GW170817 constrains `c_GW` vs
+`c_light`. The 1.7 s delay is not raw propagation-speed evidence: the
+real LIGO/Virgo bound (`|v_GW−c|/c ~ 10⁻¹⁵`) is derived by accounting
+for jet-formation/breakout emission delay at the source, not by
+treating the full 1.7 s as propagation lag. Refines, without
+reversing, the shared-c mechanism entry already on record (correctly
+framed there as "fractional difference effectively identical," not
+"GW measurably outran light").
+
+Any literal HDF resistance-diverges-at-`c` mechanism, if it implies a
+real preferred rest frame with physical consequences, must satisfy
+extremely tight, real experimental bounds on Lorentz invariance
+violation (clock-comparison experiments, modern Michelson-Morley
+descendants, gamma-ray-burst/cosmic-ray timing bounds on energy-
+dependent photon speed -- real constraints around `10⁻¹⁵`-`10⁻¹⁶` for
+various effects, Standard-Model Extension literature, Kostelecký and
+collaborators, not a philosophical objection). Sharp distinction this
+framework needs to state explicitly: (a) if the resistance picture is
+a *reinterpretation* mathematically equivalent to standard SR
+kinematics (a modern Lorentzian-ether reading of relativity reproduces
+Einstein's SR exactly), it automatically satisfies these tests by
+construction, but is a more modest claim than a real dynamical drag
+effect; (b) if it is a genuinely different dynamical effect with a
+real preferred frame, it must reproduce these bounds precisely, not
+just qualitatively diverge near `c`. Which of these two is being
+claimed has not yet been specified.
+
+**Status:** the resistance-based explanation for the speed limit
+remains a legitimate direction -- and a real, concrete candidate for
+HDF's own dissipation term in the bounded `a₀` calculation -- now with
+the actual bar it must clear stated explicitly rather than left
+implicit.
+
 **Locality correction (2026-09-14):** `a₀` is a *local* effect, not a
 universal one requiring a cosmic-scale coupling -- correcting the
 `H₀`-coupling direction pursued across the preceding exchanges. If
