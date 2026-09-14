@@ -735,7 +735,7 @@ via separate calculations.
 | Wake solution | `δρ(x), δT(x), δP(x)` | Not yet solved -- an actual SOLVED anisotropic wake profile, not an assumed hemisphere |
 | Geometry/boundary condition | Surface, trailing cone, cavity wall, or mode distribution | Not yet specified -- determines the angular factor as an OUTPUT, not an input |
 | Force coupling | `F=-∮_∂V P(x)n̂dA` | Not yet carried out -- converts the actual pressure distribution into a real acceleration |
-| Cosmological coupling | How `H₀` actually sets `P_background(x)` or a gradient | Not yet specified -- not merely a background temperature asserted by analogy |
+| ~~Cosmological coupling~~ Local material constant | **Superseded 2026-09-14** -- see locality correction below | Not `H₀`; not yet identified |
 
 **Status summary:** neither `a₀=c₀H₀` nor any hemispheric variant
 (`c₀H₀/6`, `2^(1/4)c₀H₀`, `2c₀H₀`) is derived. All rest on an imposed
@@ -743,6 +743,24 @@ scalar-matching assumption that was never physically justified as a
 force-generating mechanism. A real derivation requires solving the six
 elements above, not finding the right prefactor to apply to a scalar
 equality.
+
+**Locality correction (2026-09-14):** `a₀` is a *local* effect, not a
+universal one requiring a cosmic-scale coupling -- correcting the
+`H₀`-coupling direction pursued across the preceding exchanges. If
+`a₀` is set by HDF's own intrinsic local material properties (`c_s0`,
+its compressibility, its tension) rather than a literal coupling to
+the cosmic expansion rate, its universality across galaxies needs no
+separate explanation: every galaxy sits in the same one medium, and
+that medium's own local material constants don't vary from place to
+place. Same substrate, same local physics, same answer, everywhere --
+no mechanism connecting a local dynamical effect to a global expansion
+rate is required. More parsimonious than the `H₀`-coupling line, and
+dissolves the local-to-global bridging question raised earlier (the
+pop-pop-boat exchange: what plays the role of the tube geometry --
+answer: HDF's own local material constant, most likely `c_s0` or
+something built from it, not `H₀`). The "cosmological coupling" row
+above is superseded accordingly; the other five roadmap elements are
+unchanged.
 
 **Deep-MOND-limit interpolation -- EMPIRICAL PHENOMENOLOGICAL LAW:**
 `g_obs=√(a₀·g_bar)` is a real target formula, supported by SPARC-132
