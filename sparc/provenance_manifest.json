@@ -642,9 +642,11 @@
       "status": "baseline, PWC algebraic proxy, no continuum ODE"
     },
     "domain_W2_causal_relaxation": {
-      "train_rms_dex": 1000000.0,
-      "holdout_rms_dex": 1000000.0,
-      "status": "non-convergent across full 6-parameter differential_evolution search; root cause not diagnosed for this ODE system"
+      "train_rms_dex": 0.2602,
+      "train_converged": "72/98 (73.5%)",
+      "holdout_rms_dex": 0.2501,
+      "holdout_converged": "29/43 (67.4%)",
+      "status": "CORRECTED 2026-09-14 -- real converged fit, ~2x RAR scatter. Original logged value (1000000.0) was a race-condition artifact from an overwritten output file, not a real result."
     },
     "domain_X_linear_closure": {
       "train_rms_dex": 1000000.0,
@@ -1296,8 +1298,21 @@
         "rar_train": 0.1331,
         "rar_holdout": 0.1293
       },
-      "result": "NEGATIVE. differential_evolution reported f(x)=1000000.0 at step 1 and never improved across the full 6-parameter search (log10(rho_0), log10(Gamma), log10(tau_Pi), log10(tau_pi), alpha1, alpha2). Reported 'Universal parameters' (rho_0=7.512e-24 kg/m^3, Gamma=5.040e-18 /s, tau_Pi=3.999e12 s, tau_pi=4.121e8 s, zeta=9.713e5 Pa*s, eta=50.94 Pa*s, c_s0=0.629c) is an L-BFGS-B polish of a flat, uninformative penalty surface -- not a fit, since min_convergence_frac>=0.5 was never satisfied by any evaluated point. Train/holdout HDF-theory RMS both pinned at exactly 1000000.0000 dex.",
-      "open_item": "Unlike Domain X, the specific numeric root cause of non-convergence was NOT diagnosed for W2's own ODE system. rho_0 was fit freely (not fixed at a wrong-regime constant) and landed at 7.5e-24 kg/m^3 -- a physically plausible order of magnitude, a couple of orders below the Domain Y-inverted galaxy-scale target of ~1e-22 kg/m^3. Whether this shares Domain X's root cause, a different numerical conditioning issue, or a genuine physical inconsistency in the relaxation-ODE formulation is unresolved."
+      "correction_log": "This entry originally (same night) reported a flat non-convergent result (RMS=1000000.0 both sets, rho_0=7.5e-24) -- a race-condition artifact, not a real result. The original background run of this script was launched hours earlier and took a long time to finish; while still silently running, the same script was relaunched twice more under different job IDs, producing failed/degenerate results that got written to and read from the same shared output filename. The original job has since finished and overwrote the file with its real result (recorded below), superseding the incorrect entry. Caught by diffing the file against a very-late background-task completion notification, not assumed correct on read.",
+      "result": "Real, converged fit, not a degenerate surface. differential_evolution genuinely progressed (f(x) fell from 0.430 at step 1 to 0.260 by step 10). Convergence: 72/98 train (73.5%), 29/43 holdout (67.4%) of galaxies produced actual physical solutions -- comfortably above the min_convergence_frac>=0.5 guard. RMS: 0.2602 dex train / 0.2501 dex holdout -- roughly double the scatter of the empirical RAR baseline (0.1293 dex holdout); does not outperform the empirical fit, but is the strongest real (non-degenerate, majority-converged) result from any Domain V/W/W2/X attempt this session.",
+      "fitted_parameters": {
+        "rho_0_kg_m3": 1.999e-21,
+        "note_rho_0": "Much closer to the Domain Y-inverted galaxy-scale target of ~1e-22 kg/m^3 than the earlier, incorrect 7.5e-24 value -- within about one order of magnitude, not several.",
+        "Gamma_s_1": 7.116e-18,
+        "tau_Pi_s": 747200000000.0,
+        "tau_pi_s": 476800000000000.0,
+        "zeta_Pa_s": 64930000.0,
+        "eta_Pa_s": 33110000000.0,
+        "c_s0_m_s": 9480000.0,
+        "c_s0_over_c": 0.0316,
+        "note_c_s0": "Notably NOT close to c -- consistent with the clean parameter ledger's framing that c_s0=c was a short-scale/optical-limit hypothesis, not necessarily the galaxy-scale value."
+      },
+      "open_item": "This is a real fit, not a disproof of the Israel-Stewart-type closure, but clearly worse than the empirical RAR baseline (~2x scatter). Whether that gap closes with a better outer boundary condition, a different closure, or doesn't close at all remains open. The 26/98 train and 14/43 holdout galaxies that still fail to converge were not individually diagnosed -- unknown whether they fail for a shared reason or scattered numerical causes."
     },
     "domain_X_linear_causal_2026-09-14": {
       "model_version": "domain_X_linear_causal.py",

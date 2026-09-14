@@ -1725,27 +1725,48 @@ g_bar = Vbar2 / R * conv
   holdout 0.5154 dex; empirical RAR train 0.1331 dex / holdout 0.1293 dex --
   consistent with every other domain's baseline numbers, confirming the data
   pipeline itself is not the source of any failure here.
-- **Result: NEGATIVE.** `differential_evolution` reported `f(x)=1000000.0` at
-  step 1 and never improved on it across the full 6-parameter search
-  (`log10(rho_0), log10(Gamma), log10(tau_Pi), log10(tau_pi), alpha1, alpha2`).
-  The reported "Universal parameters" table (`rho_0=7.512e-24 kg/m^3,
-  Gamma=5.040e-18 /s, tau_Pi=3.999e12 s, tau_pi=4.121e8 s, zeta=9.713e5 Pa*s,
-  eta=50.94 Pa*s, c_s0=0.629c`) is an L-BFGS-B polish of a flat, uninformative
-  penalty surface, exactly the same category of non-result as Domain W's
-  original `c_s0=9.99e5 m/s` -- **not a fit**, since the objective never found
-  any point where the `min_convergence_frac>=0.5` guard was satisfied.
-  Train/holdout HDF-theory RMS both pinned at exactly `1000000.0000` dex.
-- **Open item, not resolved here**: unlike Domain X below, the specific
-  numeric root cause of this non-convergence was NOT diagnosed for W2's own
-  ODE system. `rho_0` here was fit freely (not fixed at a wrong-regime
-  constant like `RHO_HDF_REF` in Domain X) and landed at `7.5e-24 kg/m^3` --
-  a physically plausible order of magnitude, roughly the cosmic critical
-  density, a couple of orders below the Domain Y-inverted galaxy-scale target
-  of `~1e-22 kg/m^3`. Whether this failure shares Domain X's root cause
-  (outer-BC/state-scale mismatch), a different numerical conditioning issue,
-  or a genuine physical inconsistency in the relaxation-ODE formulation
-  itself is an open question. Do not assume the Domain X diagnosis transfers
-  here without checking.
+- **CORRECTION (2026-09-14, later same night)**: this entry originally
+  reported a flat non-convergent result (`RMS=1000000.0` both sets,
+  `rho_0=7.5e-24`). That was wrong -- an artifact of a race condition, not a
+  real result, caught and fixed the same night it was made. The original
+  background run of this exact script was launched hours earlier and took a
+  very long time to finish (slow `differential_evolution` sweep); while it
+  was silently still running, the same script was relaunched twice more
+  under different job IDs, unaware the original hadn't finished. Those later
+  runs failed (one hit a data-loader error, one produced a genuine flat
+  `1e6` penalty surface) and both wrote their results to the same output
+  filename, which is what got read and logged here. The original job has
+  since finished and overwrote the file with its real result below,
+  superseding the incorrect entry. Caught by directly diffing the file
+  against what a very-late background-task completion notification
+  reported, not assumed correct on read.
+- **Actual result: a real, converged fit, not a degenerate surface.**
+  `differential_evolution` genuinely progressed (`f(x)` fell from `0.430` at
+  step 1 to `0.260` by step 10, not stuck at the `1e6` penalty ceiling) and
+  the polished result has real convergence: **72/98 train (73.5%), 29/43
+  holdout (67.4%)** of galaxies produced actual physical solutions --
+  comfortably above the `min_convergence_frac>=0.5` guard.
+  **RMS: 0.2602 dex train / 0.2501 dex holdout** -- roughly double the
+  scatter of the empirical RAR baseline (0.1293 dex holdout), so this does
+  NOT outperform the empirical fit, but it is the strongest real (non-
+  degenerate, majority-converged) result from any Domain V/W/W2/X attempt
+  this entire session.
+- **Fitted parameters**: `rho_0=1.999e-21 kg/m^3` (much closer to the Domain
+  Y-inverted galaxy-scale target of `~1e-22 kg/m^3` than the earlier,
+  incorrect `7.5e-24` value -- within about one order of magnitude, not
+  several), `Gamma=7.116e-18 /s`, `tau_Pi=7.472e11 s`, `tau_pi=4.768e14 s`,
+  `zeta=6.493e7 Pa*s`, `eta=3.311e10 Pa*s`, `c_s0=9.480e6 m/s = 0.0316c`
+  (notably NOT close to `c` -- consistent with the clean parameter ledger's
+  own framing that `c_s0=c` was a short-scale/optical-limit hypothesis, not
+  necessarily the galaxy-scale value).
+- **Open item, still genuinely unresolved**: this is a real fit, not a
+  disproof of the Israel-Stewart-type closure, but it is also clearly worse
+  than the empirical RAR baseline -- roughly 2x the scatter. Whether that
+  gap closes with a better-motivated outer boundary condition, a different
+  closure, or doesn't close at all remains open. The ~27-33% of galaxies
+  that still fail to converge (26/98 train, 14/43 holdout) were not
+  individually diagnosed -- unknown whether they fail for a shared reason
+  (e.g. specific radius ranges, galaxy types) or scattered numerical causes.
 
 ### Domain X (minimal linear causal closure baseline, K1=rho0*c_s0^2 only) -- 2026-09-14, ROOT CAUSE DIAGNOSED
 
@@ -1979,7 +2000,7 @@ g_bar = Vbar2 / R * conv
 | Domain U2 | -- | -- | incomplete, killed before results |
 | Domain V (BVP) | -- | -- | convergence test failed before any fit attempted |
 | Domain W (BVP, shock-freeze outer BC) | nan (0/99) | nan (0/42) | full run attempted, 0 of 144 galaxies converged |
-| Domain W2 (BVP, Israel-Stewart-type causal relaxation ODEs) | 1000000.0000 | 1000000.0000 | non-convergent across full 6-param search; root cause not diagnosed for this ODE system |
+| Domain W2 (BVP, Israel-Stewart-type causal relaxation ODEs) | 0.2602 (72/98 conv.) | 0.2501 (29/43 conv.) | CORRECTED -- real converged fit (~2x RAR scatter), see full entry; original logged value was a race-condition artifact |
 | Domain X (BVP, linear closure only, placeholder BC) | 1000000.0000 (0/104) | 1000000.0000 (0/45) | root cause diagnosed: RHO_HDF_REF is ~33 orders of magnitude off-regime for galaxy scale |
 | Domain Y (direct density inversion, not a fit) | n/a -- descriptive | n/a -- descriptive | COMPLETED: produces the target rho_req(r) atlas Domain X's diagnosis showed was missing |
 | Domain Z (disk-scale-length collapse test on Domain Y) | n/a -- descriptive | n/a -- descriptive | COMPLETED, NEGATIVE: no collapse in r/R_d (scatter 0.377->0.447 dex, worse not better) |

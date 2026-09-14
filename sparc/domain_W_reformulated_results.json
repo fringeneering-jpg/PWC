@@ -2,21 +2,29 @@
     "status": "completed",
     "methodology": "Strict Rule 2026-09-14 adhered. Causality speed bounds fixed. Source geometry corrected.",
     "universal_parameters": {
-        "rho_0_kg_m3": 7.511801293032933e-24,
-        "Gamma_s_1": 5.040488116858766e-18,
-        "tau_Pi_s": 3998944485887.601,
-        "tau_pi_s": 412090431.0012698,
-        "zeta_Pa_s": 971302.8686616316,
-        "eta_Pa_s": 50.94432662350144,
-        "c_s0_m_s": 188674296.78552625
+        "rho_0_kg_m3": 1.9991600634651406e-21,
+        "Gamma_s_1": 7.115798241039266e-18,
+        "tau_Pi_s": 747175233596.5383,
+        "tau_pi_s": 476811899152006.2,
+        "zeta_Pa_s": 64926556.77682254,
+        "eta_Pa_s": 33114531614.07669,
+        "c_s0_m_s": 9480269.926203676
     },
     "diagnostic": {
-        "example_vector_drag_N": 1.3187784582946756e+29
+        "example_vector_drag_N": 1.861756483953768e+29
     },
     "metrics": {
-        "hdf_train_rms_dex": 1000000.0,
-        "hdf_holdout_rms_dex": 1000000.0,
+        "hdf_train_rms_dex": 0.26015918355639467,
+        "hdf_holdout_rms_dex": 0.2501092373501728,
         "baseline_newt_holdout_rms": 0.5154374716062261,
         "baseline_rar_holdout_rms": 0.12929140821449714
+    },
+    "convergence": {
+        "train_ok": 72,
+        "train_fail": 26,
+        "train_frac": 0.7346938775510204,
+        "holdout_ok": 29,
+        "holdout_fail": 14,
+        "holdout_frac": 0.6744186046511628
     }
 }
