@@ -1,0 +1,18 @@
+{
+  "n_galaxies": 139,
+  "n_boot": 2000,
+  "n_valid_replicates": 2000,
+  "vs_physical_kpc_baseline": {
+    "mean_diff_dex": 0.006924569628491408,
+    "std_diff_dex": 0.033964409296108465,
+    "ci95_low": -0.05971022597819886,
+    "ci95_high": 0.07357331404687173,
+    "frac_resamples_tilde_lower": 0.5795
+  },
+  "vs_raw_rho_req_same_x_bins": {
+    "mean_diff_dex": 0.0783649422679106,
+    "ci95_low": 0.019026056753153837,
+    "ci95_high": 0.135550515381209,
+    "frac_resamples_tilde_lower": 0.9945
+  }
+}

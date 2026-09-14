@@ -1901,6 +1901,74 @@ g_bar = Vbar2 / R * conv
   (`domain_Z_disk_scale_collapse_results.json`) is the primary audit
   artifact and should be read alongside it, not in place of it.
 
+### Domain AA (baryonic-surface-density amplitude normalization test) -- COMPLETED, 2026-09-14
+
+- **model_version**: `domain_AA_surface_density.py`, follow-up significance
+  check `domain_AA_bootstrap_check.py`
+- **Question (pre-registered, single test, not iterated)**: does normalizing
+  `rho_req` by a characteristic density scale built from baryonic surface
+  density reduce cross-galaxy scatter, given Domain Z showed disk size
+  (`R_d`) alone does not?
+- **Predictor, declared before running**:
+  ```
+  M_star    = Upsilon_disk * L[3.6]              (L[3.6] is TOTAL luminosity,
+                                                    not disk-only -- limitation, not hidden)
+  M_gas     = 1.33 * M_HI                          (standard He-correction factor,
+                                                    Lelli/McGaugh/Schombert convention)
+  Sigma_bar = (M_star+M_gas) / (2*pi*Rdisk^2)
+  rho_0     = Sigma_bar / Rdisk                    (dimensionally exact, no fitted exponent)
+  rho_tilde = rho_req / rho_0
+  ```
+  Units (`L[3.6]`, `MHI` both in `1e9` Lsun/Msun) confirmed against known
+  catalog values before running: NGC3198 `MHI=10.869` -> `1.089e10 Msun`
+  (matches catalog); NGC2403 `MHI=3.199` -> `3.199e9 Msun` (matches catalog).
+- **Pre-registered pass criterion**: mean scatter of `log10(rho_tilde)` across
+  `x=r/Rdisk` bins (`n_gal>=5`) must be lower than the frozen Domain Z
+  physical-kpc baseline of `0.377 dex`.
+- **Point estimate**: `0.367 dex` (rho_tilde) vs `0.377 dex` (frozen
+  baseline) -- technically passes by `0.010 dex`.
+- **Galaxy-level bootstrap check (2000 resamples, galaxy is the resampling
+  unit, not radial points) run BEFORE reporting a pass, given the margin was
+  far smaller than per-bin scatter itself (0.22-0.51 dex range):**
+  - **vs. the frozen physical-kpc baseline: DOES NOT SURVIVE.** 95% CI on
+    the improvement: `[-0.060, +0.074] dex` -- includes zero. Only 58% of
+    resamples favor `rho_tilde`, statistically a coin flip. **The 0.010 dex
+    point-estimate "pass" is noise, not a real result.**
+  - **vs. raw `rho_req` in the SAME `x=r/Rdisk` bins (matched-geometry,
+    paired comparison, removing the bin-set confound entirely): SURVIVES.**
+    95% CI: `[0.019, 0.136] dex` -- excludes zero. 99.5% of resamples favor
+    `rho_tilde`. **This is a real, robust effect**: Sigma_bar-based
+    amplitude normalization genuinely reduces scatter on top of the
+    `x=r/Rdisk` coordinate choice.
+  - **Direct correlation check**: `corr(log Sigma_bar, log rho_req at
+    x=1-2 R_d) = 0.388` (n=111) -- a real, modest, positive signal,
+    consistent with the paired-comparison result above.
+- **Honest, precise conclusion (both halves, neither oversold)**: baryonic
+  surface density carries real information about the AMPLITUDE of the
+  required-density profile that disk size alone does not capture (a genuine
+  positive result, confirmed by resampling). But `x=r/Rdisk` coordinates
+  plus a Sigma_bar amplitude correction, taken together as a complete
+  system, do not clearly outperform simply using physical kpc (a genuine
+  null result against that comparison, also confirmed by resampling) --
+  because the `x=r/Rdisk` coordinate choice itself already cost ~0.07 dex
+  (Domain Z), and the Sigma_bar correction recovers most but not quite all
+  of that loss.
+- **Not established**: a specific functional form linking Sigma_bar to the
+  full radial shape of `rho_req` (only a single fixed dimensional
+  normalization, `Sigma_bar/Rdisk`, was tested); any HDF mechanism or
+  closure law; whether a different combination (e.g. `Sigma_bar` alone
+  without the `/Rdisk` factor, or gas fraction separately) would perform
+  better -- not tested, would require a new pre-registered domain, not
+  post-hoc iteration on this one.
+- **Methodological note, worth keeping**: this is the first domain in this
+  project's record where a bootstrap/resampling check reversed a
+  point-estimate "pass" into "not significant" for one comparison while
+  confirming significance for another -- a concrete demonstration of why
+  point estimates on small, noisy per-galaxy scatter statistics need this
+  check before being reported as results, not just as a formality.
+
+## Comparison baselines (all on the same 104/45 split, same quality cuts)
+
 | Model | Train RMS (dex) | Holdout RMS (dex) | Status |
 |---|---|---|---|
 | Empirical McGaugh RAR | 0.1338 | 0.1298 | baseline, a-theoretic |
@@ -1915,6 +1983,7 @@ g_bar = Vbar2 / R * conv
 | Domain X (BVP, linear closure only, placeholder BC) | 1000000.0000 (0/104) | 1000000.0000 (0/45) | root cause diagnosed: RHO_HDF_REF is ~33 orders of magnitude off-regime for galaxy scale |
 | Domain Y (direct density inversion, not a fit) | n/a -- descriptive | n/a -- descriptive | COMPLETED: produces the target rho_req(r) atlas Domain X's diagnosis showed was missing |
 | Domain Z (disk-scale-length collapse test on Domain Y) | n/a -- descriptive | n/a -- descriptive | COMPLETED, NEGATIVE: no collapse in r/R_d (scatter 0.377->0.447 dex, worse not better) |
+| Domain AA (baryonic surface-density amplitude test on Domain Y/Z) | n/a -- descriptive | n/a -- descriptive | COMPLETED, MIXED: real effect vs raw rho_req in matched x-bins (CI excludes 0), but NOT distinguishable from the physical-kpc baseline after bootstrap (CI includes 0) |
 | "Domain T" pasted claim (source script not in this repo) | 0.1344 | 0.1368 | **not independently reproduced** -- no runnable script for this specific claim has been provided or located on disk |
 
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)
