@@ -1763,10 +1763,37 @@ g_bar = Vbar2 / R * conv
   disproof of the Israel-Stewart-type closure, but it is also clearly worse
   than the empirical RAR baseline -- roughly 2x the scatter. Whether that
   gap closes with a better-motivated outer boundary condition, a different
-  closure, or doesn't close at all remains open. The ~27-33% of galaxies
-  that still fail to converge (26/98 train, 14/43 holdout) were not
-  individually diagnosed -- unknown whether they fail for a shared reason
-  (e.g. specific radius ranges, galaxy types) or scattered numerical causes.
+  closure, or doesn't close at all remains open.
+- **Residual/convergence audit (`domain_W2_residual_audit.py`,
+  `domain_W2_residual_audit_results.json`), 2026-09-14 -- fixed parameters,
+  no re-optimization:**
+  - Converged (101) residual RMS spans `0.031` to `0.639` dex (median
+    `0.232`); weakly correlates with galaxy properties (`corr(rms, log
+    M_bar)=-0.29`, `corr(rms, r_max)=-0.20`) -- bigger, more extended
+    galaxies fit somewhat BETTER, not worse. Mean signed bias `+0.060 dex`
+    (slight under-prediction of observed gravity, small relative to the
+    spread). NGC3198 -- one of the most-studied, cleanest rotation curves in
+    SPARC -- lands at `rms=0.077, bias=+0.001`, essentially zero mean bias, a
+    meaningful cross-check on a galaxy the field already treats as a gold
+    standard. Several of the worst-RMS converged fits (F568-V1, UGC05918,
+    F565-V2, UGC01281) have only 3-6 data points -- likely small-sample
+    noise, not a real model failure.
+  - The 40 failures are NOT randomly scattered -- two real patterns:
+    (1) skewed toward lower baryonic mass (failed median `6.66e9 Msun` vs
+    converged median `1.21e10 Msun`, 65% of failures below the converged
+    median); (2) skewed toward larger radial extent (failed median
+    `r_max=15.45 kpc` vs converged median `11.47 kpc`, 65% of failures above
+    the converged median, including systems out to 65-108 kpc). NOT a
+    data-sparsity artifact: failed galaxies have MORE data points on median
+    (19.5 vs 13.0), ruling out "too few points to solve."
+  - **Interpretation, precisely scoped**: consistent with the single global
+    parameter set (one `rho_0, Gamma, tau_Pi, tau_pi` for every galaxy)
+    working best for a mid-range galaxy and struggling at both mass/size
+    extremes -- plausibly a fixed relaxation timescale mismatched outside
+    some intermediate range. This is a correlational/distributional
+    diagnosis (median comparisons, not individual solver-failure tracing) --
+    the actual `solve_bvp` failure mode for individual galaxies was not
+    examined; that is the next open layer if pursued further.
 
 ### Domain X (minimal linear causal closure baseline, K1=rho0*c_s0^2 only) -- 2026-09-14, ROOT CAUSE DIAGNOSED
 

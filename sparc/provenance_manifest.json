@@ -1488,6 +1488,29 @@
         "Whether a different combination (Sigma_bar alone without the /Rdisk factor, or gas fraction separately) would perform better -- not tested; would require a new pre-registered domain, not post-hoc iteration on this one."
       ],
       "methodological_note": "First domain in this project's record where a bootstrap/resampling check reversed a point-estimate pass into not-significant for one comparison while confirming significance for another -- concrete demonstration of why point estimates on small, noisy per-galaxy scatter statistics need this check before being reported as results, not just as a formality."
+    },
+    "domain_W2_residual_audit_2026-09-14": {
+      "model_version": "domain_W2_residual_audit.py",
+      "purpose": "Pure diagnostic pass on the already-fitted Domain W2 parameters -- no re-optimization, no parameter changes. Characterize where the 101 converged solutions have residual error, and characterize the 40 non-convergent galaxies.",
+      "converged_galaxy_findings": {
+        "n": 101,
+        "rms_dex_range": [
+          0.031,
+          0.639
+        ],
+        "rms_dex_median": 0.232,
+        "corr_rms_vs_log_Mbar": -0.29,
+        "corr_rms_vs_rmax": -0.2,
+        "mean_signed_bias_dex": 0.06,
+        "note": "Bigger, more extended galaxies fit somewhat better, not worse. NGC3198 (a gold-standard SPARC rotation curve) lands at rms=0.077, bias=+0.001. Several worst-RMS fits (F568-V1, UGC05918, F565-V2, UGC01281) have only 3-6 data points -- likely small-sample noise, not a real model failure."
+      },
+      "failed_galaxy_findings": {
+        "n": 40,
+        "pattern_1_mass": "Skewed toward lower baryonic mass: failed median 6.66e9 Msun vs converged median 1.21e10 Msun, 65% of failures below the converged median.",
+        "pattern_2_radius": "Skewed toward larger radial extent: failed median r_max=15.45 kpc vs converged median 11.47 kpc, 65% of failures above the converged median, including systems out to 65-108 kpc.",
+        "not_data_sparsity": "Failed galaxies have MORE data points on median (19.5 vs 13.0), ruling out 'too few points to solve' as the explanation."
+      },
+      "interpretation": "Consistent with the single global parameter set (one rho_0, Gamma, tau_Pi, tau_pi for every galaxy) working best for a mid-range galaxy and struggling at both mass/size extremes -- plausibly a fixed relaxation timescale mismatched outside some intermediate range. This is a correlational/distributional diagnosis (median comparisons across the population), not individual solver-failure tracing -- the actual solve_bvp failure mode for individual galaxies was not examined; that is the next open layer if pursued further."
     }
   },
   "methodology_standing_rule_2026-09-14": {
