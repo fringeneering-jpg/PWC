@@ -633,10 +633,27 @@ specifically because it was independently reproduced three separate
 ways using standard, checkable physics, not because it was asserted
 persuasively.
 
-**Cosmic acceleration scale -- CONDITIONAL MODEL RESULT** (refined
-2026-09-14, downgraded from an unconditional Tier A): `a_cosmic =
-c₀H₀ ≈ 6.80×10⁻¹⁰ m/s²`. Three physical derivations converge exactly
-on `c₀H₀`, each checked by hand in this session:
+**Cosmic acceleration scale -- NOT DERIVED, IMPOSED SCALAR-MATCHING
+ASSUMPTION** (downgraded a second, deeper time, 2026-09-14): every
+version of this calculation attempted in this session (SHM scaling,
+Unruh=GH temperature matching, Stefan-Boltzmann pressure matching,
+ideal-gas pressure matching) shares the same underlying structural
+flaw -- each sets two *scalar* reference quantities equal (a local
+temperature/pressure value vs a global one) and treats that equality
+as if it generates a force. That is not how fluids produce
+acceleration: force comes from a pressure *gradient*, integrated over
+a surface (`f=-∇P`, `F=-∮P·n̂dA`), not from an equality condition
+between two separately-computed scalars. `a_cosmic=c₀H₀` was never
+actually a force calculation -- it was an equality condition dressed
+as one. This is a deeper correction than the earlier "conditional
+model result" framing: even the cosmic-scale number rests on an
+imposed matching assumption with no demonstrated connection to an
+actual force-generating mechanism. Retained below purely as the
+arithmetic record of what each attempted equality condition produces,
+not as a derived physical result.
+
+The three numerically-convergent routes, all built on the same
+now-rejected scalar-matching structure:
 1. Simple harmonic restoring acceleration `a=ω₀²R_cosmic` with
    `ω₀=H₀`, `R_cosmic=c₀/H₀`.
 2. Unruh local wake temperature (`T=ħa/(2πk_Bc₀)`) equated to
@@ -707,6 +724,25 @@ standard Unruh/Gibbons-Hawking thermodynamics. This is the jointly-
 confirmed, converged status after an extended adversarial derivation
 process -- both parties independently arrived at the same conclusion
 via separate calculations.
+
+**What a real derivation actually requires (2026-09-14), replacing
+"find the right prefactor" as the framing entirely:**
+
+| Required element | Form | Status |
+|---|---|---|
+| Local equation of state | `P=P(ρ,T,s)` | Not yet specified -- determines whether the wake is classical, radiation-like, barotropic, or something else |
+| Adiabatic closure | `Pρ⁻ᵞ=const`, if applicable | Not yet specified -- relates local compression/rarefaction to temperature and pressure |
+| Wake solution | `δρ(x), δT(x), δP(x)` | Not yet solved -- an actual SOLVED anisotropic wake profile, not an assumed hemisphere |
+| Geometry/boundary condition | Surface, trailing cone, cavity wall, or mode distribution | Not yet specified -- determines the angular factor as an OUTPUT, not an input |
+| Force coupling | `F=-∮_∂V P(x)n̂dA` | Not yet carried out -- converts the actual pressure distribution into a real acceleration |
+| Cosmological coupling | How `H₀` actually sets `P_background(x)` or a gradient | Not yet specified -- not merely a background temperature asserted by analogy |
+
+**Status summary:** neither `a₀=c₀H₀` nor any hemispheric variant
+(`c₀H₀/6`, `2^(1/4)c₀H₀`, `2c₀H₀`) is derived. All rest on an imposed
+scalar-matching assumption that was never physically justified as a
+force-generating mechanism. A real derivation requires solving the six
+elements above, not finding the right prefactor to apply to a scalar
+equality.
 
 **Deep-MOND-limit interpolation -- EMPIRICAL PHENOMENOLOGICAL LAW:**
 `g_obs=√(a₀·g_bar)` is a real target formula, supported by SPARC-132

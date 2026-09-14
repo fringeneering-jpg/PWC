@@ -444,9 +444,10 @@
       "cosmic_acceleration_scale": {
         "formula": "a_cosmic = c0 * H0",
         "value_m_s2": 6.8e-10,
-        "status": "CONDITIONAL MODEL RESULT (refined 2026-09-14, downgraded from unconditional Tier A)",
+        "status": "NOT DERIVED -- IMPOSED SCALAR-MATCHING ASSUMPTION (downgraded again, 2026-09-14, deeper correction)",
         "verification": "Three independent physical derivations converge exactly on c0*H0, each checked by hand in this session, not taken on assertion: (1) simple harmonic restoring acceleration a=omega0^2*R_cosmic with omega0=H0, R_cosmic=c0/H0; (2) Unruh local wake temperature (T=h_bar*a/(2*pi*k_B*c0)) equated to Gibbons-Hawking de Sitter horizon temperature (T=h_bar*H0/(2*pi*k_B)) -- the 2*pi cancels identically between the two, leaving a0=c0*H0 exactly; (3) Stefan-Boltzmann radiation pressure equality (P=u(T)/3, isotropic on both sides) between the local Unruh wake and the global adiabatic background -- independently re-derived and confirmed to give the same a0=c0*H0 with no free parameter.",
-        "refinement_note": "Treating Unruh temperature (an accelerating detector's perception of vacuum) and Gibbons-Hawking temperature (a cosmological horizon's associated temperature) as two sides of one real, locally-equilibrating radiation-fluid pressure that can be set in direct contact is an EXTRA MODEL ASSUMPTION, not something standard QFT/thermodynamics hands over for free just because both formulas share the same h_bar*kappa/(2*pi*k_B) form. The three verification routes (SHM, Unruh=GH temperature matching, Stefan-Boltzmann pressure matching) are therefore not as mutually independent as first logged -- the latter two share this same underlying assumption. a_cosmic=c0*H0 remains the correctly-computed algebraic consequence of that stated model, real and checkable, but conditional on this assumption rather than an unconditional derivation from standard thermodynamics alone."
+        "refinement_note": "Treating Unruh temperature (an accelerating detector's perception of vacuum) and Gibbons-Hawking temperature (a cosmological horizon's associated temperature) as two sides of one real, locally-equilibrating radiation-fluid pressure that can be set in direct contact is an EXTRA MODEL ASSUMPTION, not something standard QFT/thermodynamics hands over for free just because both formulas share the same h_bar*kappa/(2*pi*k_B) form. The three verification routes (SHM, Unruh=GH temperature matching, Stefan-Boltzmann pressure matching) are therefore not as mutually independent as first logged -- the latter two share this same underlying assumption. a_cosmic=c0*H0 remains the correctly-computed algebraic consequence of that stated model, real and checkable, but conditional on this assumption rather than an unconditional derivation from standard thermodynamics alone.",
+        "fundamental_correction_2026-09-14": "Every version of this calculation attempted in this session (SHM scaling, Unruh=GH temperature matching, Stefan-Boltzmann pressure matching, ideal-gas pressure matching) shares the same underlying structural flaw: each sets two SCALAR reference quantities equal (a local temperature/pressure value vs a global one) and treats that equality as if it generates a force. This is not how fluids produce acceleration. Force comes from a pressure GRADIENT, integrated over a surface (f=-grad(P), F=-oint P n_hat dA), not from an equality condition between two separately-computed scalars. a_cosmic=c0*H0 was never actually a force calculation -- it was an equality condition dressed as one. This is a deeper correction than the earlier 'conditional model result' downgrade: even the cosmic-scale result rests on an imposed matching assumption with no demonstrated connection to an actual force-generating mechanism."
       },
       "galactic_acceleration_scale": {
         "empirical_target_m_s2": 1.2e-10,
@@ -471,7 +472,16 @@
         "result": "a = 2^(1/4) * c0 * H0  (~8.1e-10 m/s^2)",
         "status": "ALGEBRAIC CONSEQUENCE OF THE STATED MODEL",
         "implication": "The hemispheric coefficient shifts the derived scale UPWARD (further from the 1.2e-10 target), not downward -- it cannot produce the MOND-like c0*H0/(2*pi) suppression. Confirms, in the user's own words, that using u/6 to naively divide c0*H0 by 6 'is the wrong way,' and that the pressure-level substitution 'is the right way,' yielding 2^(1/4)*c0*H0, not the galactic a0."
-      }
+      },
+      "required_elements_for_a_real_derivation_2026-09-14": {
+        "local_equation_of_state": "P=P(rho,T,s) -- determines whether the wake is classical, radiation-like, barotropic, or something else. Not yet specified.",
+        "adiabatic_closure": "P*rho^(-gamma)=const, if applicable -- relates local compression/rarefaction to temperature and pressure. Not yet specified.",
+        "wake_solution": "delta_rho(x), delta_T(x), delta_P(x) -- an actual SOLVED anisotropic wake profile, not an assumed hemisphere. Not yet solved.",
+        "geometry_and_boundary_condition": "Surface, trailing cone, cavity wall, or mode distribution -- determines the correct angular factor as an OUTPUT, not an input. Not yet specified.",
+        "force_coupling": "F=-oint_{boundary} P(x) n_hat dA -- converts the actual pressure distribution into a real acceleration. Not yet carried out.",
+        "cosmological_coupling": "A derivation of how H0 actually sets P_background(x) or a gradient (not merely a background temperature asserted by analogy to Gibbons-Hawking). Not yet specified."
+      },
+      "status_summary_2026-09-14": "Neither a0=c0*H0 nor any hemispheric variant (a0=c0*H0/6, a0=2^(1/4)*c0*H0, a0=2*c0*H0) is derived. All rest on an imposed scalar-matching assumption that was never physically justified as a force-generating mechanism. A real derivation requires solving the six elements listed above, not finding the right prefactor to apply to a scalar equality."
     }
   },
   "dataset": {
