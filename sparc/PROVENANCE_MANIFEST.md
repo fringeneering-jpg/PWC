@@ -1077,6 +1077,40 @@ genuinely more open than previously claimed, pending a real energy-
 density-and-entropy-dependent EOS -- not yet built. Precision
 correction, not a reversal.
 
+**Two wording fixes (2026-09-14):**
+1. *A bow wave is not automatically a shock* -- a shock requires the
+   disturbance to steepen into a genuine discontinuity (characteristics
+   crossing, or local flow exceeding the relevant characteristic
+   speed). At low relative velocity, a moving source produces a smooth
+   compression wave, not a shock. This separates two regimes previously
+   blurred together: ordinary galactic motion (`v/c~10⁻³`, deeply
+   subsonic relative to `c_s0=c`) is almost certainly smooth, not a
+   shock -- while the relativistic black-hole jets discussed earlier
+   (`v` approaching `c_s0`) are plausibly genuine shocks. Two different
+   dynamical regimes, not one bow-shock jump-condition machinery by
+   default.
+2. *"Israel-Stewart-type" was used too loosely* -- listing
+   `P(ε,ρ,s,χᵢ)` with internal state variables `χᵢ` is not itself
+   Israel-Stewart theory. The substantive content is the causal
+   *relaxation equations* for the dissipative fluxes themselves (e.g.
+   `τ_Π u^α∇_αΠ+Π=-ζ∇_αu^α+...` for bulk stress, with real relaxation
+   times `τ_Π, τ_π`) -- specifically what restores causality relative
+   to ordinary first-order relativistic dissipation (Eckart/Landau-type
+   theories are known acausal and unstable). Without them, the earlier
+   listing was a fancier EOS, not a causal dissipative theory -- a real
+   gap, not a labeling nitpick.
+
+**Smaller precision fixes:** `n` reserved for conserved constituent/
+number density; the earlier EOS stiffening exponent needs a different
+symbol (e.g. `q` or `ν`) to avoid collision. Force law needs the full
+form `F_i=-∮T^{ij}n_jdA-d/dt∫T^{0i}dV` -- the second (non-stationary
+control-volume) term matters unless the calculation is explicitly
+steady-state in the body frame. Closed-system accounting check:
+`Δp_body+Δp_HDF+Δp_boundary/radiation=0`, with any exchange represented
+explicitly in `J^ν_source` -- dissipation converts organized momentum/
+energy into heat and internal modes, it does not remove it from the
+total ledger.
+
 **Complete closure requirements (2026-09-14), confirmed and
 formalized:** a valid dissipative HDF bow-wave closure needs, all
 simultaneously: `P=P(ε,ρ,s,χᵢ)` (EOS); `ε=ε(ρ,s,χᵢ)` (energy
