@@ -214,6 +214,40 @@ it is explicitly not a claim that the analogy alone yields the factor
 of 2. That must come from HDF's actual constitutive/EOS response
 (bulk vs effective transverse stiffness) worked through quantitatively.
 
+**Tension and surface-tension mechanism (2026-09-14):** HDF is under
+high tension -- expansion pressure pushing out, balanced by something
+pushing back. A photon feels no resistance because its speed equals
+the rate the medium is parting ahead of it and closing behind it -- it
+threads a gap that opens and shuts in step with its own motion.
+Separately, HDF is still attracted to heavier knots via a
+surface-tension-like effect, the way two water drops on a wet flat
+surface pull together through the connecting film.
+
+The frictionless-propagation piece is a clean plain-language restatement
+of the existing frictionless-superfluid picture already on record -- it
+explains why light loses no energy moving through HDF, but is not
+itself a bending mechanism and does not bear on the missing factor of 2.
+
+The surface-tension piece is structurally promising: if HDF's pull
+toward a knot is genuinely an interfacial-tension effect rather than an
+ordinary isotropic pressure gradient, real established physics
+(Young-Laplace capillarity) already splits interfacial tension into two
+distinct geometric roles from *one* quantity (the tension itself, `γ`):
+a tangential role (resists stretching *along* the surface) and a
+normal/curvature role (drives a pressure jump *across* the surface,
+`ΔP = γ(1/R1 + 1/R2)`). Two genuinely different effects from one
+parameter -- not two mechanisms bolted together. If HDF's attraction is
+tension-driven in this sense, the two-roles-from-one-substrate
+requirement may be structurally built in automatically.
+
+**Status, honestly:** strongest qualitative lead identified so far, but
+not a computed answer. No HDF surface-tension coefficient (an analog of
+`γ`) has been established, derived, or measured anywhere in this
+project. No Young-Laplace-style pressure-jump profile around a mass
+concentration has been computed. A bending angle cannot be produced
+from this until such a coefficient exists and is worked through
+quantitatively against the `4GM/(b*c0^2)` benchmark.
+
 **Status: OPEN.** No numerical PWC bending-angle calculation exists yet.
 No `rho(r)`-to-refractive-index law and no `rho(r)`-to-proper-path-
 length law have been established anywhere in this project's files --
