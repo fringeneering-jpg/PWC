@@ -374,6 +374,19 @@
         "https://arxiv.org/abs/2605.10022",
         "https://arxiv.org/pdf/2601.22245"
       ]
+    },
+    "jwst_early_galaxy_lcdm_tension_2026": {
+      "claim_as_given": "Labbe et al. Nature Feb 2023 'A population of red candidate massive galaxies', Boylan-Kolchin Nature Astronomy 2023 'Stress testing LCDM with early JWST observations', Glazebrook et al. Nature Feb 2024 ZF-UDS-7329 -- 'zed's dead, LCDM falsified.'",
+      "checked_2026-09-14": "Web-searched against primary sources. Real papers, real initial tension -- but the current (2026) state is more nuanced than 'falsified,' and splits into two different threads with two different outcomes.",
+      "thread_1_labbe_walked_back": "Labbe et al. 2023 reported six candidate massive galaxies (z=7.4-9.1, implied stellar mass >1e10 Msun) that seemed too massive too early. Boylan-Kolchin (Nature Astronomy 2023) showed that IF those photometric mass estimates held, some sat at or beyond \u039bCDM's theoretical star-formation-efficiency limit for that epoch -- a genuine flag at the time. However, a direct spectroscopic follow-up, 'Confirmation of the standard cosmological model from red massive galaxies ~600 Myr after the Big Bang' (arXiv:2304.11911), found several of the original candidates sit at LOWER redshift than the photometric estimate implied -- largely dissolving the tension for those specific objects. This thread was substantially walked back toward the standard model, not confirmed against it.",
+      "thread_2_zf_uds_7329_still_live": "Glazebrook et al. (Nature, Feb 2024), spectroscopically confirmed (not photometry-only): ZF-UDS-7329, a ~1e11 Msun quiescent galaxy at z~3.2 that appears to have formed most of its stars in a fast 200-400 Myr burst within the universe's first billion years, already quiescent by observation. This is a real, still-standing challenge to \u039bCDM halo assembly/quenching timescales. Follow-up work (Carnall et al. 2024, Turner et al. 2024, subsequent SFH-prior modeling) shows the tension can be substantially mitigated depending on star-formation-history priors and whether a major-merger formation channel is allowed -- reduced, not eliminated, and not confirmed away either.",
+      "honest_verdict": "Not 'LCDM falsified.' One evidentiary thread (Labbe's sample) was significantly walked back by better (spectroscopic) data in the standard model's favor. The other (ZF-UDS-7329) is real and still an active, open tension as of 2026, with plausible but not fully settled mitigating explanations. Logged accurately -- a genuine open question in mainstream cosmology, not a resolved falsification, same evidentiary discipline as the Bullet Cluster entry above.",
+      "sources": [
+        "https://arxiv.org/abs/2208.01611",
+        "https://arxiv.org/pdf/2304.11911",
+        "https://www.aanda.org/articles/aa/full_html/2025/02/aa52781-24/aa52781-24.html",
+        "https://academic.oup.com/mnras/article/537/2/1826/7973012"
+      ]
     }
   },
   "dataset": {

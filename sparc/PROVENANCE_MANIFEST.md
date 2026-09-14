@@ -530,6 +530,48 @@ Sources: [A&A 2026](https://www.aanda.org/articles/aa/full_html/2026/06/aa59214-
 [Famaey, arXiv:2605.10022](https://arxiv.org/abs/2605.10022),
 [arXiv:2601.22245](https://arxiv.org/pdf/2601.22245)
 
+## JWST early-galaxy LCDM tension fact-check (2026-09-14)
+
+**Claim as given:** Labbé et al. (Nature, Feb 2023), Boylan-Kolchin
+(Nature Astronomy 2023), and Glazebrook et al. ZF-UDS-7329 (Nature,
+Feb 2024) together mean ΛCDM is falsified. Web-searched against
+primary sources -- real papers, real initial tension, but the current
+(2026) state splits into two threads with two different outcomes, more
+nuanced than "falsified."
+
+**Thread 1 (Labbé, walked back):** six candidate massive galaxies
+(z=7.4-9.1, implied stellar mass >10¹⁰ M☉) seemed too massive too
+early. Boylan-Kolchin showed that *if* the photometric mass estimates
+held, some sat at or beyond ΛCDM's star-formation-efficiency limit for
+that epoch -- a genuine flag at the time. A direct spectroscopic
+follow-up, *"Confirmation of the standard cosmological model from red
+massive galaxies ~600 Myr after the Big Bang"* (arXiv:2304.11911),
+found several original candidates sit at *lower* redshift than the
+photometric estimate implied -- largely dissolving the tension for
+those objects. Substantially walked back toward the standard model,
+not confirmed against it.
+
+**Thread 2 (ZF-UDS-7329, still live):** spectroscopically confirmed
+(not photometry-only) -- a ~10¹¹ M☉ quiescent galaxy at z≈3.2 that
+appears to have formed most of its stars in a fast 200-400 Myr burst
+within the universe's first billion years, already quiescent by
+observation. A real, still-standing challenge to ΛCDM halo assembly/
+quenching timescales. Follow-up work (Carnall et al. 2024, Turner et
+al. 2024) shows the tension can be substantially mitigated depending on
+star-formation-history priors and whether a major-merger channel is
+allowed -- reduced, not eliminated, not confirmed away either.
+
+**Honest verdict:** not "ΛCDM falsified." One thread was significantly
+walked back by better data in the standard model's favor; the other is
+real and still an open, active tension as of 2026, with plausible but
+unsettled mitigations. A genuine open question, not a resolved
+falsification -- same discipline as the Bullet Cluster entry above.
+
+Sources: [Boylan-Kolchin, arXiv:2208.01611](https://arxiv.org/abs/2208.01611),
+[arXiv:2304.11911](https://arxiv.org/pdf/2304.11911),
+[ZF-UDS-7329 (A&A)](https://www.aanda.org/articles/aa/full_html/2025/02/aa52781-24/aa52781-24.html),
+[Age-dating early quiescent galaxies (MNRAS)](https://academic.oup.com/mnras/article/537/2/1826/7973012)
+
 ## Neutron/knot entropy capstone (2026-09-14)
 
 "Neutrons decay in the open, still the strongest knot, entropy's a
