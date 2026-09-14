@@ -1859,7 +1859,37 @@ g_bar = Vbar2 / R * conv
   answer -- it is not required to validate the result already recorded above,
   and it must be run without modifying the Domain Y inversion itself.
 
-## Comparison baselines (all on the same 104/45 split, same quality cuts)
+### Domain Z (disk-scale-length collapse test on the Domain Y atlas) -- COMPLETED, 2026-09-14
+
+- **model_version**: `domain_Z_disk_scale_collapse.py`
+- **Question (pre-registered in the Domain Y entry above)**: does `rho_req(r)`
+  collapse onto one curve when radius is measured in units of each galaxy's
+  own disk scale length (`x=r/R_d`) instead of physical kpc? Does NOT modify
+  the frozen Domain Y inversion -- same 139-galaxy quality cuts, same
+  baryonic assumptions, same endpoint-exclusion rule, same galaxy-weighted
+  stacking convention. `R_d` pulled from `vizier_t1.txt`'s `Rdisk` column
+  (VizieR SPARC Table 1, the 3.6um exponential stellar-disk scale length,
+  kpc); all 139 galaxies had a usable positive, finite value (0 excluded).
+- **Correct test used**: NOT just "does the median trend look smooth in
+  `x`" (it does, but that's true of the physical-kpc stack too and proves
+  nothing about self-similarity by itself). The actual collapse test is
+  whether **galaxy-to-galaxy scatter at fixed radius shrinks** when
+  switching from physical kpc to `x=r/R_d` -- computed as the std of
+  `log10(rho_req)` across each bin's per-galaxy median values, comparing
+  bins with `n_gal>=5` in both the physical-kpc and normalized stacks.
+- **Result: NO COLLAPSE.** Mean scatter across physical-kpc bins (7 bins,
+  `n_gal` 15-119): `0.377 dex`. Mean scatter across `x=r/R_d` bins (10 bins,
+  `n_gal` 15-121): `0.447 dex`. Normalizing by `R_d` does **not** reduce
+  scatter -- it increases it by `+0.070 dex`. This is a genuine negative
+  result, not a null/uninformative one: per-galaxy disk scale length alone
+  does not organize the required-density profile into a shared curve.
+- **Interpretation, stated at the same scope as the test**: this rules out
+  the simplest self-similarity hypothesis (one universal profile in disk
+  units). It does not identify what DOES organize the cross-galaxy
+  differences -- mass, surface density, gas fraction, morphology, and
+  environment remain open candidates, untested here. No further collapse
+  variable was tried; this was the single pre-registered test, run once, not
+  iterated against alternative normalizations to find one that "works."
 
 | Model | Train RMS (dex) | Holdout RMS (dex) | Status |
 |---|---|---|---|
@@ -1874,6 +1904,7 @@ g_bar = Vbar2 / R * conv
 | Domain W2 (BVP, Israel-Stewart-type causal relaxation ODEs) | 1000000.0000 | 1000000.0000 | non-convergent across full 6-param search; root cause not diagnosed for this ODE system |
 | Domain X (BVP, linear closure only, placeholder BC) | 1000000.0000 (0/104) | 1000000.0000 (0/45) | root cause diagnosed: RHO_HDF_REF is ~33 orders of magnitude off-regime for galaxy scale |
 | Domain Y (direct density inversion, not a fit) | n/a -- descriptive | n/a -- descriptive | COMPLETED: produces the target rho_req(r) atlas Domain X's diagnosis showed was missing |
+| Domain Z (disk-scale-length collapse test on Domain Y) | n/a -- descriptive | n/a -- descriptive | COMPLETED, NEGATIVE: no collapse in r/R_d (scatter 0.377->0.447 dex, worse not better) |
 | "Domain T" pasted claim (source script not in this repo) | 0.1344 | 0.1368 | **not independently reproduced** -- no runnable script for this specific claim has been provided or located on disk |
 
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)
