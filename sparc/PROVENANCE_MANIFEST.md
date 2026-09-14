@@ -623,6 +623,69 @@ deserve further exploration." Explicitly hedged -- not "falsified," not
 "dead." Strongest of the Bullet Cluster results checked in this
 project so far, still short of "dead."
 
+## Frontier 2 -- low-acceleration boost (a₀) -- split status (2026-09-14)
+
+Product of an extended, adversarial derivation process: multiple
+proposed closures for the galactic-scale prefactor were checked by
+independent hand calculation in this session and rejected when they
+did not survive verification. The surviving result below is real
+specifically because it was independently reproduced three separate
+ways using standard, checkable physics, not because it was asserted
+persuasively.
+
+**Cosmic acceleration scale -- DERIVED (Tier A):**
+`a_cosmic = c₀H₀ ≈ 6.80×10⁻¹⁰ m/s²`. Three independent physical
+derivations converge exactly on `c₀H₀`, each checked by hand in this
+session:
+1. Simple harmonic restoring acceleration `a=ω₀²R_cosmic` with
+   `ω₀=H₀`, `R_cosmic=c₀/H₀`.
+2. Unruh local wake temperature (`T=ħa/(2πk_Bc₀)`) equated to
+   Gibbons-Hawking de Sitter horizon temperature (`T=ħH₀/(2πk_B)`) --
+   the `2π` cancels identically between the two, leaving `a₀=c₀H₀`
+   exactly.
+3. Stefan-Boltzmann radiation pressure equality (`P=u(T)/3`, isotropic
+   both sides) between the local Unruh wake and the global adiabatic
+   background -- independently re-derived here, confirmed to give the
+   same `a₀=c₀H₀`, no free parameter.
+
+**Galactic acceleration scale -- OPEN DERIVATION / EMPIRICAL
+CORRESPONDENCE:** empirical target `1.20×10⁻¹⁰ m/s²`. The ratio
+`a_cosmic/a₀ ~ 5.7` sits close to `2π` (`c₀H₀/2π ~ 1.08×10⁻¹⁰`, ~10%
+agreement) -- a known, real coincidence Milgrom himself noted decades
+ago, not something derived here first. Four attempted mechanistic
+derivations of this specific projection factor were checked in this
+session and each failed independent verification:
+- (a) an unexplained dimensional-analysis combination `c₀ν₀` that does
+  not match the standard SHM acceleration formula (which instead gives
+  `c₀H₀`, no `2π`);
+- (b) a closed-cavity eigenmode/impedance-matching argument with no
+  worked calculation shown;
+- (c) an Unruh-adiabatic-floor argument that, worked correctly with
+  the real Gibbons-Hawking formula, also gives `c₀H₀`, no `2π`;
+- (d) a Stefan-Boltzmann hemispheric-vs-isotropic radiation pressure
+  argument (`P_hemisphere=u/6`, itself a correctly verified textbook
+  radiative-transfer result) that, properly substituted into the
+  actual temperature-matching equation rather than applied as a
+  post-hoc divisor on the final answer, gives `a₀=2^(1/4)·c₀H₀`
+  (`~8.1×10⁻¹⁰`, *further* from the target) -- because temperature
+  enters the Stefan-Boltzmann relation to the 4th power, a factor-of-6
+  pressure correction only produces a `6^(1/4)~1.57×` change in the
+  resulting acceleration, not `6×`.
+
+The exact field-theoretic derivation of the `1/(2π)` (or any other)
+geometric projection factor from HDF's own wake dynamics remains
+genuinely open.
+
+**Deep-MOND-limit interpolation -- EMPIRICAL PHENOMENOLOGICAL LAW:**
+`g_obs=√(a₀·g_bar)` is a real target formula, supported by SPARC-132
+Tier A data, but not derived from the wake mechanism. The proposed
+physical picture (entropic wake pressure asymmetry breaking
+d'Alembert's symmetry -- itself a real, legitimate classical-fluids
+starting point) has no worked calculation connecting it specifically
+to the square-root/geometric-mean form, as opposed to any other
+interpolating shape. The complete non-linear transition function
+(continuum stress-tensor closure) remains an open derivation.
+
 ## JWST early-galaxy LCDM tension fact-check (2026-09-14)
 
 **Claim as given:** Labbé et al. (Nature, Feb 2023), Boylan-Kolchin
