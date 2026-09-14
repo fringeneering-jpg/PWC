@@ -350,6 +350,25 @@ viscosity value, flow law, or quantitative fluidity ratio, none of
 which exist anywhere in this project. Supports, does not yet compute,
 the surface-tension bending lead and shared-c/drag entries above.
 
+**LDF generalization (2026-09-14):** LDF is not limited to visible-
+spectrum photons -- it is the general category of genuine energy-wave/
+radiation phenomena: the full EM spectrum (radio, infrared, visible,
+UV, X-ray, gamma) plus neutrinos, all sharing the rigid/structured
+(LDL-like) character above. Plasma is explicitly excluded, correctly:
+plasma is ionized MATTER -- charged particles, still bound mass
+carriers -- not a pure energy-wave. It carries its own collective wave
+phenomena (plasma/Langmuir oscillations), but that is a matter-wave in
+a charged fluid, categorically different from a photon or a
+free-streaming neutrino; plasma stays on the Sintot/matter side of the
+ledger.
+
+**Honest caveat:** neutrinos are not exactly massless and do not travel
+at exactly `c` -- they carry a small, confirmed nonzero rest mass
+(neutrino oscillation experiments, Super-Kamiokande/SNO, 2015 Nobel
+Prize), traveling very close to but not exactly at `c`. Consistent with
+the user's own earlier framing this session ("99.99% to a neutrino"),
+not a contradiction of it.
+
 **Status: OPEN.** No numerical PWC bending-angle calculation exists yet.
 No `rho(r)`-to-refractive-index law and no `rho(r)`-to-proper-path-
 length law have been established anywhere in this project's files --
