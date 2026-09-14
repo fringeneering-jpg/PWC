@@ -733,7 +733,7 @@ via separate calculations.
 | Local equation of state | `P=P(ρ,T,s)` | Not yet specified -- determines whether the wake is classical, radiation-like, barotropic, or something else |
 | Adiabatic closure | `Pρ⁻ᵞ=const`, if applicable | Not yet specified -- relates local compression/rarefaction to temperature and pressure |
 | Wake solution | `δρ(x), δT(x), δP(x)` | Not yet solved -- an actual SOLVED anisotropic wake profile, not an assumed hemisphere |
-| Geometry/boundary condition | Surface, trailing cone, cavity wall, or mode distribution | Not yet specified -- determines the angular factor as an OUTPUT, not an input |
+| Geometry/boundary condition | Surface, trailing cone, cavity wall, or mode distribution | **Corrected 2026-09-14:** real, concrete geometry HAS been proposed repeatedly this session (hemispheric trailing wake, cos²θ weighting, trailing cone, plus the pop-pop-boat/watermelon-seed/cheese-grater analogies supporting it). Gap is narrower than "not specified": it's *assumed* as an input to compute a number, not yet *derived* as the output of actually solving the wake equations and showing the solution comes out hemispherical |
 | Force coupling | `F=-∮_∂V P(x)n̂dA` | Not yet carried out -- converts the actual pressure distribution into a real acceleration |
 | ~~Cosmological coupling~~ Local material constant | **Superseded 2026-09-14** -- see locality correction below | Not `H₀`; not yet identified |
 
