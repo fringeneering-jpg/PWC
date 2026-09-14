@@ -72,13 +72,17 @@
       },
       "statement": "Literal energy (light) is the baseline substance -- not matter. HDF names that same baseline energy in its unlocked state. Matter (Sintot) is derived from it via locking; energy is not a property matter happens to contain.",
       "historical_note": "This is Einstein's original 1905 form and notation (paper title: \"Does the Inertia of a Body Depend Upon Its Energy Content?\"), which derives m=L/c^2 for a body emitting radiation of energy L. This is historically PRIOR to the popularized E=mc^2 form -- not a rearrangement of it. The original derivation specifically analyzes EMISSION (a body radiating energy loses mass, from the kinetic-energy mismatch seen in a boosted frame); this directionality is why the sign convention below matters, not just a formality.",
-      "flagged_uncertainty": "A claim was raised in conversation that the reverse (absorption) direction does not work the same way and that this traces to an error by Planck specifically. I do not have confident, specific knowledge of that historical claim and am not asserting it here -- recorded as raised, not verified.",
       "bookkeeping_constraint": {
         "statement": "All subsequent HDF/LDF/Sintot mechanics must preserve this bookkeeping baseline. Any energy released or absorbed as light corresponds to a mass change.",
         "equation": "Delta_M = Delta_L / c0^2",
         "sign_convention": "Delta_M > 0 for the system when it absorbs light energy (Delta_L > 0 absorbed); Delta_M < 0 for the system when it emits light energy (Delta_L > 0 emitted). Sign is set by whether the defined system is emitting or absorbing, not by an independent convention."
       },
-      "status": "PWC premise"
+      "status": "PWC premise",
+      "entropy_asymmetry": {
+        "statement": "M=L/c0^2 is a mass-energy BOOKKEEPING equation, algebraically symmetric -- it does not assert that emission (mass->light) and locking/absorption (light->mass) are thermodynamically symmetric processes. Emission (a body radiating energy into the baseline medium) is entropy-favorable, the same direction as any energy dispersing into a higher-entropy form. Light spontaneously organizing into a locked, low-entropy Sintot state is not the free mirror image of that -- it requires a specific, non-generic driving/compression mechanism, exactly as PWC already requires (the E_lock/barrier-crossing condition elsewhere in this manifest was never claimed to be the automatic reverse of emission).",
+        "analogy_offered_in_conversation": "Multiplying by zero is a reversible operation on paper, but a real physical reset (e.g. erasing a bit, per Landauer's principle) has a real minimum thermodynamic cost -- algebraic symmetry of an equation does not imply the physical process is symmetric or free in both directions.",
+        "status": "PWC premise, consistent with and reinforcing the existing E_lock/exceptional-reverse-equalisation framing -- not a new, separate claim"
+      }
     }
   },
   "excluded_substitutions": [

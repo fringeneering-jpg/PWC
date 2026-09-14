@@ -66,11 +66,23 @@ mass, from the kinetic-energy mismatch seen in a boosted frame); that
 directionality is why the sign convention below matters, not just a
 formality.
 
-**Flagged, not verified:** a claim was raised that the reverse
-(absorption) direction does not work the same way, tracing to an error
-attributed to Planck specifically. No confident, specific knowledge of
-that historical claim is asserted here -- recorded as raised, not
-confirmed.
+**Entropy asymmetry (corrected from the earlier, vague "Planck" note):**
+M=L/c0^2 is a mass-energy bookkeeping equation, algebraically symmetric
+-- it does NOT assert that emission (mass->light) and locking/absorption
+(light->mass) are thermodynamically symmetric processes. Emission (a
+body radiating energy into the baseline medium) is entropy-favorable,
+the same direction as any energy dispersing into a higher-entropy form.
+Light spontaneously organizing into a locked, low-entropy Sintot state
+is not the free mirror image of that -- it requires a specific,
+non-generic driving/compression mechanism, exactly as PWC already
+requires (the E_lock/barrier-crossing condition elsewhere in this
+manifest was never claimed to be the automatic reverse of emission).
+Analogy offered in conversation: multiplying by zero is reversible on
+paper, but a real physical reset (e.g. erasing a bit, per Landauer's
+principle) has a real minimum thermodynamic cost -- algebraic symmetry
+of an equation does not imply the physical process is symmetric or free
+in both directions. This reinforces, rather than contradicts, the
+existing E_lock/exceptional-reverse-equalisation framing.
 
 **Bookkeeping constraint, binding on all subsequent HDF/LDF/Sintot
 mechanics:** any energy released or absorbed as light corresponds to a
