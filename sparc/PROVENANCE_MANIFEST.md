@@ -248,6 +248,40 @@ concentration has been computed. A bending angle cannot be produced
 from this until such a coefficient exists and is worked through
 quantitatively against the `4GM/(b*c0^2)` benchmark.
 
+**Correction (2026-09-14): LDF/HDF are two phases of one substance, not
+a frictionless pass-through.** The frictionless-propagation claim above
+is REJECTED by the user: light does feel drag. LDF is HDF -- same
+weight, same speed -- just a different phase of the one substance, not
+a separate thing passing through an inert background; gravity waves are
+also HDF. Real grounding identified: liquid water is now understood,
+with real experimental support, to have TWO distinct liquid phases -- a
+high-density liquid (HDL) and a low-density liquid (LDL) -- separated
+by a genuine phase transition, most clearly studied in supercooled
+water. This was a long-standing hypothesis (Poole, Sciortino, Stanley
+and others, from the early 1990s, the "liquid-liquid critical point"
+hypothesis) and received direct experimental support from X-ray
+scattering on supercooled water microdroplets (Kim et al., *Science*,
+2020). Same molecule, two distinct liquid phases, genuinely different
+density and structure -- the physical grounding for HDF/LDF as two
+phases of one substance rather than a background-plus-wave picture.
+
+If LDF and HDF are genuinely distinct phases rather than a uniform
+medium a wave passes through unchanged, a photon (LDF) interacting with
+HDF is a real phase-boundary interaction -- real drag is physically
+expected, the same way sound or heat transport differ measurably
+between water's two liquid phases. The earlier "no resistance" framing
+incorrectly treated LDF and HDF as the same phase encountering itself;
+they are not. **Honest caveat:** water's liquid-liquid transition
+remains an active, still-debated research area (the hypothesized second
+critical point is contested and experimentally hard to reach) --
+treated as well-evidenced grounding for a two-phase picture, not as an
+exactly-solved system to import numbers from. No HDF/LDF drag
+coefficient or phase-boundary condition has been derived anywhere in
+this project. This correction concerns real drag/energy exchange during
+propagation -- a separate question from the surface-tension anisotropy
+lead above; whether that drag is itself directionally asymmetric (and
+could also contribute to bending) is a new, not-yet-examined question.
+
 **Status: OPEN.** No numerical PWC bending-angle calculation exists yet.
 No `rho(r)`-to-refractive-index law and no `rho(r)`-to-proper-path-
 length law have been established anywhere in this project's files --
