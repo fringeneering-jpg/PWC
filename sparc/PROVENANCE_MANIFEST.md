@@ -413,6 +413,28 @@ to genuinely contain two independent contributions when worked through
 in full) before a bending angle can honestly be computed and compared
 to the `2GM/(b*c0^2)` vs `4GM/(b*c0^2)` benchmark.
 
+## Neutron/knot entropy capstone (2026-09-14)
+
+"Neutrons decay in the open, still the strongest knot, entropy's a
+bitch, deal with it." Not a contradiction -- the same entropy-asymmetry
+rule already logged under Mass baseline, demonstrated at the particle
+level. A free neutron sits in the high-entropy, spontaneous-decay
+direction with no cost and no special condition required: it decays
+via `n -> p + e- + antineutrino` with a mean lifetime of ~879 seconds
+(~15 minutes), a precisely measured fact. Packed into sufficient
+density with degeneracy pressure (Pauli blocking suppressing the
+reverse reaction) and gravitational confinement holding the bulk state
+together, that same particle becomes part of the most tightly bound,
+radiation-resistant configuration in this framework -- more resistant
+than even iron-56, the peak of the nuclear binding curve. Nothing about
+the neutron itself changes between these two cases; only whether the
+surrounding conditions have paid the entropy cost of confinement
+determines whether it is the weakest or the strongest thing in the
+framework. Capstone synthesis of three already-logged points (free
+neutron lifetime, neutron-degenerate matter as the strongest tier-knot,
+and the general locking/unlocking entropy-asymmetry rule) -- no new
+numerical claim.
+
 ## Excluded substitutions (explicitly rejected, so they cannot re-enter quietly)
 
 | Substitution | Status |
