@@ -1077,6 +1077,21 @@ genuinely more open than previously claimed, pending a real energy-
 density-and-entropy-dependent EOS -- not yet built. Precision
 correction, not a reversal.
 
+**Complete closure requirements (2026-09-14), confirmed and
+formalized:** a valid dissipative HDF bow-wave closure needs, all
+simultaneously: `P=P(ε,ρ,s,χᵢ)` (EOS); `ε=ε(ρ,s,χᵢ)` (energy
+functional with internal/non-equilibrium state variables `χᵢ`);
+`∂_μT^{μ}_{ν}=J_{ν,\text{source}}` (stress-energy conservation with
+the driving source); all characteristic speeds `≤c` (causality); and
+`∇_μS^μ≥0` (second law, non-negative entropy production) -- the same
+structure real causal relativistic dissipative hydrodynamics (Israel-
+Stewart-type theories) requires. The dissipative freedom this
+correction opens is real but not unconstrained -- momentum and energy
+must still be fully accounted for through the stress-energy tensor;
+dissipation redistributes and generates entropy, it does not let
+anything vanish or appear unaccounted for. None of the five
+requirements have been fixed for HDF yet.
+
 **Locality correction (2026-09-14):** `a₀` is a *local* effect, not a
 universal one requiring a cosmic-scale coupling -- correcting the
 `H₀`-coupling direction pursued across the preceding exchanges. If
