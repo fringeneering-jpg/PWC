@@ -1335,12 +1335,58 @@
       "next_open_test_not_yet_run": "Does rho_req(r) collapse onto one curve when radius is rescaled by each galaxy's own structural size (x=r/R_d or r/R_eff)? A real collapse would suggest a self-similar galaxy-associated structure; no collapse would point to mass, surface density, gas fraction, morphology, or environment as the organizing variable(s). Descriptive follow-up, not required to validate the result already recorded, and must be run without modifying the Domain Y inversion itself."
     },
     "domain_Z_disk_scale_collapse_2026-09-14": {
+      "domain": "Z",
+      "name": "disk_scale_length_collapse_test",
+      "status": "completed_negative",
+      "date": "2026-09-14",
+      "parent_domain": "Y",
       "model_version": "domain_Z_disk_scale_collapse.py",
-      "question": "Pre-registered in the Domain Y entry: does rho_req(r) collapse onto one curve when radius is measured in units of each galaxy's own disk scale length (x=r/R_d) instead of physical kpc? Does NOT modify the frozen Domain Y inversion -- same 139-galaxy quality cuts, same baryonic assumptions, same endpoint-exclusion rule, same galaxy-weighted stacking convention.",
-      "r_disk_source": "vizier_t1.txt 'Rdisk' column (VizieR SPARC Table 1, 3.6um exponential stellar-disk scale length, kpc). All 139 galaxies had a usable positive, finite value; 0 excluded.",
-      "test_used": "NOT just whether the median trend looks smooth in x (it does, but that's true of the physical-kpc stack too and proves nothing about self-similarity alone). The actual collapse test: does galaxy-to-galaxy scatter at fixed radius shrink when switching from physical kpc to x=r/R_d, measured as the std of log10(rho_req) across each bin's per-galaxy median values, comparing bins with n_gal>=5 in both stacks.",
-      "result": "NO COLLAPSE. Mean scatter across physical-kpc bins (7 bins, n_gal 15-119): 0.377 dex. Mean scatter across x=r/R_d bins (10 bins, n_gal 15-121): 0.447 dex. Normalizing by R_d does not reduce scatter -- it increases it by +0.070 dex. Genuine negative result, not null/uninformative: per-galaxy disk scale length alone does not organize the required-density profile into a shared curve.",
-      "interpretation": "Rules out the simplest self-similarity hypothesis (one universal profile in disk units). Does not identify what DOES organize cross-galaxy differences -- mass, surface density, gas fraction, morphology, and environment remain open candidates, untested here. Single pre-registered test, run once, not iterated against alternative normalizations to find one that works.",
+      "question": "Does the Domain Y spherical-equivalent required-density profile collapse onto a shared relation when radius is expressed as x = r/R_d rather than physical kpc?",
+      "inherited_configuration": {
+        "galaxies": 139,
+        "inversion": "unchanged from Domain Y",
+        "quality_cuts": "unchanged from Domain Y",
+        "baryonic_assumptions": "unchanged from Domain Y",
+        "endpoint_exclusion": "unchanged from Domain Y",
+        "stacking_unit": "per-galaxy medians",
+        "Rdisk_source": "vizier_t1.txt, Rdisk column",
+        "Rdisk_definition": "3.6 um exponential stellar-disk scale length, kpc",
+        "missing_or_nonpositive_Rdisk": 0
+      },
+      "collapse_criterion": {
+        "definition": "A collapse is supported only if cross-galaxy scatter in per-galaxy median log10(rho_req) decreases at fixed normalized radius relative to fixed physical radius.",
+        "scatter_metric": "standard deviation in dex across per-galaxy median log10(rho_req)",
+        "minimum_galaxies_per_compared_bin": 5
+      },
+      "results": {
+        "physical_radius": {
+          "bins_compared": 7,
+          "galaxies_per_bin_range": [
+            15,
+            119
+          ],
+          "mean_scatter_dex": 0.377
+        },
+        "normalized_radius_r_over_Rd": {
+          "bins_compared": 10,
+          "galaxies_per_bin_range": [
+            15,
+            121
+          ],
+          "mean_scatter_dex": 0.447
+        },
+        "scatter_change_dex": 0.07,
+        "direction": "normalized-radius scatter is higher"
+      },
+      "conclusion": "No disk-scale-length collapse. Rescaling r by Rd does not reduce cross-galaxy scatter and worsens the mean scatter by 0.070 dex.",
+      "interpretation": "This rejects the simplest one-parameter self-similarity hypothesis: Rd alone does not organize the required-density profiles into a shared curve.",
+      "not_established": [
+        "That disk scale length is physically irrelevant.",
+        "Which variable or combination of variables organizes the remaining cross-galaxy differences.",
+        "A specific HDF mechanism or closure law."
+      ],
+      "analysis_discipline": "Single pre-registered normalization test; no alternative scaling variables were iteratively searched.",
+      "caveat_bin_correspondence": "The 7 physical-radius bins and 10 normalized-radius bins are NOT one-to-one (different bin edges/counts by construction -- physical kpc bins were fixed a priori for continuity with Domain Y; x=r/R_d bins were chosen separately to cover the actual x range). The 0.070-dex mean-scatter comparison is a useful summary; the per-bin scatter table below is the primary audit artifact and should be read alongside it, not replaced by it.",
       "per_bin_scatter_dex": {
         "physical_kpc": {
           "0-1": 0.524,

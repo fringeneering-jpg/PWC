@@ -1890,6 +1890,16 @@ g_bar = Vbar2 / R * conv
   environment remain open candidates, untested here. No further collapse
   variable was tried; this was the single pre-registered test, run once, not
   iterated against alternative normalizations to find one that "works."
+- **Scope caution, do not overstate**: this does NOT show disk scale length
+  is physically irrelevant -- only that it alone is not the missing
+  universal coordinate. Defensible statement: "at fixed r/R_d, the
+  direct-inversion density profiles remain at least as heterogeneous as they
+  are at fixed physical radius." Also note the 7 physical-radius bins and 10
+  normalized-radius bins are NOT one-to-one (different bin edges/counts by
+  construction, not matched pairs) -- the 0.070-dex mean-scatter comparison
+  is a useful summary, but the full per-bin scatter table
+  (`domain_Z_disk_scale_collapse_results.json`) is the primary audit
+  artifact and should be read alongside it, not in place of it.
 
 | Model | Train RMS (dex) | Holdout RMS (dex) | Status |
 |---|---|---|---|
