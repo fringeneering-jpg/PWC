@@ -740,9 +740,94 @@ via separate calculations.
 **Status summary:** neither `a₀=c₀H₀` nor any hemispheric variant
 (`c₀H₀/6`, `2^(1/4)c₀H₀`, `2c₀H₀`) is derived. All rest on an imposed
 scalar-matching assumption that was never physically justified as a
-force-generating mechanism. A real derivation requires solving the six
-elements above, not finding the right prefactor to apply to a scalar
-equality.
+force-generating mechanism.
+
+**Lighthill attempt and its correction (2026-09-14):** a real,
+independently-computed calculation was run using the standard subsonic
+moving-monopole solution (Lighthill 1952) -- correctly reproduced zero
+net force for a stationary source (matching d'Alembert), and found a
+real, non-fabricated result for a moving one: `F∝v` exactly (fitted
+power law `1.0000`) at realistic galactic Mach numbers -- a linear
+scaling, not a saturating floor, meaning the simplest moving-monopole
+mechanism does not by itself reproduce MOND phenomenology. **This
+result was then correctly identified as invalid for a different
+reason:** it used the standard *infinite free-space* Green's function
+-- the same unbounded-zero error this entire project has been catching
+everywhere else, directly contradicting PWC's own finite-medium
+premise. A follow-up attempt to patch this with an ad hoc bounded-
+domain image series (invented damping constants, not a real solution)
+was caught and rejected before being presented as a result.
+
+**The correct bounded formulation (2026-09-14), replacing both prior
+attempts:** the error was never missing geometry -- a finite closed
+HDF medium, a moving mass-shedding source, a trailing directional
+wake, and a boundary-return mechanism (the pop-pop-boat analogy) were
+all proposed earlier in this session. The error was silently replacing
+that proposed geometry with an infinite free-space domain when
+actually computing anything. The correct boundary-value problem:
+
+```
+(d²/dt² - c_s0²∇²)p' = S(x,t)   on a finite domain Ω
+∂p'/∂n = 0 on ∂Ω   (rigid wall; or p'=Z·u'·n̂ for a lossy boundary, Z derived not assumed)
+```
+
+solved via the domain's own Neumann eigenmodes (`∇²Φ_α+k_α²Φ_α=0`,
+`∂Φ_α/∂n=0` on `∂Ω`), expanding `p'=Σq_α(t)Φ_α(x)` with each mode a
+forced oscillator `q̈_α+ω_α²q_α=S_α(t)`, `ω_α=c_s0k_α`. Standard,
+correct bounded-domain (duct/cavity modal) acoustics, not invented for
+this project.
+
+**The momentum-conservation constraint, real and important:** a
+perfectly closed rigid cavity containing only a passive body and a
+linear, lossless fluid cannot emit net momentum through its external
+boundary -- simple conservation of momentum for an isolated system,
+ruling out the naive version of this mechanism outright. It does *not*
+rule out PWC's actual proposed mechanism: the body isn't passive or
+lossless, it continuously and irreversibly sheds mass into the medium
+(`ΔM=L/c₀²`, already established). That's exactly the kind of
+anisotropic, dissipative, time-reversal-symmetry-breaking process that
+*can* produce a real sustained force inside a closed system. This
+identifies precisely which ingredient must do the real work
+(irreversible anisotropic shedding, not bare geometry) and rules out
+any calculation -- including both prior attempts this session -- that
+treats the source as linear and passive.
+
+**Required specification, final version, replacing all earlier
+(imprecise or flawed) roadmaps:**
+
+| Component | Existing proposal | Needed specification |
+|---|---|---|
+| Domain | Closed, finite HDF medium | Shape and scale (sphere, shell, torus, or other explicit `Ω`) -- not yet specified |
+| Closure | No escape / pressure return | Rigid Neumann wall, periodic topology, or impedance `Z(ω)` -- not yet specified |
+| Source | Moving mass-shedding body | `S(x,t)`: strength, spectrum, size, trajectory `X(t)` -- not yet quantified |
+| Wake direction | Trailing hemisphere/cone | Retarded coupling and the actual field it produces -- not yet solved (still assumed, not derived) |
+| Fluid response | `c_s0=c`, compressibility/tension | Full `P(ρ,s)`, plus damping/viscosity -- partially specified, incomplete |
+| Measured effect | Local low-acceleration boost | Real control surface, `F_i=-∮P_ij n_j dA` -- not yet defined |
+| Boundary return | Pop-pop mechanism / recirculation | Phase delay, reflection law, coherent/damped/nonlinear -- not yet specified |
+
+**Lossless assumption corrected (2026-09-14):** the momentum-
+conservation constraint above was stated for a *linear, lossless*
+fluid plus a dissipative body -- but nobody established HDF itself as
+lossless, and this project explicitly rejected that framing earlier
+tonight (the LDF/HDF real-drag correction: light does feel drag, HDF
+established as the *more fluid*, dissipative phase, not an idealized
+inviscid medium). The standard linear wave equation above silently
+imported a lossless medium from standard acoustics -- not a PWC-
+derived assumption. This means there are *two* independent channels
+available to break the closed-system reversibility argument, not one:
+(1) the body's own irreversible mass-shedding (already identified),
+and (2) HDF's own internal dissipation/viscosity (established
+elsewhere in this project, not yet incorporated into this wave-
+equation formulation). The fluid-response line of the specification
+table needs a real damping/dissipation term, not just `P(ρ,s)`, to
+match what's already established about HDF elsewhere in this
+manifest.
+
+**Status:** this is now the correct, complete problem specification.
+Actually solving it -- real eigenfunctions for an explicit HDF cavity
+geometry, coupled to a genuinely irreversible, anisotropic source term
+and HDF's own real dissipation -- is substantial applied-math work not
+yet attempted. Scope stated honestly as open, not simulated.
 
 **Locality correction (2026-09-14):** `a₀` is a *local* effect, not a
 universal one requiring a cosmic-scale coupling -- correcting the
