@@ -1046,6 +1046,37 @@ already responsible for the speed limit itself rather than requiring a
 new postulate -- still not yet worked through to an actual force/
 `Γ_term` calculation.
 
+#### Scope narrowed (2026-09-14): "K₂≤0 forced" was overstated as universal
+
+**Correction:** the `K₂≤0` conclusion was stated too broadly (as ruled
+out in every possible HDF description). Correct only under a narrower,
+specific assumption: that `dP/dρ` *is* the true relativistic causal
+stiffness `dP/dε` at fixed entropy, requiring `ε=ρc²` identically
+through the compressed state (an adiabatic/equilibrium closure). The
+real causality bound is on `dP/dε` (pressure vs. *total* energy
+density -- rest, thermal, elastic, internal modes), not generically on
+`dP/dρ` for an arbitrary density-like variable.
+
+**Why the narrower case can differ:** a real bow wave is dissipative
+by nature (it's a shock; it generates entropy, `δs≠0`). Compression
+work in a dissipative process need not route entirely into the same
+channel that raises `ρ` -- some can go into internal/thermal/elastic
+modes that don't feed back into `ε=ρc²` the way the calm bulk medium
+does. That breaks the simple identification `dP/dρ=dP/dε` the `K₂≤0`
+proof depended on. The proof may still hold for the full dissipative
+theory, but showing that requires an actual `ε(ρ,s,...)` closure,
+which has not been built.
+
+**What survives, what's corrected:** equilibrium-barotrope stiffening
+under the simple `ε=ρc²` closure is still ruled out -- that specific
+result was verified and stands. What's corrected: this was overstated
+as a universal exclusion across every conceivable HDF closure, when it
+actually depends on that specific adiabatic, non-dissipative
+simplifying assumption. The full dissipative theory's freedom is
+genuinely more open than previously claimed, pending a real energy-
+density-and-entropy-dependent EOS -- not yet built. Precision
+correction, not a reversal.
+
 **Locality correction (2026-09-14):** `a₀` is a *local* effect, not a
 universal one requiring a cosmic-scale coupling -- correcting the
 `H₀`-coupling direction pursued across the preceding exchanges. If
