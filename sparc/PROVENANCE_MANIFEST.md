@@ -999,6 +999,53 @@ is now a verified, non-free result. The nonlinear closure (`K₂, K₃,
 constitutive derivation *and* causal saturation at `c²`, ruling out
 simple unbounded-divergence forms like the one originally proposed.
 
+### Sharper causality correction (2026-09-14): equilibrium stiffening ruled out entirely
+
+**Correction of the above:** the "saturate at `c²`, don't diverge past
+it" framing was too permissive. Correct, sharper result: near `δ=0`,
+`dP/dρ ~ c² + (2K₂/ρ₀)δ`, using `K₁/ρ₀=c²` exactly -- the baseline is
+already *at* the causal ceiling (`c_s0=c`). If `K₂>0`, `dP/dρ` exceeds
+`c²` for *arbitrarily small* positive `δ` (compression) -- not
+eventually, immediately. Independently re-verified: since the baseline
+sound speed already equals the causal maximum, there is no room for
+the equilibrium branch to stiffen under compression at all -- `K₂≤0`
+is *forced*, not merely bounded.
+
+**What this rules out:** the entire class of mechanism, not just a
+constraint on it -- an equilibrium barotropic EOS already maximally
+stiff at `ρ₀` cannot become stiffer under compression without breaking
+its own causal premise, for *any* nonlinear closure. There is no
+`K₂>0` that works, period.
+
+**Redirect toward relativistic inertia:** sharp bow-wave resistance,
+if real, cannot come from equilibrium sound-speed stiffening -- it
+must come from elsewhere in the full stress tensor
+`T^{ij}=Pδ^{ij}+Π^{ij}+ρ_eff u^iu^j` (pressure + viscous/non-
+equilibrium stress + momentum-flux/inertia). The momentum-flux term is
+exactly what diverges as `v→c` in ordinary special relativity
+(`p=γmv`, `γ→∞`) -- the same mechanism already responsible for `c`
+being a hard speed limit at all, not a new, separate postulate. More
+parsimonious than hunting for an exotic nonlinear stiffening law:
+standard relativistic kinematics applied to HDF's own bow-wave
+inertia, not an equilibrium-EOS singularity.
+
+**Other viable non-equilibrium channels:** large finite (not infinite)
+integrated pressure difference over a bounded compression range even
+with `dP/dρ≤c²` everywhere; dissipation/viscosity/relaxation (already
+established as needed, via the earlier "who said lossless" correction);
+finite bounded-cavity geometry (reflections, phase-lagged stress);
+genuinely anisotropic, non-equilibrium stress (a moving bow wave/shock
+is not simply the equilibrium `P(ρ)` evaluated at a shifted density --
+real shocks involve entropy generation, not equilibrium thermodynamics).
+
+**Status:** genuine narrowing, not relocation, of the open problem.
+Equilibrium EOS nonlinear stiffening is now *ruled out* as the source
+of sharp resistance. Leading candidate: relativistic inertia
+(momentum-flux divergence as `v→c`), reusing the same mechanism
+already responsible for the speed limit itself rather than requiring a
+new postulate -- still not yet worked through to an actual force/
+`Γ_term` calculation.
+
 **Locality correction (2026-09-14):** `a₀` is a *local* effect, not a
 universal one requiring a cosmic-scale coupling -- correcting the
 `H₀`-coupling direction pursued across the preceding exchanges. If
