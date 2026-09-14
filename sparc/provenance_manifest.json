@@ -387,6 +387,19 @@
         "https://www.aanda.org/articles/aa/full_html/2025/02/aa52781-24/aa52781-24.html",
         "https://academic.oup.com/mnras/article/537/2/1826/7973012"
       ]
+    },
+    "bullet_cluster_igimf_v3_full_read_2026-09-14": {
+      "source": "Zhang, Haghi, Asencio, Banik et al., 'Baryonic mass budgets in the central regions of the Bullet Cluster and their consistency with strong lensing in MOND', arXiv:2606.19454v3 (dated 2026-07-06/07), read in full from local PDF C:\\Users\\jaden\\Downloads\\2606.19454v3.pdf -- supersedes the earlier summary-only entry for this paper logged under jwst_early_galaxy... / bullet_cluster_jwst_2026_update.",
+      "the_real_mechanism": "Not ad hoc. Blackwell, Bregman & Snowden (2022) showed the VISIBLE stellar populations in cluster galaxies cannot account for the metals directly measured in the intracluster gas -- requiring an earlier, now-dead population of massive stars, which leaves far more neutron star/black hole remnant mass than standard IMF accounting credits. IGIMF theory (developed independently of any dark-matter question, gauged on globular clusters, star counts, and starbursts since Kroupa & Weidner 2003) quantifies how much. Metallicity is the real, independent evidentiary anchor, not a free parameter tuned to fit lensing.",
+      "quantitative_result": "For the three BCG cores (southern, northern, subclump), IGIMF-corrected baryonic mass (stars+remnants+ICL+gas) as a fraction of the MOND strong-lensing requirement at 250 kpc: 101-136% (southern), 117-165% (northern), 120-163% (subclump) -- baryonic mass brackets or EXCEEDS the MOND requirement in most cases.",
+      "three_honest_limits_stated_by_the_authors_themselves": [
+        "1. Scope: three central BCG cores only, NOT the full cluster's weak-lensing offset map (the original Clowe et al. 2006 'direct empirical proof' claim covers the whole cluster, not just the cores).",
+        "2. Against plain GR/LCDM (not MOND), the same generous baryonic estimate is still only 52-86% of the required lensing mass -- a real gap remains; the paper's conclusion is that dark matter models must 'revise their parameters to reduce the required dark matter mass,' not eliminate it.",
+        "3. Self-flagged unresolved tension: this much extra mass concentrated in remnants in BCGs should push their velocity-dispersion profiles toward declining/Keplerian, but observed BCG profiles are flat. Testing whether natal kicks spread remnants out enough to avoid this conflict is explicitly stated as 'beyond the scope of this work' and 'remains to be explored' -- an open problem in the paper's OWN scenario, not resolved here."
+      ],
+      "additional_context_surfaced": "A companion paper in prep, cited in the references (Cho, Jee, Joo, Cha, HyeongHan, 'Joint JWST-DECam Lensing Reveals That the Bullet Cluster Is a Minor Merger', arXiv:2512.03150), reportedly finds the Bullet Cluster is a MINOR merger rather than the extreme high-velocity major collision the original LCDM-tension claims were built on -- a separate, additional, not-yet-fully-absorbed crack in the standard picture.",
+      "authors_own_conclusion_language": "'The notion that the Bullet Cluster provides definitive evidence for dark matter needs to be questioned... Alternative frameworks... offer explanations that deserve further exploration.' Explicitly hedged -- not 'falsified,' not 'dead.'",
+      "honest_verdict": "Real, serious, metallicity-anchored science with a genuine positive result for MOND at the core scale. Not a full-cluster resolution, not a demonstration dark matter is unnecessary under LCDM, and the authors' own scenario carries an unresolved dynamical (velocity-dispersion) tension they explicitly did not test. Strongest of the Bullet Cluster results checked so far in this project, still short of 'dead.'"
     }
   },
   "dataset": {
