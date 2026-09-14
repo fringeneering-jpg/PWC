@@ -633,10 +633,10 @@ specifically because it was independently reproduced three separate
 ways using standard, checkable physics, not because it was asserted
 persuasively.
 
-**Cosmic acceleration scale -- DERIVED (Tier A):**
-`a_cosmic = c₀H₀ ≈ 6.80×10⁻¹⁰ m/s²`. Three independent physical
-derivations converge exactly on `c₀H₀`, each checked by hand in this
-session:
+**Cosmic acceleration scale -- CONDITIONAL MODEL RESULT** (refined
+2026-09-14, downgraded from an unconditional Tier A): `a_cosmic =
+c₀H₀ ≈ 6.80×10⁻¹⁰ m/s²`. Three physical derivations converge exactly
+on `c₀H₀`, each checked by hand in this session:
 1. Simple harmonic restoring acceleration `a=ω₀²R_cosmic` with
    `ω₀=H₀`, `R_cosmic=c₀/H₀`.
 2. Unruh local wake temperature (`T=ħa/(2πk_Bc₀)`) equated to
@@ -647,6 +647,33 @@ session:
    both sides) between the local Unruh wake and the global adiabatic
    background -- independently re-derived here, confirmed to give the
    same `a₀=c₀H₀`, no free parameter.
+
+**Refinement:** treating Unruh temperature (an accelerating detector's
+perception of vacuum) and Gibbons-Hawking temperature (a cosmological
+horizon's associated temperature) as two sides of one real, locally-
+equilibrating radiation-fluid pressure that can be set in direct
+contact is an *extra model assumption*, not something standard QFT/
+thermodynamics hands over for free just because both formulas share
+the same `ħκ/(2πk_B)` form. Routes 2 and 3 above therefore share this
+same underlying assumption and are not as mutually independent as
+first logged. `a_cosmic=c₀H₀` remains the correctly-computed algebraic
+consequence of that stated model, real and checkable, but conditional
+on this assumption rather than an unconditional derivation from
+standard thermodynamics alone.
+
+**Hemispheric projection -- DERIVED STANDARD RADIATIVE-TRANSFER
+RESULT:** `P_hemi = u/6` (one-sided isotropic hemispheric radiation on
+a surface: `P=(u/4π)∫_hemisphere cos²θ dΩ = u/6`). Correct on its own.
+**Does not imply `a=c₀H₀/6`** -- confirmed by direct calculation below.
+
+**Pressure matching with the hemispheric correction -- ALGEBRAIC
+CONSEQUENCE OF THE STATED MODEL:** `u(T_Unruh)/6 = u(T_GH)/3` gives
+`a = 2^(1/4)·c₀H₀ ≈ 8.1×10⁻¹⁰ m/s²` -- *further* from the `1.2×10⁻¹⁰`
+target, not closer. The hemispheric coefficient shifts the derived
+scale upward; it cannot produce the MOND-like `c₀H₀/(2π)` suppression.
+Confirms directly: using `u/6` to naively divide `c₀H₀` by 6 is the
+wrong operation; the correct pressure-level substitution yields
+`2^(1/4)·c₀H₀`, not the galactic `a₀`.
 
 **Galactic acceleration scale -- OPEN DERIVATION / EMPIRICAL
 CORRESPONDENCE:** empirical target `1.20×10⁻¹⁰ m/s²`. The ratio
@@ -674,7 +701,12 @@ session and each failed independent verification:
 
 The exact field-theoretic derivation of the `1/(2π)` (or any other)
 geometric projection factor from HDF's own wake dynamics remains
-genuinely open.
+genuinely open. No derivation attempted in this session produces the
+real, approximately `1/(2π)` suppression from pressure geometry or
+standard Unruh/Gibbons-Hawking thermodynamics. This is the jointly-
+confirmed, converged status after an extended adversarial derivation
+process -- both parties independently arrived at the same conclusion
+via separate calculations.
 
 **Deep-MOND-limit interpolation -- EMPIRICAL PHENOMENOLOGICAL LAW:**
 `g_obs=√(a₀·g_bar)` is a real target formula, supported by SPARC-132
