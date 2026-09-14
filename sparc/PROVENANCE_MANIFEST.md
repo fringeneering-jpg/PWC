@@ -76,10 +76,25 @@ selects this branch for real galaxies is UNRESOLVED -- Domain V's
 real-galaxy convergence test found multiple competing solution branches,
 not a clean selection of this one.
 
-**Compact HDF saturation limit** (`rho_HDF_max=4.6e10 kg/m^3`, finite core
-+ descending envelope, no singularity): stated as PWC's fixed physical
-rule (premise) in this record. **Not independently derived** from a
-medium functional by any script in this repository.
+**Compact HDF saturation limit -- status: `external_session_derived_pending_archival`.**
+`rho_HDF_max=4.6e10 kg/m^3` (finite core + descending envelope, no
+singularity) is claimed to have been derived in a separate Perplexity
+conversation on 2026-09-14, using a black-hole minimum-density/
+maximum-density argument. That transcript is not accessible from this
+Claude session and is not present anywhere in this repository. This
+session's search establishes only that no transcript/derivation record
+exists locally -- **not** that the derivation didn't happen elsewhere.
+Explicitly NOT classified as: arbitrary, invented, a free parameter,
+unsupported assertion, absent, or Domain-S-originated. It remains, as
+before, a declared input value used by Domains S/T/U/V -- that use is
+unchanged; only the description of its own origin changed. Upgrading
+this to verified/derived-and-checked requires the original transcript
+(or the black-hole objects/masses/radii, equations, and selection rule
+it used) to be archived here. Until then it stays at this status.
+
+This is a separate question from the K-scan parameter reconciliation
+below, which was resolved independently (via script dates and vocabulary
+absence, not via this value's own provenance) and is not being reopened.
 
 **Correction (post-initial-draft):** the first version of this manifest
 wrongly tagged the next two items as `unverified_claim_pending_source`.

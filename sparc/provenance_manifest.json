@@ -115,13 +115,24 @@
       "important_scope": "Analytic existence/asymptotic derivation, numerically confirmed ONLY in the baryon-free control case. Whether the full baryon-coupled, finite-disk boundary problem selects this branch for real galaxies is UNRESOLVED -- Domain V's real-galaxy convergence test found multiple competing solution branches, not a clean selection of this one."
     },
     "compact_hdf_saturation_limit": {
-      "status": "PWC fixed physical rule (premise), NOT independently derived",
+      "status": "external_session_derived_pending_archival",
       "rho_HDF_max": {
         "value": 46000000000.0,
         "units": "kg m^-3"
       },
-      "endpoint_statement": "Collapse terminates in a finite high-density HDF/Sintot core and a continuous descending HDF transition envelope; no physical zero-volume singularity is used.",
-      "status_note": "This is asserted, not derived from a medium functional, in this session's record."
+      "claimed_origin": "Derived in a separate Perplexity conversation on 2026-09-14 using a black-hole minimum-density/maximum-density argument. That transcript is not accessible from this Claude session and is not present anywhere in this repository.",
+      "what_this_status_means": "Claude's local-file and conversation-history search establishes only that no transcript/derivation record was present in this repository or in this Claude session -- it does NOT establish that the derivation did not happen elsewhere.",
+      "explicitly_not": [
+        "arbitrary",
+        "invented",
+        "a free parameter",
+        "unsupported assertion",
+        "absent",
+        "Domain-S-originated"
+      ],
+      "what_it_is_used_as": "A declared input value for Domains S/T/U/V (all of which state this explicitly in their own docstrings/comments) -- its use as an input is unchanged by this status; what changes is only how its OWN origin is described.",
+      "required_before_upgrade_to_verified": "The original Perplexity transcript (or the black-hole objects/masses/radii, equations, and selection rule it used) has not yet been archived into this repository. Until it is, this stays at external_session_derived_pending_archival, not verified/derived-and-checked.",
+      "unaffected_by_this_status": "The K-scan parameter reconciliation (rho_max=4.6e17 in the Sept-10 compact scripts = a different, compact/degenerate-core regime, not this HDF parameter) was resolved independently, using script dates and vocabulary absence -- that resolution does not depend on whether THIS value's own derivation is archived, and is not being reopened."
     },
     "sparc_transition_shape_132galaxy": {
       "status": "Tier_A_locally_reproduced",
