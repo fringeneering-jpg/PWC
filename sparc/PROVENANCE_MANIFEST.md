@@ -282,6 +282,46 @@ propagation -- a separate question from the surface-tension anisotropy
 lead above; whether that drag is itself directionally asymmetric (and
 could also contribute to bending) is a new, not-yet-examined question.
 
+**Shared-c mechanism (2026-09-14):** each individual fundamental unit of
+the substrate weighs the same whether currently arranged as HDF or
+LDF. The two phases differ purely in volumetric packing density: HDF
+packs units tightly (the source of pressure/squeeze/pull toward mass);
+LDF spreads them so thin it is "almost massless" in bulk despite being
+built from identical individual units. Because both phases are
+ultimately the same fundamental stuff, the maximum speed a disturbance
+can propagate at is set by that shared per-unit property, not by which
+macroscopic-density phase carries it -- hence light (an LDF disturbance)
+and gravitational waves (an HDF disturbance) share the same speed
+ceiling, `c`.
+
+This is not speculative: GW170817 (2017 binary neutron star merger) was
+observed in both gravitational waves (LIGO/Virgo) and a gamma-ray burst
+(Fermi/INTEGRAL) arriving within ~1.7 seconds of each other after a
+~130-million-light-year journey, constraining the fractional difference
+between gravitational-wave speed and light speed to roughly 1 part in
+10^15 -- effectively identical. The shared-fundamental-unit picture
+supplies an actual physical reason for this near-exact match, rather
+than leaving `c_GW = c_light` as an unexplained empirical coincidence.
+
+This also reconciles cleanly with the drag correction above: "almost
+massless" in bulk is a genuine qualitative reason LDF's coupling to HDF
+is normally weak enough to look frictionless over most of light's
+travel (consistent with light crossing cosmological distances with no
+measurable exotic dispersion) -- but weak coupling is not zero coupling,
+which does not contradict the prior correction that real drag exists.
+The residual coupling is exactly where real drag AND the surface-tension
+pull toward mass concentrations both plausibly live -- concentrated
+where HDF is dense, negligible where it is not.
+
+**Honest caveats:** this is a qualitative, structurally coherent account,
+not a derivation. No scaling law has been established anywhere in this
+project relating volumetric packing density to propagation-speed cap,
+drag magnitude, or the surface-tension coefficient needed for the
+still-open bending-angle question above. The GW170817 evidence directly
+supports the shared-speed-ceiling claim specifically; it does not by
+itself derive drag magnitude or resolve the anisotropy/factor-of-2
+question.
+
 **Status: OPEN.** No numerical PWC bending-angle calculation exists yet.
 No `rho(r)`-to-refractive-index law and no `rho(r)`-to-proper-path-
 length law have been established anywhere in this project's files --
