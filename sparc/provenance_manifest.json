@@ -214,6 +214,18 @@
     {
       "statement": "A failed IVP or nonconverged BVP proxy falsifies the universal PWC framework.",
       "status": "Rejected: it constrains only the precise implemented EOS/boundary/proxy (Domains S/U/U2/V), not the ontology."
+    },
+    {
+      "statement": "GR's r=0 collapse endpoint is a real, physical infinite-density point.",
+      "status": "Rejected -- mainstream physics itself already treats this as a signal classical GR breaks down there (motivation for quantum gravity), not a confirmed prediction; consistent with PWC's own no-physical-infinity premise."
+    },
+    {
+      "statement": "Dark matter is a real, invisible particle species.",
+      "status": "Rejected as a substance -- but the phenomena it was invented to explain remain real, measured, and NOT discharged by the rejection: (1) flat galaxy rotation curves -- this project has real Tier A traction (132-galaxy SPARC fit). (2) Bullet Cluster lensing mass offset from visible gas -- NOT addressed anywhere in this project. (3) CMB acoustic peak heights requiring a specific matter/baryon ratio -- NOT addressed anywhere in this project. Rejection transfers the explanatory burden to HDF mechanics; it does not discharge it. Two of three obligations remain fully open."
+    },
+    {
+      "statement": "The cosmological constant / dark energy is literal vacuum energy generated from empty space.",
+      "status": "Rejected as a mechanism -- but the observation it was invented to explain (accelerating cosmic expansion, measured via Type Ia supernovae, Perlmutter/Riess/Schmidt 1998) remains real and is NOT addressed anywhere in this project. Rejection transfers the explanatory burden to HDF mechanics; fully open."
     }
   ],
   "current_derivations": {
