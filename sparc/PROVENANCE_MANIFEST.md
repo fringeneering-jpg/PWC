@@ -31,8 +31,8 @@ They do not define or redefine PWC's ontology.
   independently derived from a medium functional in this session).
 - **Lensing**: LDF/light follows locally straight available paths through
   curved/inhomogeneous HDF geometry -- path guidance, not ordinary
-  refractive drag or sub-local-limit photon slowing. No ray-equation
-  derivation was performed in this session.
+  refractive drag or sub-local-limit photon slowing. See dedicated
+  section below (open derivation, not yet numerically complete).
 - **Redshift**: HDF density state determines local process constraint;
   denser-HDF emission observed from lower-density HDF/LDF is redshifted.
   No explicit state-to-process mapping was derived or tested this session.
@@ -90,6 +90,100 @@ mass change, `Delta_M = Delta_L / c0^2`. Sign: Delta_M > 0 when the
 defined system absorbs light energy, Delta_M < 0 when it emits light
 energy -- set by which the system is doing, not an independent
 convention.
+
+## Lensing (PWC premise + open derivation, historically anchored)
+
+**Historical checkpoint -- three convergent half-answers, not one:**
+
+1. *Newton/Soldner (1704 speculation, 1784/1801 calculation).* Newton's
+   *Opticks* (Query 1) speculated gravity acts on light. The actual
+   Newtonian-mechanics calculation -- light as an ordinary massive
+   corpuscle on a hyperbolic trajectory under plain 1/r^2 gravity -- was
+   done by Cavendish (1784, unpublished) and independently published by
+   von Soldner (1801): `theta = 2GM/(b*c0^2)`. This is the ORIGINAL
+   half-answer, over a century before Einstein, from literal particle
+   mechanics -- nothing relativistic in it at all.
+2. *Einstein, 1911.* Using only the equivalence principle (no spatial
+   curvature yet), Einstein independently reproduced the *exact same*
+   value, `2GM/(b*c0^2)`, via a wholly different argument (light losing
+   energy/frequency climbing a gravitational potential -- the same
+   reasoning as gravitational redshift/time dilation). Same number,
+   different physics: Einstein did not originate the half-answer, he
+   re-derived Newton/Soldner's value from an independent but still
+   incomplete principle.
+3. *Einstein, 1915.* Full general relativity added a second,
+   independent contribution missing from both prior calculations --
+   curvature of the *spatial* part of the metric, not just the time
+   part. This doubles the result: `theta_GR = 4GM/(b*c0^2)`, confirmed
+   by Eddington 1919.
+
+**The domino this session must not repeat:** three historically
+distinct calculations (Newton/Soldner's particle mechanics, Einstein
+1911's equivalence principle, and any naive "photon slows down in
+denser medium" refractive-index picture) all converge on the *same*
+single-effect value, because each encodes only one potential
+contribution to the light path. This is documented in the
+gravity-as-refraction literature: an effective index built naively as
+`n(r) = 1 + GM/(r*c0^2)` -- from the same potential that sets
+gravitational redshift/time dilation alone -- reproduces only half the
+true bending. Matching GR requires `n(r) = 1 + 2GM/(r*c0^2)`, i.e. two
+independent contributions summed, not one.
+
+**PWC candidate mechanism, as given in this session (2026-09-14):**
+Light (LDF) propagates exactly as it always does. Near a mass, the
+medium is a volumetrically heavier but singularly (spherically)
+symmetric HDF concentration. This asymmetrically pressures the
+surrounding LDF: the pressure on the near side of a photon's path grows
+(from the HDF pull), and that gradient pulls the photon toward the
+denser side. The resulting path is locally straight *from the photon's
+own frame* even though it appears bent externally. Separately: "time"
+bending is denied as a distinct entity -- there is no independently
+curved time, only density; travelling at (or, for a neutrino, very
+near) lightspeed through denser medium is what produces the effects GR
+attributes to time dilation, as a direct density/kinematic consequence,
+not a second geometric degree of freedom.
+
+**Assessment (applying the same rigor as the mass-baseline corrections
+above):**
+- The transverse pressure-gradient piece is a real, correct mechanism
+  as far as it goes -- mathematically a graded-index refraction /
+  Fermat's-principle ray bend, exactly like light curving toward the
+  dense side in a GRIN lens or a hot-road mirage. Nothing invented here.
+- *Open problem:* by itself this is mechanically the same single-
+  potential family flagged above. A photon path bent by one
+  density-derived pressure/index field, sourced from the same `rho(r)`
+  that also accounts for the redshift-like ("time") effect, reproduces
+  only `2GM/(b*c0^2)` -- the historical half-answer -- for the identical
+  structural reason all three prior attempts did.
+- Denying "time bending" as a separate entity and reducing it to a
+  density/speed consequence for the photon is a coherent ontological
+  move (fewer primitives: density + motion, not density + motion + a
+  separate curved-time substance) -- but it does not, by itself, supply
+  the missing second contribution to the bending angle. It only
+  relabels one of the two required pieces. If PWC has only one
+  density-sourced effect doing all the work, the deflection still comes
+  out at half value regardless of what that one effect is called.
+- *What is actually required:* HDF compression must contribute to the
+  photon's path in two mechanically distinct ways: (1) the pressure/
+  index-gradient steering already described (supplies the
+  "time-dilation-equivalent" half), and (2) an independent effect of the
+  compression on the proper spatial path length through the compressed
+  region itself (the "space" half) -- an equal, separate contribution.
+  Collapsing both into a single `rho(r)`-sourced index law, however
+  physically motivated the description, will not clear this bar without
+  being checked quantitatively against the known `4GM/(b*c0^2)` target.
+
+**Status: OPEN.** No numerical PWC bending-angle calculation exists yet.
+No `rho(r)`-to-refractive-index law and no `rho(r)`-to-proper-path-
+length law have been established anywhere in this project's files --
+tonight's compressibility figures (`e_EOS(rho)`, `rho_HDF_max`, the
+hydrostatic EOS machinery from the SPARC domains) describe the medium's
+own *mechanical* compression response and can supply an input density
+profile `rho(r)`, but do not by themselves constitute either of the two
+optical laws above. Both must be derived (or the single mechanism shown
+to genuinely contain two independent contributions when worked through
+in full) before a bending angle can honestly be computed and compared
+to the `2GM/(b*c0^2)` vs `4GM/(b*c0^2)` benchmark.
 
 ## Excluded substitutions (explicitly rejected, so they cannot re-enter quietly)
 
