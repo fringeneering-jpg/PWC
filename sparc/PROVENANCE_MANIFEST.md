@@ -161,6 +161,62 @@ gravitational redshift/time dilation alone -- reproduces only half the
 true bending. Matching GR requires `n(r) = 1 + 2GM/(r*c0^2)`, i.e. two
 independent contributions summed, not one.
 
+**Root-cause domino chain (2026-09-14), fixing the historical hand-wave
+at its source:** the standard telling of Newton/Soldner's calculation
+treats "assume light has a tiny mass, then let it vanish as m→0" as a
+delicate limit needing justification. It is not. Impulse approximation
+for a particle of mass `m`, speed `v`, passing mass `M` at impact
+parameter `b`: perpendicular impulse `Δp⊥ = 2GMm/(bv)`; deflection angle
+`θ ≈ Δp⊥/p = Δp⊥/(mv) = 2GM/(bv²)`. The test mass `m` appears in both
+the force (∝m) and the momentum being divided into (`p=mv`, also ∝m)
+and cancels by plain algebra at the *first* step -- before any
+statement about what light is made of is needed. Setting `v=c` gives
+`θ=2GM/(bc²)` directly, no limit, no hand-wave. **This is the fixed
+"bullshit workaround for a zero doing nothing":** the cancellation was
+never delicate work, it was a trivial structural fact about the force
+law (`a=GM/r²` is already mass-independent) misrepresented as a special
+trick.
+
+**The dominoes this fix knocks forward:**
+1. Because `a=GM/r²` never depended on the moving object's mass,
+   Newtonian gravity was already quietly equivalence-principle-like,
+   over a century before the equivalence principle was named (1907) --
+   unnoticed, because the cancellation was treated as a magic trick
+   rather than a plain structural fact.
+2. But `a=GM/r²` only ever describes a path bending through
+   *unchanged, rigid* Newtonian space -- the ontology has no concept of
+   space itself being reshaped, so there is nothing in the law for a
+   second effect to attach to. Newton/Soldner's half-answer is not
+   half-right by bad luck; it is structurally incapable of being more,
+   because the framework only has room for one effect.
+3. Einstein 1911 reaches the identical number via a wholly different
+   argument (equivalence principle / redshift-time-dilation, not
+   particle mechanics) -- but is still confined to the same single
+   degree of freedom: how time runs differently near mass. Still no
+   reshaped space. Same domino, knocked over twice by independent
+   routes, landing in the same place for the same reason.
+4. Only in 1915, once space is allowed to curve as a genuinely separate
+   degree of freedom from time, does the second, equal contribution
+   appear, doubling the result to `4GM/(bc²)`, confirmed by Eddington
+   1919.
+5. **PWC application:** if HDF's compression is modeled as *only* a
+   pressure/index gradient kinematically steering a photon (however
+   physically motivated), it is mechanically the same shape as
+   `a=GM/r²` -- one law, one effect, one half-answer, for the identical
+   structural reason, in new vocabulary. The missing piece is not "a
+   better steering mechanism" -- it is the medium's own proper-length/
+   geometric role, entirely separate from how it steers direction.
+6. **Why surface tension is the leading candidate, not just one
+   option among several:** interfacial tension inherently supplies two
+   distinct geometric roles (tangential steering, normal/curvature
+   length-changing) from *one* parameter, rather than one role counted
+   once -- the correct shape to escape this trap, traced back to its
+   root, not a preference among equals.
+
+**Status: still no computed bending angle.** The missing input remains
+an actual HDF tension/anisotropy figure, not yet derived or measured
+anywhere in this project.
+
 **PWC candidate mechanism, as given in this session (2026-09-14):**
 Light (LDF) propagates exactly as it always does. Near a mass, the
 medium is a volumetrically heavier but singularly (spherically)
