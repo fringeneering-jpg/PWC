@@ -1,0 +1,83 @@
+{
+  "n": 137,
+  "primary_target": "fA (independent of Mass/nH2/DGMF)",
+  "secondary_target_caveat": "Mline is derived from Mass/Lsum in the source catalog; mass_only is not an independent baseline for it",
+  "targets": {
+    "fA": {
+      "choke_F1": {
+        "pearson_r": -0.026257078184035505,
+        "pearson_p": 0.7606953602517273,
+        "spearman_rho": -0.011169644890311784,
+        "spearman_p": 0.8969276217859231,
+        "r2": 0.0006894341547627469,
+        "n": 137
+      },
+      "choke_F2": {
+        "pearson_r": 0.10607686914506041,
+        "pearson_p": 0.2173125938015322,
+        "spearman_rho": -0.005593566815745284,
+        "spearman_p": 0.9482762016642231,
+        "r2": 0.011252302167618189,
+        "n": 137
+      },
+      "density_only": {
+        "pearson_r": 0.07179060717945908,
+        "pearson_p": 0.4044699703122157,
+        "spearman_rho": 0.009047635268852147,
+        "spearman_p": 0.916430021703066,
+        "r2": 0.0051538912791952995,
+        "n": 137
+      },
+      "mass_only": {
+        "pearson_r": 0.15890592161475334,
+        "pearson_p": 0.06363806285394143,
+        "spearman_rho": 0.09456279119159706,
+        "spearman_p": 0.2717014509566097,
+        "r2": 0.025251091924234137,
+        "n": 137
+      },
+      "density_plus_ambient": {
+        "r2": 0.02050857593555766,
+        "n": 137
+      }
+    },
+    "Mline": {
+      "choke_F1": {
+        "pearson_r": 0.375538834377665,
+        "pearson_p": 6.127755743416545e-06,
+        "spearman_rho": 0.22307188802783687,
+        "spearman_p": 0.008788645253536183,
+        "r2": 0.14102941612573539,
+        "n": 137
+      },
+      "choke_F2": {
+        "pearson_r": 0.13070477758079113,
+        "pearson_p": 0.12791356157977865,
+        "spearman_rho": -0.48401880826668703,
+        "spearman_p": 2.0712812662517654e-09,
+        "r2": 0.017083738882444188,
+        "n": 137
+      },
+      "density_only": {
+        "pearson_r": -0.23933950076303678,
+        "pearson_p": 0.00485064762399362,
+        "spearman_rho": -0.41620192841813436,
+        "spearman_p": 4.229927742902763e-07,
+        "r2": 0.05728339662549997,
+        "n": 137
+      },
+      "mass_only": {
+        "pearson_r": 0.7828363843697715,
+        "pearson_p": 1.328830859510127e-29,
+        "spearman_rho": 0.8755666220349617,
+        "spearman_p": 1.727441972551437e-44,
+        "r2": 0.6128328046931371,
+        "n": 137
+      },
+      "density_plus_ambient": {
+        "r2": 0.06447714150057904,
+        "n": 137
+      }
+    }
+  }
+}

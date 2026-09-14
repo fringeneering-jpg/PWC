@@ -1,0 +1,5 @@
+system,boundary,R_value,R_unit,source
+Heliosphere (Voyager 1 direction),heliopause,122.0,AU,"Voyager 1 in-situ heliopause crossing, Stone et al. 2019, Nat. Astron. 2, 1013"
+Heliosphere (Voyager 2 direction),heliopause,119.0,AU,"Voyager 2 in-situ heliopause crossing, Stone et al. 2019, AJ 158, 43 / Krimigis et al. 2019, Nat. Astron. 3, 997"
+Local Bubble (mean),neutral-gas cavity wall,150.0,pc,"Approximate mean radius, Lallement et al. 2003, A&A 411, 447 and Lallement et al. 2014, A&A 561, A91 (order-of-magnitude, direction-averaged)"
+"Local Bubble (Scorpius-Centaurus direction, thin wall)",neutral-gas cavity wall,60.0,pc,"Direction of closest wall approach, order-of-magnitude from Lallement et al. 2003/2014 3D dust maps"

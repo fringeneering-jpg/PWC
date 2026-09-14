@@ -1,0 +1,124 @@
+{
+  "n": 15421,
+  "construction_artifact_check": {
+    "pearson_r_choke_F2_vs_algebraic_term": 0.9623749890092032,
+    "p": 0.0,
+    "interpretation": "concentration_Ng and concentration_L targets are NOT independent of choke_F2 by construction; treat as secondary/diagnostic only. thickness_proxy is the primary, construction-independent target."
+  },
+  "targets": {
+    "thickness_proxy": {
+      "choke_F1": {
+        "pearson_r": -0.07186078383372582,
+        "pearson_p": 4.0867039840407484e-19,
+        "spearman_rho": -0.0441015012845599,
+        "spearman_p": 4.2820994247977447e-08,
+        "r2": 0.005163972253197424,
+        "n": 15421
+      },
+      "choke_F2": {
+        "pearson_r": -0.0068902605995230445,
+        "pearson_p": 0.39222878335014744,
+        "spearman_rho": 0.011165834987583546,
+        "spearman_p": 0.16558850205270528,
+        "r2": 4.747569112928396e-05,
+        "n": 15421
+      },
+      "length_only": {
+        "pearson_r": 0.08802210078128468,
+        "pearson_p": 6.566386399133383e-28,
+        "spearman_rho": 0.05150134313936812,
+        "spearman_p": 1.561594743257858e-10,
+        "r2": 0.00774789022595046,
+        "n": 15421
+      },
+      "richness_only": {
+        "pearson_r": 0.05893698308003623,
+        "pearson_p": 2.3952984376220945e-13,
+        "spearman_rho": 0.025688709578866712,
+        "spearman_p": 0.00142112542553363,
+        "r2": 0.0034735679745765413,
+        "n": 15421
+      },
+      "richness_plus_ambient": {
+        "r2": 0.004888500263877438,
+        "n": 15421
+      }
+    },
+    "concentration_Ng": {
+      "choke_F1": {
+        "pearson_r": -0.009888555421394787,
+        "pearson_p": 0.21948288285540338,
+        "spearman_rho": 0.05812587840648614,
+        "spearman_p": 5.06027087571071e-13,
+        "r2": 9.778352832223725e-05,
+        "n": 15421
+      },
+      "choke_F2": {
+        "pearson_r": 0.7675683316683767,
+        "pearson_p": 0.0,
+        "spearman_rho": 0.8952367589936314,
+        "spearman_p": 0.0,
+        "r2": 0.5891611437801754,
+        "n": 15421
+      },
+      "length_only": {
+        "pearson_r": 0.04107180925777928,
+        "pearson_p": 3.35921591630409e-07,
+        "spearman_rho": -0.07119768896053169,
+        "spearman_p": 8.601033129534513e-19,
+        "r2": 0.0016868935157073883,
+        "n": 15421
+      },
+      "richness_only": {
+        "pearson_r": -0.2925843551204841,
+        "pearson_p": 5.01762822937033e-302,
+        "spearman_rho": -0.4169616861598459,
+        "spearman_p": 0.0,
+        "r2": 0.08560560486126989,
+        "n": 15421
+      },
+      "richness_plus_ambient": {
+        "r2": 0.5801979955900727,
+        "n": 15421
+      }
+    },
+    "concentration_L": {
+      "choke_F1": {
+        "pearson_r": -0.004572861743653045,
+        "pearson_p": 0.570156559736989,
+        "spearman_rho": 0.09630888808386706,
+        "spearman_p": 4.173665460905981e-33,
+        "r2": 2.091106452672964e-05,
+        "n": 15421
+      },
+      "choke_F2": {
+        "pearson_r": 0.6626513914147626,
+        "pearson_p": 0.0,
+        "spearman_rho": 0.8762348892649723,
+        "spearman_p": 0.0,
+        "r2": 0.43910686654392084,
+        "n": 15421
+      },
+      "length_only": {
+        "pearson_r": 0.05328574840403445,
+        "pearson_p": 3.561448127495312e-11,
+        "spearman_rho": -0.11973393631668519,
+        "spearman_p": 2.3985858197655297e-50,
+        "r2": 0.002839370982977818,
+        "n": 15421
+      },
+      "richness_only": {
+        "pearson_r": -0.20812312492674617,
+        "pearson_p": 1.6845148764369603e-150,
+        "spearman_rho": -0.4379221680626908,
+        "spearman_p": 0.0,
+        "r2": 0.043315235129274154,
+        "n": 15421
+      },
+      "richness_plus_ambient": {
+        "r2": 0.38427707664710664,
+        "n": 15421
+      }
+    }
+  }
+}

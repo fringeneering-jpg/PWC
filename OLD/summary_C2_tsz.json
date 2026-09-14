@@ -1,0 +1,25 @@
+{
+  "n": 300,
+  "degeneracy_check_Y5R500_vs_lambda": {
+    "pearson_r": 0.12592707913670642,
+    "p": 0.029205356620522042,
+    "r2_logY5R500_on_loglambda_plus_z": 0.22021468254699716,
+    "comparison_to_MWLc_r2": 0.973
+  },
+  "regression_test_Y5R500": {
+    "n": 300,
+    "baseline_lambda_plus_z_r2": 0.22021468254699716,
+    "extended_lambda_plus_z_plus_neighbor_r2": 0.22247456778988928,
+    "delta_r2": 0.0022598852428921123,
+    "neighbor_coef": -0.04030125642927457,
+    "neighbor_coef_p": 0.3544029221728156
+  },
+  "classification_test": {
+    "n_labeled": 200,
+    "auc": {
+      "density_only_lambda": 0.67,
+      "tsz_only_Y5R500": 0.5955555555555556,
+      "combined_lambda_x_Y5R500": 0.6977777777777778
+    }
+  }
+}

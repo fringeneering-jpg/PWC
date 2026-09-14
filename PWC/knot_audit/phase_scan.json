@@ -1,0 +1,326 @@
+[
+  {
+    "BK": 0.1,
+    "CK": 0.01,
+    "LamK": 0.1,
+    "R_core_best": 8.0,
+    "E_loc": 3.150200566811e-05,
+    "E_delocal": 4.4209706414415374e-07,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 0.1,
+    "CK": 0.01,
+    "LamK": 1.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0002389715630825344,
+    "E_delocal": 4.4209706414415374e-07,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 0.1,
+    "CK": 0.01,
+    "LamK": 5.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0011610584849244207,
+    "E_delocal": 4.4209706414415374e-07,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 0.1,
+    "CK": 0.1,
+    "LamK": 0.1,
+    "R_core_best": 8.0,
+    "E_loc": 3.225496105027609e-05,
+    "E_delocal": 4.4209706414415374e-07,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 0.1,
+    "CK": 0.1,
+    "LamK": 1.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0002397245184647005,
+    "E_delocal": 4.4209706414415374e-07,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 0.1,
+    "CK": 0.1,
+    "LamK": 5.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0011618114403065866,
+    "E_delocal": 4.4209706414415374e-07,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 0.1,
+    "CK": 1.0,
+    "LamK": 0.1,
+    "R_core_best": 8.0,
+    "E_loc": 3.978451487193704e-05,
+    "E_delocal": 4.4209706414415374e-07,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 0.1,
+    "CK": 1.0,
+    "LamK": 1.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0002472540722863615,
+    "E_delocal": 4.4209706414415374e-07,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 0.1,
+    "CK": 1.0,
+    "LamK": 5.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0011693409941282477,
+    "E_delocal": 4.4209706414415374e-07,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 1.0,
+    "CK": 0.01,
+    "LamK": 0.1,
+    "R_core_best": 8.0,
+    "E_loc": 3.150200566811e-05,
+    "E_delocal": 4.420970641441537e-06,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 1.0,
+    "CK": 0.01,
+    "LamK": 1.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0002389715630825344,
+    "E_delocal": 4.420970641441537e-06,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 1.0,
+    "CK": 0.01,
+    "LamK": 5.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0011610584849244207,
+    "E_delocal": 4.420970641441537e-06,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 1.0,
+    "CK": 0.1,
+    "LamK": 0.1,
+    "R_core_best": 8.0,
+    "E_loc": 3.225496105027609e-05,
+    "E_delocal": 4.420970641441537e-06,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 1.0,
+    "CK": 0.1,
+    "LamK": 1.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0002397245184647005,
+    "E_delocal": 4.420970641441537e-06,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 1.0,
+    "CK": 0.1,
+    "LamK": 5.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0011618114403065866,
+    "E_delocal": 4.420970641441537e-06,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 1.0,
+    "CK": 1.0,
+    "LamK": 0.1,
+    "R_core_best": 8.0,
+    "E_loc": 3.978451487193704e-05,
+    "E_delocal": 4.420970641441537e-06,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 1.0,
+    "CK": 1.0,
+    "LamK": 1.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0002472540722863615,
+    "E_delocal": 4.420970641441537e-06,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 1.0,
+    "CK": 1.0,
+    "LamK": 5.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0011693409941282477,
+    "E_delocal": 4.420970641441537e-06,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 10.0,
+    "CK": 0.01,
+    "LamK": 0.1,
+    "R_core_best": 8.0,
+    "E_loc": 3.150200566811e-05,
+    "E_delocal": 4.420970641441538e-05,
+    "verdict": "LOCALIZED"
+  },
+  {
+    "BK": 10.0,
+    "CK": 0.01,
+    "LamK": 1.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0002389715630825344,
+    "E_delocal": 4.420970641441538e-05,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 10.0,
+    "CK": 0.01,
+    "LamK": 5.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0011610584849244207,
+    "E_delocal": 4.420970641441538e-05,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 10.0,
+    "CK": 0.1,
+    "LamK": 0.1,
+    "R_core_best": 8.0,
+    "E_loc": 3.225496105027609e-05,
+    "E_delocal": 4.420970641441538e-05,
+    "verdict": "LOCALIZED"
+  },
+  {
+    "BK": 10.0,
+    "CK": 0.1,
+    "LamK": 1.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0002397245184647005,
+    "E_delocal": 4.420970641441538e-05,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 10.0,
+    "CK": 0.1,
+    "LamK": 5.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0011618114403065866,
+    "E_delocal": 4.420970641441538e-05,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 10.0,
+    "CK": 1.0,
+    "LamK": 0.1,
+    "R_core_best": 8.0,
+    "E_loc": 3.978451487193704e-05,
+    "E_delocal": 4.420970641441538e-05,
+    "verdict": "LOCALIZED"
+  },
+  {
+    "BK": 10.0,
+    "CK": 1.0,
+    "LamK": 1.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0002472540722863615,
+    "E_delocal": 4.420970641441538e-05,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 10.0,
+    "CK": 1.0,
+    "LamK": 5.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0011693409941282477,
+    "E_delocal": 4.420970641441538e-05,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 50.0,
+    "CK": 0.01,
+    "LamK": 0.1,
+    "R_core_best": 8.0,
+    "E_loc": 3.150200566811e-05,
+    "E_delocal": 0.00022104853207207688,
+    "verdict": "LOCALIZED"
+  },
+  {
+    "BK": 50.0,
+    "CK": 0.01,
+    "LamK": 1.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0002389715630825344,
+    "E_delocal": 0.00022104853207207688,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 50.0,
+    "CK": 0.01,
+    "LamK": 5.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0011610584849244207,
+    "E_delocal": 0.00022104853207207688,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 50.0,
+    "CK": 0.1,
+    "LamK": 0.1,
+    "R_core_best": 8.0,
+    "E_loc": 3.225496105027609e-05,
+    "E_delocal": 0.00022104853207207688,
+    "verdict": "LOCALIZED"
+  },
+  {
+    "BK": 50.0,
+    "CK": 0.1,
+    "LamK": 1.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0002397245184647005,
+    "E_delocal": 0.00022104853207207688,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 50.0,
+    "CK": 0.1,
+    "LamK": 5.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0011618114403065866,
+    "E_delocal": 0.00022104853207207688,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 50.0,
+    "CK": 1.0,
+    "LamK": 0.1,
+    "R_core_best": 8.0,
+    "E_loc": 3.978451487193704e-05,
+    "E_delocal": 0.00022104853207207688,
+    "verdict": "LOCALIZED"
+  },
+  {
+    "BK": 50.0,
+    "CK": 1.0,
+    "LamK": 1.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0002472540722863615,
+    "E_delocal": 0.00022104853207207688,
+    "verdict": "delocalized"
+  },
+  {
+    "BK": 50.0,
+    "CK": 1.0,
+    "LamK": 5.0,
+    "R_core_best": 8.0,
+    "E_loc": 0.0011693409941282477,
+    "E_delocal": 0.00022104853207207688,
+    "verdict": "delocalized"
+  }
+]

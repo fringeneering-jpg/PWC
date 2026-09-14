@@ -1,0 +1,1 @@
+import pandas as pd; print("pandas ok", pd.__version__)

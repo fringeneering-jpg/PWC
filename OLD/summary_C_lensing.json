@@ -1,0 +1,25 @@
+{
+  "n": 26111,
+  "degeneracy_check": {
+    "pearson_r_log_lambda_vs_log_MWLc": 0.9778980290909246,
+    "p": 0.0,
+    "r2_logMWLc_on_loglambda_plus_z": 0.9728113185479765,
+    "interpretation": "MWLc is a calibrated forecast from (lambda,z); choke_L1/choke_L2 (which contain MWLc) cannot be used to 'predict' MWLc without circularity, exactly analogous to the Domain-A2 concentration/choke_F2 artifact. Treated as descriptive-only below."
+  },
+  "regression_test_MWLc": {
+    "baseline_lambda_plus_z_r2": 0.9728113185479765,
+    "extended_lambda_plus_z_plus_neighbor_r2": 0.9748410238970339,
+    "delta_r2": 0.0020297053490573314,
+    "neighbor_coef": 0.018587984235730198,
+    "neighbor_coef_p": 0.0
+  },
+  "classification_test": {
+    "label": "top vs bottom tercile of neighbor_density_knn (independent of predictors)",
+    "n_labeled": 17408,
+    "auc": {
+      "density_only_lambda": 0.6176601907467699,
+      "mass_only_MWLc": 0.5757467963023678,
+      "combined_lambda_x_MWLc": 0.6996039696583485
+    }
+  }
+}
