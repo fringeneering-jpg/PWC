@@ -361,6 +361,19 @@
       "conclusion": "Combination of reconciliation explanations 1 and 3: a genuinely different density variable (compact/degenerate core density vs diffuse HDF medium density) from an earlier model version/vocabulary, not a transcription error and not a genuine parameter conflict -- neither script asserts these are the same quantity.",
       "remaining_action": "Neither script gives its rho_max an explicit, disambiguated name (e.g. rho_Sintot_max or rho_core_max) -- recommended naming fix for future work, not a retroactive claim about what these scripts already say.",
       "additional_finding_retained": "Independent of the naming question, running both scripts directly still does not reproduce the specific claimed \"~1.5% stable across an eightfold K scan\": stiffening_K_scan.py shows R_envelope varying from 0.006 km to 19053.7 km (6+ orders of magnitude) across K=1e7 to 1e20."
+    },
+    "bullet_cluster_jwst_2026_update": {
+      "claim_as_given": "JWST 2026 Bullet Cluster result, MOND 100% accounts for it, dark matter is dead.",
+      "checked_2026-09-14": "Web-searched and verified against actual sources -- NOT a clean 'resolved, dark matter dead' result; a real, live, three-way scientific debate as of mid-2026.",
+      "what_is_real": "A new JWST-based Bullet Cluster lens model (NIRCam imaging + NIRSpec spectroscopy, 135 secure multiple images across 27 background galaxies with spectroscopic redshifts -- Mapping dark matter in the Bullet Cluster using JWST imaging and spectroscopy, A&A 2026) produced a materially better stellar-population count and confirmed significant iron/oxygen abundance, implying more massive-star remnants (neutron stars, black holes) than previously counted. Recalculating lensing contributions with this improved remnant inventory made a MOND (no dark matter) explanation 'much more plausible' without the previously assumed dark matter quantity.",
+      "what_is_not_established": "Community response as of mid-2026 splits three ways: full MOND (baryons + remnants alone), standard dark matter reduced by roughly half (not eliminated), or a hybrid. Benoit Famaey -- a leading pro-MOND researcher, not a skeptic -- published a paper (arXiv:2605.10022, 'On the residual missing mass of the Bullet Cluster') using this SAME updated JWST lens model and concludes MOND still leaves a residual missing-mass problem in the Bullet Cluster, of the same collisionless, galaxy-centered character it leaves in other clusters generally -- not fully closed even with the improved stellar-remnant counting.",
+      "honest_verdict": "Real, significant update: the dark-matter fraction required to fit the Bullet Cluster dropped substantially on the new JWST data. NOT verified: 'MOND 100% accounts for it' or 'dark matter is dead.' Logged as a genuine partial dent in the dark-matter case, not a resolution -- matches this project's evidence-tier discipline (source-recorded, independently checked against primary sources, not independently reproduced by this project).",
+      "sources": [
+        "https://www.aanda.org/articles/aa/full_html/2026/06/aa59214-26/aa59214-26.html",
+        "https://phys.org/news/2026-06-bullet-cluster-reopen-dark-debate.html",
+        "https://arxiv.org/abs/2605.10022",
+        "https://arxiv.org/pdf/2601.22245"
+      ]
     }
   },
   "dataset": {

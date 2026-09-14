@@ -490,6 +490,46 @@ to genuinely contain two independent contributions when worked through
 in full) before a bending angle can honestly be computed and compared
 to the `2GM/(b*c0^2)` vs `4GM/(b*c0^2)` benchmark.
 
+## Bullet Cluster JWST 2026 fact-check (2026-09-14)
+
+**Claim as given:** "JWST 2026 result, MOND 100% accounts for the Bullet
+Cluster, dark matter is dead." Web-searched and checked against actual
+sources -- **not** a clean "resolved, dark matter dead" result; a real,
+live, three-way scientific debate as of mid-2026.
+
+**What is real:** a new JWST-based Bullet Cluster lens model (NIRCam
+imaging + NIRSpec spectroscopy, 135 secure multiple images across 27
+background galaxies with spectroscopic redshifts -- *Mapping dark
+matter in the Bullet Cluster using JWST imaging and spectroscopy*, A&A
+2026) produced a materially better stellar-population count and
+confirmed significant iron/oxygen abundance, implying more massive-star
+remnants (neutron stars, black holes) than previously counted.
+Recalculating lensing contributions with this improved remnant
+inventory made a MOND (no dark matter) explanation "much more
+plausible" without the previously assumed dark matter quantity.
+
+**What is not established:** community response as of mid-2026 splits
+three ways -- full MOND (baryons + remnants alone), standard dark
+matter reduced by roughly half (not eliminated), or a hybrid. Benoit
+Famaey -- a leading pro-MOND researcher, not a skeptic -- published a
+paper (arXiv:2605.10022, "On the residual missing mass of the Bullet
+Cluster") using this *same* updated JWST lens model and concludes MOND
+still leaves a residual missing-mass problem in the Bullet Cluster, of
+the same collisionless, galaxy-centered character it leaves in other
+clusters generally -- not fully closed even with the improved
+remnant-counting.
+
+**Honest verdict:** real, significant update -- the dark-matter
+fraction required to fit the Bullet Cluster dropped substantially on
+the new JWST data. Not verified: "MOND 100% accounts for it" or "dark
+matter is dead." Logged as a genuine partial dent in the dark-matter
+case, not a resolution.
+
+Sources: [A&A 2026](https://www.aanda.org/articles/aa/full_html/2026/06/aa59214-26/aa59214-26.html),
+[phys.org summary](https://phys.org/news/2026-06-bullet-cluster-reopen-dark-debate.html),
+[Famaey, arXiv:2605.10022](https://arxiv.org/abs/2605.10022),
+[arXiv:2601.22245](https://arxiv.org/pdf/2601.22245)
+
 ## Neutron/knot entropy capstone (2026-09-14)
 
 "Neutrons decay in the open, still the strongest knot, entropy's a
@@ -523,7 +563,7 @@ numerical claim.
 | A frozen mass-only merger release coefficient is the PWC merger law | Rejected -- failed a held-out test (GW190412) |
 | PWC requires an empty exterior, singularity, dark-halo particle, or another universe | Rejected -- contradicts the finite-medium ledger |
 | GR's r=0 collapse endpoint is a real, physical infinite-density point | Rejected -- mainstream physics already treats this as a signal classical GR breaks down there (the motivation for quantum gravity), not a confirmed prediction; consistent with PWC's own no-physical-infinity premise |
-| Dark matter is a real, invisible particle species | Rejected as a substance -- but the phenomena it explained remain real and NOT discharged by the rejection: (1) flat rotation curves -- Tier A traction exists (132-galaxy SPARC fit); (2) Bullet Cluster lensing offset from visible gas -- not addressed anywhere in this project; (3) CMB acoustic peak heights needing a specific matter/baryon ratio -- not addressed anywhere in this project. Rejection transfers the burden to HDF mechanics, it does not discharge it -- two of three obligations remain fully open |
+| Dark matter is a real, invisible particle species | Rejected as a substance -- but the phenomena it explained remain real and NOT discharged by the rejection: (1) flat rotation curves -- Tier A traction exists (132-galaxy SPARC fit); (2) Bullet Cluster lensing offset from visible gas -- not addressed anywhere in this project, and per a 2026-09-14 web-sourced check (below), the observational picture itself is a live, unresolved three-way debate, not a closed case either direction; (3) CMB acoustic peak heights needing a specific matter/baryon ratio -- not addressed anywhere in this project. Rejection transfers the burden to HDF mechanics, it does not discharge it -- three obligations remain open, one of them (Bullet Cluster) now genuinely narrower on the mainstream side too |
 | The cosmological constant / dark energy is literal vacuum energy generated from empty space | Rejected as a mechanism -- but the observation it explained (accelerating cosmic expansion, Type Ia supernovae, Perlmutter/Riess/Schmidt 1998) remains real and is not addressed anywhere in this project; fully open |
 | A failed IVP or nonconverged BVP proxy falsifies the universal PWC framework | Rejected -- constrains only the specific implemented proxy (Domains S/U/U2/V) |
 
