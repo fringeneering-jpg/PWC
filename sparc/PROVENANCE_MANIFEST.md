@@ -949,6 +949,56 @@ point, and only then, jet data can test the claim rather than
 motivate it. Not yet attempted: fixing `P*` and `n` from HDF's own
 already-established properties.
 
+### EOS correction (2026-09-14): restoring equilibrium, not hard-core divergence
+
+**Correction of the earlier closure:** the proposed
+`P_HDF(ρ)=P*[(1-ρ/ρ_max)^(-n)-1]` treated pressure as an arbitrary
+hard-density-limit repulsion. Corrected physical picture: HDF is a
+closed, tensioned medium in stable equilibrium at `ρ₀`, with pressure
+as a *restoring* response around that equilibrium, not a hard-core
+divergence. Correct expansion: `ΔP(δ)=K₁δ+K₂δ²+K₃δ³+...`,
+`δ=(ρ-ρ₀)/ρ₀`, with equilibrium condition `ΔP(ρ₀)=0`.
+
+**`K₁` result, independently re-verified here:** `K₁=ρ₀c_s0²`.
+`dΔP/dδ|₀=K₁`, and since `dδ/dρ=1/ρ₀`, `dΔP/dρ|_{ρ₀}=K₁/ρ₀=c_s0²`,
+giving `K₁=ρ₀c_s0²` exactly -- standard linear-elasticity/acoustics
+expansion, confirmed by direct algebra. This means the *linear*
+restoring term is not free -- `c_s0=c` and `ρ₀` (already established)
+fix it completely, no fitting involved.
+
+**What's actually still open:** not "which `n`," as the earlier
+hard-density-limit framing implied. The genuinely open freedom is the
+*nonlinear* coefficients (`K₂, K₃, ...`), which require a real
+stored-energy functional `U(θ)` or equivalent constitutive law derived
+from HDF's own microphysics -- not a guessed exponent. Sharper, more
+honest location for the remaining freedom than the earlier `n=1` vs
+`n=2` framing.
+
+**Causality constraint breaks the earlier ansatz specifically:**
+relativistic causality requires `dP/dρ` (properly `dP/dε`, using
+energy density) `≤ c²` everywhere -- a real, standard requirement (the
+same bound used to constrain real neutron-star equations of state,
+Rhoades-Ruffini causal-EOS methodology). The earlier divergent form
+has `dP/dρ→∞` as `ρ→ρ_max`, which means, by the intermediate value
+theorem, it necessarily *crosses* `c²` at some density below `ρ_max`
+and keeps climbing past it. Not merely "`n` is undetermined" -- that
+specific closure is causality-violating on its own terms, independent
+of which `n` is chosen. Confirmed by direct evaluation of the
+divergent limit.
+
+**The bound doesn't disappear in the corrected framework either:**
+nothing yet guarantees `K₁/ρ₀+2K₂δ/ρ₀+...` stays bounded by `c²` as
+compression grows. Whatever `K₂, K₃, ...` end up being, they must make
+the stiffness *saturate* at `c²` as `ρ→ρ_max`, not diverge past it --
+a real, additional constraint on top of "derive the coefficients from
+microphysics."
+
+**Status:** genuine refinement, not a completed derivation. `K₁=ρ₀c_s0²`
+is now a verified, non-free result. The nonlinear closure (`K₂, K₃,
+...`) remains open, now correctly understood as needing both a real
+constitutive derivation *and* causal saturation at `c²`, ruling out
+simple unbounded-divergence forms like the one originally proposed.
+
 **Locality correction (2026-09-14):** `a₀` is a *local* effect, not a
 universal one requiring a cosmic-scale coupling -- correcting the
 `H₀`-coupling direction pursued across the preceding exchanges. If
