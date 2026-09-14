@@ -29,6 +29,26 @@ They do not define or redefine PWC's ontology.
 - **Gravity**: more locally concentrated HDF corresponds to greater pull;
   exterior constraint `a(r) = -G*M_ledger/r^2` (required match, not yet
   independently derived from a medium functional in this session).
+  **Regime-dependence resolution (2026-09-14):** "light limited to light
+  speed, neutrinos to neutrino speed" -- different things have their own
+  characteristic behavior within one medium, resolving the apparent
+  contradiction between "HDF gravity is plain 1/r²" (asserted earlier
+  this session) and "HDF tension can also behave MOND-like at low
+  acceleration" (needed for the Bullet Cluster punch-through
+  translation below). MOND's own math is built this way -- its
+  interpolating function collapses to plain Newtonian 1/r² at high
+  acceleration (solar-system/dense regime) and only departs (boosts) at
+  low acceleration; not boosted everywhere. Same shape as PWC's own
+  already-logged Bogoliubov dispersion for the (ρ,θ,u) continuum:
+  phonon-like at low momentum, free-particle-like at high momentum, one
+  medium, two genuinely different regimes, no contradiction. "1/r²
+  works" and "a separate low-acceleration regime behaves differently"
+  are not competing claims. **What remains open:** this resolves the
+  logical tension, not the derivation -- knowing the split is permitted
+  is not the same as showing HDF tension actually reproduces it, in the
+  boosting direction, at the correct scale (`a0 ~ 1.2e-10 m/s²`). No
+  such derivation exists anywhere in this project; the Bogoliubov
+  phonon/free-particle split is the template for how one could arise.
 - **Lensing**: LDF/light follows locally straight available paths through
   curved/inhomogeneous HDF geometry -- path guidance, not ordinary
   refractive drag or sub-local-limit photon slowing. See dedicated
@@ -572,6 +592,29 @@ HyeongHan, arXiv:2512.03150) reportedly finds the Bullet Cluster is a
 *minor* merger, not the extreme high-velocity major collision the
 original ΛCDM-tension claims were built on -- a separate, not-yet-fully-
 absorbed crack in the standard picture.
+
+**PWC translation (2026-09-14):** weakly-locked Sintot (X-ray gas,
+large surface area) shocks and bogs down on collision; neutron-
+degenerate matter (the strongest knot, near-zero cross-section) punches
+straight through ballistically; HDF tension gradients track the real
+mass concentration (the neutron stars), not the gas -- producing the
+observed offset without an invented dark matter species. This is a
+legitimate, earned translation, not relabeling: the punch-through logic
+is the same physics that makes dark matter collisionless in the
+standard picture (negligible collision cross-section, same reason stars
+almost never collide during full galaxy mergers), correctly reassigned
+to neutron-degenerate matter -- already established here as the
+strongest, most radiation-resistant tier-knot. The collision dynamics
+(shock heating, gas lag) are real, independent astrophysics (Markevitch
+et al. 2002), not invented. It inherits three open dependencies rather
+than closing the case: (1) the gravity regime-dependence question above
+-- "no MOND math required" presumes HDF tension reproduces a MOND-like
+low-acceleration boost, shown permissible, not yet derived; (2) the
+three limits already logged for the IGIMF paper (core-only scope,
+residual GR-side gap, unresolved BCG velocity-dispersion tension); (3)
+the paper's own hedge that neutron-star dominance of the remnant
+population (vs. black holes) is plausible, not certain. Real, earned
+mechanism translation -- not a closed result.
 
 **Authors' own conclusion language:** "the notion that the Bullet
 Cluster provides definitive evidence for dark matter needs to be
