@@ -173,6 +173,47 @@ above):**
   physically motivated the description, will not clear this bar without
   being checked quantitatively against the known `4GM/(b*c0^2)` target.
 
+**Ontological refinement (2026-09-14): "HDF is the photon's path."** Not
+a separate medium the photon crosses through a distinct background
+space -- there is no space independent of HDF's own density/geometric
+structure; the photon's path and the HDF structure are the same thing,
+not two things in causal contact. This removes the need to invent a
+*second, independent* physical mechanism for the missing contribution
+above -- there is only ever one substrate. But it does not by itself
+hand over the doubling factor. The correct reframed question: does
+HDF's own compression response enter the photon's path in two distinct
+*geometric roles* (an index/speed-like role and a proper-path-length
+role), correctly weighted, rather than one role counted once? Real
+precedent: de Felice (1971, *Gen. Rel. Grav.* 2:347) showed that
+treating Schwarzschild lensing via a naive *isotropic* refractive index
+built from the Newtonian potential alone under-predicts bending by
+exactly a factor of 2 -- full GR bending is recovered only when the
+effective medium's index is *anisotropic*, differing for radial vs
+tangential propagation, because that is what encodes both metric
+components (`g_tt` and `g_rr`) doing equal work from one field (see
+also Evans & Nandy 2000 for the explicit refractive-index treatment of
+exact Schwarzschild spacetime). Same substrate, two roles -- not two
+fields. Reframed open question: does HDF's compression response to a
+mass concentration act anisotropically -- steering a photon differently
+along its direction of travel than transverse to it -- with the
+specific relative weighting that reproduces `4GM/(b*c0^2)` rather than
+`2GM/(b*c0^2)`? Not yet computed.
+
+**Watermelon-seed analogy (2026-09-14), as a qualitative motivation for
+that anisotropy:** a seed squeezed between fingers does not drift
+sideways in proportion to a gentle pressure gradient (that is the mild,
+linear picture -- the half-answer mechanism above); it shoots out,
+because it is nearly incompressible -- confinement along the squeeze
+axis has nowhere to go, so the stress relief is dumped almost entirely
+into the transverse direction, out of proportion to the squeeze itself.
+This is a genuinely nonlinear, anisotropic response of exactly the
+shape de Felice's analysis requires. **This is qualitative motivation
+only, not a derivation** -- it supplies a physical reason to expect
+anisotropy of the right general shape, not a specific numerical factor;
+it is explicitly not a claim that the analogy alone yields the factor
+of 2. That must come from HDF's actual constitutive/EOS response
+(bulk vs effective transverse stiffness) worked through quantitatively.
+
 **Status: OPEN.** No numerical PWC bending-angle calculation exists yet.
 No `rho(r)`-to-refractive-index law and no `rho(r)`-to-proper-path-
 length law have been established anywhere in this project's files --
