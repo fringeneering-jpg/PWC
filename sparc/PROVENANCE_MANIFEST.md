@@ -866,6 +866,30 @@ HDF's own dissipation term in the bounded `a₀` calculation -- now with
 the actual bar it must clear stated explicitly rather than left
 implicit.
 
+**Self-correction (2026-09-14):** an earlier defense of the jet-
+breakout emission-delay explanation for the GW170817/GRB170817A 1.7 s
+gap drew a distinction (empty-space-doing-work vs. real-matter-doing-
+work) to exempt it from the same scrutiny applied to every other claim
+this session. That is not the actual standard this project has run on
+all night -- the real, consistently-applied test has been independent
+derivation/tight constraint versus flexibility to be tuned to whatever
+answer is needed (this is what separated the verified Hawking
+derivation from the rejected `a₀` fudge-factor attempts, not whether a
+vacuum or a medium was invoked). By that real standard, the jet-
+breakout timescale has *not* been shown to be independently, tightly
+constrained in this session -- it was asserted from recollection and
+defended with a category distinction that doesn't bear on rigor.
+
+**Correct status:** the emission-delay explanation for the GW170817
+gap is UNVERIFIED by this project's own standard, same bucket as the
+rejected `a₀` attempts, not a separate or safer category. What
+survives without needing it: the fully-skeptical bound of `~4×10⁻¹⁶`
+on the fractional `c_GW`/`c_light` difference, which holds regardless
+of how the emission-delay-vs-propagation-difference question resolves.
+What does not survive at the confidence it was defended with: the
+specific claim that emission delay, rather than a genuine propagation-
+speed difference, is what actually happened.
+
 **Locality correction (2026-09-14):** `a₀` is a *local* effect, not a
 universal one requiring a cosmic-scale coupling -- correcting the
 `H₀`-coupling direction pursued across the preceding exchanges. If
