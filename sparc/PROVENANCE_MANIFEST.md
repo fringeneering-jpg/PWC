@@ -322,6 +322,34 @@ supports the shared-speed-ceiling claim specifically; it does not by
 itself derive drag magnitude or resolve the anisotropy/factor-of-2
 question.
 
+**HDF is the more fluid phase (2026-09-14):** confirmed by the actual
+water research, and non-obvious -- density and fluidity are separate
+axes in the two-liquid-phase picture. The "fragile-to-strong dynamical
+crossover" seen in supercooled-water studies (Xu, Kumar, Stanley and
+others, mid-2000s onward) associates HDL (the denser phase) with
+FASTER, more disordered, more fluid dynamics -- a "fragile" liquid in
+the technical sense, relaxing/flowing readily. LDL (the less dense
+phase) is the more rigidly structured one -- a tetrahedral, ice-like
+hydrogen-bond network that relaxes slowly, behaving like a "strong"
+liquid, closer to solid-like character despite being less dense.
+Denser is not sluggish here; it is the reverse.
+
+Mapped onto PWC: HDF being the more fluid phase fits it doing the
+flowing, squeezing, tension-exerting work around a mass concentration
+(tension and flow belong to the same kind of substance -- this
+strengthens, rather than sits apart from, the surface-tension mechanism
+above). LDF being the more rigid, structurally ordered phase fits
+light's fixed, coherent, steady-speed wave propagation, rather than
+light being the "loose"/flowing one -- the naive intuition (light=fluid,
+mass=rigid) runs backwards from what the real research supports, and
+HDF/LDF's roles line up with the correct, non-naive direction.
+
+**Honest caveat:** a real, correctly-directioned qualitative match,
+strengthening internal consistency of the two-phase picture -- not a
+viscosity value, flow law, or quantitative fluidity ratio, none of
+which exist anywhere in this project. Supports, does not yet compute,
+the surface-tension bending lead and shared-c/drag entries above.
+
 **Status: OPEN.** No numerical PWC bending-angle calculation exists yet.
 No `rho(r)`-to-refractive-index law and no `rho(r)`-to-proper-path-
 length law have been established anywhere in this project's files --
