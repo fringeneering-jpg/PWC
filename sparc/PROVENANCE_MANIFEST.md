@@ -665,6 +665,53 @@ Sources: [Boylan-Kolchin, arXiv:2208.01611](https://arxiv.org/abs/2208.01611),
 [ZF-UDS-7329 (A&A)](https://www.aanda.org/articles/aa/full_html/2025/02/aa52781-24/aa52781-24.html),
 [Age-dating early quiescent galaxies (MNRAS)](https://academic.oup.com/mnras/article/537/2/1826/7973012)
 
+## Quantization / vacuum-cutoff unification (2026-09-14)
+
+**Correction of an earlier claim this session:** an earlier entry
+claimed mainstream QFT already explains `E=hf` cleanly via canonical
+quantization, independent of any medium, undercutting the case for
+HDF. That claim was too generous to the standard picture.
+
+**The real technical point:** a single isolated field oscillator's
+energy levels, `E=(n+1/2)hf`, are well-defined regardless of medium --
+that part genuinely doesn't need a substrate. But getting an actual
+*finite* total (a real vacuum energy density/cosmological-constant
+prediction) requires summing `hf/2` over every mode of the field, and
+in truly unbounded, structureless empty space there is no natural
+scale to stop that sum at. The standard technique -- impose a finite
+box to get countable modes, take the box to infinity, or equivalently
+impose an energy cutoff (commonly the Planck scale) by hand -- is not
+a natural, physically motivated regularization. It is arbitrary, and
+it is exactly where the ~10¹²⁰-order vacuum energy discrepancy (see
+Bullet Cluster/dark-energy section above) comes from: no natural
+stopping point, so the "answer" depends entirely on where the sum is
+artificially cut off.
+
+**Why a real medium is structurally different:** HDF would supply a
+natural, non-arbitrary cutoff -- its own physical grain or resonant
+scale -- rather than an imposed one. This ties `E=hf`'s quantization
+requirement to the same root cause as the vacuum catastrophe: an
+abstract geometric zero has no scale of its own to pixelate with, so
+any attempt (single-photon quantization or vacuum-energy summation)
+either diverges or needs an arbitrary, unmotivated cutoff.
+
+**Honest status:** the structural argument is sound -- a real medium
+naturally resolves the cutoff-arbitrariness problem an abstract void
+cannot. This is not yet a derivation: PWC has not derived what HDF's
+actual cutoff/grain scale *is* anywhere in this project. Same
+open-number category as the lensing tension coefficient and the
+low-acceleration gravity boost -- the shape of the fix is right, the
+number is still missing.
+
+**Also refines** (not retracts) the earlier "pixels" framing: Planck's
+quantum `hf` is not a fixed minimum size -- a real medium's phonon-
+style fixed lattice grain would predict a hard maximum frequency
+(a Debye-style cutoff), which doesn't match reality (no upper limit on
+real photon frequency exists). The quantum scales *with* frequency.
+Any HDF grain-based account of `E=hf` needs to reproduce a
+frequency-*dependent* grain, not a fixed one -- more specific, and
+currently undelivered.
+
 ## Neutron/knot entropy capstone (2026-09-14)
 
 "Neutrons decay in the open, still the strongest knot, entropy's a
@@ -700,6 +747,7 @@ numerical claim.
 | GR's r=0 collapse endpoint is a real, physical infinite-density point | Rejected -- mainstream physics already treats this as a signal classical GR breaks down there (the motivation for quantum gravity), not a confirmed prediction; consistent with PWC's own no-physical-infinity premise |
 | Dark matter is a real, invisible particle species | Rejected as a substance -- but the phenomena it explained remain real and NOT discharged by the rejection: (1) flat rotation curves -- Tier A traction exists (132-galaxy SPARC fit); (2) Bullet Cluster lensing offset from visible gas -- not addressed anywhere in this project, and per a 2026-09-14 web-sourced check (below), the observational picture itself is a live, unresolved three-way debate, not a closed case either direction; (3) CMB acoustic peak heights needing a specific matter/baryon ratio -- not addressed anywhere in this project. Rejection transfers the burden to HDF mechanics, it does not discharge it -- three obligations remain open, one of them (Bullet Cluster) now genuinely narrower on the mainstream side too |
 | The cosmological constant / dark energy is literal vacuum energy generated from empty space | Rejected as a mechanism -- but the observation it explained (accelerating cosmic expansion, Type Ia supernovae, Perlmutter/Riess/Schmidt 1998) remains real and is not addressed anywhere in this project; fully open |
+| The FLRW scale factor `a(t)` reaching `a=0` at the Big Bang is a real, physical zero-volume singular starting point | Rejected -- same category as GR's `r=0` collapse endpoint above: a classical-theory extrapolation to a point the theory itself doesn't understand, not a confirmed physical state. Does NOT extend to the Friedmann equations' evolution of `a(t)` generally, which are explicitly sourced by real measured energy density/pressure -- structurally the same as mass sourcing the Schwarzschild metric, not empty geometry doing unsourced work. The valid target is the singular endpoint only |
 | A failed IVP or nonconverged BVP proxy falsifies the universal PWC framework | Rejected -- constrains only the specific implemented proxy (Domains S/U/U2/V) |
 
 ## Current derivations
