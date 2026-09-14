@@ -1088,6 +1088,56 @@ g_bar = Vbar2 / R * conv
 - **Parameters used for the convergence test**: rho_gal=1e-21 kg/m^3, c_s0=1e5 m/s -- **arbitrary placeholder values, NOT fit to data** (the convergence test was run to check solver behavior before any fitting was attempted; per the explicit instruction, the SPARC fit was NOT run given this non-convergence)
 - **No completed SPARC fit exists for Domain V.** No per-galaxy convergence table across all 149 galaxies exists. No raw radial output archive exists beyond the 3 manually-tested galaxies' console output (not saved to a JSON file).
 
+### Domain W (shock-freeze/multiphase-pressure-balance outer BC, full SPARC run) -- 2026-09-14
+
+- **model_version**: `domain_W_shock_freeze_bvp.py`
+- **Proposal:** replace Domain V's arbitrary-r_far derivative-matching outer
+  condition with a physically motivated one: `R_freeze`, a multiphase
+  pressure-equilibrium/shock-freeze radius where hot, buoyant baryonic gas
+  meets the ambient HDF pressure ceiling and precipitates into cold, dense
+  clumps -- real physical grounding matching the established multiphase ISM
+  model (Field 1965; McKee & Ostriker 1977).
+- **Interpretive choices made explicit** (spec under-determined in three
+  places, none silently assumed): (1) `R_freeze` proxied as each galaxy's own
+  last measured HI radius (no real gas-pressure/temperature profile exists in
+  the loaded SPARC data to compute it from first principles); (2) `u`
+  redefined as `rho_HDF_local/rho_HDF_max` (not `rho_excess/rho_gal`),
+  removing `rho_gal` as a free parameter -- `c_s0` is the only free global
+  parameter; (3) of the two given outer conditions (a value and a derivative
+  constraint), only the value condition is used as an independent equation --
+  the derivative condition was verified redundant with it for the same SIS
+  profile, confirmed algebraically, not a third independent equation for a
+  2-state system.
+- **Equations:**
+  ```
+  du/dr     = -(rho_bg+rho_HDF_max*u)*G*(M_bar(r)+M_HDF)/r^2*(1-u) / (rho_HDF_max*c_s0^2)
+  dM_HDF/dr = 4*pi*r^2*rho_HDF_max*u
+  ```
+- **Boundary conditions:** inner `M_HDF(r_min)=(4/3)*pi*r_min^3*rho_HDF_max*u(r_min)`;
+  outer `u(R_freeze) = c_s0^2/(2*pi*G*rho_HDF_max*R_freeze^2)`.
+- **Run: full 104/45 train/holdout split, all 149 usable galaxies, same rng
+  seed 7 as every other domain.**
+- **Result: NEGATIVE, clean.** 0 of 144 attempted galaxies converged (0/99
+  train, 0/42 holdout) -- not one physical solution found anywhere in the
+  tested parameter range. The single-galaxy sanity check failed at four
+  different `c_s0` values before the full run was even attempted. The
+  reported "fit" (`c_s0=9.99e5 m/s`, implying an absurd ~1413 km/s flat
+  velocity) is not a real fit -- every `solve_bvp` call failed uniformly
+  across the entire search range, so the scalar optimizer searched a flat,
+  uninformative penalty surface and landed arbitrarily.
+- **Diagnosis:** pinning `u` to an exact Dirichlet value at `R_freeze`
+  (stricter than Domain V's derivative-matching condition) forces the solver
+  to find a trajectory from the inner boundary landing on one exact
+  prescribed value at the outer edge, for every galaxy's specific real
+  baryon profile. scipy's Newton-based BVP collocation solver fails to find
+  any such path for any tested galaxy or `c_s0` -- not converging to a wrong
+  answer, simply not converging.
+- **Status:** Domain V's branch-degeneracy problem is NOT closed by this
+  proposal -- replaced by a stricter formulation that fails to converge at
+  all. The physical grounding (multiphase pressure balance) remains
+  legitimate; this specific mathematical implementation of it does not work
+  as specified.
+
 ## Comparison baselines (all on the same 104/45 split, same quality cuts)
 
 | Model | Train RMS (dex) | Holdout RMS (dex) | Status |
@@ -1099,6 +1149,7 @@ g_bar = Vbar2 / R * conv
 | Domain U (IVP inward-shooting, unbounded u) | 1.1120 | 1.1211 | invalid -- u hit 1, flagged pathological |
 | Domain U2 | -- | -- | incomplete, killed before results |
 | Domain V (BVP) | -- | -- | convergence test failed before any fit attempted |
+| Domain W (BVP, shock-freeze outer BC) | nan (0/99) | nan (0/42) | full run attempted, 0 of 144 galaxies converged |
 | "Domain T" pasted claim (source script not in this repo) | 0.1344 | 0.1368 | **not independently reproduced** -- no runnable script for this specific claim has been provided or located on disk |
 
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)

@@ -1,0 +1,15 @@
+{
+  "interpretive_choices": {
+    "R_freeze": "proxy = galaxy's own last measured radius (r_max), NOT derived from a real gas-pressure profile (not in the data)",
+    "u_definition": "u = rho_HDF_local/rho_HDF_max (NOT rho_excess/rho_gal as in Domain T/V) -- removes rho_gal as a free param",
+    "outer_bc_used": "value condition u(R_freeze)=cs0^2/(2*pi*G*rho_HDF_max*R_freeze^2) only; the given derivative condition is a redundant consistency check on the same SIS profile, not a third independent equation"
+  },
+  "cs0_fit": 999156.0866738361,
+  "predicted_naive_vflat_kms": 1413.0200887017668,
+  "train_rms": NaN,
+  "train_n_ok": 0,
+  "train_n_total": 99,
+  "holdout_rms": NaN,
+  "holdout_n_ok": 0,
+  "holdout_n_total": 42
+}
