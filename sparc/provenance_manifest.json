@@ -62,6 +62,22 @@
       "event_ledger": "M_1+M_2 = M_final + E_HDF_wave/c^2",
       "required_refinement": "The emitted fraction depends on the full radial density-envelope structure, relative sizes, overlap geometry, and spin/flow state -- NOT a universal one-constant mass-only fraction. A frozen one-constant version was tested (k~0.8525, and separately f~0.04594) and did not transfer to held-out events (GW190412) -- see excluded_substitutions.",
       "status": "PWC premise for the identity; the specific frozen-fraction proxy is REJECTED, not the premise itself"
+    },
+    "mass_baseline": {
+      "equation": "M = L / c0^2",
+      "symbols": {
+        "L": "light (LDF) energy",
+        "c0": "speed of light in vacuum",
+        "M": "inertial mass"
+      },
+      "statement": "Establishes that the baseline HDF medium has inertial mass because it contains light energy.",
+      "honest_note": "Algebraically identical to E=mc^2 rearranged (m=E/c^2) -- not a new equation. The PWC-specific content is the interpretation: L is specifically identified as light/HDF energy (not energy in the abstract), and c0^2 is read as the medium's own conversion threshold. Consistent with how this project has flagged other cases tonight where a relation matches known physics exactly (e.g. the D=4GM/c^2 compact-object diameter, identical to the Schwarzschild diameter) -- the number/equation is not new, the ontological reading of it is.",
+      "bookkeeping_constraint": {
+        "statement": "All subsequent HDF/LDF/Sintot mechanics must preserve this bookkeeping baseline. Any energy released or absorbed as light corresponds to a mass change.",
+        "equation": "Delta_M = Delta_L / c0^2",
+        "sign_convention": "Delta_M > 0 for the system when it absorbs light energy (Delta_L > 0 absorbed); Delta_M < 0 for the system when it emits light energy (Delta_L > 0 emitted). Sign is set by whether the defined system is emitting or absorbing, not by an independent convention."
+      },
+      "status": "PWC premise"
     }
   },
   "excluded_substitutions": [

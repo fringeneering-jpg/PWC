@@ -47,6 +47,27 @@ They do not define or redefine PWC's ontology.
   and did NOT transfer to a held-out event (GW190412); the identity is
   retained as premise, the frozen-fraction proxy is rejected.**
 
+## Mass baseline (PWC premise)
+
+`M = L / c0^2` -- L is light (LDF) energy, c0 the speed of light in
+vacuum. Establishes that the baseline HDF medium has inertial mass
+because it contains light energy.
+
+**Honest note:** algebraically identical to E=mc^2 rearranged (m=E/c^2)
+-- not a new equation. The PWC-specific content is the interpretation:
+L is specifically light/HDF energy (not energy in the abstract), and
+c0^2 is read as the medium's own conversion threshold. Same category as
+this project's earlier finding that the compact-object diameter relation
+D=4GM/c^2 is identical to the Schwarzschild diameter -- the equation
+isn't new, the ontological reading of it is.
+
+**Bookkeeping constraint, binding on all subsequent HDF/LDF/Sintot
+mechanics:** any energy released or absorbed as light corresponds to a
+mass change, `Delta_M = Delta_L / c0^2`. Sign: Delta_M > 0 when the
+defined system absorbs light energy, Delta_M < 0 when it emits light
+energy -- set by which the system is doing, not an independent
+convention.
+
 ## Excluded substitutions (explicitly rejected, so they cannot re-enter quietly)
 
 | Substitution | Status |
