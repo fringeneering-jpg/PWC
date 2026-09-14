@@ -50,16 +50,27 @@ They do not define or redefine PWC's ontology.
 ## Mass baseline (PWC premise)
 
 `M = L / c0^2` -- L is light (LDF) energy, c0 the speed of light in
-vacuum. Establishes that the baseline HDF medium has inertial mass
-because it contains light energy.
+vacuum. **Literal energy (light) is the baseline substance, not matter.**
+HDF names that same baseline energy in its unlocked state; matter
+(Sintot) is derived from it via locking -- energy is not a property
+matter happens to contain, the direction runs the other way.
 
-**Honest note:** algebraically identical to E=mc^2 rearranged (m=E/c^2)
--- not a new equation. The PWC-specific content is the interpretation:
-L is specifically light/HDF energy (not energy in the abstract), and
-c0^2 is read as the medium's own conversion threshold. Same category as
-this project's earlier finding that the compact-object diameter relation
-D=4GM/c^2 is identical to the Schwarzschild diameter -- the equation
-isn't new, the ontological reading of it is.
+**Historical note (corrected):** this is Einstein's original 1905 form
+and notation -- his paper is literally titled "Does the Inertia of a
+Body Depend Upon Its Energy Content?", deriving m=L/c^2 for a body
+emitting radiation of energy L. This is historically PRIOR to the
+popularized E=mc^2 form, not a rearrangement of it -- an earlier note in
+this manifest had that backwards and has been corrected. The original
+derivation specifically analyzes EMISSION (a body radiating energy loses
+mass, from the kinetic-energy mismatch seen in a boosted frame); that
+directionality is why the sign convention below matters, not just a
+formality.
+
+**Flagged, not verified:** a claim was raised that the reverse
+(absorption) direction does not work the same way, tracing to an error
+attributed to Planck specifically. No confident, specific knowledge of
+that historical claim is asserted here -- recorded as raised, not
+confirmed.
 
 **Bookkeeping constraint, binding on all subsequent HDF/LDF/Sintot
 mechanics:** any energy released or absorbed as light corresponds to a

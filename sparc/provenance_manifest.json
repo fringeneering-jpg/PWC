@@ -70,8 +70,9 @@
         "c0": "speed of light in vacuum",
         "M": "inertial mass"
       },
-      "statement": "Establishes that the baseline HDF medium has inertial mass because it contains light energy.",
-      "honest_note": "Algebraically identical to E=mc^2 rearranged (m=E/c^2) -- not a new equation. The PWC-specific content is the interpretation: L is specifically identified as light/HDF energy (not energy in the abstract), and c0^2 is read as the medium's own conversion threshold. Consistent with how this project has flagged other cases tonight where a relation matches known physics exactly (e.g. the D=4GM/c^2 compact-object diameter, identical to the Schwarzschild diameter) -- the number/equation is not new, the ontological reading of it is.",
+      "statement": "Literal energy (light) is the baseline substance -- not matter. HDF names that same baseline energy in its unlocked state. Matter (Sintot) is derived from it via locking; energy is not a property matter happens to contain.",
+      "historical_note": "This is Einstein's original 1905 form and notation (paper title: \"Does the Inertia of a Body Depend Upon Its Energy Content?\"), which derives m=L/c^2 for a body emitting radiation of energy L. This is historically PRIOR to the popularized E=mc^2 form -- not a rearrangement of it. The original derivation specifically analyzes EMISSION (a body radiating energy loses mass, from the kinetic-energy mismatch seen in a boosted frame); this directionality is why the sign convention below matters, not just a formality.",
+      "flagged_uncertainty": "A claim was raised in conversation that the reverse (absorption) direction does not work the same way and that this traces to an error by Planck specifically. I do not have confident, specific knowledge of that historical claim and am not asserting it here -- recorded as raised, not verified.",
       "bookkeeping_constraint": {
         "statement": "All subsequent HDF/LDF/Sintot mechanics must preserve this bookkeeping baseline. Any energy released or absorbed as light corresponds to a mass change.",
         "equation": "Delta_M = Delta_L / c0^2",
