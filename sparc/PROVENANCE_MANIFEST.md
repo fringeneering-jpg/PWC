@@ -8,6 +8,47 @@ are preserved in full but demoted to an appendix
 proxies and closures, several of which were rejected or left unresolved.
 They do not define or redefine PWC's ontology.
 
+## Standing methodology rule (2026-09-14)
+
+Formal statement of the discipline this project has enforced ad hoc
+all session, extracted and made explicit -- governs everything below,
+not just Frontier 2:
+
+1. **Write the equations first.** Define `P`, `ε`, `η`, `ζ`, relaxation
+   dynamics, source coupling, and boundary conditions *before* looking
+   at the target output.
+2. **Fix the universal parameters once**, as a single parameter vector
+   `Θ={ρ₀,K₁,η,ζ,τ_Π,τ_π,χᵢ,...}`, shared across all systems -- not one
+   set per observation.
+3. **Calibrate only against a limited, declared subset** of
+   observables; label anything not independently derived as
+   calibrated, and use as few calibration observables as possible.
+4. **Predict withheld observables.** The same `Θ` must then predict
+   other systems (other jets, other galaxies, other regimes) *without*
+   retuning.
+5. **Keep failure visible.** If the parameter region needed for one
+   test violates causality, stability, energy conservation, or another
+   observation, that version of the model is ruled out -- not patched.
+
+This is the cleanest explicit statement of what actually separated the
+real, surviving results this session (the verified Hawking sonic-choke
+derivation, the independently-checked `K₁=ρ₀c_s0²` result) from the
+rejected ones (every `a₀` scalar-matching fudge factor, the divergent
+hard-density EOS, the infinite-domain Lighthill calculation).
+
+**GR comparison standard, cross-checked and confirmed accurate:** GR
+singularities are correctly stated as geodesic incompleteness (Penrose/
+Hawking theorems), not a confirmed literal infinite-density point -- the
+rigorous, coordinate-independent formulation, more cautious than
+colloquial "infinite density" language, and consistent with (reinforces,
+does not contradict) this project's own `r=0`/`a=0` rejections, already
+framed as classical-description breakdown, not a confirmed physical
+infinity. GR's local conservation (`∇_μT^{μν}=0`) is real and intact
+within its domain, following from the field equations plus the
+contracted Bianchi identity -- the honest critique is domain
+incompleteness at extreme density, not an ordinary conservation-law
+violation.
+
 ## Ontology (PWC premise)
 
 - **Substrate**: Space is not physical nothing. The baseline is a finite,
