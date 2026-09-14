@@ -217,6 +217,27 @@ trick.
 an actual HDF tension/anisotropy figure, not yet derived or measured
 anywhere in this project.
 
+**The 115-year confirmation chain (2026-09-14; 1911 to 2026 is exactly
+115 years):** the fix above lands on 1915's doubled value, but the
+real target for any eventual PWC derivation is not that round number --
+it is everything the following century did to it. Eddington's 1919
+eclipse expedition confirmed the doubled value over the half-value, but
+only to ~30% precision. The 1960s-70s parametrized post-Newtonian (PPN)
+formalism (Robertson, then Nordtvedt and Will) named the exact quantity
+this whole chain circles: `γ`, the ratio of the spatial-curvature
+contribution to the time-dilation contribution -- Newton/Soldner and
+Einstein 1911 are `γ=0` (half answer), full GR is `γ=1` (full
+doubling). 1970s-90s VLBI tracking of quasar deflection pinned `γ` to
+~1%. The 2003 Cassini Shapiro-delay experiment measured `γ−1 = (2.1 ±
+2.3)×10⁻⁵` -- confirmed to roughly 1 part in 100,000, not merely
+"roughly doubled." Since 2015, LIGO/Virgo ringdown observations and the
+Event Horizon Telescope's photon-ring imaging (M87*, Sagittarius A*)
+extend the same test into the strong-field regime near an actual
+horizon. **The real target: not 4GM/(bc²) as a round figure, but `γ=1`
+to about five decimal places in the weak field, holding unmodified into
+the strong-field regime.** That is the bar any HDF tension/anisotropy
+mechanism will eventually need to clear.
+
 **PWC candidate mechanism, as given in this session (2026-09-14):**
 Light (LDF) propagates exactly as it always does. Near a mass, the
 medium is a volumetrically heavier but singularly (spherically)
