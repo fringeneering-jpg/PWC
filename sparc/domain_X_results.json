@@ -1,0 +1,14 @@
+{
+  "rho_HDF_ref": 46000000000.0,
+  "c_s0_fit": 3159036.2793767164,
+  "c_s0_over_c": 0.01053741078228431,
+  "train_rms": 1000000.0,
+  "train_ok": 0,
+  "train_fail": 99,
+  "train_conv": 0.0,
+  "holdout_rms": 1000000.0,
+  "holdout_ok": 0,
+  "holdout_fail": 42,
+  "holdout_conv": 0.0,
+  "note": "Linear closure only (K1=rho0*c_s0^2), no nonlinear/dissipative terms. Floor test."
+}

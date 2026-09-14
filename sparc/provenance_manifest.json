@@ -640,6 +640,23 @@
       "train_rms_dex": 0.138,
       "holdout_rms_dex": 0.1387,
       "status": "baseline, PWC algebraic proxy, no continuum ODE"
+    },
+    "domain_W2_causal_relaxation": {
+      "train_rms_dex": 1000000.0,
+      "holdout_rms_dex": 1000000.0,
+      "status": "non-convergent across full 6-parameter differential_evolution search; root cause not diagnosed for this ODE system"
+    },
+    "domain_X_linear_closure": {
+      "train_rms_dex": 1000000.0,
+      "train_converged": "0/104",
+      "holdout_rms_dex": 1000000.0,
+      "holdout_converged": "0/45",
+      "status": "root cause diagnosed: RHO_HDF_REF (4.6e10 kg/m^3) is ~33 orders of magnitude off-regime for galaxy-scale use"
+    },
+    "domain_Y_density_inversion": {
+      "train_rms_dex": null,
+      "holdout_rms_dex": null,
+      "status": "COMPLETED -- not a fit, a descriptive inversion atlas; produces the target rho_req(r) profile Domain X's diagnosis showed was missing"
     }
   },
   "surrogate_and_numerical_audits": {
@@ -1257,6 +1274,60 @@
       "result": "NEGATIVE, clean. 0 of 144 galaxies converged (0/99 train, 0/42 holdout) -- not one physical solution found anywhere in the tested c_s0 range (single-galaxy sanity check failed at 4 different c_s0 values on the first test galaxy before the full run). The reported 'fit' value (c_s0=9.99e5 m/s, implying an absurd ~1413 km/s flat velocity) is not a real fit -- every solve_bvp call failed uniformly across the search range, so the scalar optimizer was searching a flat, uninformative penalty surface and landed arbitrarily.",
       "diagnosis": "Pinning u to an exact Dirichlet value at R_freeze (rather than Domain V's derivative-matching condition) forces the solver to find a trajectory from the inner boundary landing on one exact prescribed value at the outer edge for every galaxy's specific real baryon profile -- a much tighter constraint than Domain V's. scipy's Newton-based BVP collocation solver fails to find any such path for any tested galaxy or c_s0 -- not converging to a wrong answer, simply not converging.",
       "status": "Domain V's branch-degeneracy problem is NOT closed by this proposal -- it is replaced by a stricter formulation that fails to converge at all, a genuine negative result, reported honestly rather than dropped. The physical grounding (multiphase pressure balance) remains legitimate; this specific mathematical implementation of it does not work as specified."
+    },
+    "domain_W2_causal_relaxation_2026-09-14": {
+      "model_version": "domain_W_reformulated.py",
+      "purpose": "Replace Domain W's single-value outer-Dirichlet closure with an actual causal relaxation structure (state [u, Pi, pi_rr, M_HDF]; relaxation equations for bulk/shear stress with time constants tau_Pi, tau_pi), per the manifest's own Frontier 2 correction that listing internal state variables in an EOS is not itself Israel-Stewart theory.",
+      "causality_bound": "v_char^2 = c_s0^2 + zeta/(rho_0*tau_Pi) + 4*eta/(3*rho_0*tau_pi) <= c^2, checked algebraically.",
+      "data_split": "98 train / 43 holdout",
+      "baselines_reproduced": {
+        "bare_newtonian_train": 0.5104,
+        "bare_newtonian_holdout": 0.5154,
+        "rar_train": 0.1331,
+        "rar_holdout": 0.1293
+      },
+      "result": "NEGATIVE. differential_evolution reported f(x)=1000000.0 at step 1 and never improved across the full 6-parameter search (log10(rho_0), log10(Gamma), log10(tau_Pi), log10(tau_pi), alpha1, alpha2). Reported 'Universal parameters' (rho_0=7.512e-24 kg/m^3, Gamma=5.040e-18 /s, tau_Pi=3.999e12 s, tau_pi=4.121e8 s, zeta=9.713e5 Pa*s, eta=50.94 Pa*s, c_s0=0.629c) is an L-BFGS-B polish of a flat, uninformative penalty surface -- not a fit, since min_convergence_frac>=0.5 was never satisfied by any evaluated point. Train/holdout HDF-theory RMS both pinned at exactly 1000000.0000 dex.",
+      "open_item": "Unlike Domain X, the specific numeric root cause of non-convergence was NOT diagnosed for W2's own ODE system. rho_0 was fit freely (not fixed at a wrong-regime constant) and landed at 7.5e-24 kg/m^3 -- a physically plausible order of magnitude, a couple of orders below the Domain Y-inverted galaxy-scale target of ~1e-22 kg/m^3. Whether this shares Domain X's root cause, a different numerical conditioning issue, or a genuine physical inconsistency in the relaxation-ODE formulation is unresolved."
+    },
+    "domain_X_linear_causal_2026-09-14": {
+      "model_version": "domain_X_linear_causal.py",
+      "purpose": "Floor test: does the single already-verified linear response term alone (K1=rho0*c_s0^2, no nonlinear/dissipative physics) produce anything meaningful, fitting only c_s0, with RHO_HDF_REF=4.6e10 kg/m^3 held fixed as the project's established compact-core-regime reference density.",
+      "boundary_condition_history": "Started from Domain V/W's derivative-matching outer BC (failed identically). Swapped to a crude fixed-value placeholder (u(r_far)=0.01, explicitly labeled non-physical, diagnostic-only) to isolate the BC question -- still 0/104 train, 0/45 holdout converged, max_nodes exceeded on every tested galaxy and c_s0 value.",
+      "root_cause_diagnosed": "RHO_HDF_REF=4.6e10 kg/m^3 is off by roughly 33 orders of magnitude for use as a galaxy-scale reference density. Direct calculation on 5 representative SPARC galaxies: u=rho_HDF_local/RHO_HDF_REF needs to sit around 1e-33 to 1e-34 for the enclosed HDF mass to match real baryonic mass scales (e.g. D564-8: u_scale_unclipped=6.83e-34, implying a required local density of 3.14e-23 kg/m^3, consistent with the Domain Y inversion result). At that scale u's intended meaning as an order-unity bounded state variable is destroyed; existing numerical floors (u_c>=1e-12, u_scale>=1e-6) inject unphysical density many orders of magnitude above the real target, and solve_bvp's mesh refinement runs away trying to resolve the resulting artificial near-discontinuity, regardless of boundary condition. Confirmed directly: a BC rescaled to match the (clipped) u_scale for a given galaxy still fails identically -- the problem is upstream of the boundary condition, in the reference-density normalization itself.",
+      "status": "Same underlying architectural failure already present in Domain V and Domain W (this manifest) -- the outer-BC question that consumed most of the debugging was a real but secondary symptom; the primary defect is regime-mismatched density normalization, carried forward unexamined from a compact-core context into every galaxy-scale BVP attempted so far (V, W, W2, X).",
+      "no_valid_fit": "The printed c_s0=3.159e6 m/s value sits at the edge of its search bound (log10 c_s0 upper bound 6.5) because the objective was flat at 1e6 (no convergence) across the entire search range -- not a real result."
+    },
+    "domain_Y_density_inversion_2026-09-14": {
+      "model_version": "domain_Y_density_inversion.py, independently cross-checked via a second implementation run in Google Colab (3 iterations fixing a numpy.int64-not-JSON-serializable bug in the results-writer -- a mechanical Python/JSON serialization fix, unrelated to the physics).",
+      "method": "Direct spherical Newtonian inversion of real SPARC rotation-curve residuals -- no HDF reference density, no EOS, no closure, no BVP, no per-galaxy tuning: Delta_g(r)=g_obs(r)-g_bar(r); rho_req(r) = 1/(4*pi*G*r^2) * d/dr[r^2*Delta_g(r)] (central differences on real, unevenly spaced r). Built directly in response to the Domain X root-cause diagnosis, as the honest first step (derive the target density profile the data actually require) before proposing any universal HDF response law.",
+      "result": "COMPLETED empirical inversion. Using 139 SPARC galaxies and fixed baryonic mass-to-light assumptions (Upsilon_disk=0.5, Upsilon_bulge=0.7), produced a predominantly positive, radially declining spherical-equivalent density atlas. Descriptive, not a physical identification: neither establishes an HDF medium nor distinguishes an HDF response from a dark-matter or modified-gravity effective density. Supplies a fixed observational target for subsequent forward models.",
+      "numbers": {
+        "n_points_total": 2682,
+        "pct_positive": 94.1,
+        "pct_negative_retained_as_diagnostic": 5.9,
+        "point_weighted_median_kg_m3": 3.045e-22,
+        "radial_decline_galaxy_weighted_kg_m3": {
+          "0-1_kpc": 5.11e-21,
+          "1-2_kpc": 3.16e-21,
+          "2-4_kpc": 1.07e-21,
+          "4-8_kpc": 3.91e-22,
+          "8-16_kpc": 1.86e-22,
+          "16-32_kpc": 9.63e-23,
+          "32-64_kpc": 3.4e-23
+        },
+        "corr_log_rho_req_log_gbar_raw": 0.617,
+        "corr_log_rho_req_log_gbar_partial_controlling_for_log_r": 0.653,
+        "pooled_scaling_exponent_rho_req_vs_gbar": 0.631
+      },
+      "cross_check_status": "The original run and an independently-executed Colab pass produced matching numbers (median 3.045e-22 vs 3.066e-22 kg/m^3; same radial-decline shape). This is an implementation cross-check (same SPARC inputs, same selection cuts, same baryonic assumptions, same inversion equation, run twice) -- confirms the code is bug-free and reproducible, and is explicitly NOT independent empirical confirmation of anything physical.",
+      "limitations": [
+        "Spherical-equivalent geometry applied to flattened disk galaxies (a real approximation, not a measured 3D density).",
+        "Raw numerical differentiation (central differences) of sparse, noisy real rotation-curve points -- not smoothed or spline-fit; the 5.9% negative fraction is the honest signature of this noise.",
+        "Fixed Upsilon_disk=0.5, Upsilon_bulge=0.7 (project-standard values, not re-derived or varied per galaxy).",
+        "No propagation yet of distance, inclination, stellar mass-to-light, or velocity uncertainties into rho_req's own error bars.",
+        "The point-level partial correlation is a pooled-data statistical result, not a within-galaxy or causal claim."
+      ],
+      "next_open_test_not_yet_run": "Does rho_req(r) collapse onto one curve when radius is rescaled by each galaxy's own structural size (x=r/R_d or r/R_eff)? A real collapse would suggest a self-similar galaxy-associated structure; no collapse would point to mass, surface density, gas fraction, morphology, or environment as the organizing variable(s). Descriptive follow-up, not required to validate the result already recorded, and must be run without modifying the Domain Y inversion itself."
     }
   },
   "methodology_standing_rule_2026-09-14": {

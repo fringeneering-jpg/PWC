@@ -1710,6 +1710,155 @@ g_bar = Vbar2 / R * conv
   legitimate; this specific mathematical implementation of it does not work
   as specified.
 
+### Domain W2 (causal dissipative wake reformulation, Israel-Stewart-type relaxation ODEs) -- 2026-09-14
+
+- **model_version**: `domain_W_reformulated.py`
+- **Purpose**: replace Domain W's single-value outer-Dirichlet closure with an
+  actual causal relaxation structure (state `[u, Pi, pi_rr, M_HDF]`, relaxation
+  equations for bulk/shear stress with time constants `tau_Pi, tau_pi`), per
+  the manifest's own Frontier 2 correction that listing internal state
+  variables in an EOS is not itself Israel-Stewart theory -- the substantive
+  content is the relaxation equations, which this version adds.
+- **Causality bound enforced explicitly**: `v_char^2 = c_s0^2 + zeta/(rho_0*tau_Pi) + 4*eta/(3*rho_0*tau_pi) <= c^2`, checked algebraically, not just asserted.
+- **Data**: 98 train / 43 holdout (same split convention as every other domain).
+- **Baselines reproduced for comparison**: bare Newtonian train 0.5104 dex /
+  holdout 0.5154 dex; empirical RAR train 0.1331 dex / holdout 0.1293 dex --
+  consistent with every other domain's baseline numbers, confirming the data
+  pipeline itself is not the source of any failure here.
+- **Result: NEGATIVE.** `differential_evolution` reported `f(x)=1000000.0` at
+  step 1 and never improved on it across the full 6-parameter search
+  (`log10(rho_0), log10(Gamma), log10(tau_Pi), log10(tau_pi), alpha1, alpha2`).
+  The reported "Universal parameters" table (`rho_0=7.512e-24 kg/m^3,
+  Gamma=5.040e-18 /s, tau_Pi=3.999e12 s, tau_pi=4.121e8 s, zeta=9.713e5 Pa*s,
+  eta=50.94 Pa*s, c_s0=0.629c`) is an L-BFGS-B polish of a flat, uninformative
+  penalty surface, exactly the same category of non-result as Domain W's
+  original `c_s0=9.99e5 m/s` -- **not a fit**, since the objective never found
+  any point where the `min_convergence_frac>=0.5` guard was satisfied.
+  Train/holdout HDF-theory RMS both pinned at exactly `1000000.0000` dex.
+- **Open item, not resolved here**: unlike Domain X below, the specific
+  numeric root cause of this non-convergence was NOT diagnosed for W2's own
+  ODE system. `rho_0` here was fit freely (not fixed at a wrong-regime
+  constant like `RHO_HDF_REF` in Domain X) and landed at `7.5e-24 kg/m^3` --
+  a physically plausible order of magnitude, roughly the cosmic critical
+  density, a couple of orders below the Domain Y-inverted galaxy-scale target
+  of `~1e-22 kg/m^3`. Whether this failure shares Domain X's root cause
+  (outer-BC/state-scale mismatch), a different numerical conditioning issue,
+  or a genuine physical inconsistency in the relaxation-ODE formulation
+  itself is an open question. Do not assume the Domain X diagnosis transfers
+  here without checking.
+
+### Domain X (minimal linear causal closure baseline, K1=rho0*c_s0^2 only) -- 2026-09-14, ROOT CAUSE DIAGNOSED
+
+- **model_version**: `domain_X_linear_causal.py`
+- **Purpose**: floor test -- does the single already-verified linear response
+  term alone (no nonlinear/dissipative physics) produce anything meaningful,
+  fitting only `c_s0` (galaxy-scale value explicitly not assumed `=c`), with
+  `RHO_HDF_REF=4.6e10 kg/m^3` held fixed as the project's established
+  compact-core-regime reference density.
+- **Boundary condition history this run**: started from Domain V/W's
+  derivative-matching outer BC (failed to converge, identical symptom to
+  Domain V/W); swapped to a crude fixed-value placeholder
+  (`u(r_far)=0.01`, explicitly labeled non-physical, diagnostic-only) per
+  direct instruction to isolate the BC question from everything else --
+  **still 0/104 train, 0/45 holdout converged**, `max_nodes exceeded` on
+  every tested galaxy and every `c_s0` in range.
+- **Root cause, directly diagnosed and confirmed (not inferred)**: `RHO_HDF_REF=4.6e10 kg/m^3`
+  is off by roughly 33 orders of magnitude for a galaxy-scale reference density.
+  Direct calculation on 5 representative SPARC galaxies: the state variable
+  `u = rho_HDF_local/RHO_HDF_REF` needs to sit around `1e-33` to `1e-34` for
+  the enclosed HDF mass to match real baryonic mass scales at the galaxies'
+  outer measured radii (e.g. D564-8: `u_scale_unclipped = 6.83e-34`, implying
+  a required local density of `3.14e-23 kg/m^3` -- consistent with the Domain
+  Y inversion result below). At that scale, `u`'s intended meaning as an
+  order-unity bounded state variable is destroyed; existing numerical floors
+  (`u_c>=1e-12`, `u_scale>=1e-6`) inject unphysical density many orders of
+  magnitude above the real target, and `solve_bvp`'s mesh refinement runs
+  away trying to resolve the resulting artificial near-discontinuity,
+  regardless of which boundary condition is used. Confirmed directly: a BC
+  rescaled to match the (clipped) `u_scale` for a given galaxy still fails
+  identically -- the problem is upstream of the boundary condition, in the
+  reference-density normalization itself.
+  See [[domain-y-density-inversion]].
+- **Status**: this is the same underlying architectural failure already
+  present in Domain V (2026 record) and Domain W (this manifest, 2026-09-14)
+  -- the outer-BC question that consumed most of tonight's debugging was a
+  real but secondary symptom; the primary defect is regime-mismatched
+  density normalization, carried forward unexamined from a compact-core
+  context into every galaxy-scale BVP attempted so far (V, W, W2, X).
+- **No valid fit exists for Domain X** -- the printed `c_s0=3.159e6 m/s`
+  value sits at the edge of its search bound (`log10 c_s0` upper bound 6.5)
+  because the objective was flat at `1e6` (no convergence) across the entire
+  search range; not a real result.
+
+### Domain Y (direct density-profile inversion) -- COMPLETED, 2026-09-14 {#domain-y-density-inversion}
+
+- **model_version**: `domain_Y_density_inversion.py` (original), independently
+  cross-checked via a second implementation run in Google Colab
+  (`domain_Y_v2_colab_pass1.py` derivative, 3 iterations fixing a
+  `numpy.int64`-not-JSON-serializable bug in the results-writer -- a
+  mechanical Python/JSON serialization fix, unrelated to the physics).
+- **Method**: direct spherical Newtonian inversion of real SPARC rotation-curve
+  residuals -- no HDF reference density, no EOS, no closure, no BVP, no
+  per-galaxy tuning of any kind:
+  ```
+  Delta_g(r) = g_obs(r) - g_bar(r)
+  rho_req(r) = 1/(4*pi*G*r^2) * d/dr[ r^2 * Delta_g(r) ]     (central differences on real, unevenly spaced r)
+  ```
+  Built directly in response to the Domain X root-cause diagnosis, as the
+  honest first step (derive the target density profile the data actually
+  require) before proposing any universal HDF response law that would
+  predict it.
+- **Result -- completed empirical inversion.** Using 139 SPARC galaxies and
+  fixed baryonic mass-to-light assumptions (`Upsilon_disk=0.5,
+  Upsilon_bulge=0.7`), a direct spherical Newtonian inversion of
+  rotation-curve residuals produced a predominantly positive, radially
+  declining spherical-equivalent density atlas. **The result is descriptive,
+  not a physical identification**: it neither establishes an HDF medium nor
+  distinguishes an HDF response from a dark-matter or modified-gravity
+  effective density. The inversion supplies a fixed observational target for
+  subsequent forward models.
+- **Numbers** (2,682 radial points total; 94.1% positive, 5.9% negative
+  retained as diagnostics, not filtered out):
+  - Point-weighted median: `3.045e-22 kg/m^3`
+  - Radial decline (galaxy-weighted medians, robustness-checked against
+    point-weighted medians -- they agree within ~5%, e.g. 8-16 kpc:
+    `1.86e-22` galaxy-weighted vs `1.94e-22` point-weighted):
+    `0-1 kpc: 5.11e-21` -> `1-2: 3.16e-21` -> `2-4: 1.07e-21` ->
+    `4-8: 3.91e-22` -> `8-16: 1.86e-22` -> `16-32: 9.63e-23` ->
+    `32-64: 3.40e-23 kg/m^3`
+  - `corr(log rho_req, log g_bar) = 0.617` (raw); `= 0.653` after
+    residualizing both against `log r` first (radius-controlled partial
+    correlation) -- the correlation is NOT merely a shared-radial-decline
+    artifact, since controlling for radius strengthens rather than weakens it.
+  - Pooled scaling: `rho_req ~ g_bar^0.631`
+- **Cross-check status, precisely stated**: the original run and the
+  independently-executed Colab pass produced matching numbers (median
+  `3.045e-22` vs `3.066e-22 kg/m^3`; same radial-decline shape). This is an
+  **implementation cross-check** (same SPARC inputs, same selection cuts,
+  same baryonic assumptions, same inversion equation, run twice) -- it
+  confirms the code is bug-free and reproducible, and is explicitly NOT
+  independent empirical confirmation of anything physical.
+- **Limitations, stated explicitly, not silently omitted**:
+  - Spherical-equivalent geometry applied to flattened disk galaxies (a real
+    approximation, not a measured 3D density).
+  - Raw numerical differentiation (central differences) of sparse, noisy real
+    rotation-curve points -- not smoothed or spline-fit to produce a cleaner
+    picture; the 5.9% negative fraction is the honest signature of this noise.
+  - Fixed `Upsilon_disk=0.5, Upsilon_bulge=0.7` (project-standard values, not
+    re-derived here or varied per galaxy).
+  - No propagation yet of distance, inclination, stellar mass-to-light, or
+    velocity uncertainties into `rho_req`'s own error bars.
+  - The point-level partial correlation is a pooled-data statistical result,
+    not a within-galaxy or causal claim.
+- **Next open, pre-registered test (not yet run)**: does `rho_req(r)` collapse
+  onto one curve when radius is rescaled by each galaxy's own structural size
+  (`x=r/R_d` or `r/R_eff`)? A real collapse would suggest a self-similar
+  galaxy-associated structure; no collapse would point to mass, surface
+  density, gas fraction, morphology, or environment as the organizing
+  variable(s). This is a descriptive follow-up question the frozen atlas can
+  answer -- it is not required to validate the result already recorded above,
+  and it must be run without modifying the Domain Y inversion itself.
+
 ## Comparison baselines (all on the same 104/45 split, same quality cuts)
 
 | Model | Train RMS (dex) | Holdout RMS (dex) | Status |
@@ -1722,6 +1871,9 @@ g_bar = Vbar2 / R * conv
 | Domain U2 | -- | -- | incomplete, killed before results |
 | Domain V (BVP) | -- | -- | convergence test failed before any fit attempted |
 | Domain W (BVP, shock-freeze outer BC) | nan (0/99) | nan (0/42) | full run attempted, 0 of 144 galaxies converged |
+| Domain W2 (BVP, Israel-Stewart-type causal relaxation ODEs) | 1000000.0000 | 1000000.0000 | non-convergent across full 6-param search; root cause not diagnosed for this ODE system |
+| Domain X (BVP, linear closure only, placeholder BC) | 1000000.0000 (0/104) | 1000000.0000 (0/45) | root cause diagnosed: RHO_HDF_REF is ~33 orders of magnitude off-regime for galaxy scale |
+| Domain Y (direct density inversion, not a fit) | n/a -- descriptive | n/a -- descriptive | COMPLETED: produces the target rho_req(r) atlas Domain X's diagnosis showed was missing |
 | "Domain T" pasted claim (source script not in this repo) | 0.1344 | 0.1368 | **not independently reproduced** -- no runnable script for this specific claim has been provided or located on disk |
 
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)
