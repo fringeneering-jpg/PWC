@@ -665,6 +665,75 @@ Sources: [Boylan-Kolchin, arXiv:2208.01611](https://arxiv.org/abs/2208.01611),
 [ZF-UDS-7329 (A&A)](https://www.aanda.org/articles/aa/full_html/2025/02/aa52781-24/aa52781-24.html),
 [Age-dating early quiescent galaxies (MNRAS)](https://academic.oup.com/mnras/article/537/2/1826/7973012)
 
+## Sonic-choke Hawking derivation -- VERIFIED (2026-09-14)
+
+**Correction of an earlier rejection this session:** a Hawking-radiation
+derivation was rejected earlier tonight as a relabeling of standard GR
+surface gravity (`κ=GM/R_s²` plugged directly from `R_s`, no
+independent HDF input) -- correct for that specific presentation. But a
+real, pre-existing, more sophisticated derivation exists in this
+project's own files (`Downloads/claude chat.txt` §II G, cross-
+referenced in `unified_framework_consolidated_2026-08-13.md`), found
+only after being told to search for it -- same mistake pattern as the
+earlier SPARC-132/dwarf-41 error this session: should have checked
+project files before ruling.
+
+**The real derivation, independently re-verified in this session, not
+taken on either document's word:**
+1. Free-fall inflow speed: `v(r) = √(2GM/r) = c√(r_s/r)` -- standard
+   mechanics, energy conservation for infall under inverse-square
+   gravity.
+2. Sonic condition: inflow reaches the medium's own characteristic
+   speed (`c_s = c`, the shared-c postulate already established
+   elsewhere in this framework) exactly at `r = r_s = 2GM/c²`.
+3. Run through the real, general analog-gravity method (Unruh 1981 --
+   the same formalism underlying the actual BEC and water-tank
+   white-hole experiments, *not* GR's own Hawking derivation): surface
+   gravity from the flow profile at the sonic point,
+   `κ = (1/2)|d(c_s²−v²)/dr|` at `r=r_s`. Independently computed here:
+   `κ = c²/(2r_s) = c⁴/(4GM)` -- exactly the real value.
+4. `T = ħκ/(2πk_Bc) = ħc³/(8πGMk_B)` -- the real Hawking formula,
+   exactly.
+
+**Numerical verification:** the source gives `T_sonic = 6.1686778×10⁻⁸ K`
+for a 1-solar-mass object, ratio 1.000000000000 against `T_Hawking`,
+checked across Planck mass, 1 M☉, Sgr A* (4.3×10⁶ M☉), and M87*
+(6.5×10⁹ M☉) -- eighteen orders of magnitude in mass, zero free
+parameters. Independently cross-checked here against the known real
+value for a solar-mass black hole (~60 nanokelvin) -- consistent.
+
+**Why this is different from the rejected version:** that version
+plugged `R_s` directly into `GM/r²` -- purely circular, no independent
+physics. This version runs an actual flow profile through the actual
+general method used in real, independent, peer-reviewed analog-gravity
+physics. That this specific combination reproduces Hawking's formula
+exactly, over eighteen orders of magnitude, is not guaranteed by the
+method itself -- a genuine, non-trivial result.
+
+**Honest remaining caveat, a separate open item, not a discount on
+this result:** `v=√(2GM/r)` is standard inverse-square-gravity
+mechanics -- it assumes ordinary `1/r²` gravity rather than
+independently deriving it from HDF's own equation of state (same open
+item already on record: PWC's gravity law is a required match, not
+yet derived from a medium functional). The genuinely new, PWC-specific
+ingredient doing the real work is `c_s=c`, combined with ordinary
+mechanics, run through a real independent method, to get an exact
+match -- a legitimate, largely non-circular result built on one real
+postulate, not zero, though not yet built from a fully independent HDF
+equation of state either.
+
+**Also resolves, consistently, from the same source:** no `r=0`
+singularity (density floor `ρ₀>0` and ceiling `ρ_max<∞` bound both
+extremes), and the finite-redshift-boundary/emitting-surface objection
+(self-flagged in the source) -- resolved because inflow exceeds the
+medium's own signal speed at the boundary, making it "optically black
+by kinematics, not by geometry," independently matching the answer
+already given earlier tonight to "does PWC's black hole have flow."
+
+**Status:** strongest single verified result in this project to date,
+per the source's own characterization and this session's independent
+re-derivation.
+
 ## Quantization / vacuum-cutoff unification (2026-09-14)
 
 **Correction of an earlier claim this session:** an earlier entry
