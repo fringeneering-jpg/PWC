@@ -890,6 +890,65 @@ What does not survive at the confidence it was defended with: the
 specific claim that emission delay, rather than a genuine propagation-
 speed difference, is what actually happened.
 
+## Jet/bow-wave mechanism template (2026-09-14)
+
+Black-hole relativistic jets as a natural laboratory for HDF's own
+resistance law, since the black-hole boundary is, by this project's
+already-verified sonic-horizon condition (the Hawking derivation),
+precisely where local flow reaches HDF's own characteristic speed
+`c_s0=c`. If ejected jet material is HDF itself (choke-rejected, per
+the Hawking/buoyancy mechanism), the bow wave where it plows into
+ambient HDF is a single-substance (HDF-on-HDF) compression problem,
+not a multi-species plasma/ISM shock -- governed entirely by HDF's own
+equation of state.
+
+**Why this is correctly scoped, unlike the six rejected `a₀`
+attempts:** it explicitly names what must be independently fixed
+*before* comparing to data, rather than finding a number that already
+matches and calling it derived. Stated explicitly: "it is not enough
+to choose `n` to match a desired jet speed; `P*`, `ρ_max`, and `n`
+must come from previously fixed HDF properties." `ρ_max` is already
+fixed (frozen pending its own external derivation, but fixed as a
+number); `P*` and `n` are honestly flagged as open, not assumed.
+
+**Mechanism chain:** moving ejecta → HDF bow-wave compression →
+`δρ_HDF` → `δP_HDF` → opposing force, via `δP=c_s0²δρ` (linear,
+standard sound-speed relation) -- *alone this does not produce sharp
+resistance*. Sharpness requires the EOS itself to stiffen nonlinearly
+as `ρ→ρ_max`.
+
+**Proposed closure, checked:** `P_HDF(ρ)=P*[(1-ρ/ρ_max)^(-n)-1]`,
+`n>0`. Derivative independently verified here:
+`dP/dρ=(nP*/ρ_max)(1-ρ/ρ_max)^(-(n+1))`, which does diverge as
+`ρ→ρ_max` -- confirmed by direct differentiation, not asserted.
+
+**Force balance and test design:** terminal Lorentz factor from
+balancing jet momentum flux (`L_jet/(A_jet·c)`) against the HDF bow
+pressure `P_HDF(ρ₀+δρ_bow)−P_HDF(ρ₀)`, giving `Γ_term` as a function
+of `(L_jet, A_jet, Ṁ_jet; P_HDF(ρ))`. Genuine falsification test: the
+*same* fixed HDF constants (`P*, ρ_max, n`) must predict terminal
+Lorentz factors across multiple independent jet sources (M87,
+blazars, GRBs) without being retuned per source -- same discipline
+that made the Hawking derivation trustworthy (one set of constants,
+eighteen orders of magnitude, no per-case fitting). If `n` or `P*`
+must drift between sources to fit, that is the same failure signature
+as the earlier rejected `a₀` attempts.
+
+**Necessary distinction:** `ρ_jet` (source-side jet mass loading,
+affects driving Lorentz factor via available energy per unit jet
+mass) must not be conflated with `ρ_HDF,bow` (the medium's own
+bow-shock density, governs the resistance). Two different quantities
+in the force balance.
+
+**Status:** viable, correctly-scoped mechanism template, not yet a
+derivation -- finite compressibility + speed-dependent bow compression
++ nonlinear high-density EOS ⇒ sharp terminal-speed resistance.
+Becomes an actual derivation only once `P*` and `n` are fixed
+independently of any specific jet's observed Lorentz factor -- at that
+point, and only then, jet data can test the claim rather than
+motivate it. Not yet attempted: fixing `P*` and `n` from HDF's own
+already-established properties.
+
 **Locality correction (2026-09-14):** `a₀` is a *local* effect, not a
 universal one requiring a cosmic-scale coupling -- correcting the
 `H₀`-coupling direction pursued across the preceding exchanges. If
