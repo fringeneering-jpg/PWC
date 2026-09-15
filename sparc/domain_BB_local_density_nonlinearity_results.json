@@ -1,0 +1,10 @@
+{
+  "n_galaxies": 138,
+  "n_points": 2031,
+  "fitted_exponent_p": 0.5224963576642234,
+  "fitted_intercept_a": -9.97992219030313,
+  "corr_pooled": 0.8269533544279947,
+  "r2_pooled": 0.6838518503997131,
+  "mean_per_galaxy_rms_linear_p1": 0.40834173683629976,
+  "mean_per_galaxy_rms_fitted_p": 0.2562947254790821
+}
