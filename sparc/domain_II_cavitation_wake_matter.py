@@ -1,4 +1,59 @@
 """
+*** FIRST LINK MISATTRIBUTED -- N = 4*pi/alpha = 1722 IS NOT WILLIAMSON'S. ***
+
+This file states: "Williamson's double-looped toroidal electron: major radius
+lambda_C_bar, tube radius alpha*lambda_C_bar = r_e, ratio 1/alpha. Double-loop
+path over tube scale gives 4*pi/alpha = 1722." It is presented as exact and
+not fitted. Checked against the primary sources, it is none of those things.
+
+WHAT WILLIAMSON & VAN DER MARK ACTUALLY SAY (Ann. Fond. L. de Broglie 22, 133,
+1997, "Is the electron a photon with toroidal topology?"), verbatim:
+
+  "The loop radius is then exactly lambda_C/4*pi, and this scale of length is
+   intrinsic to our model."
+  "The toroidal structure is characterised by a length r = lambda_C/4*pi."
+  "the mean radius of energy transport (the eye of the torus) is close to the
+   intrinsic scale of length in our model (lambda_C/4*pi)"
+  "An upper limit on the size of the object is obtained by considering the
+   extremal paths which also fulfil the condition that they have length
+   lambda_C."
+
+WHAT IS NOT IN EITHER THAT PAPER OR Williamson 2015 (SPIE 9570, "On the nature
+of the photon and the electron") -- both searched in full text:
+
+  "1722"                      0 occurrences in both
+  "alpha" / "fine structure"  0 occurrences in both
+  "classical electron radius" 0 occurrences in both
+  "2.818" (the value of r_e)  0 occurrences in both
+  "major radius"/"minor radius"/"tube"   0 occurrences in both
+
+SO, POINT BY POINT:
+  - The intrinsic scale is lambda_C/4*pi, which equals lambda_C_bar/2. This
+    file's "major radius = lambda_C_bar" is TWICE Williamson's stated value.
+  - "tube radius = alpha*lambda_C_bar = r_e" does not appear in his work. The
+    fine structure constant plays no role in his geometry at all.
+  - His confined photon traverses a path of length lambda_C -- ONE wavelength
+    round a double loop. Not 1722 wavelengths. The "N waves per electron"
+    picture is not his model.
+
+CONSEQUENCE. The chain below opens with "alpha -> N = 4*pi/alpha = 1722" and
+calls it exact and unfitted on Williamson's authority. It is this project's
+own construction, and the attribution is wrong. Whether 4*pi/alpha can be
+justified some other way is an open question; it cannot be justified by
+citing Williamson. This also bears directly on the 1.48e6 disagreement between
+this file's two routes to a per-wave energy, already flagged below -- one of
+those routes rests on N.
+
+SCOPE OF THE CHECK: the two foundational papers named above were searched in
+full. Williamson has later work (the "new linear theory of light and matter"
+papers, the Benn & Williamson photonic-topology papers) that was NOT searched.
+If 4*pi/alpha appears in one of those, this banner should be narrowed
+accordingly -- but it cannot be sourced to the 1997 paper this file cites.
+
+The chain below is left unedited as a record.
+
+------------------------------------------------------------------------
+
 DOMAIN II -- cavitation wake matter production, derived end to end from alpha.
 
 This domain records a chain that runs from the fine structure constant to a
