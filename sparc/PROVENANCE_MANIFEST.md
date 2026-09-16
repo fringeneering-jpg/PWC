@@ -2280,6 +2280,70 @@ baryons are a disk; medium taken as static (no bulk flow terms);
 `rho_HDF` obtained by differentiating noisy enclosed mass, stabilised
 with local log-space slopes, all population claims are medians.
 
+
+## Domain FF -- rotating HDF: solving for the medium's vorticity (2026-09-16)
+
+Script: `sparc/domain_FF_vortical_medium_flow.py`
+Results: `sparc/domain_FF_vortical_medium_flow_results.json`
+
+**Legitimate correction to Domain EE.** EE assumed a static, spherical
+medium (`v_phi = 0`), flagged in its own header. A mass-bearing medium
+interpenetrating a differentially rotating disk has no reason to sit at
+rest. The directive's radial balance
+`v_phi^2/r - (1/rho)dP/dr = V_circ^2/r` and its consequence
+`c_s^2 = (V_circ^2 - v_phi^2)/(-d ln rho/d ln r)` were **verified
+algebraically before coding and are correct.**
+
+**Structural note recorded before running:** the reversed system is fully
+determined (`rho` and `V_circ` from data, `c_s` frozen, `v_phi` read off),
+so it cannot fail *or* succeed on goodness of fit. It is different
+bookkeeping of the same information, not a better fit.
+
+**Part A -- a universal `c_s` has a hard ceiling.** `v_phi^2 >= 0` requires
+`c_s^2 <= V_circ^2/(-d ln rho/d ln r)` at every point of every galaxy. The
+binding constraint comes from the faintest dwarfs: **`c_s <= 7.83 km/s`**
+across the sample, against the ~150 km/s that massive galaxies implied in
+EE. Locked at 7.44 km/s (95% of ceiling) for the rest of the run.
+
+**Part B -- at that `c_s` the medium must co-rotate.** The pressure term
+becomes negligible: `v_phi/V_circ` median **0.9959**, with 95.9% of points
+above 0.95. This is not a slowly shear-dragged wake; it is a
+centrifugally supported, co-rotating massive medium.
+
+**Part C -- the factor is NOT absorbed, it is conserved and moved.**
+
+| | Dynamic range across galaxies | log scatter | corr. with `V_flat` |
+|---|---|---|---|
+| EE `c_s^2` | factor 478 | 0.520 dex | +0.921 |
+| FF `v_phi^2` | factor 382 | 0.535 dex | **+0.989** |
+
+Freezing `c_s` does not remove per-galaxy freedom; it relocates it from
+the substrate's stiffness into the substrate's flow field. `v_phi(r)` is
+still one free radial function per galaxy, still read off the observed
+curve, and its tie to `V_flat` is *tighter* than what it replaced.
+
+**Part D -- the genuine gain, and a real new constraint.** Unlike a halo,
+a rotating medium makes a commitment outside the rotation curve:
+`L_medium/L_baryons` within `R_max` has **median 3.98** (IQR 2.57-7.76,
+max 45.8). Drag transfers angular momentum, it does not create it, so the
+disk must have shed a comparable amount. For circular orbits
+`L ~ sqrt(GMr)`, so shedding a factor 3.98 shrinks the disk radius ~25x
+(factor 7.76 => ~77x). Observed disks are ~10 Gyr old and still extended.
+Drag strong enough to spin the medium to co-rotation would have decayed
+them; drag weak enough to preserve them cannot have supplied the angular
+momentum, which must then be primordial -- an extra assumption, not a
+consequence of the mechanism.
+
+**This is the useful output:** a test the rotating medium can FAIL that a
+static halo never faces, because a static halo makes no angular-momentum
+commitment. It is a genuine advance in falsifiability even though it did
+not absorb the variance.
+
+**Part E -- no `a0` derivation.** Locked `c_s = 7.44 km/s` gives
+`L = c_s^2/a0 = 0.0150 kpc`, not obviously any galactic scale (SPARC disk
+scale lengths span 0.18-18.76 kpc). `c_s` was fixed by the faintest
+dwarf's ceiling, not derived. Reported, not claimed.
+
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)
 
 - No git commit hash exists anywhere in this project tree.
