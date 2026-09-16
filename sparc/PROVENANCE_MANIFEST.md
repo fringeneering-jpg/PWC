@@ -2344,6 +2344,65 @@ not absorb the variance.
 scale lengths span 0.18-18.76 kpc). `c_s` was fixed by the faintest
 dwarf's ceiling, not derived. Reported, not claimed.
 
+
+## Domain GG -- oblateness artifact and cosmological spin (2026-09-16)
+
+Script: `sparc/domain_GG_oblateness_and_spin.py`
+Results: `sparc/domain_GG_oblateness_and_spin_results.json`
+
+Two challenges to EE/FF that FF did not cover, tested directly.
+
+**Challenge 1 -- is EE's K-scatter an artifact of spherical binning in an
+oblate region? REJECTED.** The claim came paired with the concession that
+"in the outer radii where the HDF dominates, spherical is a fine
+approximation", which makes it decisive: the artifact hypothesis predicts
+the scatter must collapse there.
+
+| Selection | n_pts | n_gal | scatter |
+|---|---|---|---|
+| all points | 1776 | 124 | 0.715 dex |
+| `f_bar < 0.50` | 1269 | 116 | 0.638 dex |
+| `f_bar < 0.30` | 766 | 92 | 0.594 dex |
+| `f_bar < 0.20` | 364 | 57 | 0.497 dex |
+| `r > 3 R_disk` | 826 | 110 | 0.627 dex |
+| `r > 4 R_disk` | 622 | 93 | 0.621 dex |
+| `f_bar<0.30 AND r>3 R_d` | 490 | 85 | **0.570 dex** |
+
+The scatter survives at 0.570 dex (factor 3.7) in exactly the regime both
+sides agree is near-spherical. There is a mild trend with `f_bar` but it is
+**non-monotonic** (0.497 / 0.649 / 0.614 / 0.506 across `f_bar` quartiles),
+which is not the signature a geometric artifact would leave. Oblate binning
+is not the cause.
+
+*Bookkeeping note:* the all-points figure here is 0.715 dex vs EE's 0.663.
+Same quantity, different binning (7 bins here, 9 in EE, different minimum
+occupancy). The comparison within this table is internally consistent; the
+EE number is not exactly reproduced and is not claimed to be.
+
+**Challenge 2 -- does the required medium spin match real halos? REJECTED.**
+Using FF's co-rotation solution, the Bullock et al. 2001 spin parameter
+`lambda' = J/(sqrt(2) M V R)`:
+
+| | Value |
+|---|---|
+| Required `lambda'`, median (124 galaxies) | **0.3945** (IQR 0.373-0.428) |
+| Analytic prediction, co-rotating isothermal `1/(2sqrt2)` | 0.354 |
+| Observed cosmological median (lognormal, `sigma_ln ~ 0.5`) | 0.035 |
+| Ratio | **11.3x** |
+| In units of the cosmological spread | **4.8 sigma high** |
+| Galaxies within 2 sigma of cosmological median | **0.0%** |
+
+The measured 0.3945 confirms the analytic 0.354 derived before running, so
+this is structural, not a numerical accident. Real halos do have a spin
+distribution, but it is centred an order of magnitude below full
+co-rotation -- they are pressure-supported with ~3.5% of the angular
+momentum this model needs. **Invoking halo spin as the free per-galaxy
+variable requires spins the observed distribution does not contain.**
+
+**Net:** neither assumption-relaxation rescues a universal EOS. After six
+domains the missing object is unchanged -- a law fixing `c_s` or `a0` from
+substrate parameters alone, not from the host galaxy.
+
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)
 
 - No git commit hash exists anywhere in this project tree.
