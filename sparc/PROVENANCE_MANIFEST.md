@@ -2161,6 +2161,68 @@ unrunnable off its author's laptop. `domain_CC` and
 `PWC_SPARC_DIR` / `PWC_PLANCK_FITS` / `PWC_DESI_TSV` overrides. The
 other domain scripts still carry the hard-coded path.
 
+
+## Domain DD -- HDF surface-tension gravity solver (2026-09-16)
+
+Script: `sparc/domain_DD_surface_tension_solver.py`
+Results: `sparc/domain_DD_surface_tension_results.json`
+
+**Premise correction, established from the catalog, not asserted.** The
+Level-2 directive rejected Domain CC on the grounds that `g_bar` used
+`GM/r^2` and therefore "smuggled in zero-dimensional point masses". That
+is false. SPARC's `Vdisk/Vgas/Vbulge` are numerical Poisson solutions for
+observed extended 3.6um and HI surface-density distributions (Lelli+
+2016, Casertano 1983). Three data signatures, each impossible for a point
+mass:
+
+| Test | Result | Point mass would give |
+|---|---|---|
+| Negative `Vgas` | 361 points, 48 galaxies, min -16.33 km/s | impossible |
+| Interior `Vdisk` peak | 158 galaxies, median 2.18 `R_d` | no peak; Freeman 1970 predicts 2.2 |
+| Inner `d ln Vdisk/d ln r` | median +0.48, positive in 95.2% | -0.50 everywhere |
+
+The constraint "acceleration peaks at the macro-boundary and falls
+inward" was therefore **already satisfied** before the directive asked
+for it.
+
+**Structural derivation.** Vortex defect area `A(<r) ∝ M(<r)`; conserved
+tension flux through nested spheres gives `g = C_T*A(<r)/(4πr²) ∝
+M(<r)/r²`. The `4πr²` diffusion premise **is Gauss's law**. This is the
+strongest available argument that surface tension reproduces Newtonian
+gravity where Newtonian gravity is right -- and it settles the
+directive's closing question negatively, since outside the luminous body
+`g → 1/r²` and `v → r^(-1/2)`.
+
+**Part B, NGC 3198, source rebuilt by integrating observed surface
+brightness (`Vdisk/Vbulge` never touched).** Predicted outer slope
+**-0.177** vs observed **+0.027**; `v_pred(R_max) = 64.2` vs
+`v_obs = 149.0` km/s, short by 57%. `c0` cap never approached
+(`max v/c0 = 2.9e-04`).
+
+**Part C, diffusion-geometry scan** `g = C_k*M(<r)/r^k`, 2700 points,
+149 galaxies: k=1.0 (cylindrical) 0.4657 dex; k=1.83 (best) 0.2692;
+k=2.0 (spherical, the directive) 0.2808. **Critical caveat:** the whole
+scan is flattered by a free global amplitude. Fitted `C_2/G = 2.70`,
+i.e. it reaches 0.2808 dex only by scaling all baryonic mass up 2.70x,
+demanding `M/L(3.6um) = 1.35` against 0.50 from population synthesis --
+that factor IS the missing mass the model was meant to remove. With `C`
+fixed to true `G` the same model gives 0.5145 dex (the Domain CC null).
+
+**Part D, can `a0` be eliminated? NO.** A power law is scale-free by
+construction, so Part C is the strongest possible `a0`-free result:
+0.2692 dex vs 0.1327 for the scaled law -- worse by 0.1365 dex.
+Dimensionally, `[C_k] = m^(k+1)/(s²kg)`, so `k≠2` gives `C_k = G/L^(2-k)`
+and **hides a length scale inside its own constant**. (The numeric `L` is
+hypersensitive because `2-k = 0.17`; the dimensional argument is solid,
+that particular number is not, and is not used further.)
+
+**Conclusion.** Flat outer curves require flux conserved on a surface
+growing like `r^1` (quasi-2D/cylindrical transport), not isotropic `r^2`.
+A pure `r^1` law cannot hold everywhere -- the solar system follows
+`1/r^2` to ~1e-5 -- so a 3D→2D transition is required, and **that
+transition point is an acceleration scale**. `a0` is renamed by this
+reformulation, not removed.
+
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)
 
 - No git commit hash exists anywhere in this project tree.
