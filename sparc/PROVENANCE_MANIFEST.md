@@ -101,6 +101,16 @@ violation.
   continuously descending compressed-HDF envelope, `rho_HDF_max =
   4.6e10 kg/m^3` (distinct from neutron/nuclear matter density -- this
   exact conflation was made and corrected earlier in this session's audit).
+  **Derivation direction, established 2026-09-16 (Domain II):** the two
+  ceilings are genuinely different variables and the compact-object chain
+  runs *forward* from external inputs, not circularly. `rho_Sintot_max =
+  4.6e17 kg/m^3` is an **input** (2x nuclear saturation, external nuclear
+  physics), `M_core = 28.118 Msun` is an **input** (from the `k`-partition
+  on LIGO's GW150914 masses), and `R_core = 30.73 km` is the **output**:
+  `(3*28.118 Msun / 4*pi*4.6e17)^(1/3) = 30.729 km`, matching the value
+  every `PWC/*.py` script carries. `M_grad = 7.876 Msun` and
+  `K = 1.4778e7` follow downstream. Two external inputs, one modelling
+  choice, no loop.
 - **Mergers**: `M_1+M_2 = M_final + E_HDF_wave/c^2` as an identity; the
   emitted fraction requires the full radial density-envelope structure,
   relative sizes, overlap geometry, and spin/flow state -- **a frozen
@@ -2483,6 +2493,75 @@ genuine **discontinuity** (phase transition at a specific radius) rather
 than a smooth profile. That is a different model and predicts a
 **detectable kink in rotation curves at the boundary radius**. SPARC can
 test it. Natural next domain.
+
+
+## Domain II -- cavitation wake matter production (2026-09-16)
+
+Script: `sparc/domain_II_cavitation_wake_matter.py`
+Results: `sparc/domain_II_cavitation_wake_matter_results.json`
+
+A chain running from the fine structure constant to a measured
+astronomical object with **no free parameter anywhere in between**, plus
+four reversals of this session's own earlier analysis.
+
+**Mechanism, as stated by the author** (recorded because every prior
+misreading of it produced a wrong result): the medium passes **through**
+the sieve, not around an obstacle. It **never tears** -- no vacuum, no
+`r=0`, no break in the continuum. The bow wave builds until flow around
+matches flow through, an **equilibrium the wave grows into**, not a
+threshold that trips. The resulting low-pressure wake is crushed by the
+uniform ambient pressure, and that slam forges matter -- hydrogen,
+because it is the cheapest stable knot the budget buys.
+
+**1. `N` from Williamson's toroidal electron, exact.** Electron as a
+double-looped confined photon; major radius `R = lbar_C`, tube radius
+`r = alpha*lbar_C = r_e`, ratio `1/alpha`. Double-loop path `2*2*pi*R`
+divided by the tube scale gives
+
+`N = 4*pi/alpha = 1722` waves per electron
+
+Not fitted. Medium wavelength `lambda = r_e = 2.8179e-15 m`, energy per
+quantum **440.0 MeV**.
+
+**2. Blocking threshold.** `rho > m_p/lambda^3 = 7.475e16 kg/m^3` =
+**0.325x nuclear saturation**. Stars (mean *and* core), white dwarfs and
+iron cores are transparent; neutron matter and `rho_max` cores impede.
+The drag/bow-wave mechanism is confined to exactly the objects it was
+proposed for, from a derived number rather than an assumed packing law.
+
+**3. Bow wave.** `R_bow/R = sqrt(1 + phi*c0/v)`, an equilibrium.
+
+**4. The slam IS `M = L/c0^2`.** With `c_s = c0` from the verified
+sonic-choke entry, `L = rho_HDF*c0^2` and `M = L/c0^2 = rho_HDF` exactly
+-- the wake refills with matter at precisely the density of the medium it
+displaced. This was initially mis-attributed in-session to the EOS; it is
+the master relation itself. Hydrogen wins the budget 56:1 over iron. One
+quantum exceeds the `e+e-` pair threshold by 431x, so no energy focusing
+is required; Breit-Wheeler (`gamma+gamma -> e+e-`) was observed directly
+at STAR/RHIC in 2021.
+
+**5. Against a real object.** van Dokkum et al. 2023 candidate runaway
+supermassive black hole, ~200 kpc linear wake of star formation:
+
+| wake width | matter produced |
+|---|---|
+| 0.3 kpc | 2.09e8 Msun |
+| **1.0 kpc** | **2.32e9 Msun** |
+| 3.0 kpc | 2.09e10 Msun |
+
+Observed trail stellar mass ~1e9 Msun; **ratio 2.32**. `rho_HDF = 1e-21`
+is not tuned -- it is the galaxy-scale medium density Domains EE/Z
+already produced from the SPARC inversion. With the intergalactic baryon
+density instead the trail mass is 2.3e3 Msun, short by 4e5.
+
+**6. Four corrections to this session's own earlier work:**
+
+| # | Claimed earlier | Correct |
+|---|---|---|
+| a | `rho_max` is derived as `M_core/volume`, an output | `rho_max` is an **input** (2x nuclear sat); `R_core = 30.729 km` is the output. No circularity. |
+| b | Domain HH: `a0 = cH0/2pi` needs the `2pi` derived | Manifest line 749 already records that the real Gibbons-Hawking formula gives `c0*H0` with **no** `2pi`. The relation stands or falls at the bare **5.6x**. |
+| c | Domain EE treated `c_s` as a free parameter to be derived | The verified sonic-choke entry fixes `c_s = c0`. EE's required 7.8-1227 km/s is **244-38435x** below it. Same gap, fixed target. |
+| d | `4.6e10` vs `4.6e17` is a transcription error | Genuinely distinct variables. A 1.4-2.1 Msun neutron core inside ~34 Msun of max-compressed HDF reaches max `2GM(<r)/c^2/r` of **0.37-0.48** -- it does **not** close. |
 
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)
 

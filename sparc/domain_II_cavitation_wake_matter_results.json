@@ -1,0 +1,23 @@
+{
+  "N_waves_per_electron": 1722.0451519947053,
+  "medium_wavelength_m": 2.817940324486806e-15,
+  "quantum_energy_MeV": 439.9816325272249,
+  "blocking_threshold_kg_m3": 7.474848736114389e+16,
+  "blocking_over_nuclear_sat": 0.32499342330932124,
+  "bow_wave_relation": "R_bow/R = sqrt(1 + phi*c0/v)",
+  "conversion": "M = L/c0^2, wake refills at exactly rho_HDF",
+  "quanta_per_proton": 2.132525579991102,
+  "vandokkum": {
+    "trail_mass_predicted_Msun": 2321011135.60007,
+    "trail_mass_observed_Msun": 1000000000.0,
+    "ratio": 2.32101113560007,
+    "rho_HDF_source": "Domain EE/Z SPARC inversion, not tuned"
+  },
+  "corrections": {
+    "R_core_derived_km": 30.72891645521999,
+    "rho_max_is_input_not_output": true,
+    "HH_2pi_superseded_by_manifest_line_749": true,
+    "EE_target_c_s_equals_c0": true,
+    "two_ceilings_distinct": true
+  }
+}
