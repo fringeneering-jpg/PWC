@@ -2223,6 +2223,63 @@ A pure `r^1` law cannot hold everywhere -- the solar system follows
 transition point is an acceleration scale**. `a0` is renamed by this
 reformulation, not removed.
 
+
+## Domain EE -- the medium has mass: closing the HDF ledger (2026-09-16)
+
+Script: `sparc/domain_EE_medium_mass_ledger.py`
+Results: `sparc/domain_EE_medium_mass_ledger_results.json`
+
+**Correction to Domain DD, raised by the user and confirmed.** DD's
+tension-flux integral used only `M_Sintot`. The ledger is
+`M_total = M_Sintot + M_HDF,bound + M_HDF,excess` and the substrate is
+mass-bearing, so compressed HDF belongs inside the same Gauss surface.
+DD under-counted the source; **its Keplerian conclusion applied only to a
+baryon-only source and is superseded.**
+
+**Part A -- the correction is large.** 126 galaxies. Medium fraction
+`M_med/M_total` at `R_max`: **median 0.767** (IQR 0.686-0.831). Ratio
+`M_med/M_bar`: median **3.29** (cosmological dark:baryon is ~5.4). The
+medium carries the majority of the mass inside `R_max`. 4.7% of points
+need `M_med < 0` (locally rarefied, not compressed).
+
+**Part B -- the ledger DOES buy flat curves.** Outer
+`d ln M_med/d ln r = +1.34` (flat needs +1.00);
+`d ln rho_med/d ln r = -1.92` (isothermal is -2.00). The required medium
+profile is the isothermal shape, which reproduces flat outer curves.
+This is a real gain over DD.
+
+**Part C -- decisive gauge-free EOS test.** For a barotropic medium in
+hydrostatic equilibrium, `c_s^2 = -g*r/(d ln rho/d ln r)` with no
+integration constant and no fitted parameter, and `K = rho*c_s^2` by the
+master relation. 1776 points, 124 galaxies. If the HDF is one substance,
+`K` must be single-valued in `rho`.
+
+| Quantity | Result |
+|---|---|
+| Scatter of `log10 K` at fixed `rho` | **0.663 dex (factor 5)** |
+| Correlation `log c_s` vs galaxy's own `V_flat` | **+0.921** |
+| `c_s/V_flat` | 0.627 (isothermal analytic: 0.707) |
+| `c_s^2` range across sample | **factor 251** |
+| `max c_s/c0` | 4.1e-03 -- cap never approached |
+
+**VERDICT: NEGATIVE for a universal EOS.** The medium's stiffness is set
+by each galaxy's own rotation speed, not by any shared property of the
+substrate. `c_s ≈ V_flat/sqrt(2)` is the isothermal-sphere identity --
+the medium is reproducing each galaxy's curve because it was constructed
+from it. One free radial function per galaxy: mathematically a halo, in
+fluid vocabulary.
+
+**What would flip it:** an independent law fixing `c_s` or `K` from
+substrate parameters alone, not from the host galaxy. Then `rho_HDF(r)`
+would follow from the baryons with zero per-galaxy freedom and the
+medium would do work no dark matter halo can. No such law exists in this
+repository.
+
+**Assumptions stated, not buried:** HDF treated as spherical while
+baryons are a disk; medium taken as static (no bulk flow terms);
+`rho_HDF` obtained by differentiating noisy enclosed mass, stabilised
+with local log-space slopes, all population claims are medians.
+
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)
 
 - No git commit hash exists anywhere in this project tree.
