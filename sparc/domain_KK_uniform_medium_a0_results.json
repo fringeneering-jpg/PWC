@@ -1,0 +1,23 @@
+{
+  "a0_fit_over_cH0": 0.177194605108469,
+  "a0_fitted": 1.16032740426838e-10,
+  "a0_per_galaxy_median": 1.0717110569873972e-10,
+  "a0_per_galaxy_scatter_dex": 0.31055002703818674,
+  "a0_pred_Omega_m": 1.2697728260336072e-10,
+  "a0_pred_over_cH0": 0.19390811046849038,
+  "a0_pred_rho_HDF": 7.745038211295759e-08,
+  "a0_pred_rho_crit": 2.2624070828826043e-10,
+  "n_galaxies": 149,
+  "n_galaxies_per_galaxy_fit": 139,
+  "n_points": 2700,
+  "penalty_dex_vs_fitted": 0.0007923787024882445,
+  "repo_rho_hdf_discrepancy": 445539.31284822663,
+  "rho0_from_sparc": 2.24447084951323e-27,
+  "rho0_over_rho_crit": 0.26303866718038194,
+  "rms_fitted": 0.13265125998332314,
+  "rms_newton": 0.5145191960542318,
+  "rms_pred_Omega_m": 0.13344363868581138,
+  "rms_pred_rho_HDF": 1.2838871676610482,
+  "rms_pred_rho_crit": 0.1730491933665595,
+  "sqrt_3om_8pi": 0.1939081104684904
+}

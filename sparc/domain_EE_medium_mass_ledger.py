@@ -1,4 +1,41 @@
 """
+*** SUPERSEDED IN PART -- READ THIS BEFORE READING THE RESULT BELOW. ***
+
+This domain's central number (K-scatter 0.663 dex, c_s vs V_flat r = +0.921)
+is an ARTIFACT of an assumption that was introduced silently here and that
+the author has since ruled out in the ontology.
+
+WHAT WENT WRONG. The gauge-free inversion below solves
+
+    c_s^2(r) = -g*r / (d ln rho / d ln r)
+
+for rho_HDF(r) by REQUIRING the medium to supply each galaxy's missing mass.
+That step presupposes a medium whose density varies from galaxy to galaxy
+and with radius inside each one. The author's stated ontology is the
+opposite: "constant even pressure and tension everywhere", and "who said
+anything about the medium ever moving". A uniform medium has no rho_HDF(r)
+to invert for, so the inversion has no object to act on and its outputs are
+not measurements of anything.
+
+CONSEQUENTLY:
+  - the 0.663 dex spread in K is the spread of an assumption, not of a fluid
+  - the +0.921 c_s vs V_flat correlation is V_flat correlated with itself,
+    routed through the inversion
+  - Domain FF, which conserves this variance into a vorticity field
+    (c_s^2 478x -> v_phi^2 382x, r tightening to +0.989), inherits the same
+    artifact. Conserving the variance of an artifact does not make it real.
+
+WHAT SURVIVES. The gauge-free identity itself is correct hydrostatics and
+the code implementing it is sound. What fails is applying it to a medium the
+ontology says is uniform. The uniform-medium alternative that replaced this
+line of attack is a0 = c*sqrt(G*rho0), which reaches 0.1327 dex on the RAR
+with zero free parameters and needs no per-galaxy medium profile at all.
+
+NOTHING BELOW THIS BANNER HAS BEEN EDITED. The original text and code are
+preserved verbatim so the error is auditable rather than erased.
+
+------------------------------------------------------------------------
+
 DOMAIN EE -- the medium has mass. Closing the HDF mass ledger on SPARC.
 
 CORRECTION THIS DOMAIN EXISTS TO FIX. Domain DD's tension-flux integral

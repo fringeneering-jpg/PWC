@@ -1,4 +1,22 @@
 """
+*** INHERITS DOMAIN EE'S ARTIFACT -- SEE THE BANNER ON domain_EE_medium_mass_ledger.py ***
+
+This domain takes Domain EE's c_s^2(r) field as its input and shows the
+variance is conserved when it is re-expressed as a vorticity field
+(c_s^2 spread 478x -> v_phi^2 spread 382x, correlation tightening to +0.989).
+That conservation is arithmetically correct and the code is sound. But EE's
+c_s^2 field is itself the output of an inversion that assumed a per-galaxy,
+radially varying medium, which the author's ontology forbids ("constant even
+pressure and tension everywhere"). Conserving the variance of an artifact
+does not make the artifact real, and the +0.989 here is not independent
+evidence -- it is EE's +0.921 re-expressed.
+
+The uniform-medium replacement is domain_KK_uniform_medium_a0.py.
+
+NOTHING BELOW THIS BANNER HAS BEEN EDITED.
+
+------------------------------------------------------------------------
+
 DOMAIN FF -- rotating HDF: solve for the medium's own vorticity profile.
 
 Domain EE assumed the medium was static (v_phi = 0) and spherical, and

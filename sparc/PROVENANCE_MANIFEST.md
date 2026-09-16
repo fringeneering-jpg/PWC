@@ -2563,6 +2563,138 @@ density instead the trail mass is 2.3e3 Msun, short by 4e5.
 | c | Domain EE treated `c_s` as a free parameter to be derived | The verified sonic-choke entry fixes `c_s = c0`. EE's required 7.8-1227 km/s is **244-38435x** below it. Same gap, fixed target. |
 | d | `4.6e10` vs `4.6e17` is a transcription error | Genuinely distinct variables. A 1.4-2.1 Msun neutron core inside ~34 Msun of max-compressed HDF reaches max `2GM(<r)/c^2/r` of **0.37-0.48** -- it does **not** close. |
 
+## Domain JJ -- the arrival-rate test of the pairing redshift
+
+Script: `sparc/domain_JJ_redshift_arrival_rate.py`
+Results: `sparc/domain_JJ_redshift_arrival_rate_results.json`
+Data: none from this repository. All observational inputs are **external and
+cited in the file header** (Goldhaber et al. 2001; Blondin et al. 2008;
+Fujii et al. 2000 / Damour & Dyson 1996; Lubin & Sandage 2001).
+
+**Mechanism tested, as stated by the author:** a photon is an unpaired single
+chirality; it phases into the (+,-) pair lattice at a constant rate per unit
+path; the medium is uniform and static; `c` is shared and constant. That
+gives `1+z = exp(kappa*D)` and recovers the Hubble law for
+`kappa = H0/c0 = 7.2860e-27 /m` (Planck H0), mean free
+path 4.448 Gpc.
+
+**Recovering the Hubble law is not evidence.** Any per-path energy loss does
+it, for exactly one `kappa`. The discriminating observable is the photon
+**arrival rate**.
+
+| Quantity | Value |
+|---|---|
+| Light-curve width exponent, static pairing prediction | `b = 0.0` |
+| Light-curve width exponent, observed (external) | `b = 1.07 +/- 0.06` |
+| Tension | **17.8 sigma** (still 5.9 sigma if the quoted error is 3x too small) |
+| Tolman SB exponent, static pairing | `(1+z)^-1` |
+| Tolman SB exponent, metric expansion | `(1+z)^-4` |
+
+**Why it fails structurally, not numerically.** Two photons leaving one source
+`dt` apart traverse the same path at the same speed profile, so they have
+identical travel time and arrive `dt` apart. This holds for *any* `v(x)` and
+*any* `kappa`. No static medium can dilate arrival rates. There is nothing to
+tune.
+
+**The single loophole, and it is fully determined.** If `c` depends on
+emission epoch, `dt_a/dt_e = 1 + dT/dt_e`, and `(1+z)` dilation forces
+`cdot/c = -H0` exactly, i.e. `c ∝ exp(-H0*t)` and (at constant `K`, via
+`c^2 = K/rho`) `rho_medium ∝ exp(+2*H0*t)`. The medium must **densify**.
+This is the *opposite sign* to the thinning medium assumed in
+`PWC/pwc_redshift_timing_falsification.py`, and explains that script's
+wrong-sign result.
+
+**What the loophole costs.** With `e`, `eps0`, `hbar` fixed, `alpha ∝ 1/c`
+gives `alpha_dot/alpha = 6.893e-11 /yr`
+against the Oklo bound `1e-17 /yr` --
+over by **6.9e+06x**. The escape (all
+constants co-vary so `alpha` is fixed) is legitimate and is stated in the
+file, but it makes `c(t)` unobservable by construction, at which point
+"the medium densifies" and "the metric expands" are one statement in two
+gauges. That is a relabelling of expansion, not a replacement.
+
+**STATUS: NEGATIVE.** The specific claim that redshift is a static per-path
+process and "not time stretching" is ruled out. The pair-lattice ontology
+itself is untested here, either way.
+
+## Domain KK -- a0 from a uniform medium, free parameter actually removed
+
+Script: `sparc/domain_KK_uniform_medium_a0.py`
+Results: `sparc/domain_KK_uniform_medium_a0_results.json`
+Data: SPARC `vizier_t1.txt` / `vizier_t2.txt`, cuts identical to Domains K
+and CC. 2700 points, 149 galaxies. Dark matter halo
+parameters: 0.
+
+`a0 = c0*sqrt(G*rho0)` is **dimensionally forced** for a uniform medium --
+`[G*rho] = 1/s^2`, so `c*sqrt(G*rho)` is the only m/s^2 available from
+`rho0, G, c0` without a free exponent.
+
+| Model | Fitted to SPARC | a0 [m/s^2] | rms [dex] |
+|---|---|---|---|
+| Newton, baryons only | 0 params | -- | 0.5145 |
+| RAR, a0 fitted | 1 param | 1.1603e-10 | **0.1327** |
+| `c0*sqrt(G*Omega_m*rho_crit)` | **0 params** | 1.2698e-10 | **0.1334** |
+| `c0*sqrt(G*rho_crit)` | 0 params | 2.2624e-10 | 0.1730 |
+| `c0*sqrt(G*rho_HDF)`, repo value 1e-21 | 0 params | 7.7450e-08 | 1.2839 |
+
+Penalty for the zero-parameter prediction over the one-parameter fit:
+**+0.0008 dex**. It still beats Newton by
+0.3811 dex.
+
+**The load-bearing caveat, recorded because it is disqualifying if ignored.**
+`rho_crit ∝ H0^2`, so `c0*sqrt(G*f*rho_crit) = c0*H0*sqrt(3f/(8*pi))`. This
+formula *cannot* be independent of the old `a0 ~ c*H0` coincidence.
+
+| Quantity | /(c0*H0) |
+|---|---|
+| a0 fitted to SPARC | 0.1772 |
+| `c0*sqrt(G*Omega_m*rho_crit)` | 0.1939 |
+| `c0*H0/(2*pi)` (the old coincidence) | 0.1592 |
+
+The O(1) factor `sqrt(3*Omega_m/(8*pi)) = 0.1939` is supplied
+by `Omega_m`, which is a Planck/LCDM fit. The author's own objection --
+*"is fitted assuming LCDM ... Its fitted in acdm"* -- applies to this step in
+full and is not waved away.
+
+**INTERNAL INCONSISTENCY FOUND (this repository's, not external).** Inverting
+the SPARC-fitted a0 gives `rho0 = 2.2445e-27 kg/m^3`
+(0.2630 rho_crit). Domains EE, Z and II carry
+`rho_HDF = 1e-21 kg/m^3`. These differ by **4.46e+05x**.
+A uniform medium cannot have two densities that far apart. One is wrong; KK
+does not settle which, and Domain II's van Dokkum wake result depends on the
+`1e-21` value.
+
+**Per-galaxy a0** (139 galaxies with >=4 points):
+median 1.0717e-10, scatter
+0.3106 dex. This is an **upper bound** on real
+variation -- per-galaxy fits absorb distance, inclination and M/L errors. KK
+does not claim the spread is physical.
+
+## Supersessions applied in this pass
+
+| File | Action | Reason |
+|---|---|---|
+| `domain_EE_medium_mass_ledger.py` | Banner added, **no code or text deleted** | Its gauge-free inversion assumes a per-galaxy, radially varying medium. The author's ontology is a uniform medium ("constant even pressure and tension everywhere"). The 0.663 dex K-scatter and the +0.921 `c_s` vs `V_flat` correlation are therefore artifacts of a silently introduced assumption, not measurements. |
+| `domain_FF_vortical_medium_flow.py` | Banner added, **no code or text deleted** | Takes EE's `c_s^2(r)` field as input. Its +0.989 is EE's +0.921 re-expressed; conserving the variance of an artifact does not make it real. |
+
+Both files are preserved verbatim below their banners so the error is
+auditable rather than erased.
+
+## The blocker both new domains end on
+
+`m_wave` -- the mass of a single (+,-) medium pair. Without it:
+
+- `rho0` cannot be converted to a pair number density, so `kappa = n_avail *
+  sigma` cannot be split into its two factors (Domain JJ).
+- There is no route to `rho0` that avoids passing through `H0` or `Omega_m`,
+  which is exactly what would turn Domain KK from a repackaging into a
+  derivation.
+
+Domain II's two routes to this number (`lambda = r_e` giving 440 MeV/wave;
+`N = 4*pi/alpha` giving 296.7 eV/wave) disagree by **1.48e6** and neither is
+adopted here. Neither Domain JJ nor Domain KK depends on it -- that is why
+both could be run while the blocker stands.
+
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)
 
 - No git commit hash exists anywhere in this project tree.
