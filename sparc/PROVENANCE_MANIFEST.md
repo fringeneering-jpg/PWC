@@ -2403,6 +2403,87 @@ variable requires spins the observed distribution does not contain.**
 domains the missing object is unchanged -- a law fixing `c_s` or `a0` from
 substrate parameters alone, not from the host galaxy.
 
+
+## Domain HH -- cavitation boundary EOS and the a0 = c*H0 claim (2026-09-16)
+
+Script: `sparc/domain_HH_cavitation_boundary.py`
+Results: `sparc/domain_HH_cavitation_boundary_results.json`
+
+**Attribution first.** The `a0 ~ c*H0` coincidence is **Milgrom 1983**, not
+a PWC result. Reinterpreting it in a phase-wave framing is a
+reinterpretation of a known numerical coincidence, not a derivation. It is
+nonetheless the **first proposal in this project to fix `a0` from outside
+the galaxy** rather than fitting it, which is the right kind of move.
+
+**A -- the numbers.**
+
+| Form | Value (m/s²) | vs fitted `a0` = 1.1603e-10 |
+|---|---|---|
+| `c*H0` (Planck, H0=67.4) | 6.5372e-10 | **5.6x too large** |
+| `c*H0/(2pi)` | 1.0404e-10 | **-10.2%** |
+| `c*H0/6` | 1.0895e-10 | -6.1% |
+
+The **order of magnitude is genuinely striking**. The specific claim
+`a0 = c*H0` is wrong by 5.6x. `c*H0/(2pi)` matches to -10.2%, but the
+`2pi` must be **derived, not chosen after seeing the answer**, and nothing
+in the framing derives it.
+
+**B -- the boundary EOS, written as requested.** Impedance `Z = sqrt(mu/eps)`,
+`Z_m/Z_0 = 1/n`, reflection `Gamma = (1-n)/(1+n)`; isotropic sea gives
+`P = u/3`; Young-Laplace closes it:
+
+`2*sigma/R = [(u_sea - u_void)/3] * (1 + Gamma^2)`
+
+No velocity, no vorticity, no shear -- a pure normal-traction balance, which
+is what was asked for. **But evaluated with Domain CC's own measured index
+contrast** (`n-1 = 1.95e-07`): `Gamma = -9.7e-08`, `Gamma^2 = 9.5e-15`. The
+impedance term is **14 orders below unity and does no work**. The EOS
+degenerates to `Delta_P = (u_sea - u_void)/3`.
+
+**Fine-tuning problem found.** Boundary tension to put `a = a0` at 20 kpc:
+`sigma = 1.885e+05 N/m`, `Delta_P = 6.11e-16 Pa`, against an available
+`u_sea/3 = 2.56e-10 Pa`. The required traction is **2.4e-06** of what the
+sea has, so `(u_sea - u_void)` must cancel to ~1 part in 4e5. Nothing in
+the framing supplies that cancellation.
+
+**C -- the best idea in the proposal, and it is genuinely good.** If `a0` is
+set by cosmic tension then `a0 = c*H(z)/2pi` is **not constant**:
+
+| z | 0.0 | 0.5 | 1.0 | 2.0 | 3.0 |
+|---|---|---|---|---|---|
+| `a0(z)/a0(0)` | 1.000 | 1.322 | 1.790 | **3.032** | 4.566 |
+
+A ~3x larger `a0` at z=2 is a **real falsification target reachable with
+existing high-z kinematics** (e.g. Genzel et al. 2017, Nature 543, 397) and
+unreachable by any fit to SPARC. It cuts both ways: `a0` measured constant
+with z kills the cosmic-tension origin.
+
+**D -- two structural problems the numerics cannot fix.**
+
+1. **SIGN CONTRADICTION.** The framing says a galaxy IS a void -- lower
+   density than background. Domain CC measured, from the same data, `n`
+   **increasing inward**, and `n^2 = rho/rho_0` means **higher** density
+   toward the galaxy. Cavitation and refraction in this same repository
+   require **opposite density gradients**. Both cannot be right. Possible
+   escape: the void is in the LDF/EM sea while the HDF compresses -- but
+   then the framework must say which component refracts light and which
+   carries mass, and the manifest does not.
+
+2. **STATIC SUPPORT IS ALREADY TESTED.** Correctly dropping rotation after
+   FF leaves a normal-traction balance -- exactly the static case EE
+   tested. EE's gauge-free result stands: 0.663 dex scatter in `K`, `c_s`
+   correlated with each galaxy's own `V_flat` at +0.921; GG showed this is
+   not a binning artifact (0.570 dex in the near-spherical regime). A
+   global constant `a0 = cH0/2pi` **cannot supply per-galaxy variation that
+   scales with `V_flat`**. The cavitation reframing inherits EE's failure
+   rather than escaping it.
+
+**Escape route identified, and it is testable:** unless the boundary is a
+genuine **discontinuity** (phase transition at a specific radius) rather
+than a smooth profile. That is a different model and predicts a
+**detectable kink in rotation curves at the boundary radius**. SPARC can
+test it. Natural next domain.
+
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)
 
 - No git commit hash exists anywhere in this project tree.
