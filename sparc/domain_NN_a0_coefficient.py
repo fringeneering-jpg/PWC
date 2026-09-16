@@ -1,4 +1,56 @@
 """
+*** CONTAMINATED -- BOTH ROUTES USED GENERAL RELATIVITY. RESULT RETRACTED. ***
+
+This file was written to derive the a0 coefficient from PWC's own continuum
+mechanics. It does not do that. Both routes import General Relativity, in a
+framework whose founding premise is that there is no metric and nothing about
+space expands.
+
+  ROUTE 1 uses r(t) = a(t)*x -- the FLRW scale factor -- and then
+  r_dotdot = (a_dotdot/a)*r with a_dotdot/a = H^2, which is de Sitter.
+  That is metric expansion. PWC has none. Expansion in PWC is knot untying
+  injecting volume into a pressurised medium (PWC.md §5, §6, §9).
+
+  ROUTE 2 equates the Unruh temperature with the Gibbons-Hawking temperature.
+  Both are QFT in curved spacetime, and the de Sitter horizon is a GR object
+  that does not exist in this ontology.
+
+So the headline conclusion of this file -- that the crossing gives a
+mass-dependent a_cross = (G*M)^(1/3)*H0^(4/3) sitting 803x below a0 at a
+Local-Group radius -- is a statement about GENERAL RELATIVITY, not about PWC.
+It is RETRACTED as a test of this framework.
+
+WHY THE IMPORT SPECIFICALLY BROKE IT, which is the useful part:
+
+  In GR the outward push is a property of the metric. It exists independent
+  of matter. So in the crossing, gravity scaled with M and the push did not,
+  and M survived into the answer -- hence "mass dependent, therefore not a
+  universal a0".
+
+  In PWC the outward push is SOURCED BY MATTER. Untying happens at the knots;
+  the author's statement is "the expansion originates from the matter itself"
+  and "every single burning star is literally a volume pump". If BOTH sides of
+  the crossing are sourced by the same matter, M can cancel, and the crossing
+  acceleration can be universal.
+
+  That is precisely the structural feature GR cannot have and PWC can. The
+  calculation below did not find a flaw in the mechanism. It found the flaw
+  you get when you substitute Einstein's outward term for the author's and
+  then run it.
+
+WHAT A NON-CONTAMINATED VERSION NEEDS, stated so it is not guessed at again:
+an outward term built from the untying rate as a genuine volumetric SOURCE in
+a real continuity equation for a bounded pressurised medium -- div(u) = S with
+S sourced by the local matter -- and NOT from any scale factor, metric,
+horizon or temperature. None of that has been written. This file is retained
+unedited below the banner as a record of the error.
+
+ONE THING BELOW SURVIVES, because it is arithmetic on measured numbers and
+imports nothing: Route 3, which reads k = a0/(c0*H0) off SPARC with a
+bootstrap interval. That stands.
+
+------------------------------------------------------------------------
+
 DOMAIN NN -- derive the coefficient in a0 = (coefficient) * c0 * H0, or fail.
 
 THE DEBT BEING CALLED IN. Domain HH and the PR both carry a0 = c0*H0/(2*pi).
