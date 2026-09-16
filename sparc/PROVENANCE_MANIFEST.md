@@ -2032,7 +2032,134 @@ g_bar = Vbar2 / R * conv
 | Domain Y (direct density inversion, not a fit) | n/a -- descriptive | n/a -- descriptive | COMPLETED: produces the target rho_req(r) atlas Domain X's diagnosis showed was missing |
 | Domain Z (disk-scale-length collapse test on Domain Y) | n/a -- descriptive | n/a -- descriptive | COMPLETED, NEGATIVE: no collapse in r/R_d (scatter 0.377->0.447 dex, worse not better) |
 | Domain AA (baryonic surface-density amplitude test on Domain Y/Z) | n/a -- descriptive | n/a -- descriptive | COMPLETED, MIXED: real effect vs raw rho_req in matched x-bins (CI excludes 0), but NOT distinguishable from the physical-kpc baseline after bootstrap (CI includes 0) |
+| Domain CC (gravity-as-refraction index map + universality test) | 0.1363 +/- 0.0135 holdout, 40 random 104/45 splits | see left | COMPLETED, NEGATIVE-to-NEUTRAL: indistinguishable from 1-param RAR (0.1343 +/- 0.0131) while carrying 2 params; RAR ahead in 33/40 splits |
 | "Domain T" pasted claim (source script not in this repo) | 0.1344 | 0.1368 | **not independently reproduced** -- no runnable script for this specific claim has been provided or located on disk |
+
+
+## Domain CC -- gravity-as-refraction index map on SPARC (2026-09-16)
+
+Script: `sparc/domain_CC_refraction_index_map.py`
+Results: `sparc/domain_CC_refraction_index_map_results.json`
+Data: real SPARC (VizieR J/AJ/152/157 table1+table2, in-repo). Cuts and
+parser taken verbatim from `domain_K_rar.py`; the RAR benchmark
+recomputed here reproduces `domain_K_results.json` to 4 decimal places
+(0.1327 dex, a0 = 1.1603e-10 m/s^2), which is the pipeline check.
+
+**Question (pre-registered in the script header, before any number):**
+if rotation curves come from graded-index steering through a variable
+HDF -- not a non-baryonic halo -- then the required n(r) must be (a)
+computable from the curve with no halo parameter, and (b) a *universal*
+function of the baryonic source with no per-galaxy freedom. Only (b) is
+falsifiable; (a) is a change of variables.
+
+**Relations used.** `c^2 = K/rho`; `n = c0/c_local`, so `n^2 =
+rho_HDF/rho_0` at fixed stiffness and `n^2 = K_0/K` at fixed density;
+steering law `g = ALPHA*c0^2*d ln n/dr`, integrated inward from an OUTER
+boundary `n -> 1` at the last measured radius. No `r=0` point is ever
+evaluated; no spacetime-curvature term appears.
+
+**Result (a) -- the inversion. COMPLETED, but not evidence.** 141
+galaxies mapped, 0 halts, 0 non-finite values, 0 halo parameters. The
+required index contrast is tiny: median `n-1 = 1.95e-07`, max
+`4.37e-06`, i.e. a density contrast of `1.000000` to `1.000009` x
+baseline. **This result cannot fail** -- it absorbs one free radial
+function per galaxy, exactly as a halo fit does -- and is logged as
+descriptive, not confirmatory.
+
+**Result (b) -- universality. COMPLETED, NEGATIVE-to-NEUTRAL.** Holdout
+RMS over 40 random galaxy-level 104/45 splits:
+
+| Model | Free params | Holdout RMS (dex) |
+|---|---|---|
+| Newtonian baryons only | 0 | 0.5166 +/- 0.0291 |
+| McGaugh RAR | 1 universal | 0.1343 +/- 0.0131 |
+| HDF stiffness-deficit choke | 2 universal | 0.1363 +/- 0.0135 |
+
+Difference HDF - RAR = **+0.0020 +/- 0.0020 dex**; HDF ahead in only
+**7 of 40** splits. Fitted universal parameters, stable across splits:
+`a0 = 5.55e-11 +/- 3.3e-12 m/s^2`, `p = 0.605 +/- 0.017` (consistent
+with Domain K's `n = 0.599`). Galaxy-to-galaxy scatter of the mean
+residual is 0.1356 dex -- comparable to the total residual, so the
+single-medium constraint is real and not absorbed by hidden freedom.
+
+**Methodology note, logged because it changed the answer.** The first
+run used one seeded split and gave HDF *ahead* by 0.0011 dex. The
+40-split ensemble shows that draw to be a favourable minority outcome,
+not the typical one. Single-split holdout numbers in this project are
+not reliable at the 0.002 dex level; the split-to-split spread (0.013
+dex) is larger than the model differences being tested. This applies
+retroactively to the Domain M / Domain W2 single-split comparisons.
+
+**Explicitly NOT established by this domain:**
+- `a0` is **fitted**, not derived from `K`, `rho_0` or `c_s0`. Nothing
+  in this repository derives it (Domain X's attempt via `rho_HDF_max`
+  was ~33 orders of magnitude off-regime).
+- The steering law is convention-dependent by exactly the factor-2
+  ambiguity this manifest already records as OPEN under `Lensing`: an
+  isotropic single-role index yields `2GM/(b c0^2)`, half the measured
+  bending. Fitting rotation curves does not touch that, and this run
+  carries both `ALPHA=1` and `ALPHA=0.5` explicitly rather than
+  silently picking one.
+- Rotation curves do **not** discriminate refraction from any other
+  mechanism producing the same `g(r)`. This constrains the radial force
+  law, not the ontology.
+- The substrate cap `rho_HDF_max = 4.6e10 kg/m^3` is never approached
+  (contrast ~1e-6 vs a cap ~1e31 x baseline), so the no-singularity
+  clause is untested here -- neither confirmed nor challenged.
+- A short-range gravitational break at `r < 0.5*alpha` is ~29 orders of
+  magnitude below the smallest SPARC radius. SPARC places no constraint
+  on it in either direction.
+
+## Medium_Density_Check.py -- audit and correction (2026-09-16)
+
+Two defects found in the top-level script, both under a banner reading
+"USER'S MODEL -- UNTOUCHED". Originals preserved verbatim in
+`ORIGINAL_*` strings in the file.
+
+1. **Circular normalization, REJECTED.** The Mercury section ended
+   `precession_arcseconds = shadow_deficit * 43.0  # Target
+   normalization`. Output is bounded in `[0, 43)` and lands near the
+   target for any input; the `np.isclose(..., 42.98, atol=0.5)` branch
+   printing "GENERAL RELATIVITY DISMANTLED" was reachable regardless of
+   the fit. Free parameters 1, data points 1, **degrees of freedom 0**.
+   Carried no evidential weight and has been removed.
+
+2. **Structurally infeasible fit, HALTED.** `curve_fit` ran
+   `rho_baseline/(1+k*T)` -- bounded in `(0, 1.0]` with the admitted
+   placeholder `rho_baseline = 1.0` -- against raw galaxy counts per
+   NSIDE=64 pixel, of order `1e0-1e2`. The data exceed the model's
+   supremum almost everywhere, independently of what the Planck/DESI
+   files contain. Also: the SMICA map is a ~1e-4 K *fluctuation* field
+   about 2.7255 K, not the absolute local HDF temperature the model's
+   `temp` argument requires. `rho_baseline` is now carried as `None`,
+   an explicit unknown pending the `V_env(M)` envelope formula.
+
+**New, real result from the corrected Section 3 (inversion instead of
+normalization).** Asking what the shadowing picture must *demand* to
+deliver Mercury's observed 42.98 +/- 0.04 arcsec/century:
+required `rho_local/rho_0 = 4.65e-04`, a factor ~2150 rarefaction at
+Mercury's orbit. Tested against PWC's own `c^2 = K/rho`:
+
+- **Branch A** (K fixed): `c_local/c0 = sqrt(2150) = 46.4`, i.e. light
+  at Mercury's orbit at 46x `c0`. Violates `c0` as the substrate's
+  absolute impedance limit -- a PWC premise, not an imported one -- and
+  is excluded by solar-system radar/Cassini timing at the ~1e-5 level.
+- **Branch B** (K co-varies to hold `c_local = c0`): then `n = 1`
+  everywhere, the index gradient vanishes, and the steering mechanism
+  gives precession 0, not 43.
+
+**Status: the Casimir-shadowing route to Mercury's perihelion advance
+is RULED OUT in this form**, by the framework's own master relation.
+Baseline tension limit reported in place of the halted result:
+admissible range `[0, ~4e-4]` arcsec/century against an observed 42.98
+-- a shortfall of at least 5 orders of magnitude.
+
+**Portability fix (both files).** Every domain script in `sparc/`
+hard-codes `C:\\Users\\jaden\\cosmology\\sparc` and was therefore
+unrunnable off its author's laptop. `domain_CC` and
+`Medium_Density_Check.py` resolve paths repo-relative with
+`PWC_SPARC_DIR` / `PWC_PLANCK_FITS` / `PWC_DESI_TSV` overrides. The
+other domain scripts still carry the hard-coded path.
 
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)
 
