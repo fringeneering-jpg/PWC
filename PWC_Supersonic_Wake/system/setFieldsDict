@@ -1,0 +1,4 @@
+FoamFile { version 2.0; format ascii; class dictionary; location "system"; object setFieldsDict; }
+defaultFieldValues ( volScalarFieldValue p 1.0 volVectorFieldValue U (0.8 0 0) volScalarFieldValue T 1.0 );
+regions ( cylinderToCell { p1 (5 0 -1); p2 (5 0 1); radius 1.5; 
+fieldValues ( volScalarFieldValue p 10.0 volVectorFieldValue U (0 0 0) volScalarFieldValue T 0.1 ); } );

@@ -1,0 +1,2 @@
+FoamFile { version 2.0; format ascii; class dictionary; location "system"; object topoSetDict; }
+actions ( { name obstacleCells; type cellSet; action new; source cylinderToCell; sourceInfo { p1 (0 0 -1); p2 (0 0 1); radius 1.0; } } );

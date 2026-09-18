@@ -1,0 +1,7 @@
+FoamFile { version 2.0; format ascii; class dictionary; location "system"; object changeDictionaryDict; }
+dictionaryReplacement
+{
+    U   { boundaryField { obstacle { type slip; } } }
+    p   { boundaryField { obstacle { type zeroGradient; } } }
+    T   { boundaryField { obstacle { type zeroGradient; } } }
+}
