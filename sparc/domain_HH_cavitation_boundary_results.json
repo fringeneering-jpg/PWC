@@ -1,0 +1,53 @@
+{
+  "A_a0_vs_cH0": {
+    "Planck 2018": {
+      "H0_kms_Mpc": 67.4,
+      "H0_si": 2.1842852410855023e-18,
+      "cH0": 6.548322413981453e-10,
+      "ratio": 0.17719481998644007,
+      "inv": 5.643505832035753,
+      "cH0_over_2pi": 1.0421978811446008e-10,
+      "pct_err_vs_a0_RAR": -10.180815046357022,
+      "rho_crit": 8.532855163739318e-27,
+      "u_sea": 7.668947767821908e-10
+    },
+    "SH0ES": {
+      "H0_kms_Mpc": 73.0,
+      "H0_si": 2.3657688812943864e-18,
+      "cH0": 7.092396679831543e-10,
+      "ratio": 0.16360179269980907,
+      "inv": 6.112402459029821,
+      "cH0_over_2pi": 1.1287899899637367e-10,
+      "pct_err_vs_a0_RAR": -2.718093447834767,
+      "rho_crit": 1.000968247663685e-26,
+      "u_sea": 8.996253963388544e-10
+    }
+  },
+  "A_verdict": "order of magnitude correct; bare a0=cH0 wrong by 5.6x",
+  "B_boundary_eos": {
+    "n_minus_1": 1.95e-07,
+    "Gamma": -9.749999045630902e-08,
+    "Gamma_squared": 9.50624813898035e-15,
+    "rho_crit": 8.532855163739318e-27,
+    "u_sea": 7.668947767821908e-10,
+    "sigma_required_N_per_m": 188541.31690246484,
+    "delta_P_Pa": 6.11020795022075e-16,
+    "delta_P_over_u_sea_third": 2.390239757216186e-06,
+    "impedance_term_negligible": true
+  },
+  "C_a0_evolution": {
+    "z=0.0": 1.0,
+    "z=0.5": 1.3221667822177352,
+    "z=1.0": 1.7902513789968157,
+    "z=2.0": 3.031501278244824,
+    "z=3.0": 4.565632486304608
+  },
+  "D_structural": {
+    "sign_contradiction_with_domain_CC": true,
+    "CC_required_n_increases_inward": true,
+    "static_support_already_tested_by_EE": true,
+    "EE_K_scatter_dex": 0.663,
+    "GG_near_spherical_scatter_dex": 0.57,
+    "suggested_next_test": "discontinuity/kink in rotation curves at a boundary radius"
+  }
+}

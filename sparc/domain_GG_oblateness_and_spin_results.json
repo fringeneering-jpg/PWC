@@ -1,0 +1,27 @@
+{
+  "challenge_1_oblateness": {
+    "EE_baseline_dex": 0.663,
+    "all_points_dex": 0.7149625302434675,
+    "fbar_lt_0p50_dex": 0.6381437411385772,
+    "fbar_lt_0p30_dex": 0.5937522902450569,
+    "fbar_lt_0p20_dex": 0.4968200799740716,
+    "r_gt_3Rd_dex": 0.627143798918864,
+    "r_gt_4Rd_dex": 0.62135999829917,
+    "both_cuts_dex": 0.5700864132399042,
+    "verdict": "REJECTED -- the scatter SURVIVES in exactly the regime both sides agree is near-spherical, so oblate binning is not its cause"
+  },
+  "challenge_2_spin": {
+    "n_galaxies": 124,
+    "median_lambda_required": 0.3945072300102178,
+    "iqr": [
+      0.3733360821117646,
+      0.4281683099242789
+    ],
+    "analytic_prediction": 0.354,
+    "cosmological_median": 0.035,
+    "ratio_to_cosmological": 11.27163514314908,
+    "sigma_high": 4.844578811301352,
+    "pct_within_2sigma": 0.0,
+    "verdict": "REJECTED -- the required spin is 11.3x the cosmological median, 4.8 sigma high. A co-rotating medium is NOT a normally-spinning halo; real halos are pressure-supported with only ~3.5% of the angular momentum needed here"
+  }
+}
