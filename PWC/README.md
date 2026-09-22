@@ -10,6 +10,13 @@ Status document, not a pitch. Separates what's actually verified from what's a g
 - **GW170817 constrains |v_GW − v_light|/c to ≈4×10⁻¹⁶** (using the raw 1.7s delay over ~130 Mly, no assumption about source-side emission delay). Real, and this is the correct bound to cite — GW150914 (no EM counterpart) does not constrain this at all and should not be conflated with GW170817 in any future write-up.
 - **TeVeS and similar bimetric relativistic-MOND variants are ruled out** by the GW170817/GRB170817A speed match — real, solid, not in dispute.
 
+## Key artifacts
+
+- **`sparc/void_push_zero_param_pipeline.py`** — the full pipeline: the zero-parameter geometric version (C_GEO=1/√2, no fitting, scores 0.144 dex — worse than MOND), the universal-coefficient cascade fit with a real train/holdout split, the combined cascade+tension fit (overfits: 0.106 train / 0.133 holdout), and the fitted Void Push baseline (g_pred = g_bar + √(a0·g_bar), a0=7.56e-11 m/s², 0.138 dex point-RMS / 0.133 dex galaxy-RMS).
+- **`sparc/figures/rar_sparc_vs_pwc_voidpush.png`** — the RAR plot for the Void Push fit above, all 149 SPARC galaxies, plotted against the unity line.
+
+  Caveat carried over from the "Verified" section, not dropped just because there's a plot: this specific Void Push number is a fit to the full 149-galaxy sample with no train/holdout split — unlike the cascade+tension result above, it hasn't been checked for overfitting yet. Treat the plot as "what the fit looks like," not as an out-of-sample validation.
+
 ## Good next steps (from the outside "defense" doc's roadmap — legitimate, not yet done)
 
 1. Run the actual PWC ODE on a Gaia-DR3-scale wide-binary configuration (2–30 kAU separation) and check computationally whether the cascade term genuinely fails to accumulate at that scale (the claimed advantage over MOND here is currently asserted, not demonstrated).
