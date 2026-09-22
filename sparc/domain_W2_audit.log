@@ -1,0 +1,95 @@
+Auditing FIXED, already-fitted W2 parameters (no re-optimization):
+  rho_0=1.999e-21 Gamma=7.116e-18 tau_Pi=7.472e+11 tau_pi=4.768e+14
+  zeta=6.493e+07 eta=3.311e+10 c_s0=9.480e+06
+
+Converged: 101   Failed: 40   Total: 141
+
+=== Converged-galaxy residual RMS vs galaxy properties ===
+RMS range: 0.031 to 0.639 dex, median 0.232
+corr(rms, log10 M_bar)   = -0.290
+corr(rms, r_max_kpc)     = -0.198
+corr(rms, r_min_kpc)     = -0.066
+mean signed bias (dex)   = 0.060  (+ = model under-predicts g_obs, i.e. not enough HDF gravity)
+
+Worst 10 converged galaxies by RMS:
+  F568-V1      split=holdout rms=0.639 bias=+0.638 M_bar=1.58e+09 Msun  r=[2.74,5.87] kpc  n_pts=4
+  UGC05918     split=train   rms=0.587 bias=+0.585 M_bar=4.03e+08 Msun  r=[2.79,4.46] kpc  n_pts=4
+  F565-V2      split=holdout rms=0.530 bias=+0.530 M_bar=1.86e+09 Msun  r=[6.29,8.80] kpc  n_pts=3
+  UGC08286     split=train   rms=0.483 bias=+0.471 M_bar=2.00e+09 Msun  r=[0.95,8.04] kpc  n_pts=16
+  UGC05764     split=holdout rms=0.480 bias=+0.458 M_bar=3.77e+08 Msun  r=[0.36,3.62] kpc  n_pts=10
+  UGC04278     split=train   rms=0.463 bias=-0.451 M_bar=3.22e+09 Msun  r=[1.80,6.69] kpc  n_pts=15
+  UGC07399     split=train   rms=0.459 bias=+0.457 M_bar=1.62e+09 Msun  r=[0.61,6.13] kpc  n_pts=10
+  UGC01281     split=train   rms=0.455 bias=+0.454 M_bar=6.78e+08 Msun  r=[3.07,4.99] kpc  n_pts=6
+  NGC4217      split=holdout rms=0.449 bias=-0.379 M_bar=6.17e+10 Msun  r=[1.74,16.72] kpc  n_pts=18
+  UGC08490     split=train   rms=0.442 bias=+0.398 M_bar=1.71e+09 Msun  r=[0.34,10.15] kpc  n_pts=30
+
+Best 10 converged galaxies by RMS:
+  UGC07323     split=holdout rms=0.031 bias=-0.026 M_bar=3.62e+09 Msun  r=[1.75,5.82] kpc  n_pts=8
+  UGC05829     split=train   rms=0.041 bias=+0.034 M_bar=2.25e+09 Msun  r=[4.40,6.91] kpc  n_pts=5
+  NGC3972      split=train   rms=0.049 bias=+0.018 M_bar=1.05e+10 Msun  r=[1.74,8.72] kpc  n_pts=9
+  NGC4010      split=train   rms=0.054 bias=-0.014 M_bar=1.27e+10 Msun  r=[3.50,10.47] kpc  n_pts=9
+  UGC07690     split=train   rms=0.060 bias=+0.059 M_bar=9.47e+08 Msun  r=[0.59,4.13] kpc  n_pts=7
+  NGC3917      split=train   rms=0.062 bias=+0.038 M_bar=1.74e+10 Msun  r=[1.74,14.86] kpc  n_pts=16
+  KK98-251     split=train   rms=0.066 bias=-0.057 M_bar=2.77e+08 Msun  r=[1.40,3.13] kpc  n_pts=8
+  NGC3198      split=train   rms=0.077 bias=+0.001 M_bar=4.30e+10 Msun  r=[2.24,44.08] kpc  n_pts=37
+  NGC4138      split=holdout rms=0.078 bias=+0.050 M_bar=2.70e+10 Msun  r=[2.61,13.47] kpc  n_pts=4
+  NGC6015      split=train   rms=0.081 bias=-0.049 M_bar=2.98e+10 Msun  r=[0.34,29.23] kpc  n_pts=44
+
+=== Failed galaxies: do they cluster by any property? ===
+Failed M_bar range: 3.03e+08 to 2.56e+11 Msun, median 6.66e+09
+Converged M_bar range: 5.03e+07 to 3.64e+11 Msun, median 1.21e+10
+Failed r_max range: 6.45 to 108.31 kpc, median 15.45
+Converged r_max range: 1.21 to 80.38 kpc, median 11.47
+Failed r_min range: 0.260 to 7.570 kpc, median 1.730
+Converged r_min range: 0.190 to 9.930 kpc, median 1.740
+Failed n_pts range: 4 to 113, median 19.5
+Converged n_pts range: 50297340...
+Converged n_pts range: 3 to 72, median 13.0
+  fraction of FAILED galaxies below converged median M_bar: 65.0%
+  fraction of FAILED galaxies below converged median r_max: 35.0%
+  fraction of FAILED galaxies below converged median r_min: 50.0%
+  fraction of FAILED galaxies below converged median n_pts: 40.0%
+
+All failed galaxy names, split, and properties:
+  NGC3741      split=train   M_bar=3.03e+08 Msun  r=[0.70,7.00] kpc  n_pts=19
+  NGC3109      split=train   M_bar=6.84e+08 Msun  r=[0.52,6.45] kpc  n_pts=21
+  UGC05721     split=train   M_bar=1.22e+09 Msun  r=[0.45,6.74] kpc  n_pts=20
+  NGC2915      split=train   M_bar=1.25e+09 Msun  r=[3.01,10.04] kpc  n_pts=21
+  UGC06667     split=train   M_bar=1.62e+09 Msun  r=[1.74,7.85] kpc  n_pts=8
+  DDO170       split=train   M_bar=2.13e+09 Msun  r=[3.36,12.33] kpc  n_pts=7
+  IC2574       split=train   M_bar=2.26e+09 Msun  r=[0.85,9.96] kpc  n_pts=22
+  UGC05716     split=holdout M_bar=2.53e+09 Msun  r=[2.07,12.37] kpc  n_pts=11
+  UGC06399     split=holdout M_bar=2.73e+09 Msun  r=[2.61,7.85] kpc  n_pts=7
+  DDO161       split=train   M_bar=2.93e+09 Msun  r=[1.54,13.37] kpc  n_pts=26
+  UGC04499     split=train   M_bar=3.02e+09 Msun  r=[1.82,8.18] kpc  n_pts=8
+  UGC12632     split=train   M_bar=3.33e+09 Msun  r=[2.14,10.66] kpc  n_pts=13
+  NGC0024      split=train   M_bar=3.41e+09 Msun  r=[0.96,11.27] kpc  n_pts=20
+  UGC00731     split=holdout M_bar=3.45e+09 Msun  r=[0.91,10.91] kpc  n_pts=12
+  UGC07089     split=train   M_bar=3.69e+09 Msun  r=[2.61,9.16] kpc  n_pts=9
+  F571-V1      split=holdout M_bar=3.74e+09 Msun  r=[5.83,13.59] kpc  n_pts=5
+  UGC00191     split=train   M_bar=3.82e+09 Msun  r=[0.62,9.98] kpc  n_pts=8
+  UGC07524     split=holdout M_bar=4.79e+09 Msun  r=[1.72,10.69] kpc  n_pts=27
+  UGC11820     split=holdout M_bar=5.13e+09 Msun  r=[5.26,15.82] kpc  n_pts=5
+  F583-1       split=train   M_bar=6.14e+09 Msun  r=[1.80,15.49] kpc  n_pts=10
+  UGC00634     split=holdout M_bar=7.18e+09 Msun  r=[4.51,18.01] kpc  n_pts=4
+  UGC07125     split=train   M_bar=7.62e+09 Msun  r=[2.88,18.68] kpc  n_pts=12
+  UGC12732     split=holdout M_bar=7.67e+09 Msun  r=[0.96,15.40] kpc  n_pts=16
+  NGC0247      split=train   M_bar=8.10e+09 Msun  r=[1.08,14.54] kpc  n_pts=26
+  F568-3       split=train   M_bar=1.14e+10 Msun  r=[1.80,17.98] kpc  n_pts=9
+  UGC06930     split=train   M_bar=1.16e+10 Msun  r=[3.50,16.61] kpc  n_pts=9
+  NGC2403      split=train   M_bar=1.28e+10 Msun  r=[0.26,20.87] kpc  n_pts=72
+  NGC1003      split=holdout M_bar=1.33e+10 Msun  r=[2.08,30.24] kpc  n_pts=35
+  UGC00128     split=train   M_bar=2.34e+10 Msun  r=[3.75,53.75] kpc  n_pts=21
+  NGC1090      split=holdout M_bar=5.87e+10 Msun  r=[1.60,30.09] kpc  n_pts=22
+  UGC06787     split=holdout M_bar=7.17e+10 Msun  r=[0.47,37.19] kpc  n_pts=68
+  NGC0891      split=train   M_bar=8.89e+10 Msun  r=[0.92,17.11] kpc  n_pts=18
+  NGC0289      split=train   M_bar=9.04e+10 Msun  r=[7.57,71.12] kpc  n_pts=22
+  UGC06614     split=holdout M_bar=1.33e+11 Msun  r=[3.23,64.59] kpc  n_pts=10
+  NGC5985      split=train   M_bar=1.57e+11 Msun  r=[3.54,34.72] kpc  n_pts=33
+  UGC02953     split=train   M_bar=1.62e+11 Msun  r=[0.26,62.39] kpc  n_pts=113
+  UGC09133     split=holdout M_bar=2.26e+11 Msun  r=[0.63,108.31] kpc  n_pts=67
+  NGC2955      split=train   M_bar=2.28e+11 Msun  r=[0.75,35.43] kpc  n_pts=24
+  UGC11455     split=train   M_bar=2.54e+11 Msun  r=[1.23,41.93] kpc  n_pts=35
+  NGC6195      split=holdout M_bar=2.56e+11 Msun  r=[1.33,36.43] kpc  n_pts=23
+
+results -> domain_W2_residual_audit_results.json

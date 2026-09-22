@@ -1,0 +1,10 @@
+Galaxies: 132  (load took 0.0s)
+seed=0: c=2.159 a0=1.023e-10  train=0.1060  holdout_combined=0.1329  holdout_simple=0.1569  [29.2s]
+seed=1: c=1.950 a0=1.200e-10  train=0.1113  holdout_combined=0.1226  holdout_simple=0.1607  [34.0s]
+seed=2: c=2.163 a0=1.035e-10  train=0.1163  holdout_combined=0.1093  holdout_simple=0.1440  [26.7s]
+seed=3: c=2.278 a0=8.876e-11  train=0.1130  holdout_combined=0.1174  holdout_simple=0.1457  [27.3s]
+seed=4: c=2.237 a0=9.951e-11  train=0.1172  holdout_combined=0.1076  holdout_simple=0.1322  [27.5s]
+
+mean holdout combined (c+a0, 2-param): 0.1180 +/- 0.0093
+mean holdout simple cascade (c only):   0.1479 +/- 0.0101
+combined beats simple cascade in 5/5 seeds
