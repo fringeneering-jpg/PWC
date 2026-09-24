@@ -95,6 +95,8 @@ The medium is effectively **frictionless/superfluid** in its propagation behavio
 - **Binding energy:** when knots combine (fusion), some waves are released as light; the count drops, the debt drops, and the product weighs less — the mass defect.
 - **1/r²:** a fixed debt spread over ever-larger spheres around the knot.
 
+**Measured gravity is a net figure: pull minus dump.** Every body pulls the medium and heat toward itself, and at the same time dumps its own growth — volume released by untying — all around it. The fastest-growing regions are therefore just outside the local areas of growth. What we measure as gravity is the pull minus that outward dump, so standard calculations are off by a slight percentage: the dump rate, which is left out because untying is not treated as producing growth. Prediction: gravity reads slightly weaker around whatever is untying fastest, in proportion to its untying rate.
+
 **The 1/r² reinterpretation** — the key replacement for a bare inverse-square "nothing between bodies" reading:
 
 ```

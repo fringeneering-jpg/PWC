@@ -25,6 +25,9 @@ What still needs doing, by section. **NEEDS DERIVATION** = no equation yet. **NE
 
 ## Galaxies (§10)
 
+- Dump-rate term: at fixed g_bar, do galaxies with higher untying rate (star formation, luminosity per mass) sit below the 0.1327 curve? Add the term and check whether scatter drops below 0.1327 — NEEDS TEST
+- Dump rate from untying rate: the equation (volume released per untied wave × untying rate) — NEEDS DERIVATION
+
 - Blind holdout, 104/45 split: PWC 0.139 vs McGaugh 0.130 dex — NEEDS WORK
 - Dwarf-spheroidal transfer: ρ = 0.74 but 0.253 dex scatter — NEEDS WORK
 - Cascade: why the coefficient is exactly 1; the residual ~8% outer decline — NEEDS DERIVATION
