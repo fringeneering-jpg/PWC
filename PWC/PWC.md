@@ -90,6 +90,11 @@ The medium is effectively **frictionless/superfluid** in its propagation behavio
 - Photons and neutrinos are phase-wave/mode-like excitations of the medium.
 - The medium is **birefringent**: its response and propagation can depend on phase, density, temperature, or orientation/state.
 
+**What makes gravity: the knot's volume debt.** Matter is knotted EM waves of the medium, and **mass is the amount of waves tied up**. Tying a knot takes volume out of the medium and holds it compactly; the surrounding medium is left short and stretches toward the knot to fill the gap, and because the knot won't give the volume back, the stretch stays. That standing stretch is the tension we call gravity. Space's excess heat is the pull that keeps working to untie the knot and reclaim the volume; matter sits in the stretched medium in between. Two knots share the stretched medium between them and are drawn together.
+- **Strength ∝ mass:** each tied wave carries the same volume debt, so total debt is proportional to the number of waves — the mass — whatever the material. That is why everything falls the same regardless of composition.
+- **Binding energy:** when knots combine (fusion), some waves are released as light; the count drops, the debt drops, and the product weighs less — the mass defect.
+- **1/r²:** a fixed debt spread over ever-larger spheres around the knot.
+
 **The 1/r² reinterpretation** — the key replacement for a bare inverse-square "nothing between bodies" reading:
 
 ```

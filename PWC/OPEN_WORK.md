@@ -6,7 +6,8 @@ What still needs doing, by section. **NEEDS DERIVATION** = no equation yet. **NE
 
 - a₀ from the tensioned-medium mass, using the §0 Step 5 constants — NEEDS DERIVATION
 - ρ_max at a second and third mass (GW151226, GW170814 ringdown extractions not yet clean) — NEEDS TEST
-- Medium equivalent of G, from the medium's own stiffness/density (sonic-choke normalization) — NEEDS DERIVATION
+- G from volume debt per tied wave × the medium's stiffness (also the sonic-choke normalization) — NEEDS DERIVATION
+- Volume debt per wave: the value, and why it is identical for every wave — NEEDS DERIVATION
 - Merger rule at joint-posterior level with k = 0.868899 (GW190412 rerun) — NEEDS TEST
 - Residual that shrinks with core mass: locate the three regime thresholds relative to ρ_max — NEEDS DERIVATION
 - Surface-gravity deficit: all four residuals share one sign — second-order term — NEEDS DERIVATION
