@@ -64,6 +64,8 @@ Across the SPARC sample (149 galaxies, raw baryonic data, no per-galaxy paramete
 
 **Why the disk is 2D: the poles vent the heat.** A spiral galaxy spins, and heat in a rotating chiral medium travels along the rotation axis (§9). Heat is the pull of the void, so venting it out of the poles starves the disk plane of outward pull and leaves the disk as pure 2D tension — the pull spreads over circles (2πr), not spheres (4πr²). At the edge, each star zips loose void-side medium into tension ahead of it and unzips it behind, a steady inward pull with no drag.
 
+**Ellipticals: the web does the confining.** Elliptical galaxies are round, not flat, yet follow the same relation (Lelli et al. 2017). Their tension is not spreading into an open 3D void: they sit at the nodes where filaments meet, and the pull is funnelled along the web's threads and walls. The web's geometry does the confining that the disk does for a spiral, giving the same non-1/r² falloff.
+
 **The medium does not move — the tension is accumulated over the whole orbit.** Everywhere a body goes it takes medium in ahead and leaves it behind; the medium itself stays put. The extra tension is pulled in continuously around the entire orbit, not produced in any one instant. Because the medium is stationary, every motion through it counts: a galaxy moving through the medium as a whole also sweeps medium on its leading side.
 
 a₀ is physically the tensioned-medium mass a body pulls against along its own 1/r² reach — a population-level property of the medium between masses, not a direct plug-in of ρ_max or γ alone. **Next derivation:** compute a₀ from that tensioned-medium mass using the Step 5 constants.
