@@ -33,6 +33,8 @@ What still needs doing, by section. **NEEDS DERIVATION** = no equation yet. **NE
 
 ## Heat and the thermal web (§9)
 
+- Heat as the source of the medium's tension: tension per unit heat, linked to γ = 3.36×10³¹ N/m (§0) — NEEDS DERIVATION
+
 - What sets the medium's chiral imbalance, and the heat-wave strength at galactic rotation rates — NEEDS DERIVATION
 - Heat seeking untying sources independently of the rotation axis — NEEDS TEST
 - Heat choke vs real WHIM density/temperature data — NEEDS TEST
