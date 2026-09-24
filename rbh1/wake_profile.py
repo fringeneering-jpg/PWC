@@ -65,7 +65,10 @@ sgn = 1 if fp >= fm else -1
 x = sgn * proj + 0.5; y = sgn * perp  # x: arcsec downstream from tip
 print(f"cross-wake PA {pa_cross:.1f} deg; axis PA {pa_axis:.1f}/{pa_axis+180:.1f}; Halpha near axis: +side {fp:.3g}, -side {fm:.3g} -> downstream sign {sgn:+d}")
 
-def gauss(yv, a, y0, s, c): return a * np.exp(-0.5 * ((yv - y0) / s) ** 2) + c
+GHOST = float(os.environ.get("GHOST_AS", "0"))  # >0: model background self-subtraction ghosts at +/-GHOST arcsec
+def gauss(yv, a, y0, s, c, b=0.0):
+    G = lambda m: np.exp(-0.5 * ((yv - m) / s) ** 2)
+    return a * G(y0) - (b * (G(y0 + GHOST) + G(y0 - GHOST)) if GHOST > 0 else 0) + c
 rows = []; edges = np.arange(-1.0, x[np.isfinite(Ha)].max() + 0.25, 0.25)
 rng = np.random.default_rng(1)
 for lo in edges[:-1]:
@@ -80,16 +83,16 @@ for lo in edges[:-1]:
                Ha_sum=float(np.nansum(Ha[sel])), Ha_err=float(np.sqrt(np.nansum(sHa[sel] ** 2))),
                O3_sum=float(np.nansum(O3[sel])), O3_err=float(np.sqrt(np.nansum(sO3[sel] ** 2))))
     try:
-        p, cov = curve_fit(gauss, yb, prof, p0=[max(prof.max(), 1e-3), 0, 0.2, 0], sigma=perr, absolute_sigma=True,
-                           bounds=([0, -1.2, 0.04, -np.inf], [np.inf, 1.2, 1.2, np.inf]), maxfev=5000)
+        p, cov = curve_fit(gauss, yb, prof, p0=[max(prof.max(), 1e-3), 0, 0.2, 0] + ([0.5 * max(prof.max(), 1e-3)] if GHOST > 0 else []), sigma=perr, absolute_sigma=True,
+                           bounds=([0, -1.2, 0.04, -np.inf] + ([0] if GHOST > 0 else []), [np.inf, 1.2, 1.2, np.inf] + ([np.inf] if GHOST > 0 else [])), maxfev=5000)
         fw = []
         for _ in range(200):
             try:
                 pb, _ = curve_fit(gauss, yb, prof + rng.normal(0, perr), p0=p, sigma=perr,
-                                  bounds=([0, -1.2, 0.04, -np.inf], [np.inf, 1.2, 1.2, np.inf]), maxfev=3000)
+                                  bounds=([0, -1.2, 0.04, -np.inf] + ([0] if GHOST > 0 else []), [np.inf, 1.2, 1.2, np.inf] + ([np.inf] if GHOST > 0 else [])), maxfev=3000)
                 fw.append(2.3548 * pb[2])
             except Exception: pass
-        row.update(ridge_amp_snr=float(p[0] / np.sqrt(cov[0, 0])), y0_as=float(p[1]),
+        row.update(ghost_ratio=float(p[4] / p[0]) if GHOST > 0 and p[0] > 0 else np.nan, ridge_amp_snr=float(p[0] / np.sqrt(cov[0, 0])), y0_as=float(p[1]),
                    fwhm_as=float(2.3548 * p[2]), fwhm_err=float(np.std(fw)) if fw else np.nan,
                    fwhm_kpc=float(2.3548 * p[2] * KPC_AS))
     except Exception:
@@ -100,6 +103,6 @@ for lo in edges[:-1]:
 
 json.dump(dict(cube=os.path.basename(CUBE), z=Z, kpc_per_arcsec=KPC_AS, axis_pa=float(pa_axis),
                downstream_sign=sgn, rows=rows), open(os.path.join(OUT, "wake_profile.json"), "w"), indent=1)
-print(f"{'x(kpc)':>7} {'Ha S/N':>7} {'ridge S/N':>9} {'FWHM(kpc)':>12} {'y0(as)':>7} {'[OIII]/Ha':>9}")
+print(f"ghost model: {GHOST} arcsec"); print(f"{'x(kpc)':>7} {'Ha S/N':>7} {'ridge S/N':>9} {'FWHM(kpc)':>12} {'y0(as)':>7} {'[OIII]/Ha':>9}")
 for rw in rows:
     print(f"{rw['x_kpc']:7.1f} {rw['Ha_snr']:7.1f} {rw['ridge_amp_snr']:9.1f} {rw['fwhm_kpc']:7.2f}±{rw['fwhm_err']*KPC_AS:4.2f} {rw['y0_as']:7.2f} {rw['O3_Ha']:9.2f}")
