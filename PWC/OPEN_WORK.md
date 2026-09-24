@@ -40,6 +40,12 @@ What still needs doing, by section. **NEEDS DERIVATION** = no equation yet. **NE
 - Heat choke vs real WHIM density/temperature data — NEEDS TEST
 - Occupancy/band-filling equation for the EM-coupling heat choke — NEEDS DERIVATION
 
+## Runaway black holes (§8, RBH-1)
+
+- Predicted star mass in the trail from the wake's volume debt — NEEDS DERIVATION
+- Predicted trail width (no-scatter squeeze) vs measured RBH-1 trail width — NEEDS TEST
+- Bow-wave compression profile and water-hammer pressure ΔP = ρ_max·c·Δv — NEEDS DERIVATION
+
 ## Cosmic scale (§6, §7)
 
 - What makes the medium push apart at cosmic scale (dark energy): star-formation route failed; aggregate merger medium release not yet calculated — NEEDS DERIVATION
