@@ -97,6 +97,7 @@ The medium is effectively **frictionless/superfluid** in its propagation behavio
 
 **Measured gravity is a net figure: pull minus dump.** Every body pulls the medium and heat toward itself, and at the same time dumps its own growth — volume released by untying — all around it. The fastest-growing regions are therefore just outside the local areas of growth. What we measure as gravity is the pull minus that outward dump, so standard calculations are off by a slight percentage: the dump rate, which is left out because untying is not treated as producing growth. Prediction: gravity reads slightly weaker around whatever is untying fastest, in proportion to its untying rate.
 - **The growth is not a 1/r² field around each body.** The medium is a tensioned web: growth is volumetric and comes from large clusters as a whole, not directed toward other clusters. The pressure is outward from galaxies and clusters, except in some large cold voids. So the dump is nearly invisible around a single star and shows up collectively, at cluster scale — in how cluster outskirts expand and how galaxies fall in.
+- **Growth concentrates at the thickest walls of the cosmic web** — the dense rings around voids, especially at the pronounced borders between large galaxies. Walls growing outward on both sides push into the neighbouring voids: this is what drives void expansion.
 
 **The 1/r² reinterpretation** — the key replacement for a bare inverse-square "nothing between bodies" reading:
 
