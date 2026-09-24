@@ -61,5 +61,6 @@ Kept honest and short, in the same style as the rest of this project's tracking 
 
 ## On directed chiral heat transport (§9, added 2026-09-25)
 
+- Direction of causation: in the published chiral-heat-wave work the rotation axis sets the wave's direction; §9's claim goes further — heat itself steers toward untying sources (buoyancy-like). That extra step is PWC's own and would need its own test, e.g. heat flow tracking untying-rich regions independently of the rotation axis.
 - The chiral heat wave in the literature needs a net chiral imbalance (unequal left/right-handed populations) plus rotation, and is demonstrated at quark-gluon-plasma and condensed-matter scales. For §9 to use it quantitatively, PWC needs (a) what sets the medium's chiral imbalance and (b) a propagation speed/strength estimate at galactic rotation rates. Neither is computed yet.
 - Worth checking: whether jet-axis heat transport in real AGN/black-hole jets shows any handedness signature (e.g. polarization), which would tie this to the §0/§8 black-hole chain and to the birefringence test already listed.
