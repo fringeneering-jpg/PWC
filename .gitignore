@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 OLD/master_data.json
 PWC/GW190412_posterior_samples_v3.h5
+rbh1/data/
