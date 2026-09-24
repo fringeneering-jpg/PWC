@@ -190,6 +190,10 @@ The answer that survives: **it isn't one localized event that we happen to occup
 
 This costs something specific, worth stating plainly: it rules out the picture of our universe as one distinguished bubble sitting inside a larger sea of un-converted medium, with us positioned somewhere inside it. That version would put different observers at different distances from a real boundary, which isn't what's observed. The uniform, no-privileged-location version is the one that survives the check.
 
+### Space is the cavitation zone
+
+What we call the vacuum of space is the medium in its pulled, cavitated state, universe-wide. Heat is the pull (§1), and to matter pull always feels like a vacuum — so "empty space" is not empty, it is medium under tension. RBH-1's wake (§8) is the same process at small scale: a cavitating, volumetrically short region where hydrogen forms, is squeezed and cooled, and collapses into orderly suns. Universe-wide, stars, galaxies and the filaments of the cosmic web are matter formed in the cavitation zone the same way.
+
 ### A possible reversal: cavitation-driven turnaround
 
 Extending the cavitation picture (see §8's bow-wave/cavitation-zone discussion) to cosmic scale: if the same mechanism applies to the whole medium, expansion isn't necessarily one-directional. A cavitation bubble grows both from its boundary and by vaporizing residual material ("mist") at its own center, which pulls heat/energy inward as it does. Applied to the universe as a whole, this would mean the same process driving expansion also sets up its own eventual reversal — once temperature has equalized throughout a finite matter inventory, the mechanism that was growing the bubble starts running the other way, and expansion turns into contraction.
