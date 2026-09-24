@@ -59,7 +59,8 @@ What still needs doing, by section. **NEEDS DERIVATION** = no equation yet. **NE
 - What makes the medium push apart at cosmic scale (dark energy): star-formation route failed; aggregate merger medium release not yet calculated — NEEDS DERIVATION
 - Space holds excess heat: how that excess drives accelerated expansion, and whether it is a standing property of space (not tied to star-formation rate, so the Pantheon+ star-formation null does not apply) — NEEDS DERIVATION
 - Excess heat vs the measured 2.7 K of space: what the medium's heat is, relative to measured radiation temperature — NEEDS DERIVATION
-- Cosmic web from cavitation: reproduce the measured clustering (BAO ~150 Mpc scale, matter power spectrum) and galaxy age spreads in filaments — NEEDS TEST
+- BAO scale (147 Mpc, measured to ~1% by DESI, same ruler in the CMB): derive it from the medium's sound speed and the formation-era travel time before the wave froze — NEEDS DERIVATION
+- Cosmic web from cavitation: reproduce the matter power spectrum and galaxy age spreads in filaments — NEEDS TEST
 - Local growth around untying sites, from light echoes: V838 Mon polarization ring vs spectroscopic distance (agree ~10%); SN 1987A ring (51.4 kpc) vs LMC eclipsing-binary distance (49.6 kpc) (agree ~3.5%) — size of growth allowed around a star/supernova — NEEDS TEST
 - Melting rate: early-universe baryon density (BBN deuterium, CMB) and today's census (incl. FRB missing-baryon count, Macquart et al. 2020) agree at ~5% of critical — how much matter has melted since formation, and whether that fits voids as "cooked soup" — NEEDS DERIVATION
 - Early massive galaxies (JWST) from the bow-wave mechanism: mass vs redshift — NEEDS DERIVATION
