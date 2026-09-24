@@ -17,6 +17,7 @@ What still needs doing, by section. **NEEDS DERIVATION** = no equation yet. **NE
 
 - Intermediate scale between the electron knot and the neutron core (nucleon, nucleus, crust) — NEEDS DERIVATION
 - Stable-knot field equation needs a volume/pressure (max-compression) term — NEEDS DERIVATION
+- Does knot handedness (chirality) decide matter vs antimatter — OPEN
 - Can a knot be tight and not-tight at once, or always one or the other — OPEN
 - Strong-force matter: what "L" locks nucleons if not EM light — NEEDS DERIVATION
 
