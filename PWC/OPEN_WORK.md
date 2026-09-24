@@ -4,7 +4,8 @@ What still needs doing, by section. **NEEDS DERIVATION** = no equation yet. **NE
 
 ## Core chain (§0, §3, §8)
 
-- a₀ from the tensioned-medium mass, using the §0 Step 5 constants — NEEDS DERIVATION
+- a₀'s value as a holding threshold: one threshold-vs-density rule must give 3.23×10¹¹ N/kg at ρ_max and a₀ at resting density. Dimensional form c·√(Gρ) needs factor ~3.65 (black hole) vs ~0.33 (galaxy) — an 11× mismatch; does sphere-vs-disk geometry account for it? — NEEDS DERIVATION
+- 2D step of the √(a₀·g_bar) derivation: early-type (non-disk) galaxies follow the same relation (Lelli et al. 2017) — does confinement come from the disk or from the web? — NEEDS TEST
 - ρ_max at a second and third mass (GW151226, GW170814 ringdown extractions not yet clean) — NEEDS TEST
 - G from volume debt per tied wave × the medium's stiffness (also the sonic-choke normalization) — NEEDS DERIVATION
 - Volume debt per wave: the value, and why it is identical for every wave — NEEDS DERIVATION
