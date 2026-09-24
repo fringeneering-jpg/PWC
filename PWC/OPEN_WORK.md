@@ -49,7 +49,8 @@ What still needs doing, by section. **NEEDS DERIVATION** = no equation yet. **NE
 ## Cosmic scale (§6, §7)
 
 - What makes the medium push apart at cosmic scale (dark energy): star-formation route failed; aggregate merger medium release not yet calculated — NEEDS DERIVATION
-- Space as a medium under tension (negative pressure) → accelerated expansion: the mechanism by which tension drives outward expansion — NEEDS DERIVATION
+- Space holds excess heat: how that excess drives accelerated expansion, and whether it is a standing property of space (not tied to star-formation rate, so the Pantheon+ star-formation null does not apply) — NEEDS DERIVATION
+- Excess heat vs the measured 2.7 K of space: what the medium's heat is, relative to measured radiation temperature — NEEDS DERIVATION
 - Cosmic web from cavitation: reproduce the measured clustering (BAO ~150 Mpc scale, matter power spectrum) and galaxy age spreads in filaments — NEEDS TEST
 - Early massive galaxies (JWST) from the bow-wave mechanism: mass vs redshift — NEEDS DERIVATION
 

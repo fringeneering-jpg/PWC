@@ -192,7 +192,7 @@ This costs something specific, worth stating plainly: it rules out the picture o
 
 ### Space is the cavitation zone
 
-What we call the vacuum of space is the medium in its pulled, cavitated state, universe-wide. Heat is the pull (§1), and to matter pull always feels like a vacuum — so "empty space" is not empty, it is medium under tension. RBH-1's wake (§8) is the same process at small scale: a cavitating, volumetrically short region where hydrogen forms, is squeezed and cooled, and collapses into orderly suns. Universe-wide, stars, galaxies and the filaments of the cosmic web are matter formed in the cavitation zone the same way.
+What we call the vacuum of space is medium holding **excess heat**. Heat is the pull (§1), so space pulls — and to matter, that pull always feels like a vacuum. **Matter is the opposite side: under tension and short on volume.** "Empty space" is not empty; it is the heat-rich side of the medium, and matter is the tensioned, volume-short side. RBH-1's wake (§8) shows the same process at small scale: a cavitating, volumetrically short region where hydrogen forms, is squeezed and cooled, and collapses into orderly suns. Universe-wide, stars, galaxies and the filaments of the cosmic web are matter formed the same way.
 
 ### A possible reversal: cavitation-driven turnaround
 
