@@ -201,7 +201,7 @@ What we call the vacuum of space is medium holding **excess heat**. Heat is the 
 
 ### Cosmic history: ice melting in a hot stew
 
-The earliest moment was the hottest, and it was the moment of formation — matter had just tied. Ever since, matter has been melting like ice in a hot stew: untying back into the heat-rich medium. **Voids are the soup that has already cooked** — regions where the melting has finished. Walls, filaments and nodes are the ice still melting; the hottest gas in the universe sits around the biggest remaining blocks (galaxy clusters), exactly where melting is most active. Small, gas-rich void galaxies are the last small pieces of ice left in the soup.
+The formation event was hottest or coldest depending on which side you were on. **For heat, it was the separation** — heat released and driven out. **For matter, it was the great freezing** — matter shoved and compressed into the tuna can. One event, like water freezing: the freeze and the release of latent heat are the same moment, and c² is the universe's latent heat (§4), so m = L/c² counts the heat each piece of frozen matter gave up. (Mainstream counterpart: at ~10 μs the quark–gluon plasma froze into protons and neutrons — the confinement transition.) Ever since, matter has been melting like ice in a hot stew: untying back into the heat-rich medium. **Voids are the soup that has already cooked** — regions where the melting has finished. Walls, filaments and nodes are the ice still melting; the hottest gas in the universe sits around the biggest remaining blocks (galaxy clusters), exactly where melting is most active. Small, gas-rich void galaxies are the last small pieces of ice left in the soup.
 
 ### Growth is not uniform — it concentrates at untying sites
 
