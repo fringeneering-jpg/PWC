@@ -2,6 +2,18 @@
 
 What still needs doing, by section. **NEEDS DERIVATION** = no equation yet. **NEEDS TEST** = derived, not yet checked against data. **OPEN** = question not yet decided.
 
+## The five values that close the framework
+
+Fix each once, from one place — then it must predict what it was not set from.
+
+| Value | Predicts once fixed |
+|---|---|
+| Resting density of the medium, ρ₀ | a₀'s value; the loose side of the zipper |
+| Holding threshold vs density (one rule: 3.23×10¹¹ N/kg at ρ_max ↔ a₀ at ρ₀) | a₀ with zero fitted constants |
+| Volume per tied wave | G; dump rate; supernova and cluster growth; Hubble tension |
+| P(ρ) between ρ₀ and ρ_max | black-hole shell profile; bow wave; water-hammer spike |
+| Growth-vs-time law | redshift = (1+z); CMB z ≈ 1100; BAO 147 Mpc |
+
 ## Core chain (§0, §3, §8)
 
 - a₀'s value as a holding threshold: one threshold-vs-density rule must give 3.23×10¹¹ N/kg at ρ_max and a₀ at resting density. Dimensional form c·√(Gρ) needs factor ~3.65 (black hole) vs ~0.33 (galaxy) — an 11× mismatch; does sphere-vs-disk geometry account for it? (Needed ratio 10.9–11.8 across H₀ = 67–73; 4π = 12.6 does not fit, and 4πr²/2πr is not dimensionless.) — NEEDS DERIVATION
