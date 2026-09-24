@@ -199,6 +199,10 @@ This costs something specific, worth stating plainly: it rules out the picture o
 
 What we call the vacuum of space is medium holding **excess heat**. Heat is the pull (§1), so space pulls — and to matter, that pull always feels like a vacuum. **Matter is the opposite side: under tension and short on volume.** "Empty space" is not empty; it is the heat-rich side of the medium, and matter is the tensioned, volume-short side. RBH-1's wake (§8) shows the same process at small scale: a cavitating, volumetrically short region where hydrogen forms, is squeezed and cooled, and collapses into orderly suns. Universe-wide, stars, galaxies and the filaments of the cosmic web are matter formed the same way.
 
+### Cosmic history: ice melting in a hot stew
+
+The earliest moment was the hottest, and it was the moment of formation — matter had just tied. Ever since, matter has been melting like ice in a hot stew: untying back into the heat-rich medium. **Voids are the soup that has already cooked** — regions where the melting has finished. Walls, filaments and nodes are the ice still melting; the hottest gas in the universe sits around the biggest remaining blocks (galaxy clusters), exactly where melting is most active. Small, gas-rich void galaxies are the last small pieces of ice left in the soup.
+
 ### Growth is not uniform — it concentrates at untying sites
 
 The medium does not grow at the same rate everywhere. Growth is concentrated where untying is concentrated — around stars, the most entropic events in any galaxy — not spread evenly along the paths between them. A distance measured by light arriving now is not the same as the distance at the moment of emission, and local growth around a source changes the source's surroundings without necessarily stretching the light's path to us.
