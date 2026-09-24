@@ -26,6 +26,7 @@ What still needs doing, by section. **NEEDS DERIVATION** = no equation yet. **NE
 ## Galaxies (§10)
 
 - Dump-rate term: at fixed g_bar, do galaxies with higher untying rate (star formation, luminosity per mass) sit below the 0.1327 curve? Add the term and check whether scatter drops below 0.1327 — NEEDS TEST
+- Dump rate bounds: Sun (GM☉ change from planetary ranging matches mass loss to ~10⁻¹⁴/yr) sets the ceiling for ordinary stars; test the feeding-rate ladder Sgr A* → active nuclei → quasars for a rising gravity deficit in host centres — NEEDS TEST
 - Dump rate from untying rate: the equation (volume released per untied wave × untying rate) — NEEDS DERIVATION
 
 - Blind holdout, 104/45 split: PWC 0.139 vs McGaugh 0.130 dex — NEEDS WORK

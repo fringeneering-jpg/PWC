@@ -241,6 +241,7 @@ A black hole does not contain a singularity or an "infinite hole leading nowhere
 - The neutron cores account for the gravitating mass; the two merging cores together are treated as carrying 100% of the black-hole mass in the model.
 - The ≈3 solar masses conventionally described as radiated in GW150914 are interpreted as involving space/the medium itself, rather than additional disappearing core mass.
 - A black hole is not a one-way sink with unaccounted energy loss — the model's principle is that it outputs as much as it takes in through finite medium-state processes.
+- **All black holes are feeding.** Medium flows in at the sonic choke continuously; even an isolated black hole gains from the CMB (2.7 K, far hotter than any astrophysical Hawking temperature). Sgr A* takes in ~10⁻⁹ M☉/yr; quasars up to hundreds of M☉/yr. Because a black hole puts out what it takes in, **every black hole is also dumping** — and the feeding rate sets the size of the gravity dump (§2).
 
 The gravitational-wave mechanism is not ordinary fluid friction or generic bulk turbulence. It is a **structural geometric snap**: tension relaxes between merging stress points, producing a quadrupolar wave pattern. The hourglass-like stretch-and-snap geometry is meant to account for the observed quadrupole structure, propagation near light speed, energy loss, and waveform behavior.
 
