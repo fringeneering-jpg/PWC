@@ -53,6 +53,7 @@ What still needs doing, by section. **NEEDS DERIVATION** = no equation yet. **NE
 - Space holds excess heat: how that excess drives accelerated expansion, and whether it is a standing property of space (not tied to star-formation rate, so the Pantheon+ star-formation null does not apply) — NEEDS DERIVATION
 - Excess heat vs the measured 2.7 K of space: what the medium's heat is, relative to measured radiation temperature — NEEDS DERIVATION
 - Cosmic web from cavitation: reproduce the measured clustering (BAO ~150 Mpc scale, matter power spectrum) and galaxy age spreads in filaments — NEEDS TEST
+- Local growth around untying sites, from light echoes: V838 Mon polarization ring vs spectroscopic distance (agree ~10%); SN 1987A ring (51.4 kpc) vs LMC eclipsing-binary distance (49.6 kpc) (agree ~3.5%) — size of growth allowed around a star/supernova — NEEDS TEST
 - Early massive galaxies (JWST) from the bow-wave mechanism: mass vs redshift — NEEDS DERIVATION
 
 ## Light and gravitational waves

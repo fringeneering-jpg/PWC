@@ -199,6 +199,10 @@ This costs something specific, worth stating plainly: it rules out the picture o
 
 What we call the vacuum of space is medium holding **excess heat**. Heat is the pull (§1), so space pulls — and to matter, that pull always feels like a vacuum. **Matter is the opposite side: under tension and short on volume.** "Empty space" is not empty; it is the heat-rich side of the medium, and matter is the tensioned, volume-short side. RBH-1's wake (§8) shows the same process at small scale: a cavitating, volumetrically short region where hydrogen forms, is squeezed and cooled, and collapses into orderly suns. Universe-wide, stars, galaxies and the filaments of the cosmic web are matter formed the same way.
 
+### Growth is not uniform — it concentrates at untying sites
+
+The medium does not grow at the same rate everywhere. Growth is concentrated where untying is concentrated — around stars, the most entropic events in any galaxy — not spread evenly along the paths between them. A distance measured by light arriving now is not the same as the distance at the moment of emission, and local growth around a source changes the source's surroundings without necessarily stretching the light's path to us.
+
 ### A possible reversal: cavitation-driven turnaround
 
 Extending the cavitation picture (see §8's bow-wave/cavitation-zone discussion) to cosmic scale: if the same mechanism applies to the whole medium, expansion isn't necessarily one-directional. A cavitation bubble grows both from its boundary and by vaporizing residual material ("mist") at its own center, which pulls heat/energy inward as it does. Applied to the universe as a whole, this would mean the same process driving expansion also sets up its own eventual reversal — once temperature has equalized throughout a finite matter inventory, the mechanism that was growing the bubble starts running the other way, and expansion turns into contraction.
