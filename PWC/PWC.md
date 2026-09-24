@@ -50,6 +50,8 @@ Across the SPARC sample (149 galaxies, raw baryonic data, no per-galaxy paramete
 
 **Why the disk is 2D: the poles vent the heat.** A spiral galaxy spins, and heat in a rotating chiral medium travels along the rotation axis (§9). Heat is the pull of the void, so venting it out of the poles starves the disk plane of outward pull and leaves the disk as pure 2D tension — the pull spreads over circles (2πr), not spheres (4πr²). At the edge, each star zips loose void-side medium into tension ahead of it and unzips it behind, a steady inward pull with no drag.
 
+**The medium does not move — the tension is accumulated over the whole orbit.** Everywhere a body goes it takes medium in ahead and leaves it behind; the medium itself stays put. The extra tension is pulled in continuously around the entire orbit, not produced in any one instant. Because the medium is stationary, every motion through it counts: a galaxy moving through the medium as a whole also sweeps medium on its leading side.
+
 a₀ is physically the tensioned-medium mass a body pulls against along its own 1/r² reach — a population-level property of the medium between masses, not a direct plug-in of ρ_max or γ alone. **Next derivation:** compute a₀ from that tensioned-medium mass using the Step 5 constants.
 
 **No violations, no placeholders.** No singularity, no infinite density, no zero-content space, no unaccounted mass or energy (the 3 M☉ is medium — conserved and released), no dark-matter particle inventory.
