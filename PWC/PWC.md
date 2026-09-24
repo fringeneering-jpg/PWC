@@ -7,6 +7,20 @@ The Phase Wave Cosmology framework: rules, mechanisms, derivations and results. 
 
 ---
 
+## The Premise
+
+**Space is a medium with a minute mass and a propagation limit — not a zero.** Newton, GR and MOND work because they have been measuring this medium all along; they assumed nothing was there and missed by the tiniest bit. PWC keeps their mathematics and adds the medium back in. Everything else follows from that one premise:
+
+- **Tension added back into Newtonian gravity** — the pull is carried by the medium; at spiral-galaxy edges its tension is the missing gravity (§0, §10).
+- **A propagation cap** — light, gravitational waves and EM waves all move at c, the medium's own limit; the sonic choke gives the Hawking temperature (§8).
+- **A density cap** — black holes are shells at ρ_max, not singularities; the 3 M☉ of GW150914 is released medium (§0, §3).
+- **A scale of passage, from lightest to heaviest** — light moves at the cap; ordinary matter is a sieve and passes freely; an object at ρ_max cannot pass through the medium, so a runaway SMBH ploughs a bow wave and throws the heat back out (§8). "Drag" on light is the speed cap, not energy loss (§7).
+- **Matter ↔ waves ↔ heat, conserved** — m = L/c²; untying releases volume (expansion); heat moves toward matter to untie it (§1, §4, §5, §9).
+- **The cosmic story** — one great cavitation. Formation squeezed the heat out — the great freeze — leaving matter as ice in a hot plasma ooze. Ever since, it has been melting back in: spinning, breaking up and joining the medium like a stock cube in boiling water (§6).
+- **The rules** — no zeros, no infinities, no singularities, no placeholders; mass–energy conservation and thermodynamic equilibrium hold throughout, because every quantity is a measurement of something real (§1).
+
+---
+
 ## 0. The Core Derivation Chain — black holes to galaxy rotation
 
 One chain, one medium, derived in order. Each step uses only what the steps before it established. (Source: working session "Refining Black Hole Shell Density", 21–22 Sep 2026, plus the sonic-choke derivation of §8.)

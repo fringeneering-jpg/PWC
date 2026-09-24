@@ -68,6 +68,7 @@ What still needs doing, by section. **NEEDS DERIVATION** = no equation yet. **NE
 - Cosmic web from cavitation: reproduce the matter power spectrum and galaxy age spreads in filaments — NEEDS TEST
 - Local growth around untying sites, from light echoes: V838 Mon polarization ring vs spectroscopic distance (agree ~10%); SN 1987A ring (51.4 kpc) vs LMC eclipsing-binary distance (49.6 kpc) (agree ~3.5%) — size of growth allowed around a star/supernova — NEEDS TEST
 - Melting rate: early-universe baryon density (BBN deuterium, CMB) and today's census (incl. FRB missing-baryon count, Macquart et al. 2020) agree at ~5% of critical — how much matter has melted since formation, and whether that fits voids as "cooked soup" — NEEDS DERIVATION
+- Stock-cube spin at the largest scale: whole-universe rotation is limited to < ~10⁻⁹ of the expansion rate (CMB uniformity) — spinning/breaking up must be piecewise, not global — NEEDS DERIVATION
 - Early massive galaxies (JWST) from the bow-wave mechanism: mass vs redshift — NEEDS DERIVATION
 
 ## Light and gravitational waves
