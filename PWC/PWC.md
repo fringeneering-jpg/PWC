@@ -21,6 +21,23 @@ The Phase Wave Cosmology framework: rules, mechanisms, derivations and results. 
 
 ---
 
+## In gratitude
+
+**James Clerk Maxwell** — for listening to the intuition guys. Faraday had no formal mathematics; he *saw* lines of force filling space, and the mathematicians waved him off. Maxwell took him seriously, wrote his picture into equations (*On Faraday's Lines of Force*, 1855), then modelled the vacuum as a real medium with elasticity and density and found its wave speed came out equal to the speed of light. From the preface to his *Treatise* (1873): *"As I proceeded with the study of Faraday, I perceived that his method of conceiving the phenomena was also a mathematical one, though not exhibited in the conventional form of mathematical symbols."*
+
+**Albert Einstein** — for going back to correct what he'd started, even when nobody listened. His original 1905 statement was about light, not a bare E = mc²:
+
+> *"Gibt ein Körper die Energie L in Form von Strahlung ab, so verkleinert sich seine Masse um L/V²."*
+> "If a body gives off the energy L in the form of radiation, its mass diminishes by L/c²."
+> — *Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?*, Annalen der Physik 18, 639 (1905)
+
+**m = L/c²** — the relation this framework is built on (§4). And in 1920, at Leiden, he came back for the medium:
+
+> *"According to the general theory of relativity space without ether is unthinkable; for in such space there not only would be no propagation of light, but also no possibility of existence for standards of space and time."*
+> — *Ether and the Theory of Relativity* (1920)
+
+---
+
 ## 0. The Core Derivation Chain — black holes to galaxy rotation
 
 One chain, one medium, derived in order. Each step uses only what the steps before it established. (Source: working session "Refining Black Hole Shell Density", 21–22 Sep 2026, plus the sonic-choke derivation of §8.)
