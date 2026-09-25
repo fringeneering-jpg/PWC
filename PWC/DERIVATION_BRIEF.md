@@ -128,3 +128,25 @@ Each target: what to derive · allowed inputs · forbidden inputs (sealed target
 
 **Deep Research (literature and methods):**
 > Find existing physics that could supply each missing PWC derivation: (1) equations of state with a hard density ceiling and finite energy at the ceiling (e.g. stiff/causal EOS, maximum-compactness limits); (2) threshold or yield laws in self-gravitating media linking a microscopic yield to a macroscopic acceleration scale like a₀ ≈ cH₀/2π; (3) Lorentz contraction derived from propagation-limited binding in a medium (Lorentz ether theory, Bell, analog-gravity "emergent Lorentz invariance"); (4) two-phase (LDL/HDL) liquid models giving sound speed from phase pressure differences; (5) acoustic-metric (Unruh, Visser, Barceló–Liberati–Visser) results usable for surface gravity and horizon thermodynamics in a real medium; (6) superfluid-vacuum / Volovik emergent-gravity work with a massive medium. For each, give the key equation, the paper, and how it would plug into targets T1–T8.
+
+---
+
+## 7. Round 1 results (2026-09-25: AI Studio, Perplexity, Gemini Deep Research) — checked
+
+**Kept:**
+- **T3 endpoints specified (Jaden):** ordered resting medium = 3D radiation-like EM lattice, P = ε/3, c_s = c₀/√3; locked medium at ρ_max = 1D stiff EM lattice, P = ε, c_s = c₀ (Zel'dovich 1962, JETP 14, 1143). Still to derive: the transition w(η) from ⅓ to 1, and the anisotropic stress tensor.
+- **Light and gravitational waves are neighbour-reaction (EM-yank) waves, not compression:** c₀ = 1/√(μ₀ε₀) (Maxwell 1861–62). Compression is the separate slower mode. New target: ε₀, μ₀ from the pairing.
+- **T1 progress:** a_hold ~ c_s·√(4πGρ). Locked branch at ρ_max: c₀√(4πGρ_max) = 3.14×10¹¹ (2.9% from 3.23×10¹¹ — but the shell edge sits at 0.87 r_s, where any c√(Gρ) scale is forced near c⁴/GM, so this is a consistency check, not a derivation). Ordered branch at ρ₀ = 8.74×10⁻²⁷: (c₀/√3)√(4πGρ₀) = 4.69×10⁻¹⁰ — the gap to a₀ drops from ~11× to ~6.7×. The remaining factor is not derived.
+- **T5 lead:** G from secondary Bjerknes forces between pulsating volume defects, G = ρ₀ω²(ΔV/m)²/4π (dimensionally correct; historical Bjerknes gravity analogy). Needs ΔV and ω of the 720° knot. Check the Guyer & McCall citation.
+- **T6 lead:** Bell (1976) / FitzGerald round-trip: longitudinal 2Lc₀/(c₀²−v²) vs transverse → L = L₀√(1−v²/c₀²). Applies directly if the knot is EM waves. Still needs time dilation (Kennedy–Thorndike) and all binding forces sharing c₀.
+
+**Rejected (do not reuse):**
+- √(40/3) "from the Buchdahl limit" — Buchdahl is 2GM/Rc² ≤ 8/9; no such prefactor. √(40/3) ≈ 3.6515 vs required 3.652 is a numerical match only.
+- 1/π disk factor giving a₀ = 7.29×10⁻¹¹ — chosen to land in the window (with H₀ = 70 chosen too); equals a₀ ≈ 0.107·cH₀, MOND's coincidence.
+- "Exactly 10.6" as a target — depends on which fitted a₀ (10.6 for 7.55, 12.0 for 6.68). Use a range frozen in advance.
+- "shared ≈ 4.5" for clusters — impossible, shared ≤ 1 by definition.
+- BAO "830,000 years" — arithmetic error (4.53×10²⁴ m ÷ 1.73×10⁸ m/s = 830 million years; comoving/proper mixed).
+- "P ≈ ρc²/3 is maximally stiff" — no, that is radiation; stiff is P = ρc².
+- Energy loss stretching packet spacing (T7 variant) — the classic tired-light error.
+
+**Round 2 focus:** T3 transition w(η) and stress tensor from EM-lattice mode counting; then the remaining T1 factor from that, target range frozen before derivation; ε₀ and μ₀ from the pairing.

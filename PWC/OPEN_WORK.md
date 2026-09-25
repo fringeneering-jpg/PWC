@@ -100,4 +100,7 @@ Fix each once, from one place — then it must predict what it was not set from.
 
 ## Underlies several items
 
+- ε₀ and μ₀ from the medium's pairing: yank strength between neighbouring paired waves → 1/ε₀; density of paired waves → μ₀; must reproduce c₀ = 1/√(μ₀ε₀) — NEEDS DERIVATION
+- EOS transition between the ordered branch (P = ε/3, c_s = c₀/√3) and the locked branch (P = ε, c_s = c₀): order parameter η and w(η), derived from EM-lattice mode counting / locking, not chosen — NEEDS DERIVATION
+- Holding threshold: with c_s = c₀/√3 at rest the gap to a₀ drops from ~11× to ~6.7×; source of the remaining factor (√40 in the locked-branch coefficient √(40/3) ≈ 3.65 is a numerical match only) — NEEDS DERIVATION
 - The medium's equation of state, P(ρ, s) — NEEDS DERIVATION
