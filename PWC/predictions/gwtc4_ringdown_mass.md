@@ -18,3 +18,11 @@ Above ~45 M☉ the held medium sits inside the choke, so inspiral and ringdown s
 Below ~25 M☉ the profile puts ~a quarter of the mass outside the choke and predicts the ringdown mass ~25% below the inspiral mass. Light systems have weak ringdowns and are mostly outside the LVK IMR sample, so this is not yet tested either way.
 **Standing prediction:** a loud light binary black hole (M_f < 25 M☉) will show its ringdown-inferred final mass ~20–30% below its inspiral-inferred final mass. GR predicts agreement. Decisive once O4/O5 delivers one with a measurable ringdown.
 Caveat: leading-order proxy (enclosed mass at the potential peak); a medium shell's redshift/reflection effects on the QNM not modelled.
+
+## Correction after review (2026-09-25, Perplexity critique accepted)
+This run is **not a PWC ringdown prediction**. It rested on three assumptions not derived in the framework:
+(1) the k-rule's M_grad treated as literal mass at definite radii (the k-rule is apparent-mass bookkeeping);
+(2) a 1/r² tail normalized to ρ_max at the yield radius (under which dM/dr is constant and M(r) ∝ r — the tail is not light by construction; its extent came from the budget, not from physics);
+(3) GR's ringdown taken as set by the enclosed mass at 3GM/c², with the medium as ordinary exterior matter.
+The "~25% light-BH ringdown deficit" is therefore withdrawn as a standing PWC prediction. A real test needs ρ(r), P(r), c_s(r), the stress law and PWC's own perturbation equation → ω_PWC(M, J, …).
+Note: assumption (1) also underlies §3's ρ_max = M_grad / shell volume — if M_grad is not literal shell mass, the 1.304×10¹⁵ figure needs the same derivation.
