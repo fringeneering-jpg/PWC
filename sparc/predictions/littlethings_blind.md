@@ -14,3 +14,10 @@ Metric: Jaden's galaxy-balanced (mean over galaxies of per-galaxy RMS in log g).
 Predictions:
 1. Beats base on the 20 galaxies.
 2. Gap to McGaugh no worse than on SPARC overall (SPARC full: 0.13062 vs 0.12895, +1.3%) -- i.e. within +1.3% of McGaugh or better.
+
+## Outcome — both predictions PASSED (on noisy data)
+First run had a data-read bug (DM-only file de-scaled with the total-curve factors); fixed, no model/constant change.
+16 of 20 usable (DDO46, DDO47, F564-V3, Haro29 have no DM-only curve), 425 points.
+Galaxy-balanced: PWC 0.3374 | base 0.3417 | McGaugh 0.3464. PWC beats base 10/16, beats McGaugh 10/16; gap -2.6%.
+Caveats: scatter ~0.34 dex vs 0.13 on SPARC (baryon curve reconstructed as Vtot^2 - Vdm^2; DDO101, NGC3738, IC1613 fit badly under every model).
+Diagnostic: same a0 with s=0 gives 0.3383 -> most of the gain over base is the SPARC-locked a0; shared term adds 0.3383 -> 0.3374.
