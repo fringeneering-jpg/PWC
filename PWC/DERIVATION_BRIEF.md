@@ -111,6 +111,15 @@ Each target: what to derive · allowed inputs · forbidden inputs (sealed target
 ### T10 — Merger lag and formation
 - Untie-to-rest relaxation time (heat available × tension gap) → the ~1.7 s GW–gamma lag of GW170817 as a source effect.
 
+### T11 — Light bending: the factor of 2
+- **Mechanism (Jaden):** the photon is squeezed in a channel between EM waves and cannot hop paths. Two equal terms:
+  1. **Pressure** — the squeeze is stronger on the mass side; the gradient pushes the photon over. Alone: n = 1 + GM/(rc²), α = 2GM/(bc²) = 0.87″ at the solar limb (the Newtonian/Soldner value).
+  2. **Geometric** — the medium around the mass is compressed ("thicker, not denser"), so the channel itself curves; the confined photon follows it. Another GM/(rc²).
+- **Total:** n = 1 + 2GM/(rc²), α = 4GM/(bc²) = **1.75″** — the measured value (VLBI, ~10⁻⁴).
+- **Mapping:** ε (squeeze / yank) and μ (density / inertia) each shift by 2GM/(rc²), n = √(εμ); equal shifts keep the medium impedance-matched (√(μ/ε) unchanged) — no reflection, no polarization split. Same split as GR's time + space halves.
+- **Constraint met by construction:** confinement puts both polarizations in the same channel — no gravitational birefringence, as observed.
+- **Derive:** each term's GM/(rc²) from the medium's loading around mass; expected to follow from the ε₀/μ₀ pairing derivation (see Round 1, §7).
+
 ---
 
 ## 5. Rules for any derivation
@@ -149,4 +158,4 @@ Each target: what to derive · allowed inputs · forbidden inputs (sealed target
 - "P ≈ ρc²/3 is maximally stiff" — no, that is radiation; stiff is P = ρc².
 - Energy loss stretching packet spacing (T7 variant) — the classic tired-light error.
 
-**Round 2 focus:** T3 transition w(η) and stress tensor from EM-lattice mode counting; then the remaining T1 factor from that, target range frozen before derivation; ε₀ and μ₀ from the pairing.
+**Round 2 focus:** T3 transition w(η) and stress tensor from EM-lattice mode counting; then the remaining T1 factor from that, target range frozen before derivation; ε₀ and μ₀ from the pairing, which should also give T11 (light bending: squeeze-pressure term + compressed-channel term).
