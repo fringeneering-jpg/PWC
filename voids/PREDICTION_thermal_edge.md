@@ -13,7 +13,7 @@
 - **PASS:** median Δ > 0 AND fraction(Δ > 0) > 50% with one-sided sign-test p < 0.05.
 - **FAIL:** anything else. Also reported: bootstrap 95% range of mean Δ; same statistic with major replaced by the intermediate axis (control).
 
-## Outcome — FAILED as frozen (no signal either way)
+## Outcome — INCONCLUSIVE (exploratory hunch; no signal at Planck's sensitivity either way)
 805 edge-free voids measured, 281 asymmetric (√(λmax/λmin) ≥ 1.3; median ratio 1.26). Cartesian convention verified.
 Major ends − minor ends: median −1.2×10⁻⁸, mean +6.3×10⁻⁹, bootstrap 95% [−4.0, +5.5]×10⁻⁸; positive 139/281 (49%); sign-test p = 0.59.
 Control (intermediate − minor): 143/281 (51%), p = 0.41.

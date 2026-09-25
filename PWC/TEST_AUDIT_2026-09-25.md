@@ -12,7 +12,7 @@ Every test run today: data source, script, frozen prediction (timestamped git co
 | 4 | PROBES blind (1342) | `sparc/jaden_probes_blind.py` | `sparc/predictions/probes_blind.md` | passed (beats McGaugh 1.7%) |
 | 5 | PROBES M/L 0.4/0.6 | `sparc/jaden_probes_ml_robustness.py` | `sparc/predictions/probes_ml_robustness.md` | passed at both |
 | 6 | PROBES + ALFALFA gas (331) | `sparc/jaden_probes_gas.py` | `sparc/predictions/probes_gas.md` | passed |
-| 7 | Void thermal edge | `voids/thermal_edge_test.py` | `voids/PREDICTION_thermal_edge.md` | failed (no signal) |
+| 7 | Void thermal edge | `voids/thermal_edge_test.py` | `voids/PREDICTION_thermal_edge.md` | inconclusive — exploratory, below Planck sensitivity |
 | 8 | GWTC-4.0 merger rule (84) | `PWC/gwtc4_blind_tests.py` | `PWC/predictions/gwtc4_blind.md` | A passed; B (ρ_max universal) failed |
 | 9 | Shell vs choke | `PWC/gwtc4_shell_vs_choke.py` | `PWC/predictions/gwtc4_shell_vs_choke.md` | failed |
 | 10 | Ringdown mass (assumed profile) | `PWC/gwtc4_ringdown_mass.py` | `PWC/predictions/gwtc4_ringdown_mass.md` | withdrawn (un-derived profile) |
