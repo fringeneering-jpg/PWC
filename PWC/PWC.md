@@ -337,6 +337,12 @@ A black hole's edge is where infalling medium reaches the medium's own maximum p
 
 **Honest remaining item, narrower than it first looks:** the *shape* of the 1/r² infall law doesn't need independent derivation — it's geometrically forced for any spherically-symmetric conserved response in 3D space (§2), the same reason light intensity, sound intensity, and gravity all share that exponent regardless of the underlying substance, and here they share it *because* they're the same substance, not by coincidence. What's still open is the *normalization* — the medium-equivalent of G, the constant setting how strongly a given mass compresses the medium — which would need to come from the medium's own stiffness/density, not from matching Newton's G after the fact. That's a real, separate, fillable gap, not a discount on this result.
 
+### No gravitational-wave echoes
+
+If a black hole had a reflecting surface a little *outside* its horizon — the "exotic compact object" alternatives (gravastars, boson stars, firewall-type surfaces) — gravitational waves from a merger would bounce between that surface and the potential barrier and return as delayed **echoes** after the ringdown. Searches of LIGO–Virgo data have found no confirmed echoes (claimed low-significance signals have not held up), which constrains those models.
+
+**PWC predicts no echoes.** The ρ_max shell is not outside the horizon: in the GW150914 numbers (§3) its outer edge *is* the Kerr horizon (159.55 km) and the choke sits there — the medium's own propagation limit c₀ is reached at that boundary, so nothing reflected at or inside it can travel back out. The shell is behind the sonic choke, not in front of it. This matches the null echo searches and separates PWC from surface-outside-the-horizon models. It does not separate PWC from GR: ordinary GR black holes predict no echoes either.
+
 ### The core/gradient mass split
 
 The apparent mass measured from outside a merging pair is split into two physical zones:
