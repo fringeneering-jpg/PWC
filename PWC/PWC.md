@@ -541,6 +541,36 @@ Baryonic-only velocity declines by a factor of 3.2 over this range (196→62 km/
 
 **Needing derivation, not yet done:** why the coefficient on the compounding term is exactly 1 rather than some other value derived from K₁/ρ_max/c₀ specifically; whether the residual ~8% decline closes with a proper treatment of the transition region near the visible disk rather than the unit coefficient used here; and the connection to a0 itself — this derivation didn't need a0 as an input anywhere, so if it's right, a0's specific value should be recoverable as an *output* of this equation applied self-consistently across many real galaxies, not assumed. That cross-check has not been run.
 
+### Shared tension: loaded, one-sided, locked (2026-09-25)
+
+The extra pull comes from medium that is **loaded from both sides radially** — pulled in by the mass inside a radius and out by the mass outside it. Loaded from both ends it is taut and carries tension a star can pull on. Orbital motion drops out: a body pulls the medium equally in front and behind, so the medium passes through with no drag (stationary-medium sweep, §0).
+
+- **Shared** (mid-disk, mass inside and outside) — taut, most extra pull.
+- **One-sided** (the edge, pulled only from inside) — not loaded from the other end, less to pull on.
+- **Locked** (bulge / centre, medium set at max) — no room left to stretch, gives nothing extra. Same as the 2/3 lockout.
+
+One material, one stretch curve: what a star can draw on is **load × room left** = shared × (1 − locked).
+
+**Why the share is small.** Every body already holds its own medium; nobody takes it except in a catastrophically close orbit. The only medium contested is the overlap of the weakest tails of neighbouring reaches. So only a fraction of the medium is in play — the overlap share s.
+
+    g_obs = g_bar + √(a₀·g_bar) · [1 + s · shared · (1 − locked)]
+    shared = min(g_in, g_out)/g_in     (ring geometry from each galaxy's measured baryons)
+    locked = bulge share of the normal pull (0.7·Vbul²/Vbar²)
+    a₀ = 6.68×10⁻¹¹ m/s²,  s = 0.226     — two constants total, zero per galaxy
+
+**Test record** (all in `sparc/`, predictions frozen in `sparc/predictions/` before each run):
+
+| Data | Constants | This model | Base | McGaugh |
+|---|---|---|---|---|
+| SPARC 149, held-out mean, 10 splits | fitted on training galaxies | 0.1309 | 0.1326 | 0.1283 |
+| LITTLE THINGS 16 dwarfs, not in SPARC | locked from SPARC | 0.3374 | 0.3417 | 0.3464 |
+| GHASP 81 spirals, not in SPARC | locked from SPARC | 0.2655 | 0.2661 | 0.2657 |
+| GHASP, 69 with bulges | locked from SPARC | 0.2514 | 0.2519 | 0.2547 |
+
+On GHASP the tension term itself is visible: switching it off (s = 0, same a₀) gives 0.2695; it helps in 52/81 galaxies. On the dwarfs it barely switches on (little outer mass to share with). The LITTLE THINGS and GHASP data are noisier than SPARC (rebuilt baryons; Hα only, no gas, optical-colour M/L), and all margins are under ~3%.
+
+What failed on the way: full rebound (s = 1) overshoots; treating one-sided pull as tight (the U form) and a bulge pin on its own both came out with the wrong sign — consistent with one-sided and locked medium giving less, not more.
+
 ---
 
 ## 11. The Unified Rule Set
