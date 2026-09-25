@@ -525,7 +525,7 @@ Push and pull are not two mechanisms — they are the same single self-gravitati
 
 ### The cascade equation (2026-09-22): a compounding-shadow mechanism, not a pairwise sum, tested directly against real disk data
 
-**What works instead: each shell of medium responds to the state already built up by the shells inside it, not to the local baryonic source alone** — a compounding-shadow (Casimir-type) mechanism rather than direct action-at-a-distance, consistent with the Casimir-like pressure-shadowing already proposed for galactic cohesion above. Stated as an ODE for the enclosed medium mass:
+**Each shell of medium responds to the state already built up by the shells inside it, not to the local baryonic source alone** — a compounding-shadow (Casimir-type) mechanism rather than direct action-at-a-distance, consistent with the Casimir-like pressure-shadowing already proposed for galactic cohesion above. Stated as an ODE for the enclosed medium mass:
 
 ```
 dM_med/dr = dM_bar/dr + M_med(r)/r
