@@ -30,6 +30,7 @@ Fix each once, from one place — then it must predict what it was not set from.
 - Merger rule at joint-posterior level with k = 0.868899 (GW190412 rerun) — NEEDS TEST
 - Residual that shrinks with core mass: locate the three regime thresholds relative to ρ_max — NEEDS DERIVATION
 - GWTC-4.0 blind (84 events, 2026-09-25): merger rule −0.56% ± 1.62%, but the residual trend is the rule's radiated fraction ∝ M^(−1/3) (6.3% → 3.8% across mass) against data rising slightly (3.6% → 5.2%). Either derive a mass-scaling for M_grad that stays near-scale-free, or show the regime picture beats this simpler reading — NEEDS DERIVATION
+- Light black holes (M_f < 25 M☉): the core → max-P → 1/r² profile puts ~27% of the mass outside the choke → ringdown mass ~25% below inspiral mass (GWTC-4.0 run, `predictions/gwtc4_ringdown_mass.md`). Heavy black holes: 0%. Test on the first loud light BBH with a measured ringdown (GR predicts agreement) — NEEDS TEST
 - ρ_max universality FAILED with the shell edge at the horizon (GWTC-4.0: ρ_shell ∝ M^(−2.5), range ×1,300). Reformulate: fix ρ_max, let the shell thickness follow from M_grad ("thicker, not denser"), predict the shell edge vs the horizon for every event — NEEDS DERIVATION
 - Surface-gravity deficit: all four residuals share one sign — second-order term — NEEDS DERIVATION
 - 2^(−2/3) for extended galaxies from the same starting physics as compact cores — NEEDS DERIVATION
