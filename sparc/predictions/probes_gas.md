@@ -13,3 +13,8 @@ Predictions (M/L 0.5, gas included, galaxy-balanced mean over the 331):
 2. PWC beats base.
 Also reported (not predicted): same 331 without gas; gas + M/L 0.6.
 Wording rule: a pass means "survived", not "proven".
+
+## Outcome — both predictions SURVIVED
+Gas, M/L 0.5 (predicted): PWC 0.2452 | base 0.2490 | McGaugh 0.2511. vs McGaugh -2.3% (95% [-0.0084,-0.0033]), wins 207/331; vs base -1.5% (95% [-0.0044,-0.0031]), wins 242/331.
+Same 331 without gas: vs McGaugh -1.8%, vs base -1.5%. Adding gas did not erode the lead; it grew vs McGaugh. Gas adds outer mass, median shared 0.36 -> 0.39.
+Gas + M/L 0.6 (reported): PWC 0.2426 vs McGaugh 0.2427 -- tie (95% [-0.0028,+0.0028]); still beats base -1.1% (95% excludes 0).

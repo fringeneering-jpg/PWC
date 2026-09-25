@@ -567,8 +567,9 @@ One material, one stretch curve: what a star can draw on is **load × room left*
 | GHASP 81 spirals, not in SPARC | locked from SPARC | 0.2655 | 0.2661 | 0.2657 |
 | GHASP, 69 with bulges | locked from SPARC | 0.2514 | 0.2519 | 0.2547 |
 | **PROBES 1342 spirals, not in SPARC/GHASP** | locked from SPARC | **0.2931** | 0.2986 | 0.2982 |
+| PROBES 331 with ALFALFA HI gas added | locked from SPARC | 0.2452 | 0.2490 | 0.2511 |
 
-On PROBES (1342 galaxies, no gas, no bulge split) the model beats McGaugh by 1.7% (bootstrap 95% range 1.3–2.1%, excludes zero) and base in 988/1342 galaxies, with zero constants fitted to PROBES. On GHASP the tension term itself is visible: switching it off (s = 0, same a₀) gives 0.2695; it helps in 52/81 galaxies. On the dwarfs it barely switches on (little outer mass to share with). The LITTLE THINGS and GHASP data are noisier than SPARC (rebuilt baryons; Hα only, no gas, optical-colour M/L), and all margins are under ~3%.
+On PROBES (1342 galaxies, no gas, no bulge split) the model beats McGaugh by 1.7% (bootstrap 95% range 1.3–2.1%, excludes zero) and base in 988/1342 galaxies, with zero constants fitted to PROBES. Adding ALFALFA gas to 331 of them did not erode the lead (vs McGaugh 1.8% → 2.3%; vs base 1.5% unchanged), so the tension term is not standing in for missing gas; at M/L 0.6 with gas it ties McGaugh and still beats base. Survived, not proven. On GHASP the tension term itself is visible: switching it off (s = 0, same a₀) gives 0.2695; it helps in 52/81 galaxies. On the dwarfs it barely switches on (little outer mass to share with). The LITTLE THINGS and GHASP data are noisier than SPARC (rebuilt baryons; Hα only, no gas, optical-colour M/L), and all margins are under ~3%.
 
 What failed on the way: full rebound (s = 1) overshoots; treating one-sided pull as tight (the U form) and a bulge pin on its own both came out with the wrong sign — consistent with one-sided and locked medium giving less, not more.
 
