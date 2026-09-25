@@ -63,6 +63,7 @@ Fix each once, from one place — then it must predict what it was not set from.
 - Heat as the source of the medium's tension: tension per unit heat, linked to γ = 3.36×10³¹ N/m (§0) — NEEDS DERIVATION
 
 - What sets the medium's chiral imbalance, and the heat-wave strength at galactic rotation rates — NEEDS DERIVATION
+- **Decisive heat test:** cold expansion wakes (SN 1987A inner ejecta ~20 K dust, Cas A unshocked ejecta, kilonova cooling), hot bow-shock fronts and hot web nodes all fit PWC — but also fit standard adiabatic cooling + hot-to-cold heat flow, so they do not discriminate. The discriminator: an expanding/untying region that is already HOTTER than its surroundings yet still draws heat in (heat flowing up the temperature gradient). Standard thermodynamics forbids it without work; PWC's heat-to-untying rule predicts it — NEEDS TEST
 - Heat seeking untying sources independently of the rotation axis — NEEDS TEST
 - Heat choke vs real WHIM density/temperature data — NEEDS TEST
 - Occupancy/band-filling equation for the EM-coupling heat choke — NEEDS DERIVATION
