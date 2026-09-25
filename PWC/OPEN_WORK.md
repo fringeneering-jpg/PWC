@@ -86,6 +86,8 @@ Fix each once, from one place — then it must predict what it was not set from.
 - Heat choke vs real WHIM density/temperature data — NEEDS TEST
 - Occupancy/band-filling equation for the EM-coupling heat choke — NEEDS DERIVATION
 
+- **~43 GeV γ-ray line from galaxy clusters = the hot medium entropying (Jaden):** Fan et al. 2024/2026 (arXiv:2407.11737v3) find a line at 43.2 GeV toward Virgo, Fornax and Ophiuchus (4.3σ global; 3.7σ for 13 clusters), absent from the Galactic centre — which disfavours the canonical dark-matter reading. PWC reading: a fixed-energy transition of the medium in the hot intracluster / warm-hot gas. Derive why 43.2 GeV from the medium's pairing/untying. Distinguishing prediction: line strength should track the hot gas (X-ray luminosity, temperature, gas mass), not the dark-matter J-factor; weak where there is little hot gas (Galactic centre). Decisive check: VLAST (~1–2 yr) — NEEDS DERIVATION / NEEDS TEST
+
 ## Runaway black holes (§8, RBH-1)
 
 - Conventional mass budget for RBH-1 (checked 2026-09-25): no upstream/sightline gas measurement exists. Kaul & Oh 2026 (arXiv:2604.13155) close the budget by cooling-induced entrainment of surrounding hot CGM along the whole tail, ASSUMING a typical halo density n_H ≈ 5×10⁻³ cm⁻³ at ~10⁶ K (from other galaxies' quasar-absorption surveys, not RBH-1). At that density the hot gas within 1–3 kpc of the 62 kpc tail holds ~10⁷–10⁸ M☉ — enough on paper. PWC criterion #1 wins if a direct measurement (background-quasar absorption; future X-ray) finds density well below that — NEEDS DATA
