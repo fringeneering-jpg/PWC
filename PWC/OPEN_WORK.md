@@ -71,6 +71,7 @@ Fix each once, from one place — then it must predict what it was not set from.
 - Dwarf-spheroidal transfer: ρ = 0.74 but 0.253 dex scatter — NEEDS WORK
 - Cascade: why the coefficient is exactly 1; the residual ~8% outer decline — NEEDS DERIVATION
 - Medium budget/closure: control volume, source term, boundary flux, EOS, gravity coupling — NEEDS DERIVATION
+- **Moving vs still (KiDS lensing, Jaden):** blue spirals are in constant motion — the medium keeps letting go of one mass and grabbing the next, never settling at full tension → less pull (PWC with shared = 0 fits them, ≈ McGaugh). Red ellipticals sit still — the medium stays at peak tension, always pulling in → more pull (all models fall short; `kids/PREDICTION_kids_lensing.md`). Test: at the same mass, slow-rotating (still) ellipticals should show more extra pull than fast-rotating ones (ATLAS3D-type kinematics) — NEEDS TEST
 - Cluster lensing (Bullet Cluster) with PWC's own calculation on the Zhang et al. 2026 data — NEEDS TEST
 
 ## Heat and the thermal web (§9)
