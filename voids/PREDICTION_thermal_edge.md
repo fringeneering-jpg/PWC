@@ -12,3 +12,9 @@
 - **Statistic:** per void Δ = mean(y at the two major ends) − mean(y at the two minor ends).
 - **PASS:** median Δ > 0 AND fraction(Δ > 0) > 50% with one-sided sign-test p < 0.05.
 - **FAIL:** anything else. Also reported: bootstrap 95% range of mean Δ; same statistic with major replaced by the intermediate axis (control).
+
+## Outcome — FAILED as frozen (no signal either way)
+805 edge-free voids measured, 281 asymmetric (√(λmax/λmin) ≥ 1.3; median ratio 1.26). Cartesian convention verified.
+Major ends − minor ends: median −1.2×10⁻⁸, mean +6.3×10⁻⁹, bootstrap 95% [−4.0, +5.5]×10⁻⁸; positive 139/281 (49%); sign-test p = 0.59.
+Control (intermediate − minor): 143/281 (51%), p = 0.41.
+No preference for hotter gas at the stretched ends. Sensitivity: differences below ~5×10⁻⁸ in y are not resolvable with single-void Planck discs — comparable to the size of stacked void SZ signals, so a small real effect (PWC's or ΛCDM's tidal one) cannot be excluded.
