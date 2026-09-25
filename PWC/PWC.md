@@ -29,7 +29,7 @@ The Phase Wave Cosmology framework: rules, mechanisms, derivations and results. 
 
 > *"Gibt ein Körper die Energie L in Form von Strahlung ab, so verkleinert sich seine Masse um L/V²."*
 > "If a body gives off the energy L in the form of radiation, its mass diminishes by L/c²."
-> — *Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?*, Annalen der Physik 18, 639 (1905)
+> — **"Does the Inertia of a Body Depend Upon Its Energy Content?"** (*Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?*), Annalen der Physik 18, 639 (1905)
 
 **m = L/c²** — the relation this framework is built on (§4). And in 1920, at Leiden, he came back for the medium:
 
