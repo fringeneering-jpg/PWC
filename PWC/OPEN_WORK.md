@@ -51,13 +51,12 @@ Fix each once, from one place — then it must predict what it was not set from.
 - Growth profile through the tensioned web (not 1/r²): the equation — NEEDS DERIVATION
 - Dump rate from untying rate: the equation (volume released per untied wave × untying rate) — NEEDS DERIVATION
 
-- Blind holdout, identical splits (2026-09-25, `sparc/domain_CC2_vs_RAR.py`, 10 seeds, 70/30, galaxy-balanced): PWC base 0.1265 · PWC+tension 0.1237 (2 constants) · McGaugh RAR 0.1210 (1 constant). Tension term closes the gap to ~0.0027 dex (~2%) and beats McGaugh on 3/10 splits; not yet ahead on average. (Superseded single-split figure: 0.139 vs 0.130.) — NEEDS WORK
 - Shared-tension overlap share s ≈ 0.23: derive it from how far a body's reach runs before it is weak tail (currently measured on SPARC, not derived) — NEEDS DERIVATION
 - Shared tension on interacting / merging galaxies: held medium changes hands only in catastrophically close orbits, so the 0.23 share should fail there, toward more pull — NEEDS TEST (no dataset with full mass models found yet; tidal dwarfs Lelli+2015 give Mdyn ≈ Mbar, known result, not blind)
 - LITTLE THINGS rebuilt from HI maps + Spitzer 3.6 µm (adds DDO46, DDO47, F564-V3, Haro29; replaces noisy Vtot² − Vdm² baryons) — NEEDS TEST
+- Rerun the GW190412 posterior-level merger test with the single-source k = 0.868899 — NEEDS TEST
 - Dwarf-spheroidal transfer: ρ = 0.74 but 0.253 dex scatter — NEEDS WORK
 - Cascade: why the coefficient is exactly 1; the residual ~8% outer decline — NEEDS DERIVATION
-- Negative λ on the gradient term: cause — OPEN
 - Medium budget/closure: control volume, source term, boundary flux, EOS, gravity coupling — NEEDS DERIVATION
 - Cluster lensing (Bullet Cluster) with PWC's own calculation on the Zhang et al. 2026 data — NEEDS TEST
 
