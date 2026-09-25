@@ -94,7 +94,7 @@ Fix each once, from one place — then it must predict what it was not set from.
 
 ## Light and gravitational waves
 
-- Light bending factor of 2: pressure term + geometric term as one equation — NEEDS DERIVATION
+- Light bending factor of 2 (1.75″ at the solar limb, measured to ~10⁻⁴): the photon is squeezed in a channel between EM waves and cannot hop paths. Two equal terms: (1) **pressure** — the squeeze is stronger on the mass side, the gradient pushes the photon over (alone: κ = 1, 0.87″, the Newtonian/Soldner value); (2) **geometric** — the medium around the mass is compressed ("thicker, not denser"), so the channel itself is laid through more medium and curves; the confined photon follows it (another κ = 1). Total n = 1 + 2GM/(rc²) → α = 4GM/(bc²). Maps onto ε (squeeze/yank) and μ (density/inertia) each shifting by 2GM/(rc²), n = √(εμ); and onto GR's time + space halves. Confinement means both polarizations share the channel — no gravitational birefringence, as observed. Derive each term's GM/(rc²) from the medium's loading around mass (follows from the ε₀/μ₀ pairing derivation) — NEEDS DERIVATION
 - Polarization-dependent lensing (birefringence) — NEEDS TEST
 - Ringdown sandbox df/dt = κ·f^α fit to the real ridge — NEEDS TEST
 - Medium tension from indirect probes: multi-messenger timing (SN 1987A), flyby anomaly — NEEDS TEST
