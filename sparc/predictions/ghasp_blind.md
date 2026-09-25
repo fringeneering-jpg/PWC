@@ -16,3 +16,9 @@ Predictions:
 2. Beats base on the 69 bulge galaxies.
 3. Gap to McGaugh no worse than SPARC (+1.3%).
 4. Mechanism check: the tension term helps -- s = 0.2264 beats s = 0 at the same a0.
+
+## Outcome — all four PASSED (narrowly; noisy data)
+ALL (81): PWC 0.2655 | PWC s=0 0.2695 | base 0.2661 | McGaugh 0.2657. Beats base 46/81, McGaugh 39/81, tension helps 52/81. Gap -0.1%.
+Bulge (69): PWC 0.2514 | s=0 0.2538 | base 0.2519 | McGaugh 0.2547. Beats base 39/69, McGaugh 36/69.
+No bulge (12): PWC 0.3464 | s=0 0.3597 | base 0.3479 | McGaugh 0.3294.
+Caveats: scatter ~0.27 dex (Halpha only, no gas, Rc-band colour M/L); margins vs base/McGaugh are <1.5%.
