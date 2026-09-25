@@ -213,6 +213,25 @@ The concrete, smallest-scale example of a knot as described above: Williamson & 
 
 ---
 
+### The medium cycle: knotted, paired, unpaired (2026-09-25)
+
+One substance, three states, one loop.
+
+- **Knotted — matter.** EM waves tied into the 720° toroidal quicycle knot.
+- **Paired — the resting medium.** EM(+) and EM(−) waves paired up. Each attracts and repels its neighbours; **heat keeps them apart at the resting distance** where the pull and push balance. Less heat, they close up; more heat, they spread out.
+- **Unpaired — energy waves.** A wave missing its partner is disordered: light is just a wave, a phonon is just heat, Hawking emission is heat off the choke as one wave. All the same disordered state.
+
+The loop:
+
+1. Matter falls into a black hole and is compressed to **ρ_max** (1.304×10¹⁵ kg/m³).
+2. At maximum compression the knots cannot hold — **the matter breaks into the medium.**
+3. Most of the released waves use the heat to reach their resting tension and separation and **pair up** into ordered medium. They are barely ever free light.
+4. The unpaired remainder leaves **disordered** — Hawking heat at the choke, light.
+5. Travelling through the medium, the disordered waves **reorder** back into pairs. That reordering is **redshift** (§7) — nothing lost, nothing outside the medium to lose it to.
+6. The ordered medium is available to be **tied into matter again** at formation (the great freezing, §6).
+
+**Where it points next:** the neighbour pull/push against distance is P(ρ). Its balance point gives ρ₀; its stiffness there gives c₀; how far it stretches before letting go gives a₀ — the closure-sheet chain.
+
 ## 6. Cosmic Origin — Uniform Untying, Not a Localized Bubble
 
 If expansion is a pressure-driven phase transition — the medium locally dropping below a threshold and part of it converting, the same class of process as cavitation, but describing the state of the medium itself rather than a localized flow disturbance — there's a real question about how it looks the same in every direction to every observer, no matter where they are.
