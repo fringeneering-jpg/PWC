@@ -4,3 +4,6 @@ Data: Brouwer 2021 KiDS-1000, same 4 stellar-mass bins (log M★ 8.5–10.3, 10.
 Where: only where each lens's own reach dominates — radius < 0.3 Mpc (Brouwer's isolation scale), i.e. g_bar > G·M_upper/(0.3 Mpc)² per bin (upper bin edge = stricter cut). Beyond that, crowded lenses pick up neighbours' own mass.
 Statistic: inverse-variance weighted mean of log(g_obs,isolated / g_obs,all) over those points, errors from the diagonals treated as independent (conservative: the isolated set is a subset of all).
 Prediction: isolated pull harder — weighted mean > 0 at ≥ 2σ.
+
+## Outcome — right direction, below the 2σ bar
+29 points inside 0.3 Mpc: isolated pull harder by +6.5% (log ratio +0.027 ± 0.017, 1.6σ). Errors treated as independent although the isolated lenses are a subset of all lenses, so the true uncertainty is smaller than quoted.
