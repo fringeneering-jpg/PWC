@@ -51,7 +51,7 @@ Fix each once, from one place — then it must predict what it was not set from.
 - Growth profile through the tensioned web (not 1/r²): the equation — NEEDS DERIVATION
 - Dump rate from untying rate: the equation (volume released per untied wave × untying rate) — NEEDS DERIVATION
 
-- Blind holdout, 104/45 split: PWC 0.139 vs McGaugh 0.130 dex — NEEDS WORK
+- Blind holdout, identical splits (2026-09-25, `sparc/domain_CC2_vs_RAR.py`, 10 seeds, 70/30, galaxy-balanced): PWC base 0.1265 · PWC+tension 0.1237 (2 constants) · McGaugh RAR 0.1210 (1 constant). Tension term closes the gap to ~0.0027 dex (~2%) and beats McGaugh on 3/10 splits; not yet ahead on average. (Superseded single-split figure: 0.139 vs 0.130.) — NEEDS WORK
 - Dwarf-spheroidal transfer: ρ = 0.74 but 0.253 dex scatter — NEEDS WORK
 - Cascade: why the coefficient is exactly 1; the residual ~8% outer decline — NEEDS DERIVATION
 - Negative λ on the gradient term: cause — OPEN
