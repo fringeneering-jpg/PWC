@@ -89,6 +89,13 @@ Each target: what to derive · allowed inputs · forbidden inputs (sealed target
 - From the paired-wave picture: neighbour attraction/repulsion vs separation, heat setting the equilibrium distance (liquid-water LDL/HDL two-phase behaviour is the physical analogy).
 - **Hard conditions:** c_s ≤ c everywhere; ∂P/∂ρ > 0 where stable; finite energy density as ρ → ρ_max; defined yield/phase response at ρ_max; defined entropy production; weak-field limit recovers Newton.
 - **Sealed targets:** other GW events, ringdowns, shell profile.
+- **Route (2026-09-25): rigidity minus cohesion.** The medium is pressurized and held together by tension:
+
+      P_net = rigidity(ρ, S, T) − cohesion Y(ρ)
+
+  - **Rigidity = the pressure** — the paired waves' push; resists squeezing. For waves moving at c the push along an axis is ε·⟨cos²θ⟩, so with the alignment order parameter S = ⟨(3cos²θ − 1)/2⟩: **w = P/ε = (1 + 2S)/3** — S = 0 gives the ordered resting branch (⅓), S = 1 the locked 1D branch at ρ_max (1). Transverse push ε(1 − ⟨cos²θ⟩)/2 → 0 when locked (the anisotropic stress). Same form as the radiative-transfer variable Eddington factor. **S(ρ, T):** compression forces alignment (Onsager 1949, hard-rod isotropic→nematic), heat scrambles it (Maier–Saupe). Inputs to supply: pair shape (length/width) and neighbour-alignment strength.
+  - **Cohesion = the yank** — EM attraction between neighbouring pairs (the same pull that sets ε₀); resists being pulled apart and closes the medium back in behind anything moving through it. Liquid analogy: van der Waals P = kinetic push − a·ρ²; water's cohesive "internal pressure" is thousands of atmospheres against 1 atm net. §0's γ = P·R/2 (Laplace) is this balance at the black-hole shell.
+  - **Out of the two:** sound speed at every density; ρ_max; the 1.053 cavitation stretch (net P negative beyond what Y holds); the holding threshold → a₀; and **v_cav ≈ √(2Y/ρ)** — the speed at which the medium is forced around a body faster than the yank can close it behind. Below v_cav the medium closes in (SMBHs held at galaxy centres); above it an open cavitation zone trails the body (RBH-1, ~950–1,000 km/s). **Test:** recoiling/runaway SMBH candidates above v_cav show wakes, those below do not (candidates incl. 3C 186, CID-42); the slowest runaway with a wake bounds Y from data.
 
 ### T4 — The overlap share s ≈ 0.23
 - **Derive** the fraction of medium that is contested (overlap of weak tails between neighbouring reaches) vs held, from the reach profile r_t = √(GM/a₀). **Forbidden:** SPARC/PROBES fits.
