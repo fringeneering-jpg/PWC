@@ -63,6 +63,7 @@ Fix each once, from one place — then it must predict what it was not set from.
 - Heat as the source of the medium's tension: tension per unit heat, linked to γ = 3.36×10³¹ N/m (§0) — NEEDS DERIVATION
 
 - What sets the medium's chiral imbalance, and the heat-wave strength at galactic rotation rates — NEEDS DERIVATION
+- **BH-merger thermal signature:** no temperature has ever been measured behind a BH–BH merger (GW-only, usually gas-free; GW170817's cooling was NS debris expanding). For mergers inside AGN gas disks, PWC (3 M☉ medium released → untying draws heat in) predicts a local cooling/dimming at the merger site; the standard picture predicts a flare (kicked remnant heats disk gas — e.g. disputed GW190521/ZTF candidate). Opposite signs; test with AGN light curves following GW alerts — NEEDS TEST
 - **Decisive heat test:** cold expansion wakes (SN 1987A inner ejecta ~20 K dust, Cas A unshocked ejecta, kilonova cooling), hot bow-shock fronts and hot web nodes all fit PWC — but also fit standard adiabatic cooling + hot-to-cold heat flow, so they do not discriminate. The discriminator: an expanding/untying region that is already HOTTER than its surroundings yet still draws heat in (heat flowing up the temperature gradient). Standard thermodynamics forbids it without work; PWC's heat-to-untying rule predicts it — NEEDS TEST
 - Heat seeking untying sources independently of the rotation axis — NEEDS TEST
 - Heat choke vs real WHIM density/temperature data — NEEDS TEST
