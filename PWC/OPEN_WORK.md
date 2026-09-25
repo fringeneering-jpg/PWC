@@ -71,6 +71,7 @@ Fix each once, from one place — then it must predict what it was not set from.
 
 ## Runaway black holes (§8, RBH-1)
 
+- Conventional mass budget for RBH-1 (checked 2026-09-25): no upstream/sightline gas measurement exists. Kaul & Oh 2026 (arXiv:2604.13155) close the budget by cooling-induced entrainment of surrounding hot CGM along the whole tail, ASSUMING a typical halo density n_H ≈ 5×10⁻³ cm⁻³ at ~10⁶ K (from other galaxies' quasar-absorption surveys, not RBH-1). At that density the hot gas within 1–3 kpc of the 62 kpc tail holds ~10⁷–10⁸ M☉ — enough on paper. PWC criterion #1 wins if a direct measurement (background-quasar absorption; future X-ray) finds density well below that — NEEDS DATA
 - Predicted star mass in the trail from the wake's volume debt — NEEDS DERIVATION
 - Predicted trail width (no-scatter squeeze) vs measured RBH-1 trail width — NEEDS TEST
 - Bow-wave compression profile and water-hammer pressure ΔP = ρ_max·c·Δv — NEEDS DERIVATION
