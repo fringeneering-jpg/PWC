@@ -16,3 +16,7 @@ Controlled for stellar mass and σ_e: slow-rotator coefficient d = +0.009 ± 0.0
 λ_Re (continuous) runs the other way for (A): +0.059 ± 0.029 (t = +2.1) — more rotation, slightly more extra pull.
 Raw f_DM is higher for slow rotators (0.140 vs 0.105) but they are ~3.6× more massive (median log M★ 11.13 vs 10.57); at matched mass the difference disappears (A: +0.054 vs +0.048).
 Scope: this probes within ~1 R_e (a few kpc), not the 100 kpc–Mpc scales where KiDS found the red-galaxy excess. The KiDS red/blue gap is therefore not explained by stillness at the R_e scale; environment (web loading) or scale remain open.
+
+## CORRECTION (2026-09-25) — the first outcome used the wrong column; corrected result PASSES
+The "stellar M/L" column (Paper XX logML_star) is the JAM M/L × (1 − f_DM) — dynamical, not from starlight (verified to 0.009 dex). So measures A and B were both the dynamical model's own halo fraction. Corrected measure C = log(M/L)_JAM − log(M/L)_Salp (dynamics vs stellar-population M/L from the light), same controls (log M★ from the population M/L, log σ_e):
+slow coefficient +0.061 ± 0.030, t = +2.04, one-sided p = 0.022 → **prediction met (d > 0 at p < 0.05)**. Still galaxies show more extra pull than rotating ones at the same mass and σ. λ_R continuous: +0.035 ± 0.050 (not significant). Script: corrected_extra_pull.py.
