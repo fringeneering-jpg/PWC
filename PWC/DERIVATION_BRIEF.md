@@ -127,6 +127,13 @@ Each target: what to derive · allowed inputs · forbidden inputs (sealed target
 - **Constraint met by construction:** confinement puts both polarizations in the same channel — no gravitational birefringence, as observed.
 - **Derive:** each term's GM/(rc²) from the medium's loading around mass; expected to follow from the ε₀/μ₀ pairing derivation (see Round 1, §7).
 
+### T12 — Redshift as reordering: one mechanism, three places
+- **Mechanism (Jaden):** light loses energy by reordering into paired medium — the energy is not lost, it becomes medium (m = L/c²).
+  1. **Cosmological:** crossing space → (1+z) (see T7 for the supernova time-dilation and Tolman tests it must pass).
+  2. **Gravitational:** climbing out of a well → must equal Δν/ν = gh/c² exactly (Pound–Rebka 1960; Gravity Probe A 1976; Galileo satellites 2018, ~10⁻⁴–10⁻⁵).
+  3. **Black holes:** near the choke nearly all of it reorders → black holes stay dark; stuck, shredded matter's lost energy mc²(1 − √(1 − r_s/R)) becomes medium (a recycling bin, not a waste disposal). Consistent with quiescent black-hole X-ray binaries ~100× fainter than neutron-star ones.
+- **Derive:** the reordering per unit climb from the medium loading around mass — the same loading that gives the light-bending factor 2 (T11).
+
 ---
 
 ## 5. Rules for any derivation

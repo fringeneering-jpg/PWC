@@ -109,6 +109,7 @@ Fix each once, from one place — then it must predict what it was not set from.
 - Polarization-dependent lensing (birefringence) — NEEDS TEST
 - Ringdown sandbox df/dt = κ·f^α fit to the real ridge — NEEDS TEST
 - Medium tension from indirect probes: multi-messenger timing (SN 1987A), flyby anomaly — NEEDS TEST
+- **Redshift = reordering, everywhere (Jaden):** one mechanism for (1) cosmological redshift — light crossing space reorders into paired medium (§7); (2) gravitational redshift — light climbing out of a well reorders as it climbs; (3) black-hole darkness — near the choke nearly all of it reorders before escaping, and its energy becomes medium. Must reproduce the measured gravitational redshift exactly, Δν/ν = gh/c² (Pound–Rebka 1960: 2.5×10⁻¹⁵ over 22.5 m; Gravity Probe A 1976 and Galileo 2018: agreement to ~10⁻⁴–10⁻⁵), from the same medium loading that bends light by the factor 2 (T11) — NEEDS DERIVATION
 - "Neutrino-to-neutron" ~1% resistance: the formula — NEEDS DERIVATION
 
 ## Underlies several items
