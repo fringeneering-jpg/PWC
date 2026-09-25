@@ -33,3 +33,18 @@ Every test run today: data source, script, frozen prediction (timestamped git co
 5. **Ring geometry** (`sparc/jaden_tension_differential.py`): shared = min(g_in, g_out)/g_in from each galaxy's own baryons.
 6. **Controls in ATLAS3D regressions** (mass, σ) — whether they remove the effect being tested (raised by Jaden for the colour test).
 7. **Merger catalogue final masses** come from GR remnant formulas, not independent measurements.
+
+## Independent audit (Perplexity, 2026-09-25) — verdicts adopted
+| Claim | Audit status | Reason |
+|---|---|---|
+| Original ATLAS3D spin null | **Invalid** | used a column built from JAM M/L and f_DM, so "extra pull" ≈ −log(1 − f_DM) |
+| Original ATLAS3D heat/age reversal | **Invalid** | same column error |
+| Corrected fast/slow pass (p = 0.022) | **Not decisive** | meaningful measure, but inner-R_e dynamics, 21 slow rotators; not a large-radius test |
+| Corrected age result | **Not a medium-temperature test** | stellar age and model M/L are entangled |
+| ATLAS3D colour result | **Not decisive** | narrow red-only sample; colour is built into the population M/L in the outcome |
+| Lelli red-but-spinning "failure" | **Invalid as stated** | late-type fixed M/L (0.5/0.7) applied to old early-type galaxies manufactures an excess |
+| KiDS red/blue split | **Real pattern, interpretation open** | needs consistent baryonic mass model (B21 masses are SED fits; IMF open) and a derived PWC lensing law |
+| "Cold medium disproved" | **Unsupported** | no clean test of medium temperature/density/pressure was run |
+
+Method failures identified: outcome measure, sample, radius and stellar-mass prescription changed between tests while results were read as testing the same hypothesis.
+Required before further tests: (1) column audit per test (source, definition, dynamical vs population vs derived); (2) one consistent, externally justified mass model per comparison, with IMF brackets for early types; (3) no age or B−V as "medium temperature" — use halo gas temperature, X-ray pressure, CGM density, environment, or compactness; (4) keep inner kinematics, rotation curves and 100 kpc–Mpc lensing as separate evidence columns until a PWC radial law bridges them.

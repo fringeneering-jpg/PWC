@@ -20,3 +20,6 @@ Scope: this probes within ~1 R_e (a few kpc), not the 100 kpc–Mpc scales where
 ## CORRECTION (2026-09-25) — the first outcome used the wrong column; corrected result PASSES
 The "stellar M/L" column (Paper XX logML_star) is the JAM M/L × (1 − f_DM) — dynamical, not from starlight (verified to 0.009 dex). So measures A and B were both the dynamical model's own halo fraction. Corrected measure C = log(M/L)_JAM − log(M/L)_Salp (dynamics vs stellar-population M/L from the light), same controls (log M★ from the population M/L, log σ_e):
 slow coefficient +0.061 ± 0.030, t = +2.04, one-sided p = 0.022 → **prediction met (d > 0 at p < 0.05)**. Still galaxies show more extra pull than rotating ones at the same mass and σ. λ_R continuous: +0.035 ± 0.050 (not significant). Script: corrected_extra_pull.py.
+
+
+## Audit status: corrected pass is meaningful but not decisive — inner-R_e dynamics, 21 slow rotators; not a large-radius test.

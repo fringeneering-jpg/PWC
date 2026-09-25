@@ -18,3 +18,6 @@ Note (post-hoc, not a rescue): PWC §1 states heat is the pull; this result runs
 ## CORRECTION (2026-09-25) — wrong column (see PREDICTION_fast_slow.md); corrected result still opposite, but confounded
 With C = log(M/L)_JAM − log(M/L)_Salp: SSP age coefficient −0.231 ± 0.045 (t = −5.1); mass-weighted −0.494 ± 0.076 (t = −6.5). Older → less extra pull, strongly.
 Confound: the population M/L rises steeply with age by construction of the stellar models, so an age trend in C is dominated by how well those models (and the assumed IMF) weigh old vs young stars. This test cannot cleanly separate heat from stellar-model systematics; it does not support the "cool = more grip" prediction, and it cannot be read as a clean refutation either.
+
+
+## Audit status: not a medium-temperature test (age entangled with model M/L). No conclusion about cold/heat drawn.

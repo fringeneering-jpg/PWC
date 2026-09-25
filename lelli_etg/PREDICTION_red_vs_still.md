@@ -15,3 +15,7 @@ Spinning ETGs (15): galaxy-balanced RMS — spinning a₀ 0.207 vs KiDS-red a₀
 NGC 3522 (slow, n = 1): 0.204 (spinning) vs 0.192 (red) — slight preference for red a₀, not a test.
 Reading: in this small sample, being red/early-type goes with extra pull even when the galaxy spins — spin alone does not remove it.
 Caveat (stated after the run, not a rescue): stellar M/L was frozen at the late-type values (Υ_disk 0.5, Υ_bulge 0.7). Old early-type discs have higher 3.6 µm M/L; if the true values are higher, g_bar rises and the needed extra pull shrinks. A sensitivity rerun at higher Υ would show how much of the excess is stellar-mass bookkeeping.
+
+
+## Audit status (2026-09-25): INVALID AS STATED
+Late-type fixed M/L (Υ_disk 0.5, Υ_bulge 0.7) applied to old early-type galaxies lowers g_bar and manufactures an apparent extra pull. The "red-but-spinning prefer red a₀" conclusion is withdrawn until rerun with externally justified early-type M/L and IMF brackets.
