@@ -139,7 +139,7 @@ Each target: what to derive · allowed inputs · forbidden inputs (sealed target
 ## 5. Rules for any derivation
 
 - Write the equation first; fix each value **once** from its allowed inputs; never tune to a sealed target.
-- Freeze predictions with a timestamp before looking at data; keep failures visible (`TESTED_AND_DROPPED.md`).
+- Freeze predictions with a timestamp before looking at data; keep failures visible (`../archive/tested_and_dropped.md`).
 - No zeros, no infinities, no singularities, no placeholders; conserve mass–energy; respect thermodynamics.
 
 ---

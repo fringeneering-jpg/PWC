@@ -8,6 +8,22 @@
 
 ---
 
+## Headline result: MOND scale and Hubble rate from one mechanism, product to 0.06%
+
+The framework predicts galactic acceleration and cosmic expansion via two different mechanisms sharing the same medium. Their product is a specific dimensioned invariant that resolves the 40-year-old "MOND-Hubble coincidence" (a₀ ≈ c·H₀/2π) as a mechanistic result.
+
+| Quantity | Framework | Observed | Ratio |
+|---|---|---|---|
+| a_hold(ρ₀) | 6.61×10⁻¹¹ m/s² | SPARC/PROBES a₀ = 6.68×10⁻¹¹ | **0.990** |
+| H₀_wall | 73.8 km/s/Mpc | SH0ES 73.04 ± 1.04 | **1.010** |
+| **a_hold × H₀** | **4.876×10⁻⁹** | **4.879×10⁻⁹** | **0.9994** |
+
+Both predictions from four fundamental scales (ρ₀, ρ_max, c₀, R_proton), no fitted parameters. Two independent 1% matches with the ~1% offsets in opposite directions cancelling to a 0.06% product invariant.
+
+Derivations: [`PWC/knot_audit/eos_latent_heat.md`](PWC/knot_audit/eos_latent_heat.md) (a_hold via T1) · [`PWC/knot_audit/t7_discrete_unlocking.md`](PWC/knot_audit/t7_discrete_unlocking.md) (H₀ via T7 discrete unlocking + product invariant)
+
+---
+
 ## Headline result: galaxy rotation, blind
 
 One formula, two global constants, **zero per galaxy**, carried unchanged from SPARC to galaxies it had never seen:
@@ -46,7 +62,7 @@ Ranked targets with allowed inputs and pass/fail rules: [`PWC/DERIVATION_BRIEF.m
 
 ## Method
 
-Write the equation first. Freeze the prediction with a timestamp. Then look at the data. Keep failures visible — they live in [`PWC/TESTED_AND_DROPPED.md`](PWC/TESTED_AND_DROPPED.md) and in the outcome notes under each frozen prediction.
+Write the equation first. Freeze the prediction with a timestamp. Then look at the data. Keep failures visible — they're archived in [`archive/tested_and_dropped.md`](archive/tested_and_dropped.md) and in the outcome notes under each frozen prediction.
 
 ## Repository map
 
@@ -55,7 +71,8 @@ Write the equation first. Freeze the prediction with a timestamp. Then look at t
 | `PWC/PWC.md` | The framework |
 | `PWC/DERIVATION_BRIEF.md` | Derived results, tests, ranked missing derivations, research prompts |
 | `PWC/OPEN_WORK.md` · `PWC/CLOSURE_SHEET.md` | Open items · derivation order for the five closing values |
-| `PWC/TESTED_AND_DROPPED.md` | Everything tried and dropped |
+| `PWC/knot_audit/eos_latent_heat.md` · `PWC/knot_audit/t7_discrete_unlocking.md` | Two-phase EOS + T1 (a_hold) · T7 discrete unlocking + H₀ + product invariant |
+| `archive/tested_and_dropped.md` | Everything tried and dropped (auditable) |
 | `sparc/predictions/` | Frozen predictions + outcomes for every galaxy test |
 | `sparc/jaden_*.py`, `sparc/*_build.py` | Test and data-build scripts (SPARC, LITTLE THINGS, GHASP, PROBES, ALFALFA) |
 | `sparc/littlethings/`, `sparc/ghasp/`, `sparc/probes/` | Catalogue data and built accelerations (raw PROBES: Zenodo 10456320) |

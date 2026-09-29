@@ -264,5 +264,5 @@ Intellectual honesty per Section 6's "no forced fits" rule.
 
 T1 closed. T5's ΔV_wave/m_w = 1/rho_0 universal stands. The Bjerknes route
 from Round 1 to derive G from the same ω_wave × ΔV_wave framework is
-falsified separately (see TESTED_AND_DROPPED.md). G remains open with no
+falsified separately (see ../../archive/tested_and_dropped.md). G remains open with no
 current candidate route inside the framework.

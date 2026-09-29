@@ -3,7 +3,7 @@
 
 *Fringeneering — Jaden Allison*
 
-The Phase Wave Cosmology framework: rules, mechanisms, derivations and results. The core derivation chain is §0. Hypotheses that were tested and dropped are logged in `TESTED_AND_DROPPED.md`; what still needs work is listed in `OPEN_WORK.md`.
+The Phase Wave Cosmology framework: rules, mechanisms, derivations and results. The core derivation chain is §0. Hypotheses that were tested and dropped are archived in `../archive/tested_and_dropped.md`; what still needs work is listed in `OPEN_WORK.md`.
 
 ---
 
