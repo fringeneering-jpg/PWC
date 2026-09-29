@@ -19,7 +19,7 @@ Modern cosmology and fundamental physics operate under a set of standing, intera
 
 A persistent empirical thread connecting these disparate phenomena is the MOND–Hubble coincidence. First identified in 1983, the characteristic acceleration scale at which galaxy rotation curves strictly diverge from Newtonian expectations (a₀ ≈ 1.2 × 10⁻¹⁰ m/s²) is numerically proportional to the speed of light and the cosmological expansion rate via a₀ ≈ c·H₀/2π. For four decades, standard ΛCDM models have treated this product invariant as an incidental numerical coincidence, lacking the mechanistic architecture to couple local galactic halo profiles directly to the global cosmological horizon without extreme parameter fine-tuning.
 
-The resolution requires revisiting Albert Einstein's original 1905 formulation of mass-energy equivalence. In his foundational paper, "Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?", Einstein asked whether the inertia of a body depends upon its energy content, explicitly establishing energy as the primary continuous field and mass as a derived condensation governed by m = L/c², where L is latent heat. Over the last century, standard physics inverted this directionality, treating mass as a fundamental, irreducible substance and necessitating the insertion of disparate dark-sector placeholders to balance cosmological ledger equations.
+The resolution requires revisiting Albert Einstein's original 1905 formulation of mass-energy equivalence. In his foundational paper, "Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?", Einstein asked whether the inertia of a body depends upon its energy content, explicitly establishing energy as the primary continuous field and mass as a derived condensation governed by m = L/c², where L is latent heat. Over the last century, standard physics inverted this directionality, treating mass as a fundamental, irreducible substance and necessitating the insertion of disparate dark-sector placeholders to balance cosmological ledger equations. The continued relevance of Einstein's original directionality — treating electromagnetic radiation as inherently massive — has been reinforced by explicit demonstrations that light carries gravitational mass (van der Mark & 't Hooft, "Light is Heavy"), directly supporting the framework's substrate identity that space is a continuous electromagnetic medium.
 
 This paper completes Einstein's unified field project by modeling space not as an empty vacuum metric, but as a real continuous medium. By extending the microscopic topological foundation of the Williamson–van der Mark (1997) 720° electron model to a macroscopic continuum governed by a two-phase latent-heat equation of state, we present Phase Wave Cosmology (PWC). We demonstrate that the acoustic tension of the continuous medium inherently dictates galactic rotation curves without dark matter, and that the local topological untying of matter knots strictly drives cosmic expansion without dark energy. The derivation of these two macroscopic parameters explicitly forces the MOND–Hubble product invariant to match empirical data to 0.02%. Every prediction within this paper is sealed with git-timestamps prior to observational comparison, enforcing an auditable, zero-parameter methodology.
 
@@ -66,7 +66,7 @@ $$c_s = \frac{c_0}{\sqrt{3}}$$
 
 **The Transition:**
 
-Transitioning between the locked phase (matter) and the untied phase (space) requires the exact addition or subtraction of latent heat. Einstein's 1905 identity is thus restored as the macroscopic thermodynamic latent heat of transition: L = c₀².
+Transitioning between the locked phase (matter) and the untied phase (space) requires the exact addition or subtraction of latent heat. Einstein's 1905 identity is thus restored as the macroscopic thermodynamic latent heat of transition: L = c₀². This continuous-medium interpretation of mass-energy equivalence is directly supported by van der Mark and 't Hooft's explicit treatment of electromagnetic radiation as gravitationally massive (van der Mark & 't Hooft, "Light is Heavy"), which provides the microscopic physical basis for treating the entire spatial continuum as a real EM medium capable of undergoing thermodynamic phase transitions.
 
 ---
 
@@ -281,15 +281,16 @@ Coupled with percent-level predictive matches to massive blind galaxy rotation c
 
 ## Acknowledgments
 
-The author extends profound gratitude to J.G. Williamson and M.B. van der Mark for their essential foundational 1997 theoretical work establishing the 720° double-cover quicycle topology of the electron. Their framework provided the indispensable microscopic geometry strictly required to formalize this macroscopic continuous-medium cosmology.
+The author extends profound gratitude to the late J.G. Williamson and to M.B. van der Mark for their essential foundational 1997 theoretical work establishing the 720° double-cover quicycle topology of the electron, and to M.B. van der Mark and G.W. 't Hooft for the "Light is Heavy" treatment of electromagnetic radiation as gravitationally massive. Together, these works provided the indispensable microscopic geometry and substrate identity strictly required to formalize this macroscopic continuous-medium cosmology. This paper is dedicated to the memory of John Williamson.
 
 ---
 
 ## References
 
 1. Williamson, J.G., & van der Mark, M.B. (1997). "Is the electron a photon with toroidal topology?" *Annales de la Fondation Louis de Broglie*, 22(2), 133–146.
-2. Einstein, A. (1905). "Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?" *Annalen der Physik*, 323(13), 639–641.
-3. Rybicki, G.B., & Lightman, A.P. (1979). *Radiative Processes in Astrophysics*. John Wiley & Sons.
+2. van der Mark, M.B., & 't Hooft, G.W. (2000). "Light is Heavy." [Publication venue to be confirmed — direct treatment of electromagnetic radiation as gravitationally massive, foundational to the substrate identity of PWC.]
+3. Einstein, A. (1905). "Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?" *Annalen der Physik*, 323(13), 639–641.
+4. Rybicki, G.B., & Lightman, A.P. (1979). *Radiative Processes in Astrophysics*. John Wiley & Sons.
 4. Antognini, A., et al. (2013). "Proton Structure from the Measurement of 2S–2P Transition Frequencies of Muonic Hydrogen." *Science*, 339(6118), 417–420.
 5. Riess, A.G., et al. (2022). "A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km/s/Mpc Uncertainty from the Hubble Space Telescope and the SH0ES Team." *The Astrophysical Journal Letters*, 934(1), L7.
 6. McGaugh, S.S., Lelli, F., & Schombert, J.M. (2016). "Radial Acceleration Relation in Rotationally Supported Galaxies." *Physical Review Letters*, 117(20), 201101.
