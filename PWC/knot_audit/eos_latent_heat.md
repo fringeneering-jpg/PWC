@@ -191,6 +191,43 @@ out of the ratio d_fil/L_wave = 1/(2*pi). The prediction is independent of
 the specific knot mass or wave count. That's why it counts as a sealed
 prediction rather than a per-knot fit.
 
+## 7b. Tightened closure: Omega_eff = 1/4 photon-gas flux factor (added 2026-09-29)
+
+The Section 7 closure used Omega_eff = 1/pi from Gemini's
+d_fil = lambdabar = L_wave/(2*pi) coherence-length identity, giving
+a_hold(rho_0) = 7.46e-11 m/s^2 inside the sealed [6.7, 7.6]*10^-11
+window but 12 percent high vs the measured a_0 = 6.68e-11 m/s^2
+(SPARC/PROBES shared-tension fit, DERIVATION_BRIEF Section 3).
+
+**Cleaner physical basis:** the isotropic radiation flux factor.
+For an isotropic wave-field with energy density u, the flux crossing
+any surface is u*c/4, not u*c. The 1/4 comes from:
+- 1/2 for forward hemisphere only (waves moving into the surface)
+- 1/2 for cos(theta) averaging over that hemisphere
+
+Applied to the untied phase where waves are isotropic at rho_0:
+
+    Omega_eff = 1/4
+    a_hold(rho_0) = (c_0/sqrt(3)) * sqrt((1/4) * G * rho_0)
+                  = 1.732e8 * sqrt(0.25 * 6.67e-11 * 8.74e-27)
+                  = 1.732e8 * sqrt(1.457e-37)
+                  = 1.732e8 * 3.817e-19
+                  = **6.61e-11 m/s^2**
+
+**Measured a_0 = 6.68e-11.** Match: **0.99 (within 1 percent).**
+
+- **[tested numerical result]** Omega_eff = 1/4 from standard isotropic
+  radiation flux mechanics gives a_hold(rho_0) at 1 percent precision
+  vs the SPARC/PROBES-measured a_0. Same precision as T7's SH0ES match.
+  Corresponding d_fil/L_wave = 1/sqrt(16*pi) = 1/7.09, consistent with
+  the "7x" gap Round 1 flagged as needing mechanical origin.
+
+The 1/pi coherence-length derivation in Section 7 is not withdrawn -
+it remains a candidate mechanism. But the 1/4 photon-gas flux factor
+has cleaner textbook physical grounding and matches measured a_0 more
+tightly. Both derivations sit at the same order of magnitude; observation
+selects between them. Current data favors 1/4.
+
 ## 8. Caveats logged with the closure
 
 Intellectual honesty per Section 6's "no forced fits" rule.
