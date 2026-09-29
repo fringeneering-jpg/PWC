@@ -26,3 +26,21 @@
 ## Known bias, stated before running
 
 The apex is shock-excited (high [O III]/Hα, elevated [S II]). Shocks raise [S II] relative to [N II], which lowers N2S2Hα at the apex. That biases the apex **low**, and so works **against** a PWC pass. Reported regardless, with [S II]/Hα per region so the excitation difference is visible.
+
+## Result (2026-09-29, run after commit bc95fad; code `metallicity_test.py`)
+
+| Reduction | Region | S/N Hα / [N II] / [S II] | [N II]/Hα | [S II]/Hα | 12+log(O/H) N2S2Hα |
+|---|---|---|---|---|---|
+| v1 (no bkg) | apex | 5.1 / 0.4 / 0.0 | — | — | undetected |
+| v1 (no bkg) | tail | 4.3 / 0.0 / 1.6 | — | — | undetected |
+| v2 (bkg = other pointing) | apex | 6.4 / 3.3 / 6.0 | 0.48 | 1.42 | 8.21 (8.00–8.38) |
+| v2 (bkg = other pointing) | tail | 11.6 / 10.9 / 15.9 | 0.91 | 2.17 | 8.38 (8.32–8.43) |
+
+v2: Δ = tail − apex = **+0.17 ± 0.19 dex** (0.9σ; P(Δ<0) = 0.17).
+
+**Verdict by the frozen rule: NOT TESTABLE.** [N II] and [S II] are undetected in v1, so the two reductions cannot be compared.
+
+- v2 alone leans against dilution (tail slightly richer), but at 0.9σ, below the ≥1σ-in-both bar for "against".
+- v2's [S II]/Hα of 1.4–2.2 is far outside the H II-region range the N2S2Hα calibration was built on (typically < 0.4; shocks ~0.5–1). This gas is shock/mixing-excited, so the index is not a reliable metallicity here, and v2's background method is already known to distort fluxes (RESULTS.md, ghosts). The v2 number is recorded, not claimed.
+
+**What would make it testable:** the publishing team's clean cubes (van Dokkum et al., on request), or deeper spectra further down the 62 kpc tail, beyond this IFU's first ~20 kpc, where the gas has cooled out of the shock regime. A temperature-based (direct) metallicity would also need [O III]4363 or [N II]5755, which this setup does not reach cleanly.
