@@ -46,6 +46,24 @@ source energy/mass → medium stress / density gradient → spherically distribu
 
 1/r² is read as the geometric dilution/decompression profile of a *finite* medium response, not evidence that the region between bodies has no physical structure. Newton's calculation (treating space as a mathematical zero) happened to land on the same functional form a spherically-weakening finite medium would produce — which is PWC's explanation for why the inverse-square law works at all without space actually being empty.
 
+### Three tensions, not one σ (2026-09-29, Jaden's mechanics)
+
+The 27-order "σ conflict" (8.74×10¹⁰ vs 1.19×10³⁸ J/m²) is not a unit error — both are J/m². It is three different mechanical quantities that had been sharing one symbol:
+
+| Quantity | What it is mechanically | Scale | Source |
+|---|---|---|---|
+| **P0** — boundary tension | The whole medium pressing against the outer boundary. Small, uniform, everywhere. Flows through ordinary matter. | ambient | `knot_existence_pressure_confinement.py` §4 (bounded P0 < electron-scale; negligible there) |
+| **σ** — knot skin | Tension of the interface of a single knot (tied vs untied medium). | 2π·m_e³c⁴/h² = 8.74×10¹⁰ J/m² | same file — conditional on the stated Williamson identification R* = λ_C/4π |
+| **Jam term** — `k` | Medium piling against a body at ρ_max that it **cannot pass through**. Area-scaled because the jam sits on the surface, but it is not a skin tension. | k-fit, read literally as σ → 1.19×10³⁸ J/m² | §8 `M_grad = k·M_core^(2/3)` |
+
+Reading the jam term as a skin tension is what produced the 10³⁸ number, and why it failed at both nuclear (10²⁰× too large) and galaxy scale (§13). It was never σ.
+
+**P0 is what GR calls dark energy / expansion.** Nothing expands (§7). The medium is under constant tension against its boundary; GR reads that tensioned state as expanding space driven by dark energy. It does not rip because the medium is **closed** — the tension wraps around on itself, with no free edge for a tear to start from. No Big Rip.
+
+**Order-of-magnitude match, not a result:** ρ_Λ from Planck ≈ 5.8×10⁻²⁷ kg/m³; the ambient density implied by the SPARC-fitted a₀ in this repo ≈ 2.2×10⁻²⁷ kg/m³. Same order from unrelated routes (galaxy rotation vs cosmological dark energy); a factor ≈2.6 apart, so a match in size only. The boundary this tension presses on is also what the birefringence pitch hypothesis (`be46baa`) says β measures — one boundary, three roles: source of the tension, the closure that prevents a rip, and what the light-twist measures.
+
+**Open, and the main derivation gap:** how many EM wave pairs make an electron, and the wave size. The σ value above is conditional on the one-loop-pair (Williamson) identification; PWC has not fixed it.
+
 ---
 
 ## 3. Maximum Compression
