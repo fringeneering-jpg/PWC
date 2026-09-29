@@ -28,9 +28,20 @@ THE TERMS AND WHERE THEY CAME FROM  (stated before computing)
       at c the entire way. One substance, one speed, slow transport.
 
   lambda = 2.818e-15 m
-      NOT a new parameter. It is this repo's own blocking threshold,
-      rho > m_p/lambda^3 = 7.475e16 kg/m^3 (domain II, PROVENANCE_MANIFEST
-      line ~2526), solved for lambda.
+      ONE STATED IDENTIFICATION, corrected 2026-09-29. The blocking
+      threshold rho > m_p/lambda^3 = 7.475e16 kg/m^3 (domain II,
+      PROVENANCE_MANIFEST line ~2526) is a DENSITY criterion. Solving it
+      for a length and calling that length the mean free path assumes
+      that the volume per proton IS the medium's scattering cell. PWC has
+      never fixed the wave size -- the author's position throughout is
+      that it is not measurable yet ("we've never been able to stop a
+      motherfucker to see"). So this is an assumption, stated, and every
+      number in section 2 is conditional on it.
+
+      The earlier version of this file headlined section 2 as "ZERO FREE
+      PARAMETERS". That was wrong. The caveat existed in section 5 while
+      the headline said the opposite, which is the same as not flagging
+      it at all.
 
   adiabatic T ~ V^(1-gamma)
       First law with Q = 0. Used ONLY in section 1, and its naive answer
@@ -112,9 +123,12 @@ print("""
    below. It is not a win.""")
 
 # ===================================================================== 2
-print("\n2. THE CRITERION IN THE MEDIUM -- ZERO FREE PARAMETERS")
+print("\n2. THE CRITERION IN THE MEDIUM -- ONE STATED IDENTIFICATION")
 L()
-print(f"   lambda (from this repo's m_p/lambda^3 = 7.475e16) = {lam:.4e} m")
+print( "   lambda: the blocking threshold is a DENSITY criterion. Reading it")
+print( "   as a LENGTH assumes volume-per-proton = mean free path. Assumed,")
+print( "   not derived. Everything below is conditional on it.")
+print(f"   lambda (m_p/lambda^3 = 7.475e16, solved for length) = {lam:.4e} m")
 print(f"      for reference, the classical electron radius   = {2.8179403262e-15:.4e} m")
 print(f"   alpha = c0*lambda/3                               = {alpha:.4e} m^2/s")
 print(f"      scale check: water 1.4e-07, air 2.0e-05, copper 1.1e-04 m^2/s")
@@ -217,10 +231,12 @@ print(f"""  - If the real compression speed at a creation site is below
     {v_crit_e:.2e} m/s, section 3 inverts and knot creation is forbidden
     where PWC says it happens. Section 3 uses a PROXY; replacing it with an
     actual compression speed is the single most valuable next calculation.
-  - If the mean free path is not lambda, alpha is a free parameter and the
-    zero-parameter claim in section 2 dies. lambda = 2.818e-15 m coming out
-    equal to the classical electron radius is noted and NOT claimed as a
-    result; nothing here derives it.
+  - The mean-free-path identification (see banner) is the load-bearing
+    assumption. If the scattering cell is not the volume per proton, alpha
+    moves with it and every number in section 2 moves with alpha. This is
+    an assumption the framework has NOT closed, not a derived input.
+    lambda coming out equal to the classical electron radius is noted and
+    NOT claimed; nothing here derives it.
   - If heat is ever treated as a second substance rather than the kinetic
     content of LDF, this file is incoherent with the rest of the framework.
     One continuum. That constraint is load-bearing, not stylistic.
