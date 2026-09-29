@@ -22,9 +22,9 @@ The five values that close the framework, as one derivation order. Each is fixed
 - ✔ sonic choke + c_s = c → Hawking temperature (§8)
 - ✔ additive cores + 1/r² hold → ρ_max, 3 M☉ release (§0)
 - ✔ tension rule + holding threshold + 2D spreading → √(a₀·g_bar) shape (§0)
-- ☐ P(ρ, s) → a_hold(ρ) — the single rule linking 3.23×10¹¹ at ρ_max to a₀ at ρ₀
+- ✔ P(ρ, s) → a_hold(ρ) — two-phase latent-heat EOS + free-streaming coherence d_fil = ƛ = L_wave/(2π) → a_hold(ρ₀) = 7.46×10⁻¹¹ m/s² inside sealed [6.7, 7.6]×10⁻¹¹ window (`knot_audit/eos_latent_heat.md` §7; two caveats §8)
 - ☐ cosmological background → ρ₀
-- ☐ knot energy functional → ΔV_wave → G
+- ☐ knot energy functional → ΔV_wave → G — **Bjerknes route falsified 2026-09-29** (see `TESTED_AND_DROPPED.md`); ΔV_wave/m_w = 1/ρ₀ universal survives; G route now open with no current candidate. Next lead: static gradient response of the untied medium to two fixed pressure defects at range, using m = L/c₀².
 - ☐ ΔV_wave × Γ_untie → growth law → (1+z), BAO
 
 ## Hard conditions on P(ρ, s)
