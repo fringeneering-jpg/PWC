@@ -44,3 +44,7 @@ v2: Δ = tail − apex = **+0.17 ± 0.19 dex** (0.9σ; P(Δ<0) = 0.17).
 - v2's [S II]/Hα of 1.4–2.2 is far outside the H II-region range the N2S2Hα calibration was built on (typically < 0.4; shocks ~0.5–1). This gas is shock/mixing-excited, so the index is not a reliable metallicity here, and v2's background method is already known to distort fluxes (RESULTS.md, ghosts). The v2 number is recorded, not claimed.
 
 **What would make it testable:** the publishing team's clean cubes (van Dokkum et al., on request), or deeper spectra further down the 62 kpc tail, beyond this IFU's first ~20 kpc, where the gas has cooled out of the shock regime. A temperature-based (direct) metallicity would also need [O III]4363 or [N II]5755, which this setup does not reach cleanly.
+
+## Method addendum (2026-09-29, declared BEFORE running; prediction and criteria unchanged)
+
+v1 lacks [N II]/[S II] detections and v2's cross-pointing background is known to distort ratios. Adding **v3**: the v1 cube (no cross-pointing subtraction) with a **sky-spaxel background** removed per channel — median of spaxels at |y| > 1.0″ from the wake axis, after the same running-median continuum subtraction. The "both reductions" rule now means **v2 and v3**. If v3 also fails S/N 3 on [N II] or [S II], the verdict stays NOT TESTABLE.
