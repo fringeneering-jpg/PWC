@@ -3,7 +3,11 @@
 **Jaden Allison**
 *Fringeneering*
 
-*Draft v1 · 2026-09-29 · commit reference: PWC repo (fringeneering-jpg/PWC), branch `claude/eos-latent-heat`*
+*Draft v1.2 · 2026-09-29 · commit reference: PWC repo (fringeneering-jpg/PWC), branch `claude/eos-latent-heat`*
+
+---
+
+*Dedicated to Albert Einstein and John G. Williamson, who both saw the continuous physical substrate beneath the mathematics and were dismissed in their lifetimes for saying so.*
 
 ---
 
@@ -281,7 +285,9 @@ Coupled with percent-level predictive matches to massive blind galaxy rotation c
 
 ## Acknowledgments
 
-The author extends profound gratitude to the late J.G. Williamson and to M.B. van der Mark for their essential foundational 1997 theoretical work establishing the 720° double-cover quicycle topology of the electron, and to M.B. van der Mark and G.W. 't Hooft for the "Light is Heavy" treatment of electromagnetic radiation as gravitationally massive. Together, these works provided the indispensable microscopic geometry and substrate identity strictly required to formalize this macroscopic continuous-medium cosmology. This paper is dedicated to the memory of John Williamson.
+The author extends profound gratitude to the late J.G. Williamson and to M.B. van der Mark for their essential foundational 1997 theoretical work establishing the 720° double-cover quicycle topology of the electron, and to M.B. van der Mark and G.W. 't Hooft for the "Light is Heavy" treatment of electromagnetic radiation as gravitationally massive. Together, these works provided the indispensable microscopic geometry and substrate identity strictly required to formalize this macroscopic continuous-medium cosmology.
+
+This paper is dedicated to Albert Einstein and John G. Williamson. Einstein spent the last three decades of his life pursuing a unified field theory in which matter emerged from a continuous physical medium rather than being treated as fundamental — a project the physics community largely brushed aside. Williamson spent his career arguing that an electron is a photon knotted into a 720° toroidal topology, and was marginalized for it. Both men saw the continuous physical substrate beneath the mathematics and were dismissed in their lifetimes for saying so. This framework attempts to complete what they were both trying to say.
 
 ---
 
