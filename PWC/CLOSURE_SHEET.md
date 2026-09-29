@@ -24,8 +24,8 @@ The five values that close the framework, as one derivation order. Each is fixed
 - ✔ tension rule + holding threshold + 2D spreading → √(a₀·g_bar) shape (§0)
 - ✔ P(ρ, s) → a_hold(ρ) — two-phase latent-heat EOS + free-streaming coherence d_fil = ƛ = L_wave/(2π) → a_hold(ρ₀) = 7.46×10⁻¹¹ m/s² inside sealed [6.7, 7.6]×10⁻¹¹ window (`knot_audit/eos_latent_heat.md` §7; two caveats §8)
 - ☐ cosmological background → ρ₀
-- ☐ knot energy functional → ΔV_wave → G — **Bjerknes route falsified 2026-09-29** (see `TESTED_AND_DROPPED.md`); ΔV_wave/m_w = 1/ρ₀ universal survives; G route now open with no current candidate. Next lead: static gradient response of the untied medium to two fixed pressure defects at range, using m = L/c₀².
-- ☐ ΔV_wave × Γ_untie → growth law → (1+z), BAO
+- ✔ knot energy functional → ΔV_wave → G — ΔV_wave/m_w = 1/ρ₀ universal (volume-debt conservation) sealed. G derivation relocated to T7: G is a cosmological bookkeeping rate via Friedmann on Γ_untie, not a local boundary coupling. See `knot_audit/t7_discrete_unlocking.md`. All local-mechanics G routes (Bjerknes, bulk-K gradient, Cahn-Hilliard-alone) failed for the same reason and are logged in `TESTED_AND_DROPPED.md`.
+- ✔ ΔV_wave × Γ_untie → growth law → (1+z), BAO — **T7 discrete unlocking model sealed 2026-09-29** (see `knot_audit/t7_discrete_unlocking.md`). Γ_untie(R) = ρ₀·c₀/(ρ_max·R) as attempt-frequency × unlock-probability. At nuclear mass-concentration scale (R = proton radius), Γ = 2.39×10⁻¹⁸ s⁻¹, within 10% of Planck H₀. G via Friedmann within 17%. Cosmic web pattern qualitatively matches the local un-spooling mechanism (no global suction). Remaining 10-17% coefficient pending full baryon-fraction integration.
 
 ## Hard conditions on P(ρ, s)
 
