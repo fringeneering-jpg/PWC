@@ -38,6 +38,11 @@ proj = dE * ua[0] + dN * ua[1]; perp = dE * np.cos(np.radians(pa_axis)) - dN * n
 near = np.abs(perp) < 0.5
 sgn = 1 if np.nansum(Ha[near & (proj > 0)]) >= np.nansum(Ha[near & (proj < 0)]) else -1
 x = sgn * proj + 0.5; y = sgn * perp
+if os.environ.get("SKYBG") == "1":  # v3: per-channel sky background from spaxels far off the wake axis
+    skym = (np.abs(y) > 1.0) & np.isfinite(Ha)
+    print(f"v3 sky background from {skym.sum()} spaxels at |y| > 1.0 arcsec")
+    r = r - np.nanmedian(r[:, skym], axis=1)[:, None, None]
+    CUBE = CUBE.replace(".fits", "_skybg.fits")
 
 REG = dict(apex=(-0.25, 0.25), tail=(0.5, 2.5))
 lam0 = {k: v * (1 + Z) for k, v in L.items()}
