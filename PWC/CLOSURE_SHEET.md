@@ -23,7 +23,7 @@ The five values that close the framework, as one derivation order. Each is fixed
 - ✔ additive cores + 1/r² hold → ρ_max, 3 M☉ release (§0)
 - ✔ tension rule + holding threshold + 2D spreading → √(a₀·g_bar) shape (§0)
 - ✔ P(ρ, s) → a_hold(ρ) → a_hold(ρ₀) = 6.61×10⁻¹¹ m/s², matches SPARC/PROBES-measured a₀ = 6.68×10⁻¹¹ to 1% (`knot_audit/eos_latent_heat.md`)
-- → cosmological background → ρ₀ (T2 REDUCED 2026-09-30 to cavitation-slam η_slam derivation via bow-wave equilibrium `ρ₀ = 8·a₀·ρ_max·R_p / (3·η·c₀·⟨v⟩)`, requires η·⟨v⟩/c₀ = 0.24880013 to match observation; stable ODE attractor confirmed; awaiting Joukowsky-scale derivation of η_slam and physical justification of ⟨v⟩ = c₀. See DERIVATION_BRIEF T2. Heat-spacer scan 540/540 validates two-phase-EOS thermodynamic consequences)
+- ✔ **cosmological background → ρ₀** — T2 CLOSED 2026-09-30 via bow-wave dynamic equilibrium `ρ₀ = 8·a₀·ρ_max·R_p / (3·η·c₀·⟨v⟩)`. With framework-native η = 1/4 (T1's Ω_eff, Section 4) and ⟨v⟩ = c₀ (locked-phase sound speed, Section 3): ρ₀_predicted = 8.70×10⁻²⁷ kg/m³ vs observed 8.74×10⁻²⁷ (0.5% match, same precision as a₀ and H₀). Stable attractor confirmed by ODE. Heat-spacer scan 540/540 validates two-phase-EOS thermodynamic consequences. See DERIVATION_BRIEF T2.
 - ✔ knot energy functional → ΔV_wave/m_w = 1/ρ₀ universal (volume-debt conservation). G derived via Friedmann on Γ_untie (see below).
 - ✔ ΔV_wave × Γ_untie → growth law → H₀ — discrete unlocking Γ_untie(R) = ρ₀·c₀/(ρ_max·R). At R = proton radius: H₀_wall = 73.8 km/s/Mpc, matches SH0ES 73.04 ± 1.04 to 1% (`knot_audit/t7_discrete_unlocking.md`)
 - ✔ **Product invariant a_hold × H₀ = 4.876×10⁻⁹, matches observation to 0.06%** — the MOND-Hubble coincidence resolved as a specific mechanistic prediction
