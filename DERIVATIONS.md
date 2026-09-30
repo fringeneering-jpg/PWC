@@ -49,6 +49,8 @@ Reproduce the merger chain in one command: `python PWC/derive_chain.py` (11/11 s
 - The gravity wave **is the medium itself returning to rest tension**. Not a separate thing emitted by the released mass. No standard-theory mode/radius formalism anywhere in this work.
 - The merger is not cavitation: the neutron cores simply join; the displaced medium is the wave.
 - The medium has its own mass and sits in the 1/r² profile; reach uses total mass including the medium.
+- **What the merger is, physically (Jaden, 2026-10-01):** the cores have to **push through the medium to join**. Each core sits in its own crushed ρ_max layer; as the cores close the two layers overlap, and medium cannot stay crushed twice, so the overlap is squeezed out and relaxes back to rest tension — that is the gravity wave. It is geometry, not drag (matter is a sieve). GW150914 numbers (yield 3.23×10¹¹, total mass at the layer edge): layers 82.9 + 73.4 = 156.3 km thick separate, 112.6 km merged = **28% thinner**, ~44 km no longer crushed. The rate at which the squeezed-out medium relaxes (→ τ = 4.68 ms; c₀ across 44 km is only 0.15 ms) is still to be supplied.
+- The ρ_max layer's outer edge is where the pull from **everything inside it** (core + the layer itself, ≈ 62 M☉ at 159.6 km) drops below the yield 3.23×10¹¹; only mass inside counts. Compare layers by **thickness**, not by mass capacity (capacity grows with radius³ and misleads).
 - The passage scale is continuous: photons at c₀, neutrinos just under, sieve matter ~99.99% empty, ~1000 km/s at ρ_max. Never binary.
 - Merger-mass chain (rows 1–10) is validated data, not prediction.
 - Nothing in git changes without his say-so; frozen predictions stay frozen.
