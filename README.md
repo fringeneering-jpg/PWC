@@ -18,9 +18,15 @@ The framework predicts galactic acceleration and cosmic expansion via two differ
 | H₀_wall | 73.8 km/s/Mpc | SH0ES 73.04 ± 1.04 | **1.010** |
 | **a_hold × H₀** | **4.876×10⁻⁹** | **4.879×10⁻⁹** | **0.9994** |
 
-Both predictions from four fundamental scales (ρ₀, ρ_max, c₀, R_proton), no fitted parameters. Two independent 1% matches with the ~1% offsets in opposite directions cancelling to a 0.06% product invariant.
+Both predictions from four scales (ρ₀, ρ_max, c₀, R_proton). ~~No fitted parameters. Two independent 1% matches cancelling to a 0.06% product invariant.~~ *(struck through 2026-09-30 — see the audit note below: ρ₀ embeds H₀ ≈ 70 and Ω_eff was chosen after seeing the target; the matches are not independent and the precision is not 0.06%.)*
 
 Derivations: [`PWC/knot_audit/eos_latent_heat.md`](PWC/knot_audit/eos_latent_heat.md) (a_hold via T1) · [`PWC/knot_audit/t7_discrete_unlocking.md`](PWC/knot_audit/t7_discrete_unlocking.md) (H₀ via T7 discrete unlocking + product invariant)
+
+> **Independence audit (2026-09-30) — read before quoting the table above.** Reproduce: `pip install -r requirements.txt && python PWC/audit_independence.py` → [`independence_audit.md`](PWC/knot_audit/independence_audit.md).
+> - ρ₀ = 8.74×10⁻²⁷ is 0.95 × the critical density at H₀ ≈ 70. A measured H₀ is already inside it, so "no fitted parameters" does not hold, and the H₀ "prediction" tracks whatever H₀ is fed in (input 67.4 → 68.5, input 73.04 → 80.4).
+> - The geometric factor Ω_eff = 1/4 replaced 1/π after 1/π overshot a₀ by 12%. A 1% match after that choice is not a 1% test.
+> - "0.06%" is a rounding artefact: the same numbers give 4.876×10⁻⁹ here, 4.878×10⁻⁹ in the paper (quoted there as 0.02%), and 4.879×10⁻⁹ unrounded. The observed side alone has an ~8% spread on H₀ (SH0ES vs Planck) and a₀ is fit-dependent. Supportable claim: agreement at roughly the 10% level.
+> - Not covered by this audit: the SPARC/PROBES blind-test results (not re-run here; they need the external PROBES files). The proton identities m_p·R_p·c₀ = 4ℏ and (ρ_proton/ρ_max)^(1/3) ≈ 8 were checked and are the one place the inputs are independent of the target; the integers 4 and 8 are not yet derived, and the same mechanism misses the neutron by 2.5%.
 
 ---
 
