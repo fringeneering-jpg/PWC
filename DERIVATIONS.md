@@ -50,13 +50,13 @@ Reproduce the merger chain in one command: `python PWC/derive_chain.py` (11/11 s
 |---|---|---|
 | **Scale of passage** (light at the cap; ordinary matter a sieve, passes freely; an object at ρ_max cannot pass, so it ploughs a bow wave) | `PWC.md` Premise (line ~17); §2 sieve; §8 bow wave / cavitation zone | — |
 | **Effective obstruction = core + ρ_max shell, not the bare core** (the medium can't flow through the crushed shell any more than the core) | `PWC.md` §8, line ~491 | "not yet turned into a number" — OPEN |
-| **T2 creation law**, η = 1/4 (forward hemisphere ½ × cosine-average ½), ⟨v⟩ = c₀ (collapse-front speed, locked-phase sound speed), ρ₀ to 0.5% | `PWC/DERIVATION_BRIEF.md` T2; paper v1.9 | `t2_equilibrium.py` cited but not in any branch; gate that keeps Earth/Sun from heating (ungated law gives Earth ~1.4×10²¹ W) not located in the repo |
+| **T2 creation law**, η = 1/4 (forward hemisphere ½ × cosine-average ½), ⟨v⟩ = c₀ (collapse-front speed, locked-phase sound speed), ρ₀ to 0.5% | `PWC/DERIVATION_BRIEF.md` T2; paper v1.9 | `t2_equilibrium.py` cited but not in any branch; gate that keeps Earth/Sun from heating (ungated law gives Earth ~1.4×10²¹ W) **exists only on branch `claude/pwc-engine-setup-ijmcxg`**: `sparc/domain_II_cavitation_wake_matter.py` — medium is blocked only above ρ > m_p/λ³ = 7.475×10¹⁶ kg/m³, so only compact cores impede the flow and stars/planets are transparent; `PWC/thermal_rate_criterion.py` (same branch) kills "nuclear detonation as inward heat absorption". Note Domain II's opening banner: its N = 4π/α = 1722 link is NOT Williamson's; the chain is kept as a record. Not merged to `main` |
 | **Mass defect when knots combine (fusion)**: waves released, count drops, product weighs less | `PWC.md` §3/§4 "Binding energy" line (~133) | `OPEN_WORK.md` line ~49: intermediate scale (nucleon, nucleus, crust) — NEEDS DERIVATION |
 
 ## Not in the repo yet (stated 2026-10-01, untested — do not cite as results)
 
 - **Nuclear-scale link (mine, from standard nuclear physics):** the liquid-drop mass formula has a surface term ∝ A^(2/3), the same scaling as the k-rule's M^(2/3); fusion gains by reducing surface.
-- **Hydrogen exception (Jaden):** every nucleus except H-1 holds neutrons at ~2.3×10¹⁷; hydrogen has none and is the most common matter, so bulk cosmic gas has no neutron knot to hold a crushed layer and sieves freely.
+- **Hydrogen is not an exception (Jaden):** every nucleus beyond H-1 holds neutrons at ~2.3×10¹⁷. Hydrogen is simply the **easiest knot to make** — the simplest bound state — which is why it is the most common matter and why cavitation recombination makes it first (`PWC.md` §8, "natural recombination product is hydrogen").
 
 ## Locked framing (Jaden's rulings — do not re-litigate)
 
