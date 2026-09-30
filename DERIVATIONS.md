@@ -44,12 +44,19 @@ Reproduce the merger chain in one command: `python PWC/derive_chain.py` (11/11 s
 | **Decompression rate after the merge → settling time τ** | `PWC.md` §8 "Bow wave vs. cavitation zone" (rebound passage): release of stored tension is clocked at c₀; §4: GW = the medium's own neighbour-reaction wave at c₀. τ measured: GW150914 4.68 ms (H1/L1 within 2%). No step connects the released medium to τ. The 26.3% light-BH number in `gwtc4_ringdown_mass.py` uses a borrowed radius and was withdrawn. | AI Studio chat / framework PDF — **paste here** |
 | ρ_max at 2nd/3rd masses; ρ(r), P(r), c_s(r) and the stress law from core → max-P → decompression | `OPEN_WORK.md` | not derived |
 
-## Candidates (stated by Jaden, not yet tested — do not cite as results)
+## Already in the framework (pointers — do not re-add or re-derive)
 
-| Candidate | Statement | Status |
+| Topic | Where it already is | What is still open there |
 |---|---|---|
-| **Nuclear-scale merger** (Jaden, 2026-10-01) | Every nucleus **except plain hydrogen (H-1, no neutron)** holds neutrons at ~2.3×10¹⁷, the same density as the merger cores — matter is made of tiny neutron-density knots. A nucleus-scale merger (fusion/fission) would be the same mechanism: two separate cores hold more medium than one merged core (surface ∝ M^(2/3)); the difference is released. The standard liquid-drop mass formula already has a surface term ∝ A^(2/3) and fusion gains by reducing surface — the same scaling as the k-rule. **Hydrogen is the exception and the most common matter**: no neutron, so no neutron-core knot to hold a crushed layer; the bulk of cosmic gas sieves freely. Proton itself: `PWC/predictions/proton_derivation_20260930.md`. | CANDIDATE — untested; needs his OK on the form before any run |
-| **Creation-law gate (T2)** | Matter creation (bow-wave cavitation collapse, dM/dt = ηρ₀π(GM/a₀)v, v = collapse-front speed, η·⟨v⟩/c₀ = 0.2488) happens only when the medium **cannot sieve through**: arrival speed ≥ the passage speed for that density (passage speed continuous, c₀ in dilute matter → ~1000 km/s at ρ_max), set also by how much of the cross-section the neutron knots block (Earth ~99.99% empty → sieves; neutron-star / black-hole cores have no gaps). Not a density-only cutoff: photons at c₀ can do it too. Removes the ungated Earth/Sun heating with no new parameter. Matches RBH-1 (950 km/s ≈ ρ_max passage scale). | OPEN — form agreed in words 2026-10-01, not run |
+| **Scale of passage** (light at the cap; ordinary matter a sieve, passes freely; an object at ρ_max cannot pass, so it ploughs a bow wave) | `PWC.md` Premise (line ~17); §2 sieve; §8 bow wave / cavitation zone | — |
+| **Effective obstruction = core + ρ_max shell, not the bare core** (the medium can't flow through the crushed shell any more than the core) | `PWC.md` §8, line ~491 | "not yet turned into a number" — OPEN |
+| **T2 creation law**, η = 1/4 (forward hemisphere ½ × cosine-average ½), ⟨v⟩ = c₀ (collapse-front speed, locked-phase sound speed), ρ₀ to 0.5% | `PWC/DERIVATION_BRIEF.md` T2; paper v1.9 | `t2_equilibrium.py` cited but not in any branch; gate that keeps Earth/Sun from heating (ungated law gives Earth ~1.4×10²¹ W) not located in the repo |
+| **Mass defect when knots combine (fusion)**: waves released, count drops, product weighs less | `PWC.md` §3/§4 "Binding energy" line (~133) | `OPEN_WORK.md` line ~49: intermediate scale (nucleon, nucleus, crust) — NEEDS DERIVATION |
+
+## Not in the repo yet (stated 2026-10-01, untested — do not cite as results)
+
+- **Nuclear-scale link (mine, from standard nuclear physics):** the liquid-drop mass formula has a surface term ∝ A^(2/3), the same scaling as the k-rule's M^(2/3); fusion gains by reducing surface.
+- **Hydrogen exception (Jaden):** every nucleus except H-1 holds neutrons at ~2.3×10¹⁷; hydrogen has none and is the most common matter, so bulk cosmic gas has no neutron knot to hold a crushed layer and sieves freely.
 
 ## Locked framing (Jaden's rulings — do not re-litigate)
 
