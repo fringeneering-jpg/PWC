@@ -81,9 +81,13 @@ Each target: what to derive · allowed inputs · forbidden inputs (sealed target
 - **Known clue:** the dimensional form a ~ c·√(Gρ) needs a prefactor ≈ 3.65 at the black hole but ≈ 0.33 at galaxy density — an ~11× mismatch (needed ratio 10.9–11.8 for H₀ = 67–73). Candidate: sphere (black-hole shell) vs disk (galaxy) geometry — but 4π = 12.6 does not fit and 4πr²/2πr is not dimensionless. Resolve this ratio from mechanics.
 - **Allowed:** ρ_max, 3.23×10¹¹, c, G, the EOS. **Forbidden:** any galaxy rotation data (a₀ is sealed).
 
-### T2 — Resting density ρ₀
-- **Derive** ρ₀ from the cosmological background / propagation (c² = K/ρ₀), not from galaxies. Jaden's working figure: ρ₀ ≈ 0.95 ρ_crit ≈ 8×10⁻²⁷ kg/m³.
-- Feeds T1.
+### T2 — Resting density ρ₀ (resolved 2026-09-30: Option C accepted)
+- **Status:** ρ₀ accepted as fundamental continuum anchor alongside ρ_max. Cannot be derived from PWC's four fundamentals {ρ_max, c₀, L=c₀², R_p} + ℏ without introducing an additional macroscopic scaling parameter or new mechanical axiom.
+- **Independent Deep Think verification (2026-09-30):** external AI analysis confirmed the hierarchy ρ_max/ρ₀ ≈ 10⁴¹ is dimensionally unbridgeable from local microscopic constants alone. Four routes attempted (volumetric expansion, EM pair vs heat pressure, thermal-quantum balance, 720° angular momentum) all reduce to `ρ ∝ ℏ/(λ⁴·c)` which holds self-consistently in both phases but does not relate them.
+- **Framing:** ρ₀ is the fundamental thermodynamic floor of the equipartitioned EM⁺/EM⁻ medium, just as ρ_max is the structural ceiling at sonic lock. Neither derivable from the other. Together they define the two-phase EOS's boundary conditions.
+- **Recasting:** The 10⁴¹ hierarchy is PWC's mechanical recasting of the standard model hierarchy problem (Planck/Higgs mass ratio, gravity/EM strength ratio ~ 10⁻³⁶, cosmological constant problem). Standard physics doesn't derive these ratios from first principles either.
+- **Consistency check the framework passes:** `r_natural = (ℏ/(ρ_max·c₀))^(1/4) ≈ 4 fm ≈ 5·R_p` — the natural wave-spacing at ρ_max sits at nuclear scale from ℏ + ρ_max + c₀ alone, no additional inputs.
+- **Preserved:** zero-parameter integrity of both a_hold(ρ₀) and H₀_wall derivations. The MOND-Hubble product invariant claim (4.878×10⁻⁹ vs 4.879×10⁻⁹, 0.02% match) survives unchanged — it uses ρ₀, ρ_max, c₀, R_p as measured or fundamental inputs, and no smuggled H₀ or G.
 
 ### T3 — The medium's equation of state P(ρ, s)
 - From the paired-wave picture: neighbour attraction/repulsion vs separation, heat setting the equilibrium distance (liquid-water LDL/HDL two-phase behaviour is the physical analogy).
