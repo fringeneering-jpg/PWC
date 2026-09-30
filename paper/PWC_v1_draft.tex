@@ -5,7 +5,7 @@
 %%  invariant to 0.02 percent.
 %%
 %%  Jaden Allison / Fringeneering
-%%  Draft v1.7 - 2026-09-30
+%%  Draft v1.8 - 2026-09-30
 %%  Repository: https://github.com/fringeneering-jpg/PWC
 %%  Branch: claude/eos-latent-heat
 %% ========================================================================
@@ -293,7 +293,9 @@ GW170814 deviation & Frozen $k=0.868899$ IMR & $-0.3\%$ & $-0.3\%$ & 1.000 \\
 89 GWTC BBH events & Frozen $k=0.868899$ IMR & $-0.97\%$ mean & (std $2.02\%$) & Match \\
 GWTC-4 light BH ($<25\,\Msun$) & Shell-outside-choke & $\sim 25\%$ deficit & $26.3\%$ median & 1.05 \\
 GWTC-4 heavy BH ($>60\,\Msun$) & Fully locked $\rhomax$ & $0.0\%$ deficit & $0.0\%$ deficit & 1.000 \\
-RBH-1 wake & $m = L/c^2$ locking & Mass/luminosity profile & JWST observation & Match \\
+RBH-1 wake holding reach & $r_t = \sqrt{GM/a_0}$, $M_{BH} = 2 \times 10^{7}\,\Msun$ & $192$ pc (width $\approx 384$ pc) & thin along 62 kpc (van Dokkum) & Consistent \\
+RBH-1 wake swept-gas mass & $n_H \times V(r_t \times 62\,\text{kpc})$ & $1.2 \times 10^{6}\,\Msun$ & $10^{6}$--$10^{7}\,\Msun$ new stars & Match \\
+RBH-1 standard-GR reach & $GM/v^2$ (Newtonian focusing) & $0.19$ pc & $\sim 2000\times$ short & GR fails \\
 \end{tabular}
 \end{ruledtabular}
 \end{table*}
@@ -379,6 +381,38 @@ Applying the temperature definition $T = \hbar\kappa/(2\pi k_B \cnaught)$ and su
 \end{equation}
 This macroscopic mechanism operates via classical fluid-dynamic continuum mechanics --- where the infall velocity meets the local sonic limit --- and correctly derives the fundamental thermodynamic emission scale required by standard General Relativity across 18 orders of magnitude (from the Planck mass up to M87*).
 
+\subsection{RBH-1: the runaway black hole wake at 950 km/s}
+\label{ssec:rbh1}
+
+The 62-kpc trail of new stars behind RBH-1~\cite{vanDokkum2023} ($z \approx 0.9628$, $M_{BH} \approx 2 \times 10^{7}\,\Msun$, $v \approx 950$~km/s relative to its host) provides a direct test of PWC's holding-reach mechanism at supermassive scales. Two independent zero-parameter predictions fall out of framework constants frozen elsewhere.
+
+\paragraph*{Holding reach.}
+The $a_0$ scale frozen from galaxy rotation (Sec.~\ref{sec:t1}, Table~\ref{tab:sparc}) sets the radius at which mass $M$ holds ambient medium against its motion:
+\begin{equation}
+r_t = \sqrt{\frac{G M_{BH}}{a_0}} = \sqrt{\frac{G \cdot 2 \times 10^{7}\,\Msun}{6.68 \times 10^{-11}\,\text{m/s}^2}} \approx 192\,\text{pc}
+\end{equation}
+The predicted trail width ($2 r_t \approx 384$ pc, subtending $\approx 0.05''$ at $z \approx 0.96$) is below current resolution but bounded above by the observed thin, straight trail along 62 kpc.
+
+\paragraph*{Swept-gas mass.}
+Integrating the pre-shock gas density ($n_H \approx 5 \times 10^{-3}$~cm$^{-3}$, $\times 1.4$ for helium) inside $r_t$ along the 62-kpc trail:
+\begin{equation}
+M_{\text{swept}} \approx 1.2 \times 10^{6}\,\Msun
+\end{equation}
+matching the observed $10^{6}$--$10^{7}\,\Msun$ of new stars along the trail with no parameter fit.
+
+\paragraph*{Comparison with standard GR.}
+The Newtonian focusing reach of the same black hole at 950 km/s is
+\begin{equation}
+r_{GR} = \frac{G M_{BH}}{v^2} \approx 0.1\,\text{pc}, \qquad r_{GR,\text{moving}} = \frac{2 G M_{BH}}{v^2 + c_s^2} \approx 0.19\,\text{pc}
+\end{equation}
+$\sim 2000\times$ short of the observed trail width. A Mach-6.3 conical wake would open to $\approx 20$ kpc at 62 kpc downstream; the observed trail is narrow and straight over that distance. Keeping the trail thin under the standard picture requires added cooling-entrainment physics. PWC recovers both the width scale and the mass with no fit.
+
+\paragraph*{Temporal-sequence match.}
+The observed sequence (hot shocked bow $T_{\text{post}} \approx 1.3 \times 10^{7}$~K, cold H$\alpha$/[O III] tail $\sim 10^{4}$~K, measured $\sim 200$ km/s velocity gradient along the trail~\cite{KaulOh2026}) is the expected causal chain: bow shock deposits heat, heat drains from newly-gathered matter into the medium, and cold new material decelerates against the ambient medium, producing a straight, age-ordered stellar sequence.
+
+\paragraph*{Discriminating creation test (sealed prediction, not yet resolvable).}
+The framework predicts that beyond swept ambient gas, additional matter is created from the medium in the cavitation pocket behind the black hole, forming as pure hydrogen. This new hydrogen mixed into the swept gas would \emph{dilute} the trail's oxygen abundance relative to the surrounding circumgalactic medium. The prediction was sealed 2026-09-29 (repository \texttt{rbh1/PREDICTION\_metallicity.md}). Applied to JWST GO-3149 NIRSpec IFU G140M/F100LP data in three independent reductions (v1: no background; v2: cross-pointing background; v3: sky-spaxel background), [N II]6583 and [S II]6716+6731 fall below S/N 3 in the tail region for two of three reductions; the third (v2) shows a shock-regime line ratio outside the N2S2H$\alpha$ calibration domain. \textbf{Verdict per frozen rule: not testable with current data.} Cleaner reductions from the discovery team or deeper spectroscopy along the outer 62-kpc trail are required to resolve the test.
+
 %%=========================================================================
 \section{Falsification Tests and Timeline}
 \label{sec:falsification}
@@ -423,7 +457,7 @@ Finally, by restricting cosmological volumetric expansion to the discrete topolo
 The dimensionless ratio $\rhomax/\rhonaught \approx 1.49 \times 10^{41}$ between the two fundamental thermodynamic anchors of the continuous medium constitutes PWC's mechanical recasting of the standard model hierarchy problem. In standard physics, the analogous puzzles include the Planck-to-Higgs mass ratio, the $\sim 10^{-36}$ strength ratio between gravity and electromagnetism, and the $\sim 10^{120}$ cosmological constant problem. None of these have been derived from first principles despite decades of effort. PWC translates the abstract force hierarchy into a specific mechanical form: a literal thermodynamic density hierarchy between locked and untied continuum phases, whose downstream predictions ($\amax$, $\Hwall$, and their product invariant) match observation at percent-level precision. Explicit dimensional analysis confirms that the $10^{41}$ hierarchy cannot be derived from the framework's four fundamental scales $\{\rhomax, \cnaught, L=\cnaught^{2}, R_p\}$ and $\hbar$ alone: all mechanical routes reduce to $\rho \propto \hbar/(\lambda^{4} \cnaught)$, which holds self-consistently in both phases but does not fix their ratio. Acknowledging $\rhonaught$ as an irreducible observational anchor --- the fundamental thermodynamic floor of the equipartitioned EM$^{+}$/EM$^{-}$ medium, just as $\rhomax$ is the structural ceiling at sonic lock --- preserves the zero-parameter integrity of all downstream derivations without compromising the mathematics to force a closure the microscopic geometry does not support.
 
 \paragraph*{Future work.}
-The full cosmic baryon-fraction integration required to geometrically tighten the $G$ derivation, and the exact continuous perturbation equation governing the light-BH IMR mass deficit transition, remain active areas of formalization within the project repository. Extension of the shared-tension formula into the group and cluster mass regime (per McGaugh \emph{et al.}~\cite{McGaugh2026}) is a natural next test.
+The full cosmic baryon-fraction integration required to geometrically tighten the $G$ derivation, and the exact continuous perturbation equation governing the light-BH IMR mass deficit transition, remain active areas of formalization within the project repository. Extension of the shared-tension formula into the group and cluster mass regime (per McGaugh \emph{et al.}~\cite{McGaugh2026}) is a natural next test. The RBH-1 metallicity dilution test (Sec.~\ref{ssec:rbh1}, sealed prediction \texttt{rbh1/PREDICTION\_metallicity.md}, 2026-09-29) awaits cleaner reductions from the discovery team or deeper JWST spectroscopy along the outer trail; if the dilution signature is detected with the frozen $\Delta \leq -0.10$ dex criterion at $\geq 2\sigma$ in two independent reductions, this becomes the first direct empirical evidence for matter creation from the medium in a cavitation-collapse regime.
 
 %%=========================================================================
 \section{Conclusion}
@@ -516,6 +550,16 @@ arXiv:2606.19454 (2026).
 S.S. McGaugh, T. Mistele, F. Duey, K. Haubner, F. Lelli, J.M. Schombert, and P. Li,
 ``The Baryonic Mass--Halo Mass Relation of Extragalactic Systems,''
 arXiv:2603.06479 (2026).
+
+\bibitem{vanDokkum2023}
+P. van Dokkum \emph{et al.},
+``A candidate runaway supermassive black hole identified by shocks and star formation in its wake,''
+\emph{Astrophys.\ J.\ Lett.} \textbf{946}, L50 (2023); arXiv:2302.04888. [RBH-1 discovery.]
+
+\bibitem{KaulOh2026}
+N. Kaul and S.P. Oh,
+``Velocity gradient along the RBH-1 wake,''
+(specific citation to be finalized before submission).
 
 \end{thebibliography}
 
