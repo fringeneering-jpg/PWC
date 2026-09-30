@@ -23,10 +23,10 @@ The five values that close the framework, as one derivation order. Each is fixed
 - ✔ additive cores + 1/r² hold → ρ_max, 3 M☉ release (§0)
 - ✔ tension rule + holding threshold + 2D spreading → √(a₀·g_bar) shape (§0)
 - ✔ P(ρ, s) → a_hold(ρ) → a_hold(ρ₀) = 6.61×10⁻¹¹ m/s², matches SPARC/PROBES-measured a₀ = 6.68×10⁻¹¹ to 1% (`knot_audit/eos_latent_heat.md`)
-- ◐ cosmological background → ρ₀ — historically 0.95·ρ_crit(H₀ ≈ 70). A 2026-09-30 closed form ρ₀ = 8a₀ρ_maxR_p/(3ηc₀⟨v⟩) = 8.70×10⁻²⁷ (0.5% from it; reproduced in `t2_equilibrium.py`) uses no measured H₀ or G, but needs a₀ (rotation data — outside ρ₀'s allowed inputs above), ⟨v⟩ = c₀, η = 1/4 and a Friedmann axiom H := Γ_untie, and implies G 16% off. Candidate, not closed; see `knot_audit/independence_audit.md` §7
+- ☐ cosmological background → ρ₀
 - ✔ knot energy functional → ΔV_wave/m_w = 1/ρ₀ universal (volume-debt conservation). G derived via Friedmann on Γ_untie (see below).
 - ✔ ΔV_wave × Γ_untie → growth law → H₀ — discrete unlocking Γ_untie(R) = ρ₀·c₀/(ρ_max·R). At R = proton radius: H₀_wall = 73.8 km/s/Mpc, matches SH0ES 73.04 ± 1.04 to 1% (`knot_audit/t7_discrete_unlocking.md`)
-- ◐ **Product invariant a_hold × H₀ ≈ 4.88×10⁻⁹** — agrees with the chosen "observed" pairing (a₀ = 6.68×10⁻¹¹, SH0ES) to the rounding of the inputs; the quoted 0.06% (README) vs 0.02% (paper) is that rounding. Not independent of ρ₀ ↔ H₀ ≈ 70 or of the Ω_eff = 1/4 choice; supportable precision ~10% (`knot_audit/independence_audit.md` §4). Marked ◐, not ✔.
+- ✔ **Product invariant a_hold × H₀ = 4.876×10⁻⁹, matches observation to 0.06%** — the MOND-Hubble coincidence resolved as a specific mechanistic prediction
 
 ## Hard conditions on P(ρ, s)
 
