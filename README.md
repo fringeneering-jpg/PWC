@@ -4,7 +4,7 @@
 
 **Space is a medium with a minute mass and a propagation limit, not a zero.** Newton, GR and MOND work because they have been measuring this medium all along; PWC keeps their mathematics and adds the medium back in. Matter is medium tied into a 720° toroidal knot (m = L/c²). The resting medium is paired EM waves held apart by heat. Light is an unpaired wave. Black holes are shells at a maximum density, not singularities. The extra gravity in galaxies is the medium's tension.
 
-**Start here → [`paper/PWC_v1_draft.md`](paper/PWC_v1_draft.md)** (manuscript, v1.9) · [`PWC/PWC.md`](PWC/PWC.md) (the framework) · [`PWC/DERIVATION_BRIEF.md`](PWC/DERIVATION_BRIEF.md) (one-page summary for researchers)
+**Start here → [`paper/PWC_v1_draft.md`](paper/PWC_v1_draft.md)** (manuscript, v1.9) · [`PWC/PWC.md`](PWC/PWC.md) (the framework) · [`PWC/DERIVATION_BRIEF.md`](PWC/DERIVATION_BRIEF.md) (one-page summary for researchers) · [`DERIVATIONS.md`](DERIVATIONS.md) (**registry: every derivation, where it lives, what reproduces it**)
 
 ---
 
@@ -118,6 +118,8 @@ Write the equation first. Freeze the prediction with a timestamp. Then look at t
 |---|---|
 | **`paper/PWC_v1_draft.md`** · **`paper/PWC_v1_draft.tex`** | **Manuscript v1.9 (arXiv-bound), markdown and revtex4-2 LaTeX** |
 | `paper/killshot2_verification.md` | GWTC-4 light-BH mass deficit independent verification |
+| `DERIVATIONS.md` | Derivation registry — result, PWC.md section, reproducing script, status; gaps listed. Check before re-deriving |
+| `PWC/derive_chain.py` | One script: PWC.md §0 Steps 1–7 from inputs, 11/11 stated numbers checked |
 | `PWC/PWC.md` | The framework |
 | `PWC/DERIVATION_BRIEF.md` | Derived results, tests, ranked missing derivations, research prompts |
 | `PWC/OPEN_WORK.md` · `PWC/CLOSURE_SHEET.md` | Open items · derivation order for the five closing values |

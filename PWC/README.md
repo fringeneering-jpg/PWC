@@ -2,6 +2,8 @@
 
 | File | What |
 |---|---|
+| [`../DERIVATIONS.md`](../DERIVATIONS.md) | **Registry of every derivation** — where it lives, what reproduces it, what is open or missing |
+| [`derive_chain.py`](derive_chain.py) | §0 Steps 1–7 reproduced from inputs in one script (`python derive_chain.py`) |
 | [`PWC.md`](PWC.md) | The framework — premise, §0 derivation chain, mechanisms, results |
 | [`DERIVATION_BRIEF.md`](DERIVATION_BRIEF.md) | One-page brief: what's derived, what's tested, ranked missing derivations (T1–T10), research prompts, Round 1 results |
 | [`OPEN_WORK.md`](OPEN_WORK.md) | Everything still to derive or test, by section |
