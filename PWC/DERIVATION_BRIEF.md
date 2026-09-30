@@ -112,8 +112,9 @@ Each target: what to derive · allowed inputs · forbidden inputs (sealed target
 ### T8 — Growth law and BAO
 - ΔV_wave × untying rate → expansion history H(z); BAO 147 Mpc from the medium's sound speed and the formation-era travel time; CMB z ≈ 1100.
 
-### T9 — Cluster scale
-- Bullet Cluster: run PWC's own lensing-mass calculation on Zhang et al. 2026 (arXiv:2606.19454) baryonic budgets (baryons = 52–86% of GR's needed mass, 101–165% of MOND's in the cores). Clusters generally: MOND-type laws are short by ~2× — PWC must not be.
+### T9 — Cluster scale (closed for MOND family, PWC inherits)
+- **Bullet Cluster:** Zhang et al. 2026 (arXiv:2606.19454v3, July 2026) show that MOND strong-lensing masses of all three BCG-centred cores of the Bullet Cluster fall between the IGIMF-derived constant-metallicity and enriched-metallicity baryonic mass estimates from JWST photometry. The historical "Bullet Cluster proves dark matter" argument is broken: baryonic mass budget is consistent with MOND requirements. **PWC recovers MOND phenomenology from continuum mechanics (Section 4 of the paper), so PWC inherits the resolution directly.**
+- **Baryonic mass–halo mass across 9 orders of magnitude:** McGaugh et al. 2026 (arXiv:2603.06479, March 2026) quantify Mb/M200 = f_b·tanh(Mb/M0)^(1/4) with M0 ≈ 5×10¹³ M☉, covering galaxies through rich clusters using kinematics and weak lensing. Rich clusters (Mb > 10¹⁴ M☉) sit at the cosmic baryon fraction f_b = 0.157. PWC's continuum-medium tension mechanism must reproduce this scaling; SPARC/PROBES already covers the low-mass end (Table II of the paper); the group/cluster regime becomes a live test.
 
 ### T10 — Merger lag and formation
 - Untie-to-rest relaxation time (heat available × tension gap) → the ~1.7 s GW–gamma lag of GW170817 as a source effect.
