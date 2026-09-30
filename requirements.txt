@@ -1,0 +1,6 @@
+# Minimal environment for the deterministic checks:
+#   python PWC/heat_spacer_free_energy.py
+#   python PWC/audit_independence.py
+# Verified on Python 3.11 / NumPy 2.4 and (per the Colab run) Python 3.13 / NumPy 2.1.
+numpy>=2.1
+scipy>=1.13

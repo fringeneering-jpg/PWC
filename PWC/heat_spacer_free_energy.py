@@ -224,7 +224,7 @@ def write_report(path, summary):
 
 def main():
     results = run_scan()
-    output_dir = Path("PWC/knot_audit")
+    output_dir = Path(__file__).resolve().parent / "knot_audit"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     csv_path = output_dir / "heat_spacer_scan.csv"
@@ -242,8 +242,8 @@ def main():
             f"rejected={values['rejected']}, min_slope={values['min_slope']}, "
             f"max_slope={values['max_slope']}"
         )
-    print(f"CSV: {csv_path}")
-    print(f"Report: {report_path}")
+    print(f"CSV: {csv_path.relative_to(output_dir.parent.parent)}")
+    print(f"Report: {report_path.relative_to(output_dir.parent.parent)}")
 
 
 if __name__ == "__main__":

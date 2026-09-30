@@ -1,6 +1,8 @@
 # Heat-Spacer Free-Energy Model
 
-**Status:** Hypothesis specification and reproducible computational scan. Generated numerical artifacts are pending execution of the accompanying script in a Python environment with NumPy and SciPy.
+**Status:** Hypothesis specification and reproducible computational scan. Executed 2026-09-30 (Colab, Python 3.13 / NumPy 2.1; re-run in a second environment, Python 3.11 / NumPy 2.4, with identical results). Outputs: [`heat_spacer_scan.csv`](heat_spacer_scan.csv), [`heat_spacer_results.md`](heat_spacer_results.md). 540/540 rows behave as encoded (432/432 outward families positive, 108/108 control negative).
+
+**What that pass is:** a check that the optimiser and bookkeeping are correct. It is not evidence for PWC. By the implicit-function theorem, `dd₀/dT = −(∂²f/∂d∂T)/f''(d₀)`, so with `f'' > 0` the sign of the response is fixed by the sign of the thermal term that was written into each family; the sign of every row can be stated from the input alone, without minimising (`PWC/audit_independence.py` §6 does exactly this and agrees in 540/540 rows). A test that could fail on the physics needs a thermal term whose d-dependence is derived from the medium rather than chosen to point outward.
 
 ## Purpose
 
