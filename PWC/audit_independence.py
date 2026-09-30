@@ -20,6 +20,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import t2_equilibrium as t2
+
 G = 6.6743e-11
 C0 = 2.998e8
 MPC_KM = 3.0856775814913673e19
@@ -58,19 +60,21 @@ def h_wall(rho0, c0=C0, rho_max=RHO_MAX, rp=RP_TXT):
 
 
 def section_rho0():
-    print("## 1. Where rho_0 comes from (T2)")
+    print("## 1. Where rho_0 comes from (T2): the historical route")
     print()
     h_impl = solve_h0_for(RHO0, 0.95)
     print(f"rho_0 = {RHO0:.2e} kg/m^3 equals 0.95 * rho_crit at H0 = {h_impl:.3f} km/s/Mpc.")
     print(f"  0.95 * rho_crit(70.0) = {0.95 * rho_crit(70.0):.4e}")
-    print("So rho_0 is not independent of the Hubble constant: a measured H0 = 70 is")
-    print("already inside it (paper/PWC_v1_draft.md: 'rho_0 ~ 0.95 rho_crit').")
-    print("T2 is therefore an INPUT (DERIVATION_BRIEF: 'Option C accepted'), not a derivation.")
+    print("Repo history: OPEN_WORK.md (2026-09-25, commit a3a70c0) defines 1/rho_0 = 1.053/rho_crit;")
+    print("8.74e-27 first appears in a derivation doc four days later (commit ca516cd). Under this")
+    print("route rho_0 is an input carrying H0 ~ 70, and sections 2-4 apply to it.")
+    print("A second route (closed form, no measured H0 or G) was supplied 2026-09-30; section 7")
+    print("reproduces and audits it.")
     print()
 
 
 def section_h0():
-    print("## 2. H0_wall (T7) is not independent of the H0 inside rho_0")
+    print("## 2. H0_wall (T7) under the historical route is not independent of the H0 inside rho_0")
     print()
     gamma, h_out = h_wall(RHO0)
     print(f"Gamma_untie = rho0*c0/(rho_max*R_p) = {gamma:.3e} 1/s  ->  {h_out:.2f} km/s/Mpc")
@@ -198,23 +202,79 @@ def section_heat():
     print()
 
 
-def section_t2_notebook():
-    print("## 7. T2 fixed-point cell (values printed by the Colab run; the cell is not in the repo)")
+def section_t2_closure():
+    print("## 7. The 2026-09-30 equilibrium closure (t2_equilibrium.py)")
     print()
-    prefactor, required, b, target = 2.1745131423320837e-27, 0.2488001307016114, 2.7324456318055946e+08, 8.74e-27
-    print(f"prefactor / required = {prefactor / required:.6e}  vs target {target:.2e}  "
-          f"(rel. diff {abs(prefactor / required / target - 1):.1e})")
-    print("'required eta*(Delta_M/c0)' is the number that makes the fixed point equal the target,")
-    print("so 'reproduced exactly' and 'residual 0.000' are identities, not confirmations.")
-    below, above = 2.3642759073761120e-20, -2.4120390570200742e-20
-    mean_resp = 0.5 * (below - above)
-    print(f"Printed responses at +-1% of rho*: mean magnitude {mean_resp:.5e}; B*0.01*rho* = {b * 0.01 * target:.5e}.")
-    print("The response and the linearised derivative are one calculation seen twice. Any")
-    print("d(rho)/dt = source - sink(rho) with an increasing sink has a stable fixed point, so")
-    print("'pushes toward the fixed point' holds for any B > 0 and cannot fail. The ODE itself is")
-    print("not in the repo, so nothing beyond these relations can be audited here.")
-    print("The real content is one number: eta*(Delta_M/c0) = 0.2488 must be <= 1 (v/c0 >= 0.2488).")
-    print("That is a constraint on unknown microphysics, not a confirmation of it.")
+    pre, b = t2.prefactor(), t2.untying_coefficient()
+    print("Reproduction: prefactor, B and the +-1% responses in the supplied cell output are")
+    print(f"reproduced to every printed digit (prefactor {pre!r}, B {b!r}).")
+    print("The printed responses match dρ/dt = B*rho*(1 - rho/rho*) exactly, a logistic form whose")
+    print("fixed point is stable for ANY rho* and B > 0. 'PASS: pushes toward the fixed point' is")
+    print("therefore true by construction and carries no information about rho*.")
+    print("'Required eta*<v>/c0 = 0.2488' is prefactor / target: defined from the target, not a test.")
+    print()
+    eta, v = 0.25, 1.0
+    rho0_f = t2.rho0_closed_form(eta, v)
+    print("### 7a. What the closure gives")
+    print()
+    print(f"rho_0 = 8*a0*rho_max*R_p / (3*eta*c0*<v>) = {rho0_f:.4e} kg/m^3 at eta = 1/4, <v> = c0")
+    print(f"  = {rho0_f / (0.95 * rho_crit(70.0)):.4f} x the historical value (0.95*rho_crit(70)). Uses no measured H0 or G.")
+    print("That agreement (0.5%) is the interesting fact. Points 7b-7f are why it is not yet a derivation.")
+    print()
+    print("### 7b. rho_0 cancels from the balance until G is replaced")
+    print()
+    print("| rho_0 tried | create/decay (measured G) |")
+    print("|---:|---:|")
+    for r in (1e-27, 8.74e-27, 1e-24):
+        gamma = r * b
+        create = eta * r * math.pi * G / t2.A0 * (v * C0)
+        print(f"| {r:.2e} | {create / gamma:.4f} |")
+    need = t2.A0 / (math.pi * G * t2.RHO_MAX * t2.RP)
+    print()
+    print("create/decay does not depend on rho_0: with measured G the balance fixes nothing about")
+    print(f"rho_0, and instead requires eta*<v>/c0 = a0/(pi*G*rho_max*R_p) = {need:.4f} (not 0.25).")
+    print("rho_0 is fixed only by substituting G = 3*Gamma^2/(8*pi*rho_0): the Friedmann relation with")
+    print("rho_0 as the critical density and H := Gamma_untie. That is rho_crit re-entering through")
+    print("an added axiom (H0 = Gamma_untie), not a derivation that is free of it.")
+    print()
+    print("### 7c. The substituted G disagrees with the measured G")
+    print()
+    g_em = t2.g_emergent(rho0_f)
+    print(f"G_emergent(rho_0 = {rho0_f:.3e}) = {g_em:.4e}  vs measured {G:.4e}  (ratio {g_em / G:.3f}).")
+    print("G is measured to ~2e-5. The closure fixes rho_0 by assuming an emergent G that is 16% off.")
+    print()
+    print("### 7d. <v> = c0 carries the result")
+    print()
+    for label, vv in (("c0", 1.0), ("370 km/s (CMB dipole; OPEN_WORK.md)", 370e3 / C0)):
+        print(f"  <v> = {label:<38s} -> rho_0 = {t2.rho0_closed_form(eta, vv):.3e} kg/m^3")
+    print("The repo elsewhere puts bodies at ~370 km/s through the medium; the closure needs c0.")
+    print("eta = 1/4 is also justified two ways: photon-gas flux u*c/4 in T1, swept plane over")
+    print("sphere (pi r^2 / 4 pi r^2) here. Same number, two different derivations. For T1 it was chosen")
+    print("after 1/pi missed; whether it was fixed before the target for T2 is not documented.")
+    print()
+    print("### 7e. a0 is an input, and T1 then 'predicts' a0")
+    print()
+    print("CLOSURE_SHEET lists rho_0's allowed inputs as expansion/propagation/cosmology, NOT galaxy")
+    print("rotation, and lists a0 as the sealed target. The closure takes a0 (a SPARC fit) as input.")
+    a_h = (C0 / math.sqrt(3.0)) * math.sqrt(0.25 * G * rho0_f)
+    print(f"a_hold(rho_0 from closure) = {a_h:.4e}  (a0 = {t2.A0:.3e}, ratio {a_h / t2.A0:.3f}).")
+    print("With Omega_eff = eta*<v>/c0 = 1/4, algebraically a_hold^2 = (8/9)*G*a0*rho_max*R_p, so the T1 match is")
+    print("the statement")
+    print(f"a0 ~ (8/9)*G*rho_max*R_p = {(8 / 9) * G * t2.RHO_MAX * t2.RP:.4e} (2.6% from the fit). rho_0 drops out.")
+    h_wall_new = rho0_f * b * MPC_KM
+    print(f"H0_wall = rho_0*B = 8*a0/(3*eta*<v>) -> {h_wall_new:.2f} km/s/Mpc; c*H0/a0 = "
+          f"{(8 / (3 * eta)):.3f} predicted vs {73.04e3 / MPC_M * C0 / t2.A0:.3f} (SH0ES), "
+          f"{67.4e3 / MPC_M * C0 / t2.A0:.3f} (Planck).")
+    print("So T1, T7 and the product all reduce to functions of one fitted number (a0 = 6.68e-11,")
+    print("which is form-dependent: the RAR fit gives ~1.2e-10, which this closure would turn into")
+    print(f"H0 = {8 * 1.2e-10 / (3 * eta * C0) * MPC_KM:.0f} km/s/Mpc).")
+    print()
+    print("### 7f. Verdict on this section")
+    print()
+    print("Real: an explicit equation now exists, reproduces the cell, and lands within 0.5% of the")
+    print("historical rho_0. Not yet real: independence. It needs (i) the Friedmann axiom H := Gamma,")
+    print("(ii) <v> = c0, (iii) eta = 1/4, (iv) a0 as input, and it implies G 16% off. Status: a")
+    print("candidate closure with a striking coincidence, not a derivation that removes the H0 input.")
     print()
 
 
@@ -225,7 +285,7 @@ def main():
     print("does and does not establish.")
     print()
     for fn in (section_rho0, section_h0, section_omega, section_product,
-               section_proton, section_heat, section_t2_notebook):
+               section_proton, section_heat, section_t2_closure):
         fn()
 
 
