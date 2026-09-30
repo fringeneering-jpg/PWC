@@ -118,6 +118,7 @@ Write the equation first. Freeze the prediction with a timestamp. Then look at t
 |---|---|
 | **`paper/PWC_v1_draft.md`** · **`paper/PWC_v1_draft.tex`** | **Manuscript v1.9 (arXiv-bound), markdown and revtex4-2 LaTeX** |
 | `paper/killshot2_verification.md` | GWTC-4 light-BH mass deficit independent verification |
+| `GR_TRAPS.md` | Standard-theory habits already cancelled (horizon, singularity, empty-space infall, curvature, mode/ring vocabulary…) and what PWC says instead. Read before arguing |
 | `DERIVATIONS.md` | Derivation registry — result, PWC.md section, reproducing script, status; gaps listed. Check before re-deriving |
 | `PWC/derive_chain.py` | One script: PWC.md §0 Steps 1–7 from inputs, 11/11 stated numbers checked |
 | `PWC/PWC.md` | The framework |

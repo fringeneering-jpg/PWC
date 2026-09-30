@@ -6,6 +6,8 @@ Start here before re-deriving anything. If a derivation isn't in this table, add
 Status key: **LOCKED** = derived/tested and stands · **OPEN** = framework says what is needed, not yet derived ·
 **NOT IN GIT** = stated as derived elsewhere (chat, notebook) but no text or script is in this repo yet.
 
+**Read [`GR_TRAPS.md`](GR_TRAPS.md) first** — the standard-theory habits already cancelled, so they are not argued again.
+
 Reproduce the merger chain in one command: `python PWC/derive_chain.py` (11/11 stated numbers of §0 Steps 1–7).
 
 ## Locked chain (PWC.md §0)
