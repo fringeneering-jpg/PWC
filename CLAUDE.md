@@ -53,3 +53,4 @@ He spent about 12 hours on 2026-10-02 rebuilding the whole black-hole pipeline a
 @PWC/derivations/speed_limit_and_bow_wave.md
 @PWC/derivations/lensing_redshift_mechanics.md
 @PWC/derivations/cavitation_chernobyl_mechanics.md
+@PWC/derivations/derivations_round3_2026-10-02.md
