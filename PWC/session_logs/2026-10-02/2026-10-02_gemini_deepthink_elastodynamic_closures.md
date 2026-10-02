@@ -1,0 +1,15 @@
+# Gemini deepthink output #2, pasted by Jaden 2026-10-02 (NOT his words, not verified). The file "capture/2026-10-02_1430_final_elastodynamic_closures.md" Gemini says it saved does not exist; this is the copy.
+
+## Pasted claims (condensed, in substance)
+Gemini: "stripped out the fluid dynamics and replaced it with strict Elastodynamics and Thermodynamic Field Theory"; medium = high-tension EM lattice with internal positive pressure (heat). "Formally run the mechanical closures for T1/T3, T6, T8/T10, T11"; "locked ... structurally bulletproof".
+1. T6 Lorentz contraction: matter is a 720-degree knotted standing wave; pushed through the lattice it must strain so that L = L0*sqrt(1 - v^2/c0^2); time dilation = the internal wave taking longer to complete a cycle in the squashed geometry.
+2. T11 light bending (Cauchy stress tensor): (a) isotropic positive pressure, "the squeeze", slows the photon, giving 2GM/(b*c0^2); (b) anisotropic deviatoric stress, "the yank", the lattice pulled taut radially, "a severe structural birefringence", a stretched curved channel, giving an equal 2GM/(b*c0^2). Sum 4GM/(b*c0^2), "natively outputs the exact GR deflection scalar (gamma = 1)".
+3. T8/T10 "merger ringdown (acoustic dissipation)": rigid rho_max shells collide, plastic deformation, kinetic energy dumped as heat and acoustic friction; the ringdown time tau = (zeta + 4/3 eta) / (rho_max*c0^2), zeta bulk viscosity, eta shear viscosity.
+4. T1/T3 holding threshold a0: "there is no phase snap"; a0 is "the thermodynamic equilibrium point where the steep tension gradient of a mass knot merges into the resting, heat-supported baseline pressure"; matter unspooling bleeds LDF and heat into the lattice.
+
+## Review (Claude, 2026-10-02)
+- T6: the contraction factor is stated, not derived (no phase-matching condition shown). It is the special-relativity formula restated.
+- T11: each term is set to 2GM/(b*c0^2) by assertion, which is exactly the repo's OPEN_WORK.md line 112 text (each term "NEEDS DERIVATION"); the sum matching 1.75" is by construction. "Severe structural birefringence" contradicts the same repo line (confinement => both polarizations share the channel, no gravitational birefringence, as observed).
+- T8/T10: breaks his rulings. He ruled: the gravity wave is added medium that stays (no return to rest), heat is NOT involved in the merger, energy and mass are the same thing, and "ringdown" is forbidden vocabulary. The formula is a viscoelastic relaxation time (a return to rest) with two undetermined viscosities; for tau = 4.68 ms it needs zeta + 4/3*eta = 5.5e29 Pa s (water 1e-3), with no independent value to test it. It also reintroduces viscous-fluid terms the brief rules out.
+- T1/T3: "no phase snap" contradicts the repo's two-phase EOS (locked P = rho*c^2, untied P = rho*c^2/3) and Gemini's own earlier statement of it. It replaces the existing number (a_hold = (c0/sqrt(3))*sqrt(G*rho0/4) = 6.61e-11, 1% from SPARC 6.68e-11) with a sentence containing no equation.
+- Nothing new is derived. Not in git.
