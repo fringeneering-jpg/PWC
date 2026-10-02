@@ -44,3 +44,21 @@ for x in (0.1, 0.2, 0.3):
 print("4. Shapiro: need n - 1 = 2GM/(r c^2); medium compression with c_s^2 = c^2/3 is d_rho/rho = 3GM/(r c^2)")
 for p in (0.5, 2 / 3):
     print("   light speed ~ rho^-%.3f: delay = %.0f%% of the measured value" % (p, 3 * p / 2 * 100))
+
+print("5. one push/pull pair -> bending, Shapiro delay, redshift (Fermat's principle, first order)")
+from scipy.integrate import quad
+GMs, Rs = 1.32712440018e20, 6.957e8
+asec = 180 / np.pi * 3600
+dv = GMs / (Rs * C0 ** 2)          # push: speed deficit, fixed by energy conservation (cost of speeding back up = redshift)
+dl = dv                            # pull: path lengthening, equal by action-reaction in the equilibrium medium
+bend, _ = quad(lambda u: (2 * GMs / (C0 ** 2 * Rs)) / (1 + u * u) ** 1.5, -np.inf, np.inf)
+print("   bending: push %.4f + pull %.4f = %.4f arcsec (4GM/(bc^2) = %.4f)" % (bend / 2 * asec, bend / 2 * asec, bend * asec, 4 * GMs / (Rs * C0 ** 2) * asec))
+r1 = 1.496e11
+x1 = np.sqrt(r1 ** 2 - Rs ** 2)
+t, _ = quad(lambda x: (2 * GMs / C0 ** 2) / np.sqrt(Rs ** 2 + x ** 2) / C0, -x1, x1)
+print("   Shapiro (1 AU each side, b = solar radius): %.1f us ; analytic %.1f us" % (t * 1e6, 2 * GMs / C0 ** 3 * np.log(4 * r1 * r1 / Rs ** 2) * 1e6))
+print("   redshift: only the speed deficit costs energy to undo: L*%.3e (GM/(Rc^2) = %.3e)" % (dv, GMs / (Rs * C0 ** 2)))
+
+print("6. the weak-field speed law from lattice dynamics: c = a*sqrt(k/m) ~ a ~ rho^(-1/3)")
+drho = 3 * GMs / (Rs * C0 ** 2)    # compression from the medium's own pull, c_s^2 = c^2/3
+print("   compression %.3e -> spacing change %.3e -> speed change %.3e (= -GM/(Rc^2) = -%.3e)" % (drho, -drho / 3, -drho / 3, GMs / (Rs * C0 ** 2)))
