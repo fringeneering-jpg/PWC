@@ -11,8 +11,9 @@ S  (storage limit): a bigger core stores relatively less medium (area, not volum
         S = k*(C1^(2/3) + C2^(2/3) - Cf^(2/3)),  C from  C + k*C^(2/3) = M,  k = 0.868899 (frozen repo constant, fitted on catalog).
 Dropped mass = min(E, S): light events are energy-limited, heavy ones storage-limited.
 
-Honest limits: a_max was calibrated on GW150914's edge (159.6 km, first computed from the Kerr horizon of that event, a GR
-number), so the edge scale carries one GR-derived calibration. Catalog masses come from the standard (GR) pipeline.
+Honest limits: the reach scale uses a_max from the GW150914 shell numbers (origin: see the yield-anchor row under Gaps in
+DERIVATIONS.md; Jaden's position is a pure PWC ceiling from rho_max, derivation not in git). Catalog masses come from the
+standard (GR) pipeline.
 Datasets: DEV = 5 named events + gwtc4_blind_results.csv (89 events; used while the formulas were being explored);
 OUT = gwtc5_blind_results.csv (104 events, no overlap with DEV, never used in any step here).
 """

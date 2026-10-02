@@ -18,7 +18,7 @@ Registry: `DERIVATIONS.md` row 16. The mechanics are his; the numbers are arithm
 - **Mass bookkeeping for heavy holes**: ρ_max filling the reach holds more mass than the catalog mass above ≈ 1,900 M☉ (2.1× at 8,200 M☉, 47× for Sgr A*). Whether and how shell medium counts toward the catalog mass is not settled.
 - **Core density vs mass** (row 12) is only supported over merger masses 14–238 M☉; the supermassive end is an untested extrapolation (a power-law extrapolation would make the Sgr A* core 73–323 km, not 2,071 km).
 - **Black-hole shadow (EHT)** — undefined in PWC. The flowing-medium (river-model) calculation gave GR's 3√3/2 r_s and is **withdrawn**: the medium does not flow.
-- The yield 3.23×10¹¹ and 159.6 km come from GW150914's edge, first computed from that event's Kerr horizon (a GR number); the shell scale carries that one calibration.
+- The yield 3.23×10¹¹ and the 159.6 km edge: Jaden says they are a pure PWC thermodynamic ceiling derived from ρ_max around a neutron cluster (derivation not in git); the documentary record is in the yield-anchor row under Gaps in `DERIVATIONS.md`. Origin unresolved until the derivation is pasted; the shell scale is conditional on it.
 - The sealed light-bending, speed-limit and merger results are in rows 13–15; none of them has been derived from a medium equation of state `P(ρ, s)` (still OPEN).
 
 ## Withdrawn along the way (do not revive)
