@@ -26,6 +26,9 @@ Reproduced by [`../merger_energy_balance.py`](../merger_energy_balance.py) (per-
 
 The out-of-sample set has no event in common with the explored set. Trend of error with mass (slope %/ln M): E −1.48 (dev), −1.74 (out) — heavy events over-drop; S +2.26, +1.80 — heavy events under-drop; min(E, S) +0.11 (dev) but −0.86 (out): the flat trend did **not** replicate cleanly out of sample.
 
+## Residual check (falsification, 188 events GWTC-4 + GWTC-5)
+The leftover final-mass error of min(E, S) is not noise: it correlates with the catalogue's final-spin column (+0.49), effective spin (+0.37), mass ratio (+0.29) and ln total mass (−0.24); together they explain R² = 0.33 of the residual (sd 1.06%, mean +0.36%). The mechanism is missing a spin / mass-ratio term. (Spin and mass-ratio columns are the catalogue's own, so they are GR-pipeline quantities; the final-spin column is itself computed from the others.) Sensitivity: a_max +10% changes E by −4.7% (E ∝ a_max^(−1/2)).
+
 ## Honest limits
 - a_max = 3.23×10¹¹ was calibrated on GW150914's edge (159.6 km), a number first computed from that event's Kerr horizon (a GR quantity). The reach scale therefore carries one GR-derived calibration, though not GW150914's dump.
 - k is fitted on catalog masses; the S and min(E, S) rows inherit it. Catalog masses come from the standard (GR) pipeline.
