@@ -1,0 +1,25 @@
+{
+  "part_A_ledger": {
+    "n_galaxies": 126,
+    "median_medium_fraction": 0.7667575373431494,
+    "median_medium_to_baryon_ratio": 3.2874674172080987,
+    "negative_M_med_points_pct": 4.6875
+  },
+  "part_B_profile": {
+    "median_outer_dlnM_dlnr": 1.3361071303334857,
+    "median_outer_dlnrho_dlnr": -1.9220107145058285,
+    "flat_curve_requirement": 1.0,
+    "isothermal_requirement": -2.0
+  },
+  "part_C_eos_test": {
+    "n_points": 1776,
+    "n_galaxies": 124,
+    "mean_within_bin_logK_scatter_dex": 0.6633357934319525,
+    "cs_vflat_log_correlation": 0.9211831406786776,
+    "median_cs_over_vflat": 0.626538508163685,
+    "isothermal_analytic_value": 0.7071,
+    "cs2_dynamic_range_across_galaxies": 250.98539249466901,
+    "max_cs_over_c0": 0.004091665646416082
+  },
+  "part_D_verdict": "NEGATIVE for a universal EOS: the medium's stiffness is set by each galaxy's own rotation speed, not by a shared property of the substrate -- one free profile per galaxy, i.e. a halo"
+}

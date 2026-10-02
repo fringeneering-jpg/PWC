@@ -1,0 +1,36 @@
+{
+  "part_A_cs_ceiling": {
+    "cs_max_strict_kms": 7.833975603295882,
+    "cs_max_p05_kms": 25.56290863354443,
+    "cs_locked_kms": 7.442276823131087,
+    "per_galaxy_ceiling_min_kms": 7.833975603295882,
+    "per_galaxy_ceiling_max_kms": 157.81814716089548
+  },
+  "part_B_flow": {
+    "median_vphi_over_Vcirc": 0.9958939435095913,
+    "pct_points_above_0p95": 95.88963963963964
+  },
+  "part_C_variance": {
+    "EE_cs2_dynamic_range": 477.7891899049903,
+    "FF_vphi2_dynamic_range": 382.24693814493986,
+    "EE_logcs2_scatter_dex": 0.5200741005477452,
+    "FF_logvphi2_scatter_dex": 0.5350918838504063,
+    "EE_corr_with_Vflat": 0.9211200185377011,
+    "FF_corr_with_Vflat": 0.989374127569097,
+    "factor_absorbed": false
+  },
+  "part_D_angular_momentum": {
+    "n_galaxies": 122,
+    "median_L_med_over_L_bar": 3.977899343555489,
+    "iqr": [
+      2.5665604423470576,
+      7.759707714769684
+    ],
+    "implied_disk_shrink_factor_median": 24.779481874570166
+  },
+  "part_E_a0": {
+    "cs_locked_kms": 7.442276823131087,
+    "implied_length_kpc": 0.014958217671093685,
+    "constitutes_a0_derivation": false
+  }
+}

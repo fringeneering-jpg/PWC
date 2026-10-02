@@ -1,0 +1,51 @@
+{
+  "part_A_source_is_extended": {
+    "negative_Vgas_points": 361,
+    "negative_Vgas_galaxies": 48,
+    "interior_Vdisk_peak_galaxies": 158,
+    "median_peak_over_Rdisk": 2.1793990619049834,
+    "freeman_1970_prediction": 2.2,
+    "median_inner_slope": 0.48362965662191526,
+    "pct_positive_inner_slope": 95.15151515151516,
+    "point_mass_premise_holds": false
+  },
+  "part_B_single_galaxy": {
+    "galaxy": "NGC3198",
+    "n_points": 43,
+    "M_enclosed_Rmax_Msun": 42258431116.44137,
+    "defect_area_Rmax_m2": 4.4555501522361675e+38,
+    "outer_slope_predicted": -0.17726887535709446,
+    "outer_slope_observed": 0.026611004612147438,
+    "v_pred_Rmax_kms": 64.22027167700075,
+    "v_obs_Rmax_kms": 149.0,
+    "max_v_over_c0": 0.00029268137666684267
+  },
+  "part_C_diffusion_exponent": {
+    "n_points": 2700,
+    "n_galaxies": 149,
+    "scan": {
+      "k=1.0": 0.46571149902247955,
+      "k=1.2": 0.3942928832465484,
+      "k=1.4": 0.33309353735871755,
+      "k=1.5": 0.3082739026881539,
+      "k=1.6": 0.28868751423566347,
+      "k=1.8": 0.26950771142055563,
+      "k=2.0": 0.2807722948385052
+    },
+    "k_best": 1.83,
+    "rms_best_dex": 0.26923322602592775,
+    "rms_spherical_k2": 0.2807722948385052,
+    "rms_cylindrical_k1": 0.46571149902247955
+  },
+  "part_D_scale_free_test": {
+    "best_scale_free_rms_dex": 0.26923322602592775,
+    "scaled_law_rms_dex": 0.1327,
+    "penalty_dex": 0.13653322602592774,
+    "implied_length_scale_kpc": 0.02048227056773794,
+    "implied_length_unstable": true,
+    "fitted_C2_over_G": 2.6987189138114926,
+    "implied_acceleration_constant": 6.284660967232028e-14,
+    "a0_eliminable": false,
+    "flat_curves_from_spherical_diffusion": false
+  }
+}

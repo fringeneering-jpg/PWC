@@ -101,6 +101,16 @@ violation.
   continuously descending compressed-HDF envelope, `rho_HDF_max =
   4.6e10 kg/m^3` (distinct from neutron/nuclear matter density -- this
   exact conflation was made and corrected earlier in this session's audit).
+  **Derivation direction, established 2026-09-16 (Domain II):** the two
+  ceilings are genuinely different variables and the compact-object chain
+  runs *forward* from external inputs, not circularly. `rho_Sintot_max =
+  4.6e17 kg/m^3` is an **input** (2x nuclear saturation, external nuclear
+  physics), `M_core = 28.118 Msun` is an **input** (from the `k`-partition
+  on LIGO's GW150914 masses), and `R_core = 30.73 km` is the **output**:
+  `(3*28.118 Msun / 4*pi*4.6e17)^(1/3) = 30.729 km`, matching the value
+  every `PWC/*.py` script carries. `M_grad = 7.876 Msun` and
+  `K = 1.4778e7` follow downstream. Two external inputs, one modelling
+  choice, no loop.
 - **Mergers**: `M_1+M_2 = M_final + E_HDF_wave/c^2` as an identity; the
   emitted fraction requires the full radial density-envelope structure,
   relative sizes, overlap geometry, and spin/flow state -- **a frozen
@@ -2032,7 +2042,658 @@ g_bar = Vbar2 / R * conv
 | Domain Y (direct density inversion, not a fit) | n/a -- descriptive | n/a -- descriptive | COMPLETED: produces the target rho_req(r) atlas Domain X's diagnosis showed was missing |
 | Domain Z (disk-scale-length collapse test on Domain Y) | n/a -- descriptive | n/a -- descriptive | COMPLETED, NEGATIVE: no collapse in r/R_d (scatter 0.377->0.447 dex, worse not better) |
 | Domain AA (baryonic surface-density amplitude test on Domain Y/Z) | n/a -- descriptive | n/a -- descriptive | COMPLETED, MIXED: real effect vs raw rho_req in matched x-bins (CI excludes 0), but NOT distinguishable from the physical-kpc baseline after bootstrap (CI includes 0) |
+| Domain CC (gravity-as-refraction index map + universality test) | 0.1363 +/- 0.0135 holdout, 40 random 104/45 splits | see left | COMPLETED, NEGATIVE-to-NEUTRAL: indistinguishable from 1-param RAR (0.1343 +/- 0.0131) while carrying 2 params; RAR ahead in 33/40 splits |
 | "Domain T" pasted claim (source script not in this repo) | 0.1344 | 0.1368 | **not independently reproduced** -- no runnable script for this specific claim has been provided or located on disk |
+
+
+## Domain CC -- gravity-as-refraction index map on SPARC (2026-09-16)
+
+Script: `sparc/domain_CC_refraction_index_map.py`
+Results: `sparc/domain_CC_refraction_index_map_results.json`
+Data: real SPARC (VizieR J/AJ/152/157 table1+table2, in-repo). Cuts and
+parser taken verbatim from `domain_K_rar.py`; the RAR benchmark
+recomputed here reproduces `domain_K_results.json` to 4 decimal places
+(0.1327 dex, a0 = 1.1603e-10 m/s^2), which is the pipeline check.
+
+**Question (pre-registered in the script header, before any number):**
+if rotation curves come from graded-index steering through a variable
+HDF -- not a non-baryonic halo -- then the required n(r) must be (a)
+computable from the curve with no halo parameter, and (b) a *universal*
+function of the baryonic source with no per-galaxy freedom. Only (b) is
+falsifiable; (a) is a change of variables.
+
+**Relations used.** `c^2 = K/rho`; `n = c0/c_local`, so `n^2 =
+rho_HDF/rho_0` at fixed stiffness and `n^2 = K_0/K` at fixed density;
+steering law `g = ALPHA*c0^2*d ln n/dr`, integrated inward from an OUTER
+boundary `n -> 1` at the last measured radius. No `r=0` point is ever
+evaluated; no spacetime-curvature term appears.
+
+**Result (a) -- the inversion. COMPLETED, but not evidence.** 141
+galaxies mapped, 0 halts, 0 non-finite values, 0 halo parameters. The
+required index contrast is tiny: median `n-1 = 1.95e-07`, max
+`4.37e-06`, i.e. a density contrast of `1.000000` to `1.000009` x
+baseline. **This result cannot fail** -- it absorbs one free radial
+function per galaxy, exactly as a halo fit does -- and is logged as
+descriptive, not confirmatory.
+
+**Result (b) -- universality. COMPLETED, NEGATIVE-to-NEUTRAL.** Holdout
+RMS over 40 random galaxy-level 104/45 splits:
+
+| Model | Free params | Holdout RMS (dex) |
+|---|---|---|
+| Newtonian baryons only | 0 | 0.5166 +/- 0.0291 |
+| McGaugh RAR | 1 universal | 0.1343 +/- 0.0131 |
+| HDF stiffness-deficit choke | 2 universal | 0.1363 +/- 0.0135 |
+
+Difference HDF - RAR = **+0.0020 +/- 0.0020 dex**; HDF ahead in only
+**7 of 40** splits. Fitted universal parameters, stable across splits:
+`a0 = 5.55e-11 +/- 3.3e-12 m/s^2`, `p = 0.605 +/- 0.017` (consistent
+with Domain K's `n = 0.599`). Galaxy-to-galaxy scatter of the mean
+residual is 0.1356 dex -- comparable to the total residual, so the
+single-medium constraint is real and not absorbed by hidden freedom.
+
+**Methodology note, logged because it changed the answer.** The first
+run used one seeded split and gave HDF *ahead* by 0.0011 dex. The
+40-split ensemble shows that draw to be a favourable minority outcome,
+not the typical one. Single-split holdout numbers in this project are
+not reliable at the 0.002 dex level; the split-to-split spread (0.013
+dex) is larger than the model differences being tested. This applies
+retroactively to the Domain M / Domain W2 single-split comparisons.
+
+**Explicitly NOT established by this domain:**
+- `a0` is **fitted**, not derived from `K`, `rho_0` or `c_s0`. Nothing
+  in this repository derives it (Domain X's attempt via `rho_HDF_max`
+  was ~33 orders of magnitude off-regime).
+- The steering law is convention-dependent by exactly the factor-2
+  ambiguity this manifest already records as OPEN under `Lensing`: an
+  isotropic single-role index yields `2GM/(b c0^2)`, half the measured
+  bending. Fitting rotation curves does not touch that, and this run
+  carries both `ALPHA=1` and `ALPHA=0.5` explicitly rather than
+  silently picking one.
+- Rotation curves do **not** discriminate refraction from any other
+  mechanism producing the same `g(r)`. This constrains the radial force
+  law, not the ontology.
+- The substrate cap `rho_HDF_max = 4.6e10 kg/m^3` is never approached
+  (contrast ~1e-6 vs a cap ~1e31 x baseline), so the no-singularity
+  clause is untested here -- neither confirmed nor challenged.
+- A short-range gravitational break at `r < 0.5*alpha` is ~29 orders of
+  magnitude below the smallest SPARC radius. SPARC places no constraint
+  on it in either direction.
+
+## Medium_Density_Check.py -- audit and correction (2026-09-16)
+
+Two defects found in the top-level script, both under a banner reading
+"USER'S MODEL -- UNTOUCHED". Originals preserved verbatim in
+`ORIGINAL_*` strings in the file.
+
+1. **Circular normalization, REJECTED.** The Mercury section ended
+   `precession_arcseconds = shadow_deficit * 43.0  # Target
+   normalization`. Output is bounded in `[0, 43)` and lands near the
+   target for any input; the `np.isclose(..., 42.98, atol=0.5)` branch
+   printing "GENERAL RELATIVITY DISMANTLED" was reachable regardless of
+   the fit. Free parameters 1, data points 1, **degrees of freedom 0**.
+   Carried no evidential weight and has been removed.
+
+2. **Structurally infeasible fit, HALTED.** `curve_fit` ran
+   `rho_baseline/(1+k*T)` -- bounded in `(0, 1.0]` with the admitted
+   placeholder `rho_baseline = 1.0` -- against raw galaxy counts per
+   NSIDE=64 pixel, of order `1e0-1e2`. The data exceed the model's
+   supremum almost everywhere, independently of what the Planck/DESI
+   files contain. Also: the SMICA map is a ~1e-4 K *fluctuation* field
+   about 2.7255 K, not the absolute local HDF temperature the model's
+   `temp` argument requires. `rho_baseline` is now carried as `None`,
+   an explicit unknown pending the `V_env(M)` envelope formula.
+
+**New, real result from the corrected Section 3 (inversion instead of
+normalization).** Asking what the shadowing picture must *demand* to
+deliver Mercury's observed 42.98 +/- 0.04 arcsec/century:
+required `rho_local/rho_0 = 4.65e-04`, a factor ~2150 rarefaction at
+Mercury's orbit. Tested against PWC's own `c^2 = K/rho`:
+
+- **Branch A** (K fixed): `c_local/c0 = sqrt(2150) = 46.4`, i.e. light
+  at Mercury's orbit at 46x `c0`. Violates `c0` as the substrate's
+  absolute impedance limit -- a PWC premise, not an imported one -- and
+  is excluded by solar-system radar/Cassini timing at the ~1e-5 level.
+- **Branch B** (K co-varies to hold `c_local = c0`): then `n = 1`
+  everywhere, the index gradient vanishes, and the steering mechanism
+  gives precession 0, not 43.
+
+**Status: the Casimir-shadowing route to Mercury's perihelion advance
+is RULED OUT in this form**, by the framework's own master relation.
+Baseline tension limit reported in place of the halted result:
+admissible range `[0, ~4e-4]` arcsec/century against an observed 42.98
+-- a shortfall of at least 5 orders of magnitude.
+
+**Portability fix (both files).** Every domain script in `sparc/`
+hard-codes `C:\\Users\\jaden\\cosmology\\sparc` and was therefore
+unrunnable off its author's laptop. `domain_CC` and
+`Medium_Density_Check.py` resolve paths repo-relative with
+`PWC_SPARC_DIR` / `PWC_PLANCK_FITS` / `PWC_DESI_TSV` overrides. The
+other domain scripts still carry the hard-coded path.
+
+
+## Domain DD -- HDF surface-tension gravity solver (2026-09-16)
+
+Script: `sparc/domain_DD_surface_tension_solver.py`
+Results: `sparc/domain_DD_surface_tension_results.json`
+
+**Premise correction, established from the catalog, not asserted.** The
+Level-2 directive rejected Domain CC on the grounds that `g_bar` used
+`GM/r^2` and therefore "smuggled in zero-dimensional point masses". That
+is false. SPARC's `Vdisk/Vgas/Vbulge` are numerical Poisson solutions for
+observed extended 3.6um and HI surface-density distributions (Lelli+
+2016, Casertano 1983). Three data signatures, each impossible for a point
+mass:
+
+| Test | Result | Point mass would give |
+|---|---|---|
+| Negative `Vgas` | 361 points, 48 galaxies, min -16.33 km/s | impossible |
+| Interior `Vdisk` peak | 158 galaxies, median 2.18 `R_d` | no peak; Freeman 1970 predicts 2.2 |
+| Inner `d ln Vdisk/d ln r` | median +0.48, positive in 95.2% | -0.50 everywhere |
+
+The constraint "acceleration peaks at the macro-boundary and falls
+inward" was therefore **already satisfied** before the directive asked
+for it.
+
+**Structural derivation.** Vortex defect area `A(<r) ∝ M(<r)`; conserved
+tension flux through nested spheres gives `g = C_T*A(<r)/(4πr²) ∝
+M(<r)/r²`. The `4πr²` diffusion premise **is Gauss's law**. This is the
+strongest available argument that surface tension reproduces Newtonian
+gravity where Newtonian gravity is right -- and it settles the
+directive's closing question negatively, since outside the luminous body
+`g → 1/r²` and `v → r^(-1/2)`.
+
+**Part B, NGC 3198, source rebuilt by integrating observed surface
+brightness (`Vdisk/Vbulge` never touched).** Predicted outer slope
+**-0.177** vs observed **+0.027**; `v_pred(R_max) = 64.2` vs
+`v_obs = 149.0` km/s, short by 57%. `c0` cap never approached
+(`max v/c0 = 2.9e-04`).
+
+**Part C, diffusion-geometry scan** `g = C_k*M(<r)/r^k`, 2700 points,
+149 galaxies: k=1.0 (cylindrical) 0.4657 dex; k=1.83 (best) 0.2692;
+k=2.0 (spherical, the directive) 0.2808. **Critical caveat:** the whole
+scan is flattered by a free global amplitude. Fitted `C_2/G = 2.70`,
+i.e. it reaches 0.2808 dex only by scaling all baryonic mass up 2.70x,
+demanding `M/L(3.6um) = 1.35` against 0.50 from population synthesis --
+that factor IS the missing mass the model was meant to remove. With `C`
+fixed to true `G` the same model gives 0.5145 dex (the Domain CC null).
+
+**Part D, can `a0` be eliminated? NO.** A power law is scale-free by
+construction, so Part C is the strongest possible `a0`-free result:
+0.2692 dex vs 0.1327 for the scaled law -- worse by 0.1365 dex.
+Dimensionally, `[C_k] = m^(k+1)/(s²kg)`, so `k≠2` gives `C_k = G/L^(2-k)`
+and **hides a length scale inside its own constant**. (The numeric `L` is
+hypersensitive because `2-k = 0.17`; the dimensional argument is solid,
+that particular number is not, and is not used further.)
+
+**Conclusion.** Flat outer curves require flux conserved on a surface
+growing like `r^1` (quasi-2D/cylindrical transport), not isotropic `r^2`.
+A pure `r^1` law cannot hold everywhere -- the solar system follows
+`1/r^2` to ~1e-5 -- so a 3D→2D transition is required, and **that
+transition point is an acceleration scale**. `a0` is renamed by this
+reformulation, not removed.
+
+
+## Domain EE -- the medium has mass: closing the HDF ledger (2026-09-16)
+
+Script: `sparc/domain_EE_medium_mass_ledger.py`
+Results: `sparc/domain_EE_medium_mass_ledger_results.json`
+
+**Correction to Domain DD, raised by the user and confirmed.** DD's
+tension-flux integral used only `M_Sintot`. The ledger is
+`M_total = M_Sintot + M_HDF,bound + M_HDF,excess` and the substrate is
+mass-bearing, so compressed HDF belongs inside the same Gauss surface.
+DD under-counted the source; **its Keplerian conclusion applied only to a
+baryon-only source and is superseded.**
+
+**Part A -- the correction is large.** 126 galaxies. Medium fraction
+`M_med/M_total` at `R_max`: **median 0.767** (IQR 0.686-0.831). Ratio
+`M_med/M_bar`: median **3.29** (cosmological dark:baryon is ~5.4). The
+medium carries the majority of the mass inside `R_max`. 4.7% of points
+need `M_med < 0` (locally rarefied, not compressed).
+
+**Part B -- the ledger DOES buy flat curves.** Outer
+`d ln M_med/d ln r = +1.34` (flat needs +1.00);
+`d ln rho_med/d ln r = -1.92` (isothermal is -2.00). The required medium
+profile is the isothermal shape, which reproduces flat outer curves.
+This is a real gain over DD.
+
+**Part C -- decisive gauge-free EOS test.** For a barotropic medium in
+hydrostatic equilibrium, `c_s^2 = -g*r/(d ln rho/d ln r)` with no
+integration constant and no fitted parameter, and `K = rho*c_s^2` by the
+master relation. 1776 points, 124 galaxies. If the HDF is one substance,
+`K` must be single-valued in `rho`.
+
+| Quantity | Result |
+|---|---|
+| Scatter of `log10 K` at fixed `rho` | **0.663 dex (factor 5)** |
+| Correlation `log c_s` vs galaxy's own `V_flat` | **+0.921** |
+| `c_s/V_flat` | 0.627 (isothermal analytic: 0.707) |
+| `c_s^2` range across sample | **factor 251** |
+| `max c_s/c0` | 4.1e-03 -- cap never approached |
+
+**VERDICT: NEGATIVE for a universal EOS.** The medium's stiffness is set
+by each galaxy's own rotation speed, not by any shared property of the
+substrate. `c_s ≈ V_flat/sqrt(2)` is the isothermal-sphere identity --
+the medium is reproducing each galaxy's curve because it was constructed
+from it. One free radial function per galaxy: mathematically a halo, in
+fluid vocabulary.
+
+**What would flip it:** an independent law fixing `c_s` or `K` from
+substrate parameters alone, not from the host galaxy. Then `rho_HDF(r)`
+would follow from the baryons with zero per-galaxy freedom and the
+medium would do work no dark matter halo can. No such law exists in this
+repository.
+
+**Assumptions stated, not buried:** HDF treated as spherical while
+baryons are a disk; medium taken as static (no bulk flow terms);
+`rho_HDF` obtained by differentiating noisy enclosed mass, stabilised
+with local log-space slopes, all population claims are medians.
+
+
+## Domain FF -- rotating HDF: solving for the medium's vorticity (2026-09-16)
+
+Script: `sparc/domain_FF_vortical_medium_flow.py`
+Results: `sparc/domain_FF_vortical_medium_flow_results.json`
+
+**Legitimate correction to Domain EE.** EE assumed a static, spherical
+medium (`v_phi = 0`), flagged in its own header. A mass-bearing medium
+interpenetrating a differentially rotating disk has no reason to sit at
+rest. The directive's radial balance
+`v_phi^2/r - (1/rho)dP/dr = V_circ^2/r` and its consequence
+`c_s^2 = (V_circ^2 - v_phi^2)/(-d ln rho/d ln r)` were **verified
+algebraically before coding and are correct.**
+
+**Structural note recorded before running:** the reversed system is fully
+determined (`rho` and `V_circ` from data, `c_s` frozen, `v_phi` read off),
+so it cannot fail *or* succeed on goodness of fit. It is different
+bookkeeping of the same information, not a better fit.
+
+**Part A -- a universal `c_s` has a hard ceiling.** `v_phi^2 >= 0` requires
+`c_s^2 <= V_circ^2/(-d ln rho/d ln r)` at every point of every galaxy. The
+binding constraint comes from the faintest dwarfs: **`c_s <= 7.83 km/s`**
+across the sample, against the ~150 km/s that massive galaxies implied in
+EE. Locked at 7.44 km/s (95% of ceiling) for the rest of the run.
+
+**Part B -- at that `c_s` the medium must co-rotate.** The pressure term
+becomes negligible: `v_phi/V_circ` median **0.9959**, with 95.9% of points
+above 0.95. This is not a slowly shear-dragged wake; it is a
+centrifugally supported, co-rotating massive medium.
+
+**Part C -- the factor is NOT absorbed, it is conserved and moved.**
+
+| | Dynamic range across galaxies | log scatter | corr. with `V_flat` |
+|---|---|---|---|
+| EE `c_s^2` | factor 478 | 0.520 dex | +0.921 |
+| FF `v_phi^2` | factor 382 | 0.535 dex | **+0.989** |
+
+Freezing `c_s` does not remove per-galaxy freedom; it relocates it from
+the substrate's stiffness into the substrate's flow field. `v_phi(r)` is
+still one free radial function per galaxy, still read off the observed
+curve, and its tie to `V_flat` is *tighter* than what it replaced.
+
+**Part D -- the genuine gain, and a real new constraint.** Unlike a halo,
+a rotating medium makes a commitment outside the rotation curve:
+`L_medium/L_baryons` within `R_max` has **median 3.98** (IQR 2.57-7.76,
+max 45.8). Drag transfers angular momentum, it does not create it, so the
+disk must have shed a comparable amount. For circular orbits
+`L ~ sqrt(GMr)`, so shedding a factor 3.98 shrinks the disk radius ~25x
+(factor 7.76 => ~77x). Observed disks are ~10 Gyr old and still extended.
+Drag strong enough to spin the medium to co-rotation would have decayed
+them; drag weak enough to preserve them cannot have supplied the angular
+momentum, which must then be primordial -- an extra assumption, not a
+consequence of the mechanism.
+
+**This is the useful output:** a test the rotating medium can FAIL that a
+static halo never faces, because a static halo makes no angular-momentum
+commitment. It is a genuine advance in falsifiability even though it did
+not absorb the variance.
+
+**Part E -- no `a0` derivation.** Locked `c_s = 7.44 km/s` gives
+`L = c_s^2/a0 = 0.0150 kpc`, not obviously any galactic scale (SPARC disk
+scale lengths span 0.18-18.76 kpc). `c_s` was fixed by the faintest
+dwarf's ceiling, not derived. Reported, not claimed.
+
+
+## Domain GG -- oblateness artifact and cosmological spin (2026-09-16)
+
+Script: `sparc/domain_GG_oblateness_and_spin.py`
+Results: `sparc/domain_GG_oblateness_and_spin_results.json`
+
+Two challenges to EE/FF that FF did not cover, tested directly.
+
+**Challenge 1 -- is EE's K-scatter an artifact of spherical binning in an
+oblate region? REJECTED.** The claim came paired with the concession that
+"in the outer radii where the HDF dominates, spherical is a fine
+approximation", which makes it decisive: the artifact hypothesis predicts
+the scatter must collapse there.
+
+| Selection | n_pts | n_gal | scatter |
+|---|---|---|---|
+| all points | 1776 | 124 | 0.715 dex |
+| `f_bar < 0.50` | 1269 | 116 | 0.638 dex |
+| `f_bar < 0.30` | 766 | 92 | 0.594 dex |
+| `f_bar < 0.20` | 364 | 57 | 0.497 dex |
+| `r > 3 R_disk` | 826 | 110 | 0.627 dex |
+| `r > 4 R_disk` | 622 | 93 | 0.621 dex |
+| `f_bar<0.30 AND r>3 R_d` | 490 | 85 | **0.570 dex** |
+
+The scatter survives at 0.570 dex (factor 3.7) in exactly the regime both
+sides agree is near-spherical. There is a mild trend with `f_bar` but it is
+**non-monotonic** (0.497 / 0.649 / 0.614 / 0.506 across `f_bar` quartiles),
+which is not the signature a geometric artifact would leave. Oblate binning
+is not the cause.
+
+*Bookkeeping note:* the all-points figure here is 0.715 dex vs EE's 0.663.
+Same quantity, different binning (7 bins here, 9 in EE, different minimum
+occupancy). The comparison within this table is internally consistent; the
+EE number is not exactly reproduced and is not claimed to be.
+
+**Challenge 2 -- does the required medium spin match real halos? REJECTED.**
+Using FF's co-rotation solution, the Bullock et al. 2001 spin parameter
+`lambda' = J/(sqrt(2) M V R)`:
+
+| | Value |
+|---|---|
+| Required `lambda'`, median (124 galaxies) | **0.3945** (IQR 0.373-0.428) |
+| Analytic prediction, co-rotating isothermal `1/(2sqrt2)` | 0.354 |
+| Observed cosmological median (lognormal, `sigma_ln ~ 0.5`) | 0.035 |
+| Ratio | **11.3x** |
+| In units of the cosmological spread | **4.8 sigma high** |
+| Galaxies within 2 sigma of cosmological median | **0.0%** |
+
+The measured 0.3945 confirms the analytic 0.354 derived before running, so
+this is structural, not a numerical accident. Real halos do have a spin
+distribution, but it is centred an order of magnitude below full
+co-rotation -- they are pressure-supported with ~3.5% of the angular
+momentum this model needs. **Invoking halo spin as the free per-galaxy
+variable requires spins the observed distribution does not contain.**
+
+**Net:** neither assumption-relaxation rescues a universal EOS. After six
+domains the missing object is unchanged -- a law fixing `c_s` or `a0` from
+substrate parameters alone, not from the host galaxy.
+
+
+## Domain HH -- cavitation boundary EOS and the a0 = c*H0 claim (2026-09-16)
+
+Script: `sparc/domain_HH_cavitation_boundary.py`
+Results: `sparc/domain_HH_cavitation_boundary_results.json`
+
+**Attribution first.** The `a0 ~ c*H0` coincidence is **Milgrom 1983**, not
+a PWC result. Reinterpreting it in a phase-wave framing is a
+reinterpretation of a known numerical coincidence, not a derivation. It is
+nonetheless the **first proposal in this project to fix `a0` from outside
+the galaxy** rather than fitting it, which is the right kind of move.
+
+**A -- the numbers.**
+
+| Form | Value (m/s²) | vs fitted `a0` = 1.1603e-10 |
+|---|---|---|
+| `c*H0` (Planck, H0=67.4) | 6.5372e-10 | **5.6x too large** |
+| `c*H0/(2pi)` | 1.0404e-10 | **-10.2%** |
+| `c*H0/6` | 1.0895e-10 | -6.1% |
+
+The **order of magnitude is genuinely striking**. The specific claim
+`a0 = c*H0` is wrong by 5.6x. `c*H0/(2pi)` matches to -10.2%, but the
+`2pi` must be **derived, not chosen after seeing the answer**, and nothing
+in the framing derives it.
+
+**B -- the boundary EOS, written as requested.** Impedance `Z = sqrt(mu/eps)`,
+`Z_m/Z_0 = 1/n`, reflection `Gamma = (1-n)/(1+n)`; isotropic sea gives
+`P = u/3`; Young-Laplace closes it:
+
+`2*sigma/R = [(u_sea - u_void)/3] * (1 + Gamma^2)`
+
+No velocity, no vorticity, no shear -- a pure normal-traction balance, which
+is what was asked for. **But evaluated with Domain CC's own measured index
+contrast** (`n-1 = 1.95e-07`): `Gamma = -9.7e-08`, `Gamma^2 = 9.5e-15`. The
+impedance term is **14 orders below unity and does no work**. The EOS
+degenerates to `Delta_P = (u_sea - u_void)/3`.
+
+**Fine-tuning problem found.** Boundary tension to put `a = a0` at 20 kpc:
+`sigma = 1.885e+05 N/m`, `Delta_P = 6.11e-16 Pa`, against an available
+`u_sea/3 = 2.56e-10 Pa`. The required traction is **2.4e-06** of what the
+sea has, so `(u_sea - u_void)` must cancel to ~1 part in 4e5. Nothing in
+the framing supplies that cancellation.
+
+**C -- the best idea in the proposal, and it is genuinely good.** If `a0` is
+set by cosmic tension then `a0 = c*H(z)/2pi` is **not constant**:
+
+| z | 0.0 | 0.5 | 1.0 | 2.0 | 3.0 |
+|---|---|---|---|---|---|
+| `a0(z)/a0(0)` | 1.000 | 1.322 | 1.790 | **3.032** | 4.566 |
+
+A ~3x larger `a0` at z=2 is a **real falsification target reachable with
+existing high-z kinematics** (e.g. Genzel et al. 2017, Nature 543, 397) and
+unreachable by any fit to SPARC. It cuts both ways: `a0` measured constant
+with z kills the cosmic-tension origin.
+
+**D -- two structural problems the numerics cannot fix.**
+
+1. **SIGN CONTRADICTION.** The framing says a galaxy IS a void -- lower
+   density than background. Domain CC measured, from the same data, `n`
+   **increasing inward**, and `n^2 = rho/rho_0` means **higher** density
+   toward the galaxy. Cavitation and refraction in this same repository
+   require **opposite density gradients**. Both cannot be right. Possible
+   escape: the void is in the LDF/EM sea while the HDF compresses -- but
+   then the framework must say which component refracts light and which
+   carries mass, and the manifest does not.
+
+2. **STATIC SUPPORT IS ALREADY TESTED.** Correctly dropping rotation after
+   FF leaves a normal-traction balance -- exactly the static case EE
+   tested. EE's gauge-free result stands: 0.663 dex scatter in `K`, `c_s`
+   correlated with each galaxy's own `V_flat` at +0.921; GG showed this is
+   not a binning artifact (0.570 dex in the near-spherical regime). A
+   global constant `a0 = cH0/2pi` **cannot supply per-galaxy variation that
+   scales with `V_flat`**. The cavitation reframing inherits EE's failure
+   rather than escaping it.
+
+**Escape route identified, and it is testable:** unless the boundary is a
+genuine **discontinuity** (phase transition at a specific radius) rather
+than a smooth profile. That is a different model and predicts a
+**detectable kink in rotation curves at the boundary radius**. SPARC can
+test it. Natural next domain.
+
+
+## Domain II -- cavitation wake matter production (2026-09-16)
+
+Script: `sparc/domain_II_cavitation_wake_matter.py`
+Results: `sparc/domain_II_cavitation_wake_matter_results.json`
+
+A chain running from the fine structure constant to a measured
+astronomical object with **no free parameter anywhere in between**, plus
+four reversals of this session's own earlier analysis.
+
+**Mechanism, as stated by the author** (recorded because every prior
+misreading of it produced a wrong result): the medium passes **through**
+the sieve, not around an obstacle. It **never tears** -- no vacuum, no
+`r=0`, no break in the continuum. The bow wave builds until flow around
+matches flow through, an **equilibrium the wave grows into**, not a
+threshold that trips. The resulting low-pressure wake is crushed by the
+uniform ambient pressure, and that slam forges matter -- hydrogen,
+because it is the cheapest stable knot the budget buys.
+
+**1. `N` from Williamson's toroidal electron, exact.** Electron as a
+double-looped confined photon; major radius `R = lbar_C`, tube radius
+`r = alpha*lbar_C = r_e`, ratio `1/alpha`. Double-loop path `2*2*pi*R`
+divided by the tube scale gives
+
+`N = 4*pi/alpha = 1722` waves per electron
+
+Not fitted. Medium wavelength `lambda = r_e = 2.8179e-15 m`, energy per
+quantum **440.0 MeV**.
+
+**2. Blocking threshold.** `rho > m_p/lambda^3 = 7.475e16 kg/m^3` =
+**0.325x nuclear saturation**. Stars (mean *and* core), white dwarfs and
+iron cores are transparent; neutron matter and `rho_max` cores impede.
+The drag/bow-wave mechanism is confined to exactly the objects it was
+proposed for, from a derived number rather than an assumed packing law.
+
+**3. Bow wave.** `R_bow/R = sqrt(1 + phi*c0/v)`, an equilibrium.
+
+**4. The slam IS `M = L/c0^2`.** With `c_s = c0` from the verified
+sonic-choke entry, `L = rho_HDF*c0^2` and `M = L/c0^2 = rho_HDF` exactly
+-- the wake refills with matter at precisely the density of the medium it
+displaced. This was initially mis-attributed in-session to the EOS; it is
+the master relation itself. Hydrogen wins the budget 56:1 over iron. One
+quantum exceeds the `e+e-` pair threshold by 431x, so no energy focusing
+is required; Breit-Wheeler (`gamma+gamma -> e+e-`) was observed directly
+at STAR/RHIC in 2021.
+
+**5. Against a real object.** van Dokkum et al. 2023 candidate runaway
+supermassive black hole, ~200 kpc linear wake of star formation:
+
+| wake width | matter produced |
+|---|---|
+| 0.3 kpc | 2.09e8 Msun |
+| **1.0 kpc** | **2.32e9 Msun** |
+| 3.0 kpc | 2.09e10 Msun |
+
+Observed trail stellar mass ~1e9 Msun; **ratio 2.32**. `rho_HDF = 1e-21`
+is not tuned -- it is the galaxy-scale medium density Domains EE/Z
+already produced from the SPARC inversion. With the intergalactic baryon
+density instead the trail mass is 2.3e3 Msun, short by 4e5.
+
+**6. Four corrections to this session's own earlier work:**
+
+| # | Claimed earlier | Correct |
+|---|---|---|
+| a | `rho_max` is derived as `M_core/volume`, an output | `rho_max` is an **input** (2x nuclear sat); `R_core = 30.729 km` is the output. No circularity. |
+| b | Domain HH: `a0 = cH0/2pi` needs the `2pi` derived | Manifest line 749 already records that the real Gibbons-Hawking formula gives `c0*H0` with **no** `2pi`. The relation stands or falls at the bare **5.6x**. |
+| c | Domain EE treated `c_s` as a free parameter to be derived | The verified sonic-choke entry fixes `c_s = c0`. EE's required 7.8-1227 km/s is **244-38435x** below it. Same gap, fixed target. |
+| d | `4.6e10` vs `4.6e17` is a transcription error | Genuinely distinct variables. A 1.4-2.1 Msun neutron core inside ~34 Msun of max-compressed HDF reaches max `2GM(<r)/c^2/r` of **0.37-0.48** -- it does **not** close. |
+
+## Domain JJ -- the arrival-rate test of the pairing redshift
+
+Script: `sparc/domain_JJ_redshift_arrival_rate.py`
+Results: `sparc/domain_JJ_redshift_arrival_rate_results.json`
+Data: none from this repository. All observational inputs are **external and
+cited in the file header** (Goldhaber et al. 2001; Blondin et al. 2008;
+Fujii et al. 2000 / Damour & Dyson 1996; Lubin & Sandage 2001).
+
+**Mechanism tested, as stated by the author:** a photon is an unpaired single
+chirality; it phases into the (+,-) pair lattice at a constant rate per unit
+path; the medium is uniform and static; `c` is shared and constant. That
+gives `1+z = exp(kappa*D)` and recovers the Hubble law for
+`kappa = H0/c0 = 7.2860e-27 /m` (Planck H0), mean free
+path 4.448 Gpc.
+
+**Recovering the Hubble law is not evidence.** Any per-path energy loss does
+it, for exactly one `kappa`. The discriminating observable is the photon
+**arrival rate**.
+
+| Quantity | Value |
+|---|---|
+| Light-curve width exponent, static pairing prediction | `b = 0.0` |
+| Light-curve width exponent, observed (external) | `b = 1.07 +/- 0.06` |
+| Tension | **17.8 sigma** (still 5.9 sigma if the quoted error is 3x too small) |
+| Tolman SB exponent, static pairing | `(1+z)^-1` |
+| Tolman SB exponent, metric expansion | `(1+z)^-4` |
+
+**Why it fails structurally, not numerically.** Two photons leaving one source
+`dt` apart traverse the same path at the same speed profile, so they have
+identical travel time and arrive `dt` apart. This holds for *any* `v(x)` and
+*any* `kappa`. No static medium can dilate arrival rates. There is nothing to
+tune.
+
+**The single loophole, and it is fully determined.** If `c` depends on
+emission epoch, `dt_a/dt_e = 1 + dT/dt_e`, and `(1+z)` dilation forces
+`cdot/c = -H0` exactly, i.e. `c ∝ exp(-H0*t)` and (at constant `K`, via
+`c^2 = K/rho`) `rho_medium ∝ exp(+2*H0*t)`. The medium must **densify**.
+This is the *opposite sign* to the thinning medium assumed in
+`PWC/pwc_redshift_timing_falsification.py`, and explains that script's
+wrong-sign result.
+
+**What the loophole costs.** With `e`, `eps0`, `hbar` fixed, `alpha ∝ 1/c`
+gives `alpha_dot/alpha = 6.893e-11 /yr`
+against the Oklo bound `1e-17 /yr` --
+over by **6.9e+06x**. The escape (all
+constants co-vary so `alpha` is fixed) is legitimate and is stated in the
+file, but it makes `c(t)` unobservable by construction, at which point
+"the medium densifies" and "the metric expands" are one statement in two
+gauges. That is a relabelling of expansion, not a replacement.
+
+**STATUS: NEGATIVE.** The specific claim that redshift is a static per-path
+process and "not time stretching" is ruled out. The pair-lattice ontology
+itself is untested here, either way.
+
+## Domain KK -- a0 from a uniform medium, free parameter actually removed
+
+Script: `sparc/domain_KK_uniform_medium_a0.py`
+Results: `sparc/domain_KK_uniform_medium_a0_results.json`
+Data: SPARC `vizier_t1.txt` / `vizier_t2.txt`, cuts identical to Domains K
+and CC. 2700 points, 149 galaxies. Dark matter halo
+parameters: 0.
+
+`a0 = c0*sqrt(G*rho0)` is **dimensionally forced** for a uniform medium --
+`[G*rho] = 1/s^2`, so `c*sqrt(G*rho)` is the only m/s^2 available from
+`rho0, G, c0` without a free exponent.
+
+| Model | Fitted to SPARC | a0 [m/s^2] | rms [dex] |
+|---|---|---|---|
+| Newton, baryons only | 0 params | -- | 0.5145 |
+| RAR, a0 fitted | 1 param | 1.1603e-10 | **0.1327** |
+| `c0*sqrt(G*Omega_m*rho_crit)` | **0 params** | 1.2698e-10 | **0.1334** |
+| `c0*sqrt(G*rho_crit)` | 0 params | 2.2624e-10 | 0.1730 |
+| `c0*sqrt(G*rho_HDF)`, repo value 1e-21 | 0 params | 7.7450e-08 | 1.2839 |
+
+Penalty for the zero-parameter prediction over the one-parameter fit:
+**+0.0008 dex**. It still beats Newton by
+0.3811 dex.
+
+**The load-bearing caveat, recorded because it is disqualifying if ignored.**
+`rho_crit ∝ H0^2`, so `c0*sqrt(G*f*rho_crit) = c0*H0*sqrt(3f/(8*pi))`. This
+formula *cannot* be independent of the old `a0 ~ c*H0` coincidence.
+
+| Quantity | /(c0*H0) |
+|---|---|
+| a0 fitted to SPARC | 0.1772 |
+| `c0*sqrt(G*Omega_m*rho_crit)` | 0.1939 |
+| `c0*H0/(2*pi)` (the old coincidence) | 0.1592 |
+
+The O(1) factor `sqrt(3*Omega_m/(8*pi)) = 0.1939` is supplied
+by `Omega_m`, which is a Planck/LCDM fit. The author's own objection --
+*"is fitted assuming LCDM ... Its fitted in acdm"* -- applies to this step in
+full and is not waved away.
+
+**INTERNAL INCONSISTENCY FOUND (this repository's, not external).** Inverting
+the SPARC-fitted a0 gives `rho0 = 2.2445e-27 kg/m^3`
+(0.2630 rho_crit). Domains EE, Z and II carry
+`rho_HDF = 1e-21 kg/m^3`. These differ by **4.46e+05x**.
+A uniform medium cannot have two densities that far apart. One is wrong; KK
+does not settle which, and Domain II's van Dokkum wake result depends on the
+`1e-21` value.
+
+**Per-galaxy a0** (139 galaxies with >=4 points):
+median 1.0717e-10, scatter
+0.3106 dex. This is an **upper bound** on real
+variation -- per-galaxy fits absorb distance, inclination and M/L errors. KK
+does not claim the spread is physical.
+
+## Supersessions applied in this pass
+
+| File | Action | Reason |
+|---|---|---|
+| `domain_EE_medium_mass_ledger.py` | Banner added, **no code or text deleted** | Its gauge-free inversion assumes a per-galaxy, radially varying medium. The author's ontology is a uniform medium ("constant even pressure and tension everywhere"). The 0.663 dex K-scatter and the +0.921 `c_s` vs `V_flat` correlation are therefore artifacts of a silently introduced assumption, not measurements. |
+| `domain_FF_vortical_medium_flow.py` | Banner added, **no code or text deleted** | Takes EE's `c_s^2(r)` field as input. Its +0.989 is EE's +0.921 re-expressed; conserving the variance of an artifact does not make it real. |
+
+Both files are preserved verbatim below their banners so the error is
+auditable rather than erased.
+
+## The blocker both new domains end on
+
+`m_wave` -- the mass of a single (+,-) medium pair. Without it:
+
+- `rho0` cannot be converted to a pair number density, so `kappa = n_avail *
+  sigma` cannot be split into its two factors (Domain JJ).
+- There is no route to `rho0` that avoids passing through `H0` or `Omega_m`,
+  which is exactly what would turn Domain KK from a repackaging into a
+  derivation.
+
+Domain II's two routes to this number (`lambda = r_e` giving 440 MeV/wave;
+`N = 4*pi/alpha` giving 296.7 eV/wave) disagree by **1.48e6** and neither is
+adopted here. Neither Domain JJ nor Domain KK depends on it -- that is why
+both could be run while the blocker stands.
 
 ## What this manifest does NOT contain (explicit gaps, not silently omitted)
 
