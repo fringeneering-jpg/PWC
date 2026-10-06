@@ -1,3 +1,15 @@
+> **SUPERSEDED DIAGNOSIS (see `PWC/knot_existence_pressure_confinement.py`).**
+> Nothing in this file's *results* is retracted — Pass 1 really does fail
+> 36/36. But the "Why, physically" section below is half right and its
+> proposed fix does not work. A volume/pressure penalty alone adds another
+> lam^+3 term; it removes the dispersal escape and hands the lump to
+> collapse instead. Derrick scaling shows this functional carried **no
+> negative power of lam at all**, so no value of B/K, C/K or Lam/K could
+> ever have passed. Two terms were missing, one at each end of R:
+> ambient pressure (lam^+3) *and* the confinement energy of the trapped
+> light (lam^-1). The second one is absent because `E[n,phi]` has no light
+> in it. Pass 1 did not fail on parameters; it failed on field content.
+
 # PWC Compact-Knot Dimensionless Existence/Stability/Scaling Audit — Results
 
 ## Task as specified
