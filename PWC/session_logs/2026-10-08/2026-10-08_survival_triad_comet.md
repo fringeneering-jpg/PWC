@@ -75,3 +75,16 @@ t = 79/72 km); overlap volume at CORE CONTACT = 2.72×10¹⁵ m³ → **displace
 + 2.07 spin/ringdown. The fight is the process, the capacity loss the product; the E and S
 channels sit inside the budget with room to spare. The fight's work = 1.78 M☉·c₀² — the
 mass scale behind the ringdown ruling ("the cores fighting through their max p").
+
+## The neck (Jaden's refinement, same session)
+
+"it only has to squeeze it out the way right until the 2 cores edges touch, after that
+that spot becomes the highest pull in the merger, both sides working together to force the
+medium apart as it becomes the thickest part of the merger."
+
+Verified (`scratch/neck_pull.py`): combined pull at the contact point = g1+g2 = 5.25×10¹²
+= **16.3× the yield** — the highest pull in the merger (the merged core's surface is only
+10.3×). The axis edge where the combined pull drops to the yield sits **124.0 km** past
+contact — thicker than the merged shell's 113.4 km. The neck is the thickest Max-P layer,
+forced from both sides. Two phases of one event: push-out (1.78 M☉, up to edge contact) →
+stack-up (the neck, after contact).
