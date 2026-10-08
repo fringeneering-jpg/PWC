@@ -1,7 +1,7 @@
 # Capture — Jaden's three rulings + baseline-cold mechanism (2026-10-08 10:48)
 
 Status: captured verbatim; arithmetic consequences computed in `scratch/rulings_arithmetic.py`.
-Committed to `PWC/session_logs/2026-10-08/` on Jaden's "in the git" (2026-10-08).
+Nothing in git.
 
 ## His words, verbatim
 
@@ -130,3 +130,52 @@ Committed to `PWC/session_logs/2026-10-08/` on Jaden's "in the git" (2026-10-08)
   free, so c₀).
 - Open: the release profile = the open decompression law; Y has one anchor.
 - Full document: `scratch/rcp28_volume_mass_friction.md`; script `scratch/rcp28_volume_mass_friction.py`.
+
+## Data tests run (10:48+, data on disk in C:\Users\jaden\cosmology\data\)
+
+- **Pulsar bow-shock census (BR14 + ATNF):** fold v_c ~ 1e43-1e45 m/s in the ISM (never
+  fires — bows are not fold-driven, confirms the passage chart); 5/6 bow pulsars below the
+  954 ridge (ridge doesn't separate bow/no-bow for neutron bodies — the "rho_max crust vs
+  rho_n" open cell stands); dense-ISM→slower direction present in n=6 but selection-
+  dominated (not evidence). `scratch/pulsar_bow_census.py`.
+- **HST wake-width (GO-16912 total drc, first independent measurement):** stacked cross-
+  axis significance 7.5 sigma; far-half (d=4.6-7.0") FWHM = 0.169" = 1.36 kpc, deconvolved
+  1.22 kpc = radius 0.61 kpc vs published 0.7 kpc — consistent within ~15%. Full-trail
+  stack 2.28 kpc (streak broadens toward the galaxy, as the paper says). Supply-cap input
+  survives: rho_mist moves 0.112 -> ~0.13-0.15 rho0 with the measured width — the ~0.1 rho0
+  band intact. Caveat: STScI drizzle lacks the authors' flat-field drift correction (true
+  width may be narrower still); PSF 0.075" vs 0.17" FWHM — marginally resolved.
+  `scratch/hst_wake_width.py`, `scratch/hst_wake_width2.py`, cutout `scratch/rcp28_streak_cutout.png`.
+
+## Recoil-wake check (10:48+, papers in C:\Users\jaden\cosmology\data\recoil_wake_search\)
+
+- **CID-42** (Civano 2010/2012): kick vk = 1428–2470 km/s (1.5–2.6× the 954 cap); SE AGN
+  offset ~2.5 kpc from the stellar cusp; NE/SW tidal tails; NO wake reported.
+- **3C 186** (Chiaberge 2017): kick ≈ 2100 km/s (2.2× the cap); QSO offset 1.3" (~11 kpc);
+  low-S/N shells/tidal tails in the host; NO wake reported.
+- Scoring vs the passage chart: above the cap the chart's own reading is "the front cannot
+  re-form and the medium ahead is slammed; the cap thickens/widens" — a slammed bow, NOT a
+  trailing cavitation wake. The wake regime is anchored only by RBH-1 (AT the cap, 954).
+  So the absence of RBH-1-like wakes on the two above-cap candidates is CONSISTENT with the
+  regime structure (not evidence, not falsification); their tidal tails/shells are merger
+  debris on the authors' own reading. The "slowest wake bounds Y" item stays open: no
+  additional wake detections to bound Y from below; the above-cap signature (slammed bow)
+  is neither confirmed nor excluded by the current data. `scratch/recoil_texts/*`.
+
+## The stagnation scale (Jaden's order, 10:48: displacement not cavitation; find the size/density)
+
+His words: the merger dump is displacement, not cavitation - "3 suns worth of medium can be
+dropped and move lightspeed without visible drag or cavitation, however max p cant...
+figure out the precise size and density that actually causes the stagnation."
+
+- Derived: a chunk holds itself at density rho iff g_surf = (4pi/3) G rho R >= a_max
+  -> stagnation column **rho*R >= 3 a_max/(4 pi G) = 1.155e21 kg/m^2**.
+- At rho_max: **R* = 886 km, M* = 1,910 Msun** = the session log's "pure rho_max sphere
+  holds all the mass" limit - now the stagnation boundary.
+- Merger dump: 103 km = 0.116x the column (8.6x below) -> FREE: decompresses at c0, no drag,
+  no bow shock - the wave, under the cavitation limit (his reading, as a number).
+- RBH-1: core surface gravity 1.76e14 (546x the yield) -> HELD -> stagnation at
+  v_c = sqrt(2Y/rho_max) = 954 km/s -> cavitation.
+- k-rule column Sigma = 8.48e20 = 0.73x the stagnation column (same decade, different roles).
+- Doc: `scratch/stagnation_scale.md`, script `scratch/stagnation_scale.py`. Committed
+  2026-10-08 ("in the git").
