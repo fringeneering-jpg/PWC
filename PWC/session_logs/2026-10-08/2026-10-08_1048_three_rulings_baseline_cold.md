@@ -179,3 +179,60 @@ figure out the precise size and density that actually causes the stagnation."
 - k-rule column Sigma = 8.48e20 = 0.73x the stagnation column (same decade, different roles).
 - Doc: `scratch/stagnation_scale.md`, script `scratch/stagnation_scale.py`. Committed
   2026-10-08 ("in the git").
+
+## Stagnation polish (10:48+, `scratch/stagnation_polish.py`; not yet committed)
+
+- Core-hold threshold: R >= 5.02 km / M >= 0.06 Msun — every NS/BH core holds Max-P
+  trivially (1.4 Msun -> 2.8x a_max).
+- Sheet vs ball: k-rule candidate column a_max/(2 pi G) = 7.70e20 and the stagnation column
+  3 a_max/(4 pi G) = 1.155e21 differ by exactly 3/2 — one balance, two geometries.
+- Falsification: (i) sub-column bow shock kills FREE (all merger dumps pass; GW170817 GRB =
+  ejected matter); (ii) >=886-km Max-P at c0 kills STAGNANT (boundary unpopulated);
+  (iii) 954 anchored by RBH-1 only — recoil candidates are above-cap, can't anchor;
+  (iv) neutron stars = 2x the column, stagnant, cap 72 — pulsar tension unchanged.
+
+## 43 GeV line status update (10:48+, literature on disk: data\line_43GeV\)
+
+- Fan et al. v3 (arXiv:2407.11737v3, Jul 2026): 4.3σ global / 3.7σ (13 clusters), absent from
+  the Galactic centre.
+- Profumo (arXiv:2609.16425, 16 Sep 2026): the excess is REPRODUCED in public Fermi-LAT data
+  and survives event-type partitions and a withheld-data test — not a data error. BUT the
+  spatial-spectral recalibration gives a CONDITIONAL global significance of ~2.7σ (maximum
+  at 44.5 GeV for uniform brightness), and the morphology is spatially BROAD, nearly uniform
+  surface brightness through the virial region, substructure-enhanced — smooth NFW
+  annihilation and a central point source are disfavoured; "most likely a chance
+  fluctuation amplified by analysis and target-selection effects."
+- PWC reading update: the keystone's T4 identification ("the line = the plateau quantum of
+  one 46-nucleon pair") rests on a 2.7σ conditional excess — weaker than the 4.3σ originally
+  claimed. The broad/uniform morphology is NOT inconsistent with the framework's own
+  prediction (the line tracks the hot heat-holding gas, weak at the Galactic centre —
+  OPEN_WORK:89): the ICM is broad and nearly uniform, which is exactly the morphology the
+  critique finds; it is the smooth-NFW dark-matter reading that fails. Both the fluctuation
+  and the hot-gas readings remain live; VLAST (~1-2 yr) stays the decisive test.
+
+## The medium->matter transition condition (Jaden's order, 10:48: five gates)
+
+"at what point would it start causing the stagnation... the heat and requirements of the
+proton and electron derivations and the rsmbh all together... the precise condition needed
+for the medium to matter transition... the untie is suction too, the heat and the negative
+pressure is the untying trigger, like they pull towards each other, matter is inherently
+counter intuitive for both."
+
+Five gates (all required; `scratch/transition_condition.md`, `scratch/transition_condition.py`):
+1. BLOCKAGE: rho > m_p/lam^3 = 7.475e16 (lam = 2.82 fm = 3.3 R_p, the T2 gate).
+2. FOLD: rho_max/2 -> rho_max at P* = rho_max c0^2; squeeze expels 31.371 c0^2/kg
+   (self-financed: H >= 32.371 c0^2/kg).
+3. PLATEAU WORK: m*c0^2 per kg tied — the demand function at dP = P*.
+4. QUANTIZATION: m R c0 = 4 hbar (proton 4.001 hbar; electron = 4 waves, his 10-07 ruling);
+   S = 1 = heat-void state = alignment.
+5. HOLD: topology, not gravity — knot column 8.79 kg/m^2 vs stagnation column 1.155e21
+   (20 orders apart; the column is for MEDIUM chunks).
+Wave = sub-column, never ties. Max-P shell = gates 1-2 only, still medium. RSMBH wake =
+gates 1-4 -> hydrogen. Counter-intuition: the TIE fights both (expels heat AND compresses
+against the stretch); the UNTIE runs WITH both (pull 1.75% trigger + heat suction 98.25%,
+same direction). Not yet committed. Falsification structure added (round 16): gate 1 killed
+by tying without blockage (Earth-heat gate guards); gate 2 by sub-fold tying; gate 3 by
+tying heat != m*c0^2 (water analog checks); gate 4 by a stable knot violating m R c0 = 4 hbar
+(neutron 2.5% off, isospin-recorded; Deltas open); gate 5 by a knot untying with no heat
+draw. The RSMBH wake runs all five; the frozen -0.10 dex dilution bar is their integrated
+test under path (a).

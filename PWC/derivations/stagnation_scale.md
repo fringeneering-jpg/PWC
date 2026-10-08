@@ -60,3 +60,27 @@ below the stagnation column the dropped medium is the wave (c₀, frictionless);
 the same substance becomes a stagnant body (954 km/s cap, cavitation). The merger dump and
 the runaway wake are the two sides of one scale, and the size/density that causes the
 stagnation is **ρ·R = 1.155×10²¹ kg/m²**, i.e. 886 km / 1,910 M☉ at ρ_max.
+
+## 5. Polish (2026-10-08, `PWC/stagnation_polish.py`; committed)
+
+- **Core-hold threshold:** a core holds Max-P iff its surface gravity ≥ a_max, i.e.
+  R ≥ 3a_max/(4πGρ_core) = 5.02 km (M ≥ 0.06 M☉). Every neutron star and black hole
+  qualifies trivially (1.4 M☉ → 2.8× a_max) — consistent with every hole having a shell.
+- **Sheet vs ball — one balance, two geometries:** the k-rule candidate column
+  a_max/(2πG) = 7.70×10²⁰ (flat sheet, g = 2πGΣ) and the stagnation column
+  3a_max/(4πG) = 1.155×10²¹ (ball, g = (4π/3)GρR) differ by exactly 3/2. The k-rule's
+  measured Σ = 8.48×10²⁰ = 0.734× the ball column. The two candidate laws are the same
+  pull-vs-yield balance in two geometries.
+- **Falsification structure:**
+  (i) a sub-column chunk showing a bow shock/drag kills the FREE regime — every GW event
+  without a bow-shock counterpart is a pass (GW170817's GRB is ejected matter, not a
+  medium bow shock);
+  (ii) a pure-Max-P object ≥ 886 km moving freely at c₀ kills the STAGNANT regime — none
+  known; the 886 km / 1,910 M☉ boundary is unpopulated (the 13 "NO SOLUTION" catalogue
+  rows sit above it);
+  (iii) the 954 km/s stagnation speed is anchored by RBH-1 alone; the recoil candidates
+  (1300–2470 km/s) are above the cap — the slammed-bow regime, not the wake regime, so
+  they cannot anchor it; "slowest wake bounds Y" stays open;
+  (iv) neutron stars: ρR = 2.3×10²¹ = 2.0× the column → stagnant bodies, cap 72 km/s —
+  the pulsar census tension (observed 75–1610 km/s) is unchanged and stays in the open
+  cell "ρ_max crust 954 vs bare ρ_n 72".
