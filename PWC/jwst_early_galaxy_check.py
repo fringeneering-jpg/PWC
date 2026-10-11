@@ -72,12 +72,12 @@ def E(z): return np.sqrt(Om*(1+z)**3 + Ol)
 def age_Gyr(z):
     zz = np.linspace(z, 2000, 400000)
     integrand = 1.0/((1+zz)*E(zz))
-    return np.trapz(integrand, zz) / (H0_s*yr*1e9)   # Gyr
+    return np.trapezoid(integrand, zz) / (H0_s*yr*1e9)   # Gyr
 
 # comoving distance, Mpc
 def chi_Mpc(z):
     zz = np.linspace(0, z, 20000)
-    return c_over_H0*np.trapz(1.0/E(zz), zz)
+    return c_over_H0*np.trapezoid(1.0/E(zz), zz)
 
 # linear growth factor (Carroll/Press-Turner approx), normalized D(0)=1
 def growth(z):
@@ -100,7 +100,7 @@ def sigma_of_R(R_hMpc):    # R in h^-1 Mpc
     x = k*R_hMpc
     W = 3.0*(np.sin(x)-x*np.cos(x))/x**3
     integ = Pk_norm*W**2*k**2
-    sig2 = np.trapz(integ, k)/(2*np.pi**2)
+    sig2 = np.trapezoid(integ, k)/(2*np.pi**2)
     return np.sqrt(sig2)
 
 A_norm = sigma8**2 / sigma_of_R(8.0)**2
@@ -134,7 +134,7 @@ def n_PS_vec(Mvec, z):
 def n_gt_vec(M_Msun, z):
     """n(>M,z) at a single M, vectorized over Mgrid."""
     nvals = n_PS_vec(Mgrid, z)
-    return np.trapz(nvals[Mgrid >= M_Msun], Mgrid[Mgrid >= M_Msun])
+    return np.trapezoid(nvals[Mgrid >= M_Msun], Mgrid[Mgrid >= M_Msun])
 
 # comoving volume element dV/dz per sr, Mpc3/sr
 def dVdz_sr(z):
@@ -143,7 +143,7 @@ def dVdz_sr(z):
 def count_in_shell(M_Msun, z1, z2, area_deg2):
     zz = np.linspace(z1, z2, 200)
     vals = np.array([n_gt_vec(M_Msun, z)*dVdz_sr(z) for z in zz])
-    V_per_sr = np.trapz(vals, zz)                    # count per sr
+    V_per_sr = np.trapezoid(vals, zz)                    # count per sr
     return V_per_sr * area_deg2*(np.pi/180)**2
 
 print()
@@ -194,14 +194,14 @@ for Mh, lab in [(1e11, "1e11 halo"), (6.4e11, "6.4e11 halo (M*=1e10,eps=0.1)"), 
 # full observable universe to z=14
 zlim = np.linspace(0, 14, 100)
 Ntot = np.array([n_gt_vec(1e11, z)*dVdz_sr(z) for z in zlim])
-Ntot = np.trapz(Ntot, zlim)*(4*np.pi)
+Ntot = np.trapezoid(Ntot, zlim)*(4*np.pi)
 print("  total number of >1e11 Msun halos in the WHOLE observable universe, all z<=14 : %.2e (dominated by z<3)" % Ntot)
 # z at which the FIRST 1e11 Msun halo appears: highest z where cumulative count to z=20 is >= 1
 zgrid = np.linspace(0.5, 20, 500)
 zgrid = zgrid[::-1]   # descending, 20 -> 0.5
 zsub  = np.linspace(0.5, 20, 700)
 rate  = np.array([n_gt_vec(1e11, z)*dVdz_sr(z) for z in zsub])
-cum_hi = np.array([np.trapz(rate[zsub >= z], zsub[zsub >= z]) for z in zgrid])*(4*np.pi)
+cum_hi = np.array([np.trapezoid(rate[zsub >= z], zsub[zsub >= z]) for z in zgrid])*(4*np.pi)
 z1 = zgrid[np.where(cum_hi >= 1.0)[0][0]] if (cum_hi >= 1.0).any() else np.nan
 print("  earliest z with >=1 expected 1e11-Msun halo (whole observable universe, cumulative to z=20): z = %.1f (t = %.2f Gyr)"
       % (z1, age_Gyr(z1)))
@@ -211,7 +211,7 @@ for zz in [10, 12, 14]:
     zsub = np.linspace(zz-0.5, zz+0.5, 60)
     for m in np.logspace(9, 13, 120):
         vals = np.array([n_gt_vec(m, z)*dVdz_sr(z) for z in zsub])
-        cnt = np.trapz(vals, zsub)*(100/3600.0)*(np.pi/180)**2
+        cnt = np.trapezoid(vals, zsub)*(100/3600.0)*(np.pi/180)**2
         if cnt < 1.0:
             print("  most massive halo expected (N=1) in 100 arcmin^2, z=%.0f : ~%.1e Msun" % (zz, m))
             break
@@ -457,3 +457,4 @@ print("""
   anchored yield), the two locked yields disagreeing by 1,300x, and the unaccounted flash
   rate -- all falsifiable and all currently unresolved.
 """)
+

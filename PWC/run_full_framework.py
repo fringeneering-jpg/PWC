@@ -64,7 +64,7 @@ SECTIONS = [
 def run_one(script):
     path = os.path.join(ROOT, script)
     if not os.path.exists(path):
-        return "MISSING"
+        return "MISSING", ""
     try:
         with open(LOG, "w", encoding="utf-8", errors="replace") as fh:
             r = subprocess.run([sys.executable, path], stdout=fh, stderr=subprocess.STDOUT,
@@ -99,10 +99,12 @@ for section, items in SECTIONS:
                     print(f"       {h}")
                 n_ok += 1
             else:
-                print(f"\n[OK?]  {label} - ran, no key pattern matched (check {script})")
-                n_ok += 1
+                print(f"\n[UNVERIFIED] {label} - ran, but no key number matched."
+                      f" Counted as a FAILURE. Fix {script}.")
+                n_fail += 1
         elif status == "MISSING":
-            print(f"\n[SKIP] {label} - script not found ({script})")
+            print(f"\n[FAIL] {label} - script missing ({script})")
+            n_fail += 1
         else:
             print(f"\n[{status}] {label} - {script}")
             n_fail += 1

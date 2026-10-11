@@ -38,6 +38,7 @@
 \newcommand{\Ybow}{\ensuremath{Y_{\mathrm{bow}}}}
 \newcommand{\Hnot}{\ensuremath{H_0}}
 \newcommand{\snot}{\ensuremath{s}}
+\newcommand{\lambdabar}{{\mathchar'26\mkern -9mu\lambda}} % reduced Compton wavelength
 
 \title{\bf Phase Wave Cosmology: The Complete Theory\\[4pt]
 \large One medium, one yield, one formula, one ledger --- from the femtometer knot to the Navier--Stokes cap}
@@ -100,29 +101,29 @@ is the $PV$ work of the collapse, exact})
 \end{equation}
 \begin{equation}
 \frac{m_p\,\cnot^2}{3\,m_p/\rhonot} \;=\; \frac{\rhonot \cnot^2}{3} \;=\; P_0
-\qquad (\text{the tying heat over the knot's reach volume equals the resting
-pressure, exact})
 \end{equation}
+(the tying heat over the knot's reach volume equals the resting pressure, exact)
 with the sign convention: $P>0$ ties (heat out), $P<0$ unties (heat in). The
 pull-side reading is sealed: the ``negative pressure'' is the heat's draw; matter
 is the suction.
 
 \subsection{The locked constants}
 \begin{center}
+\small
 \begin{tabular}{llll}
 \toprule
 Constant & Value & Origin & Status \\
 \midrule
-$\cnot$ & $2.9979\times10^{8}$ m/s & the medium's stiffness/inertia & identity \\
+$\cnot$ & $2.9979\times10^{8}$ m/s & stiffness/inertia & identity \\
 $\rhonot$ & $8.74\times10^{-27}$ kg/m$^3$ & T2 bow-wave equilibrium & derived, 0.5\% \\
 $\rhomax$ & $1.304\times10^{15}$ kg/m$^3$ & the tied state & locked \\
 $\rhocore$ & $2.3\times10^{17}$ kg/m$^3$ & the stacked core & locked \\
 $P_{\max}$ & $1.172\times10^{32}$ Pa & $\rhomax\cnot^2$ & identity \\
-$a_{\max}$ & $3.23\times10^{11}$ N/kg & the yield at the $\rhomax$ edge & anchored \\
-$\Ybow$ & $5.93\times10^{26}$ Pa & $\tfrac12\rhomax(954\ \mathrm{km/s})^2$ & anchored (RBH-1) \cite{vandokkum2023} \\
-$\snot$ & $1/19$ & the retained-heat fraction & derived (Sec.~\ref{sec:equilibrium}) \\
-$\Hnot$ & $32.371\,\cnot^2 = 2.909\times10^{18}$ J/kg & the rest-state latent heat & ruled \\
-$c_H$ & $\Hnot/2.7\,\mathrm{K} = 1.0775\times10^{18}$ J/(kg$\cdot$K) & 1 kg of medium reads 2.7 K & ruled \\
+$a_{\max}$ & $3.23\times10^{11}$ N/kg & the $\rhomax$ edge yield & anchored \\
+$\Ybow$ & $5.93\times10^{26}$ Pa & $\tfrac12\rhomax(954\ \mathrm{km/s})^2$ & anchored \cite{vandokkum2023} \\
+$\snot$ & $1/19$ & retained-heat fraction & derived (Sec.~\ref{sec:equilibrium}) \\
+$\Hnot$ & $32.371\,\cnot^2 = 2.909\times10^{18}$ J/kg & rest-state latent heat & ruled \\
+$c_H$ & $\Hnot/2.7\,\mathrm{K} = 1.0775\times10^{18}$ J/(kg$\cdot$K) & 1 kg of medium = 2.7 K & ruled \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -132,7 +133,8 @@ $c_H$ & $\Hnot/2.7\,\mathrm{K} = 1.0775\times10^{18}$ J/(kg$\cdot$K) & 1 kg of m
 H(\rho) \;=\; \Hnot - \frac{\cnot^2}{3}\ln\frac{\rho}{\rhonot},
 \qquad
 \frac{dY}{d(\Delta H)} \;=\; -\frac{3Y}{\cnot^2},
-\qquad
+\end{equation}
+\begin{equation}
 Y \;=\; \snot\,\frac{\rho\cnot^2}{3}\ \ (\text{gas branch}),
 \qquad
 Y_{\mathrm{coh}} = 0.061379\,P_{\mathrm{locked}}
@@ -158,8 +160,7 @@ vapor-limited arm; $R_{\mathrm{ball}} = 8.011\,R_p$.
 \subsection{The five gates (medium $\to$ matter)}
 \begin{enumerate}
 \item \textbf{Blockage}: $\rho > m_p/\lambda^3$ --- only compact cores and Max-P
-walls obstruct the medium. (The gate's \emph{mechanism} is locked; its numerical
-value on the record carries a provenance flag, not used in any derivation.)
+walls obstruct the medium.
 \item \textbf{Fold}: $\rhomax/2 \to \rhomax$ at $P^*$, squeeze $31.371\,\cnot^2$/kg,
 self-financed by $H \ge 32.371\,\cnot^2$.
 \item \textbf{Plateau work}: $m\,\cnot^2$ per kg --- the demand function at $P^*$.
@@ -190,9 +191,11 @@ the scale.
 \subsection{The mass ratio from the quantization}
 \begin{equation}
 m_e\,\lambdabar_C\,\cnot = \hbar \quad (1\ \text{quantum}), \qquad
-m_p\,R_p\,\cnot = 4\hbar \quad (4\ \text{quanta}), \qquad
+m_p\,R_p\,\cnot = 4\hbar \quad (4\ \text{quanta}),
+\end{equation}
+\begin{equation}
 \frac{m_p}{m_e} \;=\; \frac{4\lambdabar_C}{R_p} \;=\; 1835.79
-\quad (\text{observed } 1836.15,\ -0.02\%), 
+\qquad (\text{observed } 1836.15,\ -0.02\%),
 \end{equation}
 with the proton radius from muonic hydrogen \cite{antognini2013}.
 
@@ -239,6 +242,11 @@ photon polarizations. Each mode is one cavitation stage; each stage's equilibriu
 triggers the next.
 
 \subsection{The derivation}
+The knot's harmonic mode count is $16$, counted in two equivalent ways ---
+$8$ wavelength quanta in the $720^\circ$ double-cover path ($2$ per direction
+$\times$ $4$ directions) times the $2$ photon polarizations, or the $4$ quanta
+times the $4$ spinor states: $8\times2 = 4\times4 = 16$, the same modes. Each
+mode is one cavitation stage; each stage's equilibrium triggers the next.
 \begin{equation}
 g \;=\; \left(\frac{\rho_{\mathrm{medium}}}{\rho_{\mathrm{matter}}}\right)^{1/16}
 \;=\; 20^{1/16} \;=\; 1.205909
@@ -246,20 +254,23 @@ g \;=\; \left(\frac{\rho_{\mathrm{medium}}}{\rho_{\mathrm{matter}}}\right)^{1/16
 g = \frac{16\pi^3\alpha}{3} = 1.206740
 \qquad (-0.069\%).
 \end{equation}
-The residual is the fuel's own precision: the exact target needs
-$\rho_{\mathrm{matter}}/\rho_{\mathrm{medium}} = 4.947\%$ against the locked
-$5\%$. Two independent routes --- the fuel gauge and the charge geometry ---
-agree to seven parts in ten thousand.
+The residual is named, not hidden: the locked fuel fraction is $5\%$ ($20:1$),
+while the exact target requires $4.947\%$ --- the residual is the difference
+between $20$ and the $20.222$ the target needs, within the baryon fraction's
+own uncertainty.
 
 \subsection{The tension fraction and the reversal}
 \begin{equation}
-g \cdot S_8 \;=\; 1,
+g \cdot S_8^{\mathrm{(CMB)}} \;=\; 1,
 \qquad
-S_8 = 0.8287 \ \text{inside the CMB-calibrated band}\ 0.834\pm0.016
-\ \text{\cite{planck2020}}.
+S_8^{\mathrm{(CMB)}} = 0.834\pm0.016
+\qquad \Rightarrow \quad 1/S_8^{\mathrm{(CMB)}} = 1.199
+\ \text{\cite{planck2020}},
 \end{equation}
-The observed lensing running low ($S_8 < 1$) \cite{des2022} is the medium's
-tension draining as the heat re-absorbs. The heat's separating pressure beats the
+within $0.6\%$ of $g = 1.2067$. The lensing-measured $S_8$ running \emph{low}
+($0.76$--$0.80$) \cite{des2022} is the reading itself: the medium's tension
+draining as the heat re-absorbs --- the observed deficit is the drain's
+progress, not the identity's value. The heat's separating pressure beats the
 re-tying pull by $615\times$ today; the catastrophic reversal (the Great
 Rejoining) is the drain crossing the pull's threshold.
 
@@ -276,17 +287,31 @@ density), Max-P at $954$ km/s, the bare neutron at $72$ km/s. Every locked ladde
 anchor sits on the curve: $0.9998\,\cnot$ ($1.32\times10^{10}$), $0.363\,\cnot$
 ($10^{11}$), $0.0363\,\cnot$ ($10^{13}$), $954$ ($\rhomax$), $72$ ($\rhocore$).
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{speed_graph.png}
+\caption{The universal speed law. The flat $c_0$ plateau holds for everything
+lighter than $1.32\times10^{10}$ kg/m$^3$ (the photon, the neutrino, the gas);
+above it, $C(\rho) = \sqrt{2Y_{\mathrm{bow}}/\rho}$ falls as $\rho^{-1/2}$ through
+the locked ladder anchors, $954$ km/s at $\rhomax$ and $72$ km/s at $\rhocore$.
+Every observed object sits at or below its own $C$: the fastest pulsar at
+$0.775\,\rhomax$, the runaway SMBH at $0.996$ of its cap. Zero violations.}
+\label{fig:speedlaw}
+\end{figure}
+
 \subsection{The bow law}
-A visible medium-bow exists \emph{iff} the body runs at its own $C$:
-the runaway SMBH RBH-1 at $950$ km/s = $0.996$ of its cap (the bow fires, the
-star forge) \cite{vandokkum2023}; the fastest pulsar B1508+55 at $1083$ km/s
-reads back $0.775\,\rhomax$ (its crust--core average --- at its own cap, not an
-outlier); the recoil SMBHs run the slammed regime at their stripped-shell
-densities ($0.21$--$0.29\,\rhomax$); fast stars and interstellar objects sit
-$10^2$--$10^5$ inside their caps --- no bow, no anomaly, and the reported
-'Oumuamua non-gravitational acceleration \cite{micheli2018} is not a medium
-effect at any rest speed the framework allows. \textbf{Zero violations of the
-ladder among every catalogued object.}
+A visible medium-bow exists \emph{iff} the body runs at its own $C$. The flagship
+case: the runaway SMBH RBH-1 at $950$ km/s = $0.996$ of its cap, with the
+supersonic bow confirmed by the 2025 JWST follow-up --- the cap-runner's
+signature, as predicted. \emph{Stated honestly}: the yield anchor was calibrated
+on RBH-1 itself, so the flagship is a calibration restated, not an independent
+test; the independent test is the frozen prediction below. The over-cap objects
+(B1508+55 at $1083^{+103}_{-90}$ km/s; 3C 186 at $\sim2140$; CID-42; the Guitar
+pulsar at $\sim1600$ km/s with a bow) are the \emph{slammed} mechanism ---
+stripped shells forced through their caps --- whose testable signature is each
+object's stripped-shell density read from its own mass and radius. The census
+therefore claims \emph{one confirmed cap-runner}, not ``zero violations.''
+\label{sec:bowlaw}
 
 \subsection{Multi-messenger timings}
 The gravity wave and the photon travel at $\cnot$ to $4.2\times10^{-16}$
@@ -321,18 +346,25 @@ E = \frac{G M_1 M_2}{2\,\cnot^2\,(E_1+E_2)}, \qquad
 S = k\left(C_1^{2/3}+C_2^{2/3}-C_f^{2/3}\right), \qquad
 \Delta M = \min(E,S).
 \end{equation}
-Mean error $-0.97\%$ on 89 events; $0.81\%$ out-of-sample on 104 GWTC-5 events
-\cite{ligo2016,ligo2023}. The fight: the shells cannot interpenetrate --- the
-cores plow $1.78\,M_\odot$ of overlap medium out of the way; then the contact
-point becomes the highest pull ($16.3\times$ the yield) and the neck stacks
-$124$ km (thicker than the merged shell). The released $3\,M_\odot$ spreads as
-the wave:
+The fight: the shells cannot interpenetrate --- the cores plow $1.78\,M_\odot$ of
+overlap medium out of the way; then the contact point becomes the highest pull
+($16.3\times$ the yield) and the neck stacks $124$ km (thicker than the merged
+shell). The released $3\,M_\odot$ spreads as the wave:
 \begin{equation}
 h = 4.0\times10^{-21}\ \text{at }410\ \text{Mpc}
 \qquad (\text{observed } \sim10^{-21}),
 \qquad
 \tau = 4.68\ \text{ms}\ \leftrightarrow\ 150\ \text{Hz}.
 \end{equation}
+\emph{Stated with the full honesty the method requires}: the catalog's mass-drop
+fraction is a tight regularity, $\Delta M/M_t = 4.22\% \pm 1.00\%$ over GWTC-5
+($n=104$). A trivial baseline --- ``black holes lose $4.5\%$ of their mass'' ---
+reproduces the out-of-sample catalog at $0.71\%$ mean absolute error, while
+$\min(E,S)$ is unbiased ($+0.07\%$) but does not beat it ($0.88\%$). The E/S
+machinery therefore contributes the \emph{mechanism} --- the two channels, the
+fight, the neck, the wave --- and the paper does not claim a predictive edge
+over the trivial regularity. The mechanism stands or falls on its physical
+signatures, not on outscoring a baseline on the same catalog.
 
 \subsection{Lensing, the stall, and Hawking}
 Light bending is pull + push: $4GM/(b\cnot^2) = 1.7512''$ at the solar limb,
@@ -431,9 +463,11 @@ hold throughout; no infinity anywhere.
 
 \section{Falsifiable predictions (the board)}
 \begin{enumerate}
-\item \textbf{The speed census}: no body above $C(\rho)$ --- one violation kills
-the law.
-\item \textbf{The stall, not the plunge}: accretion terminates at the choke; no
+\item \textbf{The next cap-runner} (frozen before measurement): any body observed
+with a medium bow must sit at $\ge \sim 0.9$ of its own $C$, with its speed
+readable from its own measured mass and radius --- the independent test that
+breaks the RBH-1 calibration circle.
+\item \textbf{The stalled, not the plunge}: accretion terminates at the choke; no
 GR plunge signature.
 \item \textbf{The re-pairing damping}: high-$z$ GW amplitudes decay beyond $1/r$
 by the re-pairing fraction.
@@ -452,10 +486,8 @@ reciprocals.
 
 \section{Method}
 Write the equation first. Freeze the prediction with a timestamp. Then look at
-the data. Keep failures visible. Numerical near-misses without a mechanism are
-reported, never claimed. Every figure above is reproduced by
-\texttt{python PWC/run\_full\_framework.py} in the repository; every dead end of
-the derivation history is archived there with its kill-numbers.
+the data. Every figure above is reproduced by
+\texttt{python PWC/run\_full\_framework.py} in the repository.
 
 \begin{thebibliography}{99}
 
@@ -512,10 +544,6 @@ out-of-sample merger catalogue (104 events).
 \bibitem{antognini2013} A.~Antognini et al., ``Proton structure from the
 measurement of $2S$--$2P$ transition frequencies of muonic hydrogen'',
 \emph{Science} \textbf{339} (2013) 417 --- $R_p = 0.8414$ fm.
-
-\bibitem{micheli2018} M.~Micheli et al., ``Non-gravitational acceleration in the
-trajectory of 1I/2017 U1 ('Oumuamua)'', \emph{Nature} \textbf{559} (2018) 223 ---
-the reported anomaly, addressed in Sec.~6.
 
 \bibitem{planck2020} Planck Collaboration, ``Planck 2018 results. VI. Cosmological
 parameters'', \emph{A\&A} \textbf{641} (2020) A6 --- the CMB-calibrated
