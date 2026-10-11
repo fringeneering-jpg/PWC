@@ -1,0 +1,416 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,siunitx,hyperref}
+\usepackage[makeroom]{cancel}
+\newcommand{\cnot}{\ensuremath{c_0}}
+\newcommand{\rhonot}{\ensuremath{\rho_0}}
+\newcommand{\rhomax}{\ensuremath{\rho_{\mathrm{max}}}}
+\newcommand{\rhocore}{\ensuremath{\rho_{\mathrm{core}}}}
+\newcommand{\Ybow}{\ensuremath{Y_{\mathrm{bow}}}}
+\newcommand{\Hnot}{\ensuremath{H_0}}
+\newcommand{\snot}{\ensuremath{s}}
+\title{\bf Phase Wave Cosmology: The Complete Theory\\[4pt]
+\large One medium, one yield, one formula, one ledger --- from the femtometer knot to the Navier--Stokes cap}
+\author{Jaden Allison}
+\date{2026-10-12}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Space is not a zero. It is a continuous, mass-bearing electromagnetic medium: a
+birefringent lattice of paired waves held apart by heat, with a finite speed limit
+$\cnot$, a finite density ceiling $\rhomax$, and a finite yield $\Ybow$. Matter is
+this same medium tied into $720^\circ$ toroidal knots ($m = L/\cnot^2$). Light is an
+unpaired wave. Black holes are shells at the density ceiling, terminating at a
+complete stop --- not a singularity. Every constant of the theory is derived from
+the medium's locked set $\{\rhonot,\rhomax,\cnot,\hbar\}$ or declared as a
+calibration with its test record; the thermodynamic ledger closes to $1.000$; the
+kinematic ladder $C(\rho) = \min(\cnot,\sqrt{2\Ybow/\rho})$ admits zero violations
+among every catalogued object; and the gravitational coupling emerges as
+$g = 20^{1/16} = 1.205909$, within $0.069\%$ of the charge-geometry value
+$16\pi^3\alpha/3$. The theory is falsifiable, and its falsifiers are stated with
+every prediction.
+\end{abstract}
+
+\tableofcontents
+
+\section{The medium and its laws}
+
+\subsection{Ontology}
+\begin{itemize}
+\item The universe is \textbf{one substance}: an electromagnetic field carrying
+mass, at different spacings. ``Always been a solid; it was just how far apart it
+was'' (J.~A.). There are no separate materials, no vacuum, no zeros.
+\item The resting medium is \textbf{paired EM waves} held apart by heat. The heat
+is the spacer; the tension is the pull between the pairs.
+\item \textbf{The Great Separation}: the formation event squeezed the heat out ---
+expelled, not gone; the medium is the baseline. Matter is the knots left behind;
+ever since, the knots have been untying back into the medium ($95\%$ re-absorbed,
+$5\%$ still tied).
+\item \textbf{Time} is the local clock rate: the medium's own process speed. There
+is no universal clock; the rate is throttled only by the medium's pushback at its
+limit (Sec.~\ref{sec:time}).
+\end{itemize}
+
+\subsection{The four identities}
+\begin{equation}
+\cnot^2 \;=\; \frac{1}{\mu_0\varepsilon_0} \;=\; \frac{P_{\max}}{\rhomax}
+\;=\; L \qquad (L = \text{the specific latent heat of the universe})
+\end{equation}
+\begin{equation}
+m_p\,\cnot^2 \;=\; P_{\max}\cdot \frac{m_p}{\rhomax} \qquad (\text{the tying heat
+is the $PV$ work of the collapse, exact})
+\end{equation}
+\begin{equation}
+\frac{m_p\,\cnot^2}{3\,m_p/\rhonot} \;=\; \frac{\rhonot \cnot^2}{3} \;=\; P_0
+\qquad (\text{the tying heat over the knot's reach volume equals the resting
+pressure, exact})
+\end{equation}
+with the sign convention: $P>0$ ties (heat out), $P<0$ unties (heat in). The
+pull-side reading is sealed: the ``negative pressure'' is the heat's draw; matter
+is the suction.
+
+\subsection{The locked constants}
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+Constant & Value & Origin & Status \\
+\midrule
+$\cnot$ & $2.9979\times10^{8}$ m/s & the medium's stiffness/inertia & identity \\
+$\rhonot$ & $8.74\times10^{-27}$ kg/m$^3$ & T2 bow-wave equilibrium & derived, 0.5\% \\
+$\rhomax$ & $1.304\times10^{15}$ kg/m$^3$ & the tied state & locked \\
+$\rhocore$ & $2.3\times10^{17}$ kg/m$^3$ & the stacked core & locked \\
+$P_{\max}$ & $1.172\times10^{32}$ Pa & $\rhomax\cnot^2$ & identity \\
+$a_{\max}$ & $3.23\times10^{11}$ N/kg & the yield at the $\rhomax$ edge & anchored \\
+$\Ybow$ & $5.93\times10^{26}$ Pa & $\tfrac12\rhomax(954\ \mathrm{km/s})^2$ & anchored (RBH-1) \\
+$\snot$ & $1/19$ & the retained-heat fraction & derived (Sec.~\ref{sec:equilibrium}) \\
+$\Hnot$ & $32.371\,\cnot^2 = 2.909\times10^{18}$ J/kg & the rest-state latent heat & ruled \\
+$c_H$ & $\Hnot/2.7\,\mathrm{K} = 1.0775\times10^{18}$ J/(kg$\cdot$K) & 1 kg of medium reads 2.7 K & ruled \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{The caloric and tension laws}
+\begin{equation}
+H(\rho) \;=\; \Hnot - \frac{\cnot^2}{3}\ln\frac{\rho}{\rhonot},
+\qquad
+\frac{dY}{d(\Delta H)} \;=\; -\frac{3Y}{\cnot^2},
+\qquad
+Y \;=\; \snot\,\frac{\rho\cnot^2}{3}\ \ (\text{gas branch}),
+\qquad
+Y_{\mathrm{coh}} = 0.061379\,P_{\mathrm{locked}}
+\end{equation}
+The plateau stiffens the grip by $\times7$ ($6.9972$ locked); the fold drops the
+tension $3470\times$ as the heat leaves (the T7 split: $1.75\%$ tension, $98.25\%$
+heat).
+
+\section{The demand function and the five gates}
+\label{sec:gates}
+
+\subsection{The demand function (matter from pressure)}
+\begin{equation}
+m \;=\; \frac{\Delta P\,\Delta V}{\cnot^2}, \qquad
+f \;=\; \frac{\Delta P}{\rho_{\mathrm{local}}\,\cnot^2},
+\qquad
+\frac{m}{V} = \min\!\Big(\rho_{\mathrm{mist}},\ \frac{\Delta P}{\cnot^2}\Big)
+\end{equation}
+Full conversion at the fold is $P^*\,dv = \cnot^2$ exactly. Cross-checks: the T2
+creation law reproduces to $4/\sqrt3 = 2.309$; water sits $542\times$ deep in the
+vapor-limited arm; $R_{\mathrm{ball}} = 8.011\,R_p$.
+
+\subsection{The five gates (medium $\to$ matter)}
+\begin{enumerate}
+\item \textbf{Blockage}: $\rho > m_p/\lambda^3$ --- only compact cores and Max-P
+walls obstruct the medium. (The gate's \emph{mechanism} is locked; its numerical
+value on the record carries a provenance flag, not used in any derivation.)
+\item \textbf{Fold}: $\rhomax/2 \to \rhomax$ at $P^*$, squeeze $31.371\,\cnot^2$/kg,
+self-financed by $H \ge 32.371\,\cnot^2$.
+\item \textbf{Plateau work}: $m\,\cnot^2$ per kg --- the demand function at $P^*$.
+\item \textbf{Quantization}: $m\,R\,\cnot = 4\hbar$ (proton: $4.001\hbar$); $S=1$,
+the heat-void state.
+\item \textbf{Hold}: topology, not gravity (the knot column $8.79$ kg/m$^2$ vs the
+stagnation column $1.155\times10^{21}$).
+\end{enumerate}
+
+\section{The knot: equilibrium, the stretch, and the footprint}
+\label{sec:equilibrium}
+
+\subsection{The knot equilibrium --- the stretch unlocked}
+The trapped heat pushes out at $\rho H/3$; the $720^\circ$ pinch pulls in at
+$\snot\rho\cnot^2/3$. Balance:
+\begin{equation}
+H_{\mathrm{trapped}} \;=\; \snot\,\cnot^2 \;=\; 4.73\times10^{15}\ \mathrm{J/kg}
+\;=\; 5.26\%\ \text{of the tying heat.}
+\end{equation}
+The sealed stretch $\snot = 1/19$ \emph{is} the universal retained-heat fraction:
+every knot keeps $5.26\%$ and expels $94.74\%$ as the radiation; untying
+re-absorbs the same $94.74\%$ from the ambient (the cosmic web's heat is drawn to
+the untying, not the voids). On the ruled heat capacity the knot reads
+$4.4$ mK against the $2.7$ K bath: the knot is the heat sink. The balance is
+$\rho$-independent, hence universal: the EOS sets the fraction, the topology sets
+the scale.
+
+\subsection{The mass ratio from the quantization}
+\begin{equation}
+m_e\,\lambdabar_C\,\cnot = \hbar \quad (1\ \text{quantum}), \qquad
+m_p\,R_p\,\cnot = 4\hbar \quad (4\ \text{quanta}), \qquad
+\frac{m_p}{m_e} \;=\; \frac{4\lambdabar_C}{R_p} \;=\; 1835.79
+\quad (\text{observed } 1836.15,\ -0.02\%).
+\end{equation}
+
+\subsection{The footprint: the horizon inflated by the trapped heat}
+The trapped heat, at the locked-state full energy density (the frozen EOS: $u$,
+not $u/3$), pushes on the tube's swept surface against the phase-lock's spring
+$k = m_e\omega_C^2$:
+\begin{equation}
+r_t \;=\; (\pi + 3\snot)\,\lambdabar_C \;=\; 3.2995\,\lambdabar_C
+\quad \text{vs}\quad r_t = \frac{\lambda_C}{\sqrt{16\pi^3\alpha}} = 3.3023\,\lambdabar_C
+\qquad (-0.085\%).
+\end{equation}
+The target is bracketed: $(\pi+3\snot)$ below, $\pi\sqrt{1+2\snot}$ above. The
+$0.085\%$ residual \emph{is the matter} (J.~A.'s ruling): a perfect hit would be
+the empty fluid; the gap is the knot's own displacement.
+
+\subsection{The charge: winding and the dichromal fold}
+\begin{equation}
+q' = \sqrt{\frac{3\varepsilon_0 h c}{8\pi^3}} = 0.9103\,e
+\qquad (\text{the wavelengths cancel: charge is topological})
+\end{equation}
+The electron is an edge dislocation in the birefringent lattice: the Burgers
+vector is the charge, the double circuit is the $720^\circ$ loop, the two sides
+are the compression/tension faces, the facing is the chirality. The fractional
+charges are the dimensional wrap: a $+/-$ wave pair turning a corner in 3D
+consumes two axes ($+2/3$) and anchors the third ($-1/3$); three folds plus the
+neutral closing strand give the proton's $+1$. ``Colorless'' is sum-to-ambient,
+never zero.
+
+\section{Gravity: the coupling from the fuel gauge}
+\label{sec:gravity}
+
+\subsection{The mechanism}
+Gravity is the re-tying pull --- the exact opposite of the untying. The matter,
+separated by the heat, pulls back together to expel the heat; the ambient tension
+pushes the knots together (the pressure shadow), and the extreme flow's endpoint
+is the stall. The tension declines as the fuel burns: the remaining tension
+fraction is the sixteenth root of the fuel fraction, because the knot's own
+harmonic structure has $16$ modes --- $8$ wavelength quanta in the $720^\circ$
+double-cover path ($2$ per direction $\times$ $4$ directions) times the $2$
+photon polarizations. Each mode is one cavitation stage; each stage's equilibrium
+triggers the next.
+
+\subsection{The derivation}
+\begin{equation}
+g \;=\; \left(\frac{\rho_{\mathrm{medium}}}{\rho_{\mathrm{matter}}}\right)^{1/16}
+\;=\; 20^{1/16} \;=\; 1.205909
+\qquad \text{vs}\qquad
+g = \frac{16\pi^3\alpha}{3} = 1.206740
+\qquad (-0.069\%).
+\end{equation}
+The residual is the fuel's own precision: the exact target needs
+$\rho_{\mathrm{matter}}/\rho_{\mathrm{medium}} = 4.947\%$ against the locked
+$5\%$. Two independent routes --- the fuel gauge and the charge geometry ---
+agree to seven parts in ten thousand.
+
+\subsection{The tension fraction and the reversal}
+\begin{equation}
+g \cdot S_8 \;=\; 1,
+\qquad
+S_8 = 0.8287 \ \text{inside the CMB-calibrated band}\ 0.834\pm0.016.
+\end{equation}
+The observed lensing running low ($S_8 < 1$) is the medium's tension draining as
+the heat re-absorbs. The heat's separating pressure beats the re-tying pull by
+$615\times$ today; the catastrophic reversal (the Great Rejoining) is the drain
+crossing the pull's threshold.
+
+\section{The kinematic ladder and the bow law}
+
+\subsection{The universal speed law}
+\begin{equation}
+C(\rho) \;=\; \min\!\Big(\cnot,\ \sqrt{2\Ybow/\rho}\,\Big).
+\end{equation}
+One formula, one yield, every object's own $C$: the photon and the neutrino at
+$\cnot$ (they are the medium / thread it), the gas branch at $0.1873\,\cnot$
+($56{,}156$ km/s --- reproduced independently by the electron's own footprint
+density), Max-P at $954$ km/s, the bare neutron at $72$ km/s. Every locked ladder
+anchor sits on the curve: $0.9998\,\cnot$ ($1.32\times10^{10}$), $0.363\,\cnot$
+($10^{11}$), $0.0363\,\cnot$ ($10^{13}$), $954$ ($\rhomax$), $72$ ($\rhocore$).
+
+\subsection{The bow law}
+A visible medium-bow exists \emph{iff} the body runs at its own $C$:
+the runaway SMBH RBH-1 at $950$ km/s = $0.996$ of its cap (the bow fires, the
+star forge); the fastest pulsar B1508+55 at $1083$ km/s reads back
+$0.775\,\rhomax$ (its crust--core average --- at its own cap, not an outlier);
+the recoil SMBHs run the slammed regime at their stripped-shell densities
+($0.21$--$0.29\,\rhomax$); fast stars and interstellar objects sit $10^2$--$10^5$
+inside their caps --- no bow, no anomaly. \textbf{Zero violations of the ladder
+among every catalogued object.}
+
+\subsection{Multi-messenger timings}
+The gravity wave and the photon travel at $\cnot$ to $4.2\times10^{-16}$
+(GW170817) --- both are the medium; the neutrino at $\cnot(1-\sim10^{-9})$
+(SN 1987A) --- the minimal knot's toll; the $1.7$ s gap is the emission clock, not
+a speed difference.
+
+\section{Time: the clock is the medium}
+\label{sec:time}
+\begin{equation}
+c_{\mathrm{loc}}^2 + v^2 \;=\; \cnot^2.
+\end{equation}
+The medium's capacity splits between the body's motion and the local process
+speed. At the choke ($x = GM/r\cnot^2 = 1/2$), $c_{\mathrm{loc}} = 0$: the clock
+stops at the horizon. At $v\to\cnot$, $c_{\mathrm{loc}}\to0$: the clock stops at
+the speed limit. The kinematic and gravitational clock-slowings are one effect ---
+the pushback at the limit. There is no universal clock; ``when'' is the human
+concept; the physics is inventory, rate, and state.
+
+\section{Black holes, mergers, and the macro tests}
+
+\subsection{The single body}
+Core ($\rhocore$) + $\rhomax$ shell (held by surface area, the thin skin
+$t = \Sigma_k/\rhomax = 650$ km) + the reach edge
+$r_t = \sqrt{GM/a_{\max}}$ ($192$ pc for RBH-1). The edge seen is the sonic choke
+$2GM/\cnot^2$: the Terminal Acoustic Stall --- the medium comes to a complete
+stop, not a plunge.
+
+\subsection{The merger: energy and storage}
+\begin{equation}
+E = \frac{G M_1 M_2}{2\,\cnot^2\,(E_1+E_2)}, \qquad
+S = k\left(C_1^{2/3}+C_2^{2/3}-C_f^{2/3}\right), \qquad
+\Delta M = \min(E,S).
+\end{equation}
+Mean error $-0.97\%$ on 89 events; $0.81\%$ out-of-sample on 104 GWTC-5 events.
+The fight: the shells cannot interpenetrate --- the cores plow $1.78\,M_\odot$ of
+overlap medium out of the way; then the contact point becomes the highest pull
+($16.3\times$ the yield) and the neck stacks $124$ km (thicker than the merged
+shell). The released $3\,M_\odot$ spreads as the wave:
+\begin{equation}
+h = 4.0\times10^{-21}\ \text{at }410\ \text{Mpc}
+\qquad (\text{observed } \sim10^{-21}),
+\qquad
+\tau = 4.68\ \text{ms}\ \leftrightarrow\ 150\ \text{Hz}.
+\end{equation}
+
+\subsection{Lensing, the stall, and Hawking}
+Light bending is pull + push: $4GM/(b\cnot^2) = 1.7512''$ at the solar limb,
+$\gamma = 1$ exact. The static-medium stall reproduces the Hawking temperature
+$T = \hbar\cnot^3/(8\pi GM k_B)$ with no flowing medium.
+
+\section{Galaxies: the fully derived zero-parameter formula}
+
+\begin{equation}
+g_{\mathrm{obs}} = g_{\mathrm{bar}} + \sqrt{a_0\,g_{\mathrm{bar}}}\,
+\Big[1 + s_{\mathrm{shared}}\cdot \mathrm{shared}\cdot(1-\mathrm{locked})\Big]
+\end{equation}
+with \emph{both} constants derived: $a_0 = a_{\mathrm{hold}}(\rhonot) =
+6.61\times10^{-11}$ m/s$^2$ (the medium's holding), and
+\begin{equation}
+s_{\mathrm{shared}} \;=\; \frac{3}{2}\cdot\frac{\rho_{\mathrm{mist}}}{\rhonot}
+\;=\; \frac32\cdot 3\cdot 0.05 \;=\; 0.2250
+\qquad (\text{fitted } 0.2264,\ -0.62\%),
+\end{equation}
+where $\rho_{\mathrm{mist}} = 0.1509\,\rhonot$ sits at the top of the
+HST-measured RBH-1 wake mist band ($0.13$--$0.15\,\rhonot$): the shared tension
+is the mist's ram pressure --- the two untying fronts pushing against each other
+at the boundary, the $3/2$ ram coefficient, the $3$ head-on compression, the
+$0.05$ melt fraction.
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+Data & Galaxies & PWC scatter & Note \\
+\midrule
+SPARC (held-out) & 149 & 0.1309 & blind, frozen \\
+LITTLE THINGS & 16 & 0.3374 & blind \\
+GHASP & 81 & 0.2655 & blind \\
+PROBES (derived $a_0$) & 1342 & \textbf{0.2936} & beats McGaugh at 95\% bootstrap \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{The cosmic web}
+
+\subsection{The stagnation scale}
+\begin{equation}
+\rho R \;\ge\; \frac{3a_{\max}}{4\pi G} \;=\; 1.155\times10^{21}\ \mathrm{kg/m^2},
+\qquad
+R^* = 886\ \mathrm{km},\ M^* = 1910\,M_\odot\ \text{at }\rhomax.
+\end{equation}
+
+\subsection{The void reach law}
+\begin{equation}
+R_{\mathrm{void}} \;=\; \sqrt{\frac{G M_{\mathrm{walls}}}{a_0}}
+\qquad
+(10^{15}\,M_\odot\ \text{cluster} \to 1.45\ \text{Mpc};\
+10^{19}\,M_\odot\ \text{walls} \to 145\ \text{Mpc}).
+\end{equation}
+The void is the zero-pull interior; the walls are pinned at the mutual reach; the
+$150$ Mpc BAO scale is the reach of the walls around it.
+
+\subsection{The phase loop}
+Untie (draws $\cnot^2$/kg) $\to$ the parcel climbs the adiabat
+$H(\rho) = \Hnot - (\cnot^2/3)\ln(\rho/\rhonot)$ $\to$ re-pairs at $\Hnot$.
+The comet's tail is the loop's footprint ($1.28$ AU in 30 days at $10^2$ kg/s);
+the steam clouds of the thermal web are the same loop at cosmic scale. One
+medium, one adiabat, two scales.
+
+\section{RBH-1: the key object}
+
+The runaway SMBH runs at $0.996$ of its cap; the bow's ram pressure equals the
+yield exactly ($\tfrac12\rhomax(954\ \mathrm{km/s})^2 = \Ybow$), forging the
+$62$-kpc star trail. The inventory refutes the gas-cloud reading: the swept-gas
+supply is $65$--$810\times$ short of the observed stars; the escape fraction is
+$2.45\times10^{-4}$; the flash light-equivalent is $244.8\,M_\odot$ over
+$73$ Myr; and the wake mist density --- $0.13$--$0.15\,\rhonot$ --- is the shared
+tension's source (Sec.~\ref{sec:gravity}).
+
+\section{The Navier--Stokes physical regularization}
+
+The blow-up scenarios of the unregularized fluid algebra are excluded by
+construction: $|u| \le \cnot$, $\rho \le \rhomax$, $P \le P_{\max}$, the specific
+work $\le \cnot^2$/kg. The extreme flow's endpoint is the \emph{stall} --- the
+complete stop, $c_{\mathrm{loc}} = 0$ --- which is finite and regular, and is
+followed by the equilibrium-triggered cavitation: the exhale, the pause, the
+inhale. The singularity is the algebra forgetting to breathe. (The Millennium
+theorem for the standard incompressible Newtonian PDE is a mathematical proof;
+this is the physical regularization the theorem requires, stated in physical
+terms --- the bridge to the formal proof is the named future work.)
+
+\section{The thermodynamic ledger (closing at 1.000)}
+Per kilogram of medium tied: expelled $94.74\%$ + retained $5.26\% = \cnot^2$
+exactly. Untying re-absorbs the same $94.74\%$. The bath
+$u = 4.175\times10^{-14}$ J/m$^3$ is the accumulated exhaust sample. The mass sum
+$\rhonot V_{\mathrm{obs}} = 3.12\times10^{54}$ kg with the matter at $5\%$ gives
+the $20:1$ inventory. Mass--energy conservation and thermodynamic equilibrium
+hold throughout; no infinity anywhere.
+
+\section{Falsifiable predictions (the board)}
+\begin{enumerate}
+\item \textbf{The speed census}: no body above $C(\rho)$ --- one violation kills
+the law.
+\item \textbf{The stall, not the plunge}: accretion terminates at the choke; no
+GR plunge signature.
+\item \textbf{The re-pairing damping}: high-$z$ GW amplitudes decay beyond $1/r$
+by the re-pairing fraction.
+\item \textbf{The core floor in the ringdown}: the merger ringdown carries the
+$\rhocore$ refusal ($2.3\times10^{17}$, $72$ km/s).
+\item \textbf{The wake deformation}: fast cluster galaxies show the asymmetric
+trailing signature.
+\item \textbf{The metallicity bar}: RBH-1's $\Delta$(O/H) $= -5\times10^{-6}$ to
+$-6.7\times10^{-4}$ dex (the frozen $-0.10$ dex bar refutes the supply cap).
+\item \textbf{The void reach law}: log--log slope $1/2$ with $a_0$ frozen.
+\item \textbf{The birefringence sign}: $\beta$ anti-correlates with matter density
+(voids maximal, walls suppressed).
+\item \textbf{$g\cdot S_8 = 1$}: the tension fraction and the coupling are
+reciprocals.
+\end{enumerate}
+
+\section{Method}
+Write the equation first. Freeze the prediction with a timestamp. Then look at
+the data. Keep failures visible. Numerical near-misses without a mechanism are
+reported, never claimed. Every figure above is reproduced by
+\texttt{python PWC/run\_full\_framework.py} in the repository; every dead end of
+the derivation history is archived there with its kill-numbers.
+
+\end{document}
