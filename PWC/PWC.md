@@ -16,7 +16,7 @@ The Phase Wave Cosmology framework: rules, mechanisms, derivations and results. 
 - **A density cap** — black holes are shells at ρ_max, not singularities; the 3 M☉ of GW150914 is released medium (§0, §3).
 - **A scale of passage, from lightest to heaviest** — light moves at the cap; ordinary matter is a sieve and passes freely; an object at ρ_max cannot pass through the medium, so a runaway SMBH ploughs a bow wave and throws the heat back out (§8). "Drag" on light is the speed cap, not energy loss (§7).
 - **Matter ↔ waves ↔ heat, conserved** — m = L/c²; untying releases volume (expansion); heat moves toward matter to untie it (§1, §4, §5, §9).
-- **The cosmic story** — one great cavitation. Formation squeezed the heat out — the great freeze — leaving matter as ice in a hot plasma ooze. Ever since, it has been melting back in: spinning, breaking up and joining the medium like a stock cube in boiling water (§6).
+- **The cosmic story** — one great cavitation. Formation squeezed the heat out — **the Great Separation** — the heat expelled, not gone; matter left as knots in the resting medium. Ever since, it has been melting back in: spinning, breaking up and joining the medium like a stock cube in boiling water (§6).
 - **The rules** — no zeros, no infinities, no singularities, no placeholders; mass–energy conservation and thermodynamic equilibrium hold throughout, because every quantity is a measurement of something real (§1).
 
 ---
@@ -135,7 +135,7 @@ The medium is effectively **frictionless/superfluid** in its propagation behavio
 
 **Measured gravity is a net figure: pull minus dump.** Every body pulls the medium and heat toward itself, and at the same time dumps its own growth — volume released by untying — all around it. The fastest-growing regions are therefore just outside the local areas of growth. What we measure as gravity is the pull minus that outward dump, so standard calculations are off by a slight percentage: the dump rate, which is left out because untying is not treated as producing growth. Prediction: gravity reads slightly weaker around whatever is untying fastest, in proportion to its untying rate.
 - **The growth is not a 1/r² field around each body.** The medium is a tensioned web: growth is volumetric and comes from large clusters as a whole, not directed toward other clusters. The pressure is outward from galaxies and clusters, except in some large cold voids. So the dump is nearly invisible around a single star and shows up collectively, at cluster scale — in how cluster outskirts expand and how galaxies fall in.
-- **Growth concentrates at the thickest walls of the cosmic web** — the dense rings around voids, especially at the pronounced borders between large galaxies. Walls growing outward on both sides push into the neighbouring voids: this is what drives void expansion. The thickest rings sit at a preferred spacing — the BAO scale, ~147 Mpc — read in PWC as the shells where a sound wave in the medium, launched at the formation event (the great freezing), froze in place.
+- **Growth concentrates at the thickest walls of the cosmic web** — the dense rings around voids, especially at the pronounced borders between large galaxies. Walls growing outward on both sides push into the neighbouring voids: this is what drives void expansion. The thickest rings sit at a preferred spacing — the BAO scale, ~147 Mpc — read in PWC as the shells where a sound wave in the medium, launched at the formation event (the Great Separation), froze in place.
 
 **The 1/r² reinterpretation** — the key replacement for a bare inverse-square "nothing between bodies" reading:
 
@@ -250,7 +250,7 @@ The loop:
 3. Most of the released waves use the heat to reach their resting tension and separation and **pair up** into ordered medium. They are barely ever free light.
 4. The unpaired remainder leaves **disordered** — Hawking heat at the choke, light.
 5. Travelling through the medium, the disordered waves **reorder** back into pairs. That reordering is **redshift** (§7) — nothing lost, nothing outside the medium to lose it to.
-6. The ordered medium is available to be **tied into matter again** at formation (the great freezing, §6).
+6. The ordered medium is available to be **tied into matter again** at formation (the Great Separation, §6).
 
 **Where it points next:** the neighbour pull/push against distance is P(ρ). Its balance point gives ρ₀; its stiffness there gives c₀; how far it stretches before letting go gives a₀ — the closure-sheet chain.
 
@@ -268,7 +268,7 @@ What we call the vacuum of space is medium holding **excess heat**. Heat is the 
 
 ### Cosmic history: ice melting in a hot stew
 
-The formation event was hottest or coldest depending on which side you were on. **For heat, it was the separation** — heat released and driven out. **For matter, it was the great freezing** — matter shoved and compressed into the tuna can. One event, like water freezing: the freeze and the release of latent heat are the same moment, and c² is the universe's latent heat (§4), so m = L/c² counts the heat each piece of frozen matter gave up. (Mainstream counterpart: at ~10 μs the quark–gluon plasma froze into protons and neutrons — the confinement transition.) Ever since, matter has been melting like ice in a hot stew: untying back into the heat-rich medium. **Voids are the soup that has already cooked** — regions where the melting has finished. Walls, filaments and nodes are the ice still melting; the hottest gas in the universe sits around the biggest remaining blocks (galaxy clusters), exactly where melting is most active. Small, gas-rich void galaxies are the last small pieces of ice left in the soup.
+The formation event was hottest or coldest depending on which side you were on. **For heat, it was the separation** — heat released and driven out, expelled not gone (the medium is the baseline). **For matter, it was the freeze-side of the same Great Separation** — matter shoved and compressed into the tuna can. One event, like water freezing: the freeze and the release of latent heat are the same moment, and c² is the universe's latent heat (§4), so m = L/c² counts the heat each piece of frozen matter gave up. (Mainstream counterpart: at ~10 μs the quark–gluon plasma froze into protons and neutrons — the confinement transition.) Ever since, matter has been melting like ice in a hot stew: untying back into the heat-rich medium. **Voids are the soup that has already cooked** — regions where the melting has finished. Walls, filaments and nodes are the ice still melting; the hottest gas in the universe sits around the biggest remaining blocks (galaxy clusters), exactly where melting is most active. Small, gas-rich void galaxies are the last small pieces of ice left in the soup.
 
 ### Growth is not uniform — it concentrates at untying sites
 

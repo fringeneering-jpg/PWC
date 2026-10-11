@@ -309,7 +309,7 @@ Arithmetic (`scratch/rulings_arithmetic.py`, verified):
   remainder leaves as light" (`PWC.md` §5).
 - **H₀-floor reading:** today's matter exhaust = 0.0526 × 32.371 = 1.70 c₀² per kg of
   medium — only 5.3% of the H₀ ≥ 32.371 c₀² floor; an initially fully-tied inventory
-  (everything tied at the great freeze, 95% melted since) deposits exactly 32.371 c₀² per
+  (everything tied at the Great Separation, 95% melted since) deposits exactly 32.371 c₀² per
   kg of present medium = the floor. So the spacer heat is the freeze's exhaust, mostly
   ancient — matching "voids are the soup that already cooked" (`PWC.md` §6). Baseline
   T = 0 means no primordial heat; all medium heat is matter's exhaust.
