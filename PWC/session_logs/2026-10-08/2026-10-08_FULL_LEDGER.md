@@ -187,6 +187,16 @@ NOT in git until Jaden's word. Where a number is his ruling or a locked datum, i
   coherent ring mode dies at 0.707 λ̄_C, the transverse closure gives integers; the
   zitter sweep + self-spread at ~π× the zitter diameter; π√(21/19) sits +0.024% away,
   α-dressed, reported). The equilibrium is r-independent — the dynamics must set the size.
+- **The footprint run (`footprint_dynamics.py`):** the trapped heat (s·c₀²) pushing at
+  the locked-state full energy density (the frozen EOS: u, not u/3) over the tube's swept
+  surface against the phase-lock's spring (k = m_e ω_C²) gives **r_t = (π + 3s)λ̄_C =
+  3.2995 λ̄_C vs the target 3.3023 — −0.085%.** The target is BRACKETED: (π+3s) below,
+  π√(1+2s) above. The gap = the pressure's radial profile across the tube (named, not
+  integrated). The macro bridge: untying = the same equilibrium with the sign flipped —
+  the ambient heat re-funds the 95%, the tube inflates past (π+3s)λ̄_C, the knot
+  dissolves; the cosmic web's heat map is the same equation's exhaust. Status: unified in
+  STRUCTURE — every constant has a mechanism; the α-dressed 0.085% profile term keeps the
+  grail honestly open.
 
 ---
 
