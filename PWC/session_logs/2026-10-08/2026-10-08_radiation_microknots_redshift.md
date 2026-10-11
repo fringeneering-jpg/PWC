@@ -170,3 +170,22 @@ shell of held medium (the surface-area law at the electron's scale); the fold = 
 stiffened core meets the ambient; the missing screen = the pairs polarizing against Y_cav
 across the shell — the 137.036 dilution as the atmosphere's response, which is the
 coupling ruling (grip = f(heat expelled)) applied to the knot's own held shell.
+
+## The 0.085% is the matter (Jaden's ruling, same session)
+
+His words (verbatim, condensed): "what if the 0.08% is just the physical matter, thats the
+actual physical stuff that makes both energy and matter... If the pure, unobstructed fluid
+geometry resolves perfectly to π+3s, a perfect hit would mean the fluid is empty... That
+0.085% variance isn't a rounding error... It is the physical displacement of the knot
+itself... the gap is the matter. Because then it would work in the way that it expands and
+it becomes energy and then it becomes matter. It's always been a solid. It was just how
+far apart it was."
+
+Verified (`scratch/residual_is_matter.py`): the residual volume = 0.2525% of the fold =
+2.19×10⁻³⁸ m³. None of the locked matter-volumes matches it (the tight sphere m_e/ρ_max is
+10⁻¹¹ of it; the wave tube πr_e²λ_C is 0.276% of it); the implied density 4.15×10⁷ kg/m³
+has no locked match. Near-misses logged: s² = 0.277% sits near the volume residual 0.2525%
+(−7.6%); V_res·s² ≈ the wave-tube volume (+0.3%). **The ontology stands — the gap IS the
+matter, the perfect hit would be the empty fluid, the universe is one solid at different
+spacings** — the quantitative measure of "the matter's own volume in the footprint"
+remains open with the candidates ruled out.
