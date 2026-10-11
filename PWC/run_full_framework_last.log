@@ -1,0 +1,27 @@
+== 1. The tug-of-war at rest: push vs pull ==
+push (rigidity) P_g(rho0) = rho0 c0^2/3 = 2.6184e-10 Pa
+pull (tension)   Y(rho0)   = s rho0 c0^2/3 = 1.3781e-11 Pa   (s = 1/19)
+net P_net(rho0) = (1-s) rho0 c0^2/3 = 2.4806e-10 Pa  (> 0: the gas branch never
+goes negative under Y = s*rho*c0^2/3 - the 'negative pressure' is the PULL side,
+5.26% of the push; push:pull = 19:1, the same 1/19 as the stretch datum
+high/low sides: P_locked = 1.172e+32 Pa vs P_net(rho0) = 2.481e-10 Pa -
+a 41.7-decade pair, 'possibly to extremes', no tear
+
+== 2. Cold = the pull: the tension share of tying/untying ==
+tension work per kg: Y(rho0)/rho0 = s c0^2/3 = 0.0175 c0^2 = 1.75% of the latent heat
+-> the pull supplies the DIRECTION (1.75% of the bill); the heat draw pays 98.25%.
+   'the negative pressure rips the knot open' = heat loosens, pull directs.
+
+== 3. The bath = the radiated exhaust (baseline T = 0) ==
+u_bath = 4.1748e-14 J/m^3
+cosmic escape fraction, freeze inventory (100% tied once): 5.315e-05
+cosmic escape fraction, today's matter (5% tied):          1.010e-03
+RBH-1 wake measured escape fraction: 2.45e-4  (straddled by the two)
+-> all the 2.7 K can be booked as the RADIATED sample of tying exhaust;
+   the bulk is the spacer heat H0.  Baseline T = 0 needs no primordial bath.
+
+== 4. Local-exhaust prediction (falsifiable) ==
+Fresh tying sites (wakes, formation knots) must show a local excess ABOVE the
+2.725 K bath - unthermalized exhaust (RBH-1's [O III] flash is exactly this);
+the bath itself is smooth because it is the accumulated, thermalized ancient
+exhaust - consistent with CMB isotropy to 1e-5.
