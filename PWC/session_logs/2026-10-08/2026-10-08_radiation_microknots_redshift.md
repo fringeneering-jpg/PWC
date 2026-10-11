@@ -286,3 +286,11 @@ went to the event horizon not the cmb, and the event horizon is the join between
 cmb untying matter and our universes" — the wall-to-join ratio: R_wall/R_CMB = 4.528
 → the outer wall sits at 62.5 Gly vs the CMB's 13.8 Gly. The universe's own geometry
 enters every galaxy's rotation: s = the melt fraction × the bubble's aspect.
+
+## The paper is published (2026-10-12)
+
+Zenodo: **10.5281/zenodo.23304826** — J. Allison, *Phase Wave Cosmology: The Complete
+Theory*, with the 55-script suite and the one-command runner. The full bibliography:
+Einstein 1905 (m = L/c² as light energy), Maxwell 1865, Milgrom 1983, McGaugh 2016,
+Williamson–van der Mark 1997, Lai 2026, van Dokkum 2023, LIGO 2016/2017/2023,
+Antognini 2013, Micheli 2018, Planck 2020, DES 2022.
