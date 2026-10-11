@@ -1,7 +1,6 @@
 # Capture — "The Great Separation" naming + Williamson charge directive (2026-10-08)
 
-Status: captured verbatim; committed 2026-10-08 on Jaden's "in the git, the great separation
-is much better".
+Status: captured verbatim. NOT in git.
 
 ## His words, verbatim
 
@@ -59,9 +58,47 @@ Verified (`scratch/surface_area_law.py`):
   thickness 70 → ~640 km, edge/core 4.69 → 1.01 (small core: proportionally thicker;
   supermassive: razor-thin). **RULED: the r⁻⁴ thick envelope (35.6 M☉ tail) is DEAD.**
 - Sheet law candidate: 2πGΣ = a_max → Σ = 7.70×10²⁰ vs fitted 8.48×10²⁰ — +10.1% residual
-  (the one open numerical thread).
+  (see the Σ ruling below).
 - Stagnation consistency: skin 650 km < ball boundary 886 km — the skin is SUB-stagnation,
   held by the core's grip through the 1/r² dilution, never self-held; the sheet vs ball
   columns differ by 3/2 (geometry); the skin is the sheet regime.
 - This closes the third open item (the decompression-envelope shape): thin skin by the
   surface-area law.
+
+## The Σ residual ruling (same session): no mechanism needed
+
+His words (verbatim): "the Σ mechanism is unneccesssary i already have thermodynamic
+equillibrium and mass energy conservation i dont need an uinfinity to save it."
+
+Reading: the +10.1% between the sheet law (2πGΣ = a_max) and the fitted k-rule column
+(8.48233×10²⁰) is NOT a gap — k = 0.868899 is a CALIBRATED constant (calibrated on
+GW150914, tested on 89 events, −0.97% mean / 2.02% std), declared as such per methodology
+rule 3. Thermodynamic equilibrium + mass-energy conservation are the framework's closure;
+forcing a mechanism onto the calibration anchor would be the standard model's
+infinity-saving disease. The Σ mechanism hunt is RETIRED.
+
+## Derivation attempts on the two remaining threads (Jaden: "run it" / "hunt it down")
+
+**Charge g = 1.2067 — NOT closed (honest failure, `scratch/charge_derivation_attempt.py`).**
+- Linear anchor re-verified: q' = 0.9103e, α⁻¹ = 165.4.
+- My uniform-core Born-Infeld fixed point landed at α⁻¹ = 163.0 (q = 0.9168e), NOT Lai's
+  135.903: the saturation barely engages at the average energy density — their limit comes
+  from the full radial-profile integral (unpublished machinery), which my simplification
+  does not reproduce. Diagnosed, not hidden.
+- The frozen-grip factor alone cannot hit g: q ∝ √(ε_eff) goes the wrong way (k = 7 → q =
+  2.4e); the stiffening is not a uniform ε rescale, it is the profile saturation.
+- The exact missing piece: the double-loop eigenmode (the 4-quantum SU(2) quantization of
+  the loop fixing R/V) — the same 1-ppm number Quicycle has not yet released. g stays OPEN
+  with the route named.
+
+**Σ residual — NOT closed (near-misses without mechanism, `scratch/sigma_residual_hunt.py`).**
+- Σ_k recomputed precisely: 8.48233×10²⁰ (k = 0.868899, ρ_core = 2.3×10¹⁷).
+- Candidate table: 2πGΣ = a_max → 7.702×10²⁰ (−9.2%); a_hold(ρ_max) → 7.476×10²⁰
+  (−11.9%); ball column → 1.155×10²¹ (+36%).
+- Two clean-looking forms: Σ_k = (11/10)·a_max/(2πG) = (11/15)·3a_max/(4πG) to **+0.117%**
+  — identical forms by the 3/2 sheet-ball geometry — but NO mechanism. √g = 1.09852 is
+  0.252% away (a second, different near-miss).
+- Per the framework's own rule (near-misses without mechanism are reported, not claimed),
+  the residual stays open. The mechanistic route (the core's pull at the skin's outer edge
+  added to the skin's self-pull) does not produce a mass-independent Σ — the 10% most
+  likely lives in the catalogue-fit of k. NOT closed.

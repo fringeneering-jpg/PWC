@@ -3,8 +3,7 @@
 
 Status: consolidated by the working agent from this session's verified scripts; every
 number below was computed and checked in `scratch/` (committed copies under `PWC/`).
-Committed 2026-10-08 on Jaden's "in the git". Where a number is his ruling or a locked
-datum, it is marked.
+NOT in git until Jaden's word. Where a number is his ruling or a locked datum, it is marked.
 
 ---
 
@@ -109,9 +108,11 @@ datum, it is marked.
 - Inverse square = fixed tension diluted over 4πr² (the geometric origin).
 - Thin skin: t = Σ_k/ρ_max = 650 km (the 20-hole run: 70 → ~640 km; edge/core 4.69 → 1.01).
   The r⁻⁴ thick envelope (35.6 M☉ tail) is DEAD; M_med = Σ·4πR_c².
-- Σ_k = 8.48233×10²⁰ vs the sheet law 2πGΣ = a_max → 7.702×10²⁰ (+10.1%);
-  near-misses (11/10)·sheet = (11/15)·ball at +0.117%, no mechanism — reported, not
-  claimed. Skin 650 km < stagnation 886 km (sub-stagnation, core-held).
+- Σ_k = 8.48233×10²⁰ vs the sheet law 2πGΣ = a_max → 7.702×10²⁰ (+10.1%); near-misses
+  (11/10)·sheet = (11/15)·ball at +0.117%, no mechanism. **RULED (Jaden): no mechanism
+  needed** — thermodynamic equilibrium + mass-energy conservation are the closure; k is a
+  declared calibration (methodology rule 3), not a gap ("i dont need an infinity to save
+  it"). Skin 650 km < stagnation 886 km (sub-stagnation, core-held).
 
 ## 11. The fight and the neck (merger mechanics)
 
@@ -163,6 +164,30 @@ datum, it is marked.
 - HST RCP 28: far-half FWHM 1.36 kpc, deconvolved radius 0.61 kpc at 7.5σ vs published 0.7
   — the supply-cap input survives.
 
+## 15. The knot equilibrium (2026-10-09): the stretch unlocked
+
+- The balance: trapped heat's pressure ρ·H/3 = the 720° pinch s·ρ·c₀²/3 → **H_trapped =
+  s·c₀² = 4.73×10¹⁵ J/kg = 5.26% of the tying heat.** The sealed stretch s = 1/19 IS the
+  retained-heat fraction: the knot keeps 5.26%, expels 94.74% as the radiation. The
+  balance is ρ-independent — universal across knots (electron and proton share s; the
+  EOS sets the fraction, the topology sets the scale).
+- Thermal reading on the ruled c_H: the knot = a 4.4 mK heat sink against the 2.7 K bath.
+- Jaden's arrow ruling (verbatim): "No its absorbing the 95% again thats why the cosmic
+  web shows the heat attracted to the untying not the voids" — untying re-absorbs the
+  expelled 95% from the ambient: the knots drain the fluid's heat to fund their own
+  dissolution; the filaments glow, the voids stay cold.
+- The mass ratio: m_p/m_e = 4λ̄_C/R_p = 1835.79 vs 1836.15 (−0.02%) — the ratio of the
+  two quantizations (1 quantum vs 4), no hand-tuning.
+- The charge channel is EM-only (his ruling): q′ = √(3ε₀hc/8π³) needs only ε₀, h, c.
+  The g = 1.2067 correction = the slip-knot's dilution (the wave fills 0.75% of its
+  fold; emptiness ratio 134.2 vs 137.036). The electron = an edge dislocation in the
+  birefringent lattice (Burgers = charge, double circuit = 720°, two sides = the no-snap
+  ruling, facing = chirality). The core geometry pins b = 0.0566 r₀ or C = 0.1049.
+- **The ONE remaining micro piece:** the 3.302 λ̄_C tube — the dynamic footprint (the
+  coherent ring mode dies at 0.707 λ̄_C, the transverse closure gives integers; the
+  zitter sweep + self-spread at ~π× the zitter diameter; π√(21/19) sits +0.024% away,
+  α-dressed, reported). The equilibrium is r-independent — the dynamics must set the size.
+
 ---
 
 ## TESTS STILL TO BE WORKED (my list, in priority order)
@@ -171,9 +196,12 @@ datum, it is marked.
    heat-expelled volume of the knot from the caloric ladder's fold drop, not a uniform
    stiffening. Needs either the exact double-loop eigenmode (the 4-quantum SU(2)
    quantization) or the full radial-profile saturation integral with PWC's EOS.
-2. **The Σ +10.1%** — a mechanism for (11/10)·sheet or the acceptance that k = 0.868899's
-   last 10% is catalogue systematics.
-3. **H₀** — Jaden's one-word ruling (Great Separation inventory) pins it to 32.371 c₀².
+2. ~~The Σ +10.1%~~ — **RETIRED by Jaden's ruling**: k = 0.868899 is a declared
+   calibration, not a gap.
+3. **H₀ — CLOSED (Jaden's ruling):** the resting medium is absolute zero (T = 0) holding
+   the latent spacer heat H₀ = 32.371 c₀² = 2.909×10¹⁸ J/kg — the heat re-absorbed into
+   the medium and gone to rest in deep space. T = 0 with H₀ ≠ 0 is coherent in PWC's heat
+   ontology (no k_B locked; H(ρ) is the caloric curve).
 4. **The τ = 4.68 ms release profile** — the decompression law connecting the 3 M☉ dump to
    the settling time (103 km → 1403 km = 13.6×; the profile is the open decompression law).
 5. **Pulsar "crust vs bare ρ_n" cell** — needs the frontal-area law (the repo's escape is
@@ -190,6 +218,20 @@ datum, it is marked.
     EHT shadow (undefined until the light-trapping mechanism is stated); m_w unpinned
     (m_p/3–m_p); the bow sheath profile ρ_bow(r) (passage-chart open cell); the 2.7 K
     bath-anisotropy test (local tying-region excesses above the bath).
+11. **NEW — cosmic birefringence as the rest-state signature (Jaden's H₀ ruling):** the
+    rested deep-space medium is the birefringent lattice; birefringence should be MAXIMAL
+    in voids/deep space and SUPPRESSED near matter — test the reported CMB polarization
+    rotation (β ≈ 0.3°, contested, claimed anisotropy) against the matter/void
+    distribution. A positive matter correlation falsifies the reading.
+12. **NEW — the void reach law (Jaden's void-anatomy ruling):** R_void = √(G·M_walls/a₀) —
+    the void is the zero-pull interior beyond the walls' holding reach; the heat hangs
+    only where the untying matter is; the stiff birefringent centre keeps the mass from
+    meeting. Numbers: 10¹⁵ M☉ cluster → 1.45 Mpc; the 150 Mpc BAO void needs 10¹⁹ M☉ of
+    walls (the reach law lands ON the BAO scale). Test: void radius vs wall mass, log-log
+    slope 1/2 with the frozen a₀, against void catalogs at all redshifts — the universal
+    anatomy (same central void + WHIM readings for distant galaxies as local).
+    S8 is RETIRED as a PWC quantity (Jaden: a dark-matter presumption; lensing = the
+    medium's tension + the deep-space stiffening).
 
 *Every figure above has a verification script in the repo (`PWC/*.py`) and a derivation
 document in `PWC/derivations/`; every ruling is verbatim in `PWC/session_logs/2026-10-08/`.*
