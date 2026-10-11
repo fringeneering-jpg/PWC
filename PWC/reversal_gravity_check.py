@@ -7,14 +7,14 @@ s = 1.0/19.0
 alpha = 1.0/137.036
 g_target = 16*math.pi**3*alpha/3.0
 
-print("== 1. The two directions ==")
-P_heat = rho0*H0/3.0          # the heat's separating pressure (the untying direction)
+print("== 1. The two directions (the debt ontology: heat = the waves' squeezed-out component) ==")
+P_heat = rho0*H0/3.0          # the debt's tension magnitude (pulling the waves apart)
 Y_pair = s*rho0*c0**2/3.0     # the pair tension (the EM re-pairing pull)
-print(f"the untying push:  the heat's pressure   = {P_heat:.3e} Pa")
-print(f"the tying pull:    the pairs' re-pairing  = {Y_pair:.3e} Pa")
-print(f"heat wins by:      {P_heat/Y_pair:.0f}x  - the expansion runs today (95% re-absorbed)")
-print(f"the reversal (the Great Rejoining): when the heat drains below the pull - the pull")
-print(f"then re-ties everything and expels the heat again. Gravity = that pull, local.")
+print(f"the untying direction: the debt's tension = {P_heat:.3e} Pa")
+print(f"the tying direction:   the pairs' re-pairing = {Y_pair:.3e} Pa")
+print(f"debt wins by:          {P_heat/Y_pair:.0f}x  - the expansion runs today (95% re-absorbed)")
+print(f"the reversal (the Great Rejoining): when the debt drains below the pull - the pull")
+print(f"then re-ties everything and squeezes the debt out again. Gravity = that pull, local.")
 
 print("\n== 2. The g-S8 identity ==")
 print(f"g = 16 pi^3 alpha/3 = {g_target:.6f}")

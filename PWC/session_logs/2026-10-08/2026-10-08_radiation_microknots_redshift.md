@@ -294,3 +294,27 @@ Theory*, with the 55-script suite and the one-command runner. The full bibliogra
 Einstein 1905 (m = L/c² as light energy), Maxwell 1865, Milgrom 1983, McGaugh 2016,
 Williamson–van der Mark 1997, Lai 2026, van Dokkum 2023, LIGO 2016/2017/2023,
 Antognini 2013, Micheli 2018, Planck 2020, DES 2022.
+
+## The heat ontology — FINAL (his rulings, verbatim, 2026-10-12)
+
+> "your still thinking backwards, the mass is always in the wave, the wave when its
+> untied or the wave when its tied, heat doesnt add or take mass from the total, the
+> heat is just how far spread the waves are at rest"
+
+> "heat was always the second substance, heat is the debt thats owed when you cavitate
+> below the rest temperature, heats the negative pressure pulling the waves apart to
+> rest tension"
+
+> "heat is just a debt, its still a part of the em waves just squeezed out when they
+> compress"
+
+The closed reading: ONE substance — the EM waves. The mass is always the waves (ρ₀,
+tied or untied). The heat is the waves' OWN component squeezed out on compression —
+the debt, owed back on expansion. The heat's pressure is NEGATIVE — the tension
+pulling the waves apart to rest spacing (the pull-side ruling's own language). The
+caloric H₀ = 32.371 c₀²/kg is the DEBT'S MEASURE (the spacing potential per kg), not
+energy-on-top: the auditor's 32.4ρ₀ never exists because the heat never leaves the
+waves' own mass bookkeeping. The acoustic channel is the waves' own (c_s = c₀/√3);
+the debt contributes no stiffness. The tying squeezes the debt out (c₀² per kg — the
+light energy, the Einstein anchor intact); the untying re-absorbs it. The 615× margin
+= the debt's tension beating the re-tying grip — a force balance, magnitudes unchanged.
