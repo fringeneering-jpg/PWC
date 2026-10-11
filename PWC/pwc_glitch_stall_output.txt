@@ -1,0 +1,84 @@
+==============================================================================
+0. CAPS FROM LOCKED NUMBERS   v_cap = sqrt(2*Y/rho)
+==============================================================================
+  rho_max shell :     953.7 km/s  (locked 954)
+  rho_core      :      71.8 km/s  (locked 72)
+  gas branch    :     56156 km/s  = 0.1873 c0  (locked 56,156)
+
+==============================================================================
+1. SURFACE SPEED vs THE CAPS
+==============================================================================
+  VELA                     v_surf = 2*pi*R*f =       774 km/s
+     vs rho_max cap 954 km/s :    0.811x   (below cap)
+     vs rho_core cap 72 km/s:   10.775x   --> ABOVE CAP
+     vs gas-branch 56156 km/s  :    0.014x
+     surface density needed for stall at this speed: 1.981e+15 = 1.52 x rho_max
+  CRAB                     v_surf = 2*pi*R*f =      1882 km/s
+     vs rho_max cap 954 km/s :    1.973x   --> ABOVE CAP (permanently stalled)
+     vs rho_core cap 72 km/s:   26.203x   --> ABOVE CAP
+     vs gas-branch 56156 km/s  :    0.034x
+     surface density needed for stall at this speed: 3.350e+14 = 0.26 x rho_max
+  MSP (716 Hz, R=10 km)    v_surf = 2*pi*R*f =     44988 km/s
+     vs rho_max cap 954 km/s :   47.173x   --> ABOVE CAP (permanently stalled)
+     vs rho_core cap 72 km/s:  626.490x   --> ABOVE CAP
+     vs gas-branch 56156 km/s  :    0.801x
+     surface density needed for stall at this speed: 5.860e+11 = 0.00 x rho_max
+
+  Vela R=10 km / 12 km band: 703 / 844 km/s = 0.74 / 0.89 of the 954 cap
+
+==============================================================================
+2. STALL TRIGGER: what density variance stalls Vela?
+==============================================================================
+  cap(rho) = v_surf  ==>  rho = 2Y/v^2 = 1.981e+15 kg/m^3
+  = 1.52 x rho_max  ==>  the ambient/crust variance must
+  locally raise density by +52% to stall Vela.
+  A 2e-6 glitch changes v_surf by only 1.5 m/s (cap margin is 180 km/s) - the spin-up itself never approaches the cap.
+
+==============================================================================
+3. RE-LOCK MOMENTUM TRANSFER: swept-medium catch  (drag law, f_solid = 0.085%)
+==============================================================================
+psr            A_geo   sweep T   m_swept kg          dL       dn/nu    vs obs
+VELA        4*pi*R^2     100 d    7.552e-08   6.427e+02   6.780e-38   2.9e+31
+VELA        4*pi*R^2    2.5 yr    6.896e-07   5.869e+03   6.191e-37   3.2e+30
+VELA          pi*R^2     100 d    1.888e-08   1.607e+02   1.695e-38   1.2e+32
+VELA          pi*R^2    2.5 yr    1.724e-07   1.467e+03   1.548e-37   1.3e+31
+CRAB        4*pi*R^2     100 d    1.518e-07   2.856e+03   1.363e-37   7.3e+28
+CRAB        4*pi*R^2    2.5 yr    1.386e-06   2.608e+04   1.244e-36   8.0e+27
+CRAB          pi*R^2     100 d    3.794e-08   7.139e+02   3.407e-38   2.9e+29
+CRAB          pi*R^2    2.5 yr    3.465e-07   6.519e+03   3.111e-37   3.2e+28
+
+  ---- what the observed glitch DEMANDS ----
+  VELA: dn/nu = 2.0e-06 needs caught mass m = 2.228e+24 kg (1.12e-06 Msun, 0.37 Earth masses)
+         sweep time at the locked f_solid: 8.08e+30 yr   (f_solid = 1: 6.86e+27 yr)
+         entire characteristic-age sweep, 100% catch: m = 3.67 kg --> dn/nu = 3.29e-30  (still 6.1e+23x short of 2e-06)
+  CRAB: dn/nu = 1.0e-08 needs caught mass m = 1.114e+22 kg (5.60e-09 Msun, 0.00 Earth masses)
+         sweep time at the locked f_solid: 2.01e+28 yr   (f_solid = 1: 1.71e+25 yr)
+         entire characteristic-age sweep, 100% catch: m = 7.37 kg --> dn/nu = 6.62e-30  (still 1.5e+21x short of 1e-08)
+
+==============================================================================
+4. TREND TEST (Vela vs Crab)
+==============================================================================
+  predicted Crab/Vela glitch ratio = 2.01  (model: dn/nu ~ nu)
+  observed  Crab/Vela ratio         = 5.00e-03
+  --> the model's trend is INVERTED vs observation by 4.0e+02x
+
+==============================================================================
+5. RECOVERY TIMESCALES vs observed days-months
+==============================================================================
+  luminal response across the star : R/c0      =     36.7 us
+  luminal across the yield reach   : r_e/c0    =     80.0 us  (r_e = sqrt(GM/a_max) = 24.0 km)
+  framework drag torque            : 9.30e-06 N m  --> fdot = 1.10e-44 Hz/s
+  observed Vela fdot               : 1.55e-11 Hz/s   (drag is 1.4e+33x too weak to even spin Vela down)
+  drag-only relaxation of one 2e-6 glitch: 6.5e+31 yr
+  observed post-glitch recovery: days to months.
+  --> no locked framework number produces the observed recovery scale.
+
+==============================================================================
+6. SIGN CHECK (the locked framework says the medium does not move)
+==============================================================================
+  The ambient medium is stationary (locked ruling). A shell re-catching
+  stationary medium absorbs its momentum, which in the rotating frame
+  points AGAINST the spin: the catch is a spin-DOWN of magnitude m*v*R,
+  not a spin-up.  For dn/nu > 0 the swept medium must already carry
+  specific angular momentum > v*R at the shell - no locked mechanism
+  gives the ambient any rotation.  Magnitude fails (sec. 3); sign also fails.

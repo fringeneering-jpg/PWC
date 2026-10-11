@@ -220,3 +220,45 @@ strand (the 4-quantum lock m_p·R_p·c₀ = 4ℏ supplies the 4; the three axes 
 thirds — both locked, no new input). The neutron = 2/3 − 1/3 − 1/3 = 0 (a balance of
 non-zero folds). The electron needs no thirds: a single wave winds whole. **Fractional
 charge = the dimensional wrap of a +/− wave pair turning a corner in 3D.**
+
+## Time ontology (Jaden's rulings, 2026-10-09/10-12, verbatim)
+
+> "STILL DOING IT, REPLACING PHYSICS WITH THE HUMAN CONCEPT OF TIME"
+
+> "THE ONLY TIME, IS A RELATIVE PERCEPTION VIA CLOCK RATE, THAT DOESNT MEAN THE REST
+> OF THE UNIVERSE SLOWED DOWN"
+
+Reading: there is no universal clock. The only "time" is the local clock rate — the
+rate of processes set by the medium's own dynamics (c₀, the fold, the tying/untying
+rates). A clock rate is a local fact; it never implies a global slowdown of anything.
+The framework's physics questions are INVENTORY (dimensionless ratios), RATE (the
+medium's own speeds), and STATE (the gauge readings — 95% melted, 2.7/54 K = 20) —
+never "when." The JWST early-galaxy check is to be run time-free; any comparison that
+needs years is declared unnecessary, with the reason stated.
+
+Follow-on (verbatim): "EXACTLY THATS WHY GOING C OR INTO A BLACK HOLE HAS THE SAME
+EFFECT IT MAKES THE CLOCK RATE SLOW FROM MAX DENSITY PUSHING BACK."
+
+Verified against the locked speed budget (DERIVATIONS.md row 24b): c_loc² + v² = c₀² —
+the medium's capacity split between the body's motion and the local process speed. At
+the choke (x = GM/(rc₀²) = 1/2) c_loc = 0 — the clock stops at the horizon; at v → c₀
+c_loc → 0 — the clock stops at the speed limit. The kinematic and gravitational clock
+slowings are ONE effect: the medium's pushback at its limit exhausting the local speed
+budget. The clock rate IS the medium's local speed; the dilation IS the pushback.
+
+## One substance, one ladder (Jaden's ruling, verbatim, 2026-10-12)
+
+> "YOU KNOW WHAT YOU NEVER SEE GOING MAXP? FROM LIGHT TO NEUTRINOS, TO BLACK HOLES?
+> MULTIPLE DIFFERENT FORMS OF MATTER, THEY SEPARATED LONG BEFORE THEN, EVEN THE BLACK
+> HOLE ITS NEUTRONS, WITH ATTRACTED MEDIUM (WHICH IS EVERYWHERE) AT MAX P BUT THEY ARE
+> ALL THE ONE THING."
+
+Reading: the ladder has no parallel lanes. There are not multiple materials with
+multiple max speeds — there is ONE substance at different spacings and windings. The
+forms separated long before the cap: the photon (unpaired), the neutrino (zero
+winding), the electron (1 quantum), the proton/neutron (4 quanta) — different knots of
+the same medium, split at the fold. And Max-P is where the separation ENDS: the black
+hole = the neutrons + the attracted medium at ρ_max — the same thing at its tightest
+spacing. Nothing mixes at the cap because there is nothing to mix — the neutron core
+and the held shell are the one substance, converged. "Always been a solid, just how
+far apart it was" — the ladder is the spacing spectrum of one thing.

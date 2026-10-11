@@ -1,0 +1,225 @@
+C:\Users\jaden\Downloads\PWC-Check\scratch\jwst_early_galaxy_check.py:103: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  sig2 = np.trapz(integ, k)/(2*np.pi**2)
+C:\Users\jaden\Downloads\PWC-Check\scratch\jwst_early_galaxy_check.py:75: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  return np.trapz(integrand, zz) / (H0_s*yr*1e9)   # Gyr
+C:\Users\jaden\Downloads\PWC-Check\scratch\jwst_early_galaxy_check.py:137: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  return np.trapz(nvals[Mgrid >= M_Msun], Mgrid[Mgrid >= M_Msun])
+C:\Users\jaden\Downloads\PWC-Check\scratch\jwst_early_galaxy_check.py:80: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  return c_over_H0*np.trapz(1.0/E(zz), zz)
+C:\Users\jaden\Downloads\PWC-Check\scratch\jwst_early_galaxy_check.py:146: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  V_per_sr = np.trapz(vals, zz)                    # count per sr
+C:\Users\jaden\Downloads\PWC-Check\scratch\jwst_early_galaxy_check.py:197: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  Ntot = np.trapz(Ntot, zlim)*(4*np.pi)
+C:\Users\jaden\Downloads\PWC-Check\scratch\jwst_early_galaxy_check.py:204: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  cum_hi = np.array([np.trapz(rate[zsub >= z], zsub[zsub >= z]) for z in zgrid])*(4*np.pi)
+C:\Users\jaden\Downloads\PWC-Check\scratch\jwst_early_galaxy_check.py:214: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  cnt = np.trapz(vals, zsub)*(100/3600.0)*(np.pi/180)**2
+rho_crit0 = 8.533e-27 kg/m3 ; rho_b0 = 4.198e-28 kg/m3 ; rho_m0 = 3.97e+10 Msun/Mpc3
+sigma8 check (should be 0.811): 0.8110000000000002
+D(z=12) Carroll vs exact integral: 0.0977 vs 0.0977
+
+====================================================================================================
+(1) OBSERVED JWST TARGETS  (the STANDARD MODEL's clock: Planck z<->t ages)
+====================================================================================================
+  t(z=10) = 0.47 Gyr ;  lookback 13.32 Gyr ; D(z) = 0.1155
+  t(z=12) = 0.37 Gyr ;  lookback 13.43 Gyr ; D(z) = 0.0977
+  t(z=14) = 0.30 Gyr ;  lookback 13.50 Gyr ; D(z) = 0.0847
+
+  Literature sample (not repo numbers; flagged as literature):
+    JADES-GS-z14-0  z=14.32  M* ~ 4e8 Msun (Carniani et al. 2024)
+    JADES-GS-z13-0  z=13.20  M* ~ 4e8
+    GLASS-z12 / UNCOVER-z13: z~12-13, M* ~ 1e8-1e9
+    GN-z11          z=10.60  M* ~ 1e9
+    Labbe+2023 candidates: 6 objects z=7.4-9.1, implied M* > 1e10
+    ZF-UDS-7329     z=3.2, M*~1e11, formed most stars in a 200-400 Myr burst (first Gyr)
+  Task window: M* ~ 1e9-1e11 at z~10-14  ->  t = 0.29-0.48 Gyr (300-500 Myr) available.
+
+====================================================================================================
+(2) THE STANDARD MODEL'S OWN PROBLEM, IN ITS OWN CLOCK  (Press-Schechter)
+    (per Jaden: 'too early' is the standard model's anxiety -- its assembly
+     e-folds against its own time axis. NOT a PWC test.)
+====================================================================================================
+  sigma(M=1e11 Msun) @ z=0 : 3.268
+  nu = delta_c/(sigma*D) at z=12 for a 1e11 Msun halo : 5.28 sigma
+  Gaussian suppression exp(-nu^2/2) = 8.86e-07
+  n(>1e11 Msun, z=12) = 2.23e-07 Mpc^-3 (comoving)
+  M*=1e+09 Msun -> halo Mh=6.4e+10 Msun at eps=0.1  -> nu(z=12)=5.0 sigma ; n(>Mh,z=12)=1.4e-06 Mpc^-3
+  M*=1e+10 Msun -> halo Mh=6.4e+11 Msun at eps=0.1  -> nu(z=12)=6.8 sigma ; n(>Mh,z=12)=4.5e-12 Mpc^-3
+  M*=1e+11 Msun -> halo Mh=6.4e+12 Msun at eps=0.1  -> nu(z=12)=9.7 sigma ; n(>Mh,z=12)=1.1e-23 Mpc^-3
+  chi(z=12) = 10016 Mpc ;  100 arcmin^2 x dz=1 field volume ~ 143468 comoving Mpc3
+  expected count in 100 arcmin^2 field, z=11.5-12.5, 1e11 halo : 3.85e-02
+  expected count in 100 arcmin^2 field, z=11.5-12.5, 6.4e11 halo (M*=1e10,eps=0.1) : 1.05e-06
+  expected count in 100 arcmin^2 field, z=11.5-12.5, 6.4e12 halo (M*=1e11,eps=0.1) : 8.12e-18
+  total number of >1e11 Msun halos in the WHOLE observable universe, all z<=14 : 5.00e+10 (dominated by z<3)
+  earliest z with >=1 expected 1e11-Msun halo (whole observable universe, cumulative to z=20): z = 15.8 (t = 0.25 Gyr)
+  at z=12 the whole sky holds ~4.8e+04 such halos per unit z (EH sigma; Planck's full sigma gives ~4e3 -- rare but non-zero)
+  most massive halo expected (N=1) in 100 arcmin^2, z=10 : ~1.3e+11 Msun
+  most massive halo expected (N=1) in 100 arcmin^2, z=12 : ~4.4e+10 Msun
+  most massive halo expected (N=1) in 100 arcmin^2, z=14 : ~1.8e+10 Msun
+
+  Reading: at eps=0.1, observed M*~1e9 galaxies at z~12 are ~5-sigma-halo objects
+  (~0.2 expected per 100 arcmin^2 field vs ~5-10 seen: ~30x); M*~1e10 needs a
+  6.4e11 Msun halo (~1e-6 expected per field vs ~1 seen: ~1e6 x). All counts here
+  use the Eisenstein-Hu no-baryon sigma(M); Planck's full sigma lowers them by
+  another factor ~3-10, so the tension only grows.
+  Assembly time: LCDM's per-halo accretion is NOT the bottleneck (specific
+  accretion ~0.035(1+z)^2.5 h Gyr^-1 -> mass-doubling ~48 Myr at z=12); the
+  problem is abundance x efficiency: a 1e11 Msun halo at z=12 is a ~5.3-sigma
+  peak, the first such halos appear around z~15.8 (t~0.25 Gyr), and the observed
+  massive galaxies sit 1e1-1e6 x above the expected count per field. To build
+  M*=1e11 at z=12 at eps=0.1 LCDM needs a 6.4e12 Msun halo: a 9.7-sigma object
+  with ~8e-18 expected per field -- i.e. never.
+
+====================================================================================================
+(3) LOCKED-RATE CROSS-SECTION IN THE STANDARD FRAME (kept for the record)
+    (per Jaden: this frame is not PWC's test bed; the frame-free reading is (5).)
+====================================================================================================
+  RBH-1 engine (task-locked): 2e+07 Msun of stars in 1e+07 yr -> SFR = 2.0 Msun/yr
+  M*=1e9 Msun:  rate-reading N=1.2 engines (continuous 400 Myr) ; burst-reading N=50 engines ; engine mass=2.5e+07 Msun (2.5% of galaxy) ; stagnation-scale knots=1.3e+04
+  M*=1e10 Msun:  rate-reading N=12.5 engines (continuous 400 Myr) ; burst-reading N=500 engines ; engine mass=2.5e+08 Msun (2.5% of galaxy) ; stagnation-scale knots=1.3e+05
+  M*=1e11 Msun:  rate-reading N=125.0 engines (continuous 400 Myr) ; burst-reading N=5000 engines ; engine mass=2.5e+09 Msun (2.5% of galaxy) ; stagnation-scale knots=1.3e+06
+
+  RBH-1-scale engines needed for 1e11 Msun: 125 (rate reading; each engine then ties
+  8e8 Msun = 40x the observed trail mass, needing a ~340 kpc trail) or 5,000
+  (burst reading; engine mass 1e11 Msun = 100% of the target -- fully circular).
+
+  --- plausibility vs observed SMBH seed counts ---
+  Lagrangian volume of a 1e11 Msun proto-cluster at z=12: 2.52 comoving Mpc3
+  expected SMBH seeds in that volume: local density -> 0.03 ; high-z AGN density -> 2.5e-05
+  needed: 125 (rate) / 5,000 (burst) RBH-1-scale engines, or 1.3e+06 stagnation knots
+  -> engine count exceeds observed SMBH seed counts by 1e3-1e6 x at RBH-1 scale.
+  stagnation reading: total engine mass 2.5e9 Msun in 2.52 comoving Mpc3 = 9.9e+08 Msun/Mpc3
+    vs Soltan-inferred SMBH mass density today ~3e5 Msun/Mpc3 -> 3309 x above
+    vs galaxy's own mass: engines = 2.5%% of M*, vs observed BH/M* ~ 0.1-0.5%% today -> 5-25x.
+  --- T2 creation-law route (locked: rho_dot = eta*rho0*pi*G*<v>*rho_b/a0) ---
+  k = eta*rho0*pi*G*c0/a0 = 2.078e-18 s^-1  (z=0)  -> 1/k = 15.2 Gyr
+  rho0 = const (locked rest value): k(z=12)=2.078e-18 s^-1 ; k*t over 400 Myr = 0.03 ; seed mass needed = 3.8e+12 Msun (3812% of 1e11)
+  rho0 ~ (1+z)^3 (medium density scales): k(z=12)=4.565e-15 s^-1 ; k*t over 400 Myr = 57.63 ; seed mass needed = 1.7e+09 Msun (2% of 1e11)
+  RBH-1 consistency: engine rate per engine mass = 1/1e7 yr = 3.17e-15 s^-1
+    vs T2 k(z=12) with (1+z)^3 scaling = 4.57e-15 s^-1 -> ratio T2/RBH1 = 1.44 (agree to ~44%)
+  medium needed for 1e11 Msun at z=12: rho_med=1.92e-23 kg/m3 -> sphere R=44 kpc (physical)
+  baryons in that region = 4.8e+09 Msun ; seeds = 1.7e+09 Msun -> seeds must be 36% of ALL pre-existing baryons in the region
+====================================================================================================
+(4) RATE-RATIO BOOKKEEPING (frame-free) + standard-frame flags
+====================================================================================================
+  tying heat for 1e11 Msun: m*c0^2 = 1.79e+58 J ; over 400 Myr = 1.42e+42 W
+  at RBH-1 locked escape fraction 2.45e-4: flash = 3.47e+38 W = 9.1e+11 Lsun
+    (observed z~12 galaxies: L_UV ~ 1e9-1e10 Lsun -> the flash would outshine them by 1e2-1e3x)
+  T2 law read as cosmic tying rate at z=12: 0.4 Msun/yr/comoving Mpc3 (rho0 const) or 893.5 (rho0~(1+z)^3)
+    observed cosmic SFRD at z~12: ~1e-3 - 1e-2 Msun/yr/Mpc3 -> T2 overproduces by ~1e2 x (p=0) / ~1e5 x (p=3)
+
+  FALSIFIABILITY (what would kill the PWC channel; all expressible as ratios/states):
+  (a) knot inventory vs assembly: PWC knots form at full density in a single fold (gates
+      1-5) -- any high-z galaxy whose stellar content shows an assembly gradient (density/
+      age/abundance ordering inconsistent with a single-crossing formation) kills the
+      'already dense' claim. The comparison uses the observers' own clocks; PWC declines
+      the clock but must still match the observed structure;
+  (b) the engine inventory: PWC needs 5,000 RBH-1-scale engines (yield-1) or 5.2e7
+      stagnation knots per 1e11 Msun galaxy -- engine inventory = galaxy inventory.
+      Surveys of high-z fields finding no such compact-mass population kill it;
+  (c) the flash rate: m*c0^2 per kg at the locked escape fraction -> ~9e11 Lsun per
+      forming galaxy vs ~1e9-1e10 Lsun observed (rate ratio 1e2-1e3); unresolved absence
+      forces the escape fraction ~1e-5 x RBH-1's;
+  (d) the repo's own supply cap: if the frozen -0.10 dex RBH-1 metallicity test passes,
+      the cap stands and the per-crossing yield is 7.75e-4 engine-masses -- the channel
+      cannot reach galaxy inventory;
+  (e) the standard-frame SFRD flag (record only): T2 read as the cosmic tying rate
+      overproduces the observed z~12 SFRD by 1e2-1e5 x -- a standard-frame constraint
+      the framework declines to answer (it needs the LCDM census).
+
+  REPO CROSS-CHECK (the task's rate vs the repo's own sealed numbers):
+    repo: 1e6-1e7 Msun stars over 73 Myr -> SFR_engine = 0.14 Msun/yr (task uses 2.0)
+    repo supply cap (path a): <= 15500 Msun tying admixture per wake -> engines needed for 1e11 Msun = 6.5e+06
+    -> with the repo's own cap the channel is short by ~3 orders of magnitude.
+
+  FRAME NOTE: sections (1)-(4) run in the standard cosmology frame (Planck z<->t ages,
+  comoving volumes, SFRD) -- the standard model's own problem statement. Per Jaden, PWC
+  disputes that scaffolding: its redshift is the micro-knot's unspooling and its physics
+  is inventory/rate/state, not 'when'. Section (5) is the frame-free PWC reading.
+
+====================================================================================================
+(5) THE PWC READING, FRAME-FREE: INVENTORY, RATE, STATE  (NO TIME, NO AGES, NO YEARS)
+====================================================================================================
+  [INVENTORY] (locked: rho0 = 8.74e-27 ~ 0.95 rho_crit; matter = 5% of mass)
+    medium : matter = 20 : 1 everywhere. A region holding M of matter holds 20 x M of medium.
+    -> to tie a 1e+11 Msun galaxy the region needs 1e+11 Msun of medium; any region
+       holding 5.0e+09 Msun of matter already has it on site. Ratio 20, no time enters.
+    (at locked rho0 that medium occupies a sphere of R = 570 kpc -- a length, not an age)
+  [RATE] T2 locked: rho_dot = eta*rho0*pi*G*<v>*rho_b/a0, <v> = c0 (the medium's own speed).
+    the medium's own untying rate: Gamma = rho0*c0/(rho_max*R_p) = 2.39e-18 s^-1 (c0-based)
+    tying rate per unit blocking mass, in units of Gamma:
+      k/Gamma = eta*pi*G*rho_max*R_p/a0 = 0.870   (DIMENSIONLESS -- rho0 cancels out)
+    per unit MEDIUM mass at the locked 5% matter fraction:
+      rho_dot/rho_med = f_matter*k = 0.043 x Gamma  ->  a region's whole 20:1 medium
+      inventory ties in 1/0.0435 = 23 natural units (one natural unit = one untying e-fold).
+    net at rest: untying removes 0.05 of the medium per natural unit, tying adds 0.0435 ->
+      net melt -0.0065 per natural unit (the melting state, as a rate, not a duration).
+    RBH-1 anchor in the same units: one engine ties one engine-mass per trail crossing
+      (62 kpc at the medium's locked 954 km/s -- the medium's own length/speed).
+      site rate / Gamma = 1326 ; site rate / k_rest(rho0) = 1525
+      -> in the T2 law (k proportional to rho_med) the wake's rate reads as the site's
+         medium at ~1525 rho0. The locked set has NO law fixing the site's density --
+         that gap is the whole 'rate' question.
+    ENGINE INVENTORY (pure ratios, no time):
+      yield per crossing (task-locked) = 1 engine-mass -> 5000 engines per 1e+11 Msun galaxy
+      -> engine inventory = galaxy inventory (1:1, circular) unless engines re-cross;
+      counting re-crossings is a clock, which the framework declines.
+      at the stagnation floor (1,910 Msun): 5.2e+07 knots per galaxy.
+      observed SMBHs per galaxy ~ 1 (local census) vs 5,000 needed at yield-1 -> count excess ~5e+03 x
+      repo's own supply cap (path (a)): <= 15500 Msun tying per wake -> yield per crossing
+      = 7.75e-04 engine-masses -- 1290 x BELOW the task-locked yield-1. The two locked yields
+      disagree; the frozen -0.10 dex RBH-1 metallicity bar decides.
+  [STATE] (no durations; state variables only)
+    melting state: 5% of the initially tied inventory remains tied (95% re-absorbed).
+    bath gauge: T_now / T_Separation = 2.7 K / 54 K = 1/20 -- the bath sits at 5% of its
+    Great-Separation value, mirroring the 5% matter fraction. A state, not an age.
+    (54 K datum: Jaden via parent agent; NOT in the repo files -> UNCHECKED.)
+    flash rate ratio: tying the observed galaxies expels m*c0^2; at the locked 2.45e-4
+    escape fraction the emitted rate is ~9e+11 Lsun per forming galaxy vs ~1e9-1e10 Lsun
+    observed -> 91-906 x the observed emission rate (a rate ratio, no duration).
+    the framework makes NO statement about 'when'. 'When' is the human concept; the
+    physics is the inventory (20:1), the rate (0.87 x untying; c0-based), and the state
+====================================================================================================
+VERDICT (three parts, no time on the PWC side)
+====================================================================================================
+
+  1. WHAT PWC SUPPLIES: the MASS, from its own medium -- ratio 20, no time needed.
+     The knots cavitate into existence already dense (gates 1-5 run at the fold); there is
+     no assembly clock to fail. The JWST 'too early' problem is the standard model's
+     anxiety (its assembly e-folds on its own time axis); for PWC it is not a question.
+     Inventory check: any region holding M/20 of matter holds M of medium -- the full
+     target is on site. PASS, dimensionless.
+
+  2. THE RATE IS THE MEDIUM'S OWN: T2's tying rate in the medium's units is
+     0.87 x the medium's own untying rate (dimensionless: eta*pi*G*rho_max*R_p/a0,
+     rho0 cancels); at the locked 5% matter fraction the whole regional inventory ties
+     in 23 natural units (untying e-folds); the RBH-1 anchor is 1 engine-mass per trail
+     crossing (the medium's own length at its own 954 km/s). The rate is c0-based, not
+     year-based. The framework makes NO statement about 'when': 'when' is the human
+     concept; the physics is inventory, rate, state.
+
+  3. HONEST FAILURES KEPT VISIBLE (all frame-free):
+     (i)   ENGINE INVENTORY: at the anchored yield (1 engine-mass per crossing) a 1e11 Msun
+           galaxy needs 5,000 RBH-1-scale engines -- engine inventory = galaxy inventory,
+           1:1 circular (or 5.2e7 stagnation knots). Reducing the count requires counting
+           re-crossings -- a clock -- which the framework declines. Observed SMBHs per
+           galaxy ~1 vs 5,000 needed: the seed bootstrap is the load-bearing gap.
+     (ii)  THE TWO LOCKED YIELDS DISAGREE: task-locked yield 1 engine-mass per crossing
+           vs the repo's own sealed supply cap <=15,500 Msun per wake (yield 7.75e-4,
+           ~1,300x lower). If the cap holds, the channel is ~1e3 short of any galaxy-scale
+           inventory. The frozen -0.10 dex RBH-1 metallicity test decides.
+     (iii) FLASH RATE: at the locked 2.45e-4 escape fraction, tying the observed galaxies
+           emits ~9e11 Lsun vs ~1e9-1e10 Lsun observed -- a 1e2-1e3 x rate excess; the
+           framework must either absorb the heat (spacer heat) or take an escape fraction
+           ~1e-5 x RBH-1's. Currently unaccounted.
+     (iv)  NO STATE LAW for f_matter(epoch)/rho_med(epoch): the framework declines the
+           epoch comparison; if one is ever forced, it cannot currently be made without
+           borrowing the standard frame ((1+z) mechanics is OPEN, DERIVATIONS.md row 17).
+
+  SUMMARY LINE: PWC supplies the mass (ratio 20, no time needed); the rate is the medium's
+  own speed (0.87 x untying; c0-based); the framework makes no statement about 'when'
+  because 'when' is the human concept -- the physics is the inventory, the rate, and the
+  state. The only PWC-internal tensions are the engine inventory (1:1 circular at the
+  anchored yield), the two locked yields disagreeing by 1,300x, and the unaccounted flash
+  rate -- all falsifiable and all currently unresolved.
+
