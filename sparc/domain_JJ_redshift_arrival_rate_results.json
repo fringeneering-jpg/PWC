@@ -1,0 +1,15 @@
+{
+  "alpha_dot_excess_factor_planck": 6892933.645296832,
+  "alpha_dot_oklo_bound_per_yr": 1e-17,
+  "alpha_dot_required_per_yr_planck": 6.892933645296832e-11,
+  "b_observed": 1.07,
+  "b_observed_err": 0.06,
+  "b_static_prediction": 0.0,
+  "kappa_planck_per_m": 7.28599130097363e-27,
+  "kappa_sh0es_per_m": 7.891355563369064e-27,
+  "required_cdot_over_c_per_yr_planck": -6.892933645296832e-11,
+  "required_dlnrho_dt_per_yr_planck": 1.3785867290593665e-10,
+  "sb_exponent_expansion": -4.0,
+  "sb_exponent_static": -1.0,
+  "static_tension_sigma": 17.833333333333336
+}

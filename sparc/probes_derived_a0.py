@@ -1,9 +1,12 @@
 """PROBES blind test (prediction frozen in predictions/probes_blind.md, commit 1a92e41).
 All constants locked from SPARC; nothing refitted. Data from probes_build.py.
 """
-import numpy as np, pandas as pd, json
+import numpy as np, pandas as pd, json, os
 S, A = 0.2264, 6.61e-11; A_BASE, A_RAR = 7.5586e-11, 1.1603e-10
-d = pd.read_csv(r"C:\Users\jaden\Downloads\PWC-Check\PWC\sparc\probes\probes_accel.csv")
+_csv = os.path.join(os.path.dirname(os.path.abspath(__file__)), "probes_accel.csv")
+if not os.path.exists(_csv):
+    _csv = r"C:\Users\jaden\Downloads\PWC-Check\PWC\sparc\probes\probes_accel.csv"
+d = pd.read_csv(_csv)
 pts = lambda go, gp: float(np.sqrt(np.mean((np.log10(go) - np.log10(gp)) ** 2)))
 pwc = lambda g, s: g.g_bar + np.sqrt(A * g.g_bar) * (1 + s * g.shared * (1 - g.locked))
 rows = [dict(name=n, type=g.Type.iloc[0], survey=g.survey.iloc[0], npts=len(g),

@@ -36,9 +36,12 @@ No dark matter halo parameter appears anywhere in this file.
 """
 import json
 import os
+import sys
 
 import numpy as np
 from scipy.optimize import minimize_scalar
+
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 D = os.environ.get("PWC_SPARC_DIR", os.path.dirname(os.path.abspath(__file__)))
 

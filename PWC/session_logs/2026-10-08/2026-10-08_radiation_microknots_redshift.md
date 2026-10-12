@@ -338,4 +338,26 @@ The hydrocode's two layers match the split exactly: the NS caps (|u| ≤ c₀) g
 linear acoustic radiation (the shock at c₀), and the stall → equilibrium → cavitation
 loop is the EOS's discrete phase event — the superluminal snap lives OUTSIDE the fluid
 equations, as the transition between the stall and the restart. CLAUDE.md's
-matter-creation ruling updated to the split.
+matter-creation ruling updated to the split. Canonical line (his): "the engine snaps
+superluminally, and the exhaust radiates at c0."
+
+## The yield anchor, ground-up (2026-10-12)
+
+The topology equation inverted closes the registry's oldest open origin:
+Y_bow = 3αℏc₀/(190π⁴r_e⁴) = 5.9307×10²⁶ Pa vs the locked 5.93×10²⁶ (+0.011%).
+The knot's fold sets the yield, the yield holds the shells, the shells anchor the
+mergers — the 3.23×10¹¹ N/kg ceiling traces to the electron's own structure.
+
+## Branch recovery + final v3 synthesis (2026-10-12)
+
+The unmerged branches survived in the old clone C:\Users\jaden\cosmology\PWC_online:
+claude/pwc-engine-setup-ijmcxg (17 commits beyond main: the domain_CC–NN galaxy suite,
+knot_existence_pressure_confinement, shell_thickness_scaling, thermal_rate_criterion,
+cosmic_birefringence_pitch, CONVERSATION_TRANSCRIPT), claude/heat-spacer-free-energy
+(heat_spacer_free_energy pair), eos-latent-heat and framework-rebuild (already
+absorbed). t2_equilibrium.py confirmed NOT in any branch (registry's NOT-IN-GIT stands).
+Recovered to main with provenance flags (the gate-1 circularity banner stands).
+Final v3: the complete paper + the 28-section runner + the recovered suite, one folder
+for Zenodo. Jaden's directive: "this is it i want the culmination of everything together
+and comprehensive and readable in a single folder with everything needed for the v3 and
+final zenodo."

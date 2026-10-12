@@ -1,0 +1,149 @@
+PWC FULL-FRAMEWORK RUN - one command, every active verification
+
+==========================================================================
+MACRO - black holes, mergers, lensing, speed limit
+==========================================================================
+
+[OK]   BH pipeline (the 62 Msun chain, one-command rebuild)
+       object            M Msun |  core(all)  edge(reach) | core(area)  edge(area) | choke 2GM/c2
+       core(all)/edge(reach): message-8 derivation, whole mass as core, edge where the pull falls
+       neutron core 2.3e17  71.83 km/s (0.0002 c0)
+
+[OK]   Merger mass drop E/S (89-event fit, out-of-sample GWTC-5)
+       model                                mean %  mean|e| %    sd %   <=3%   <=5% slope/lnM
+       min(E, S)                              0.38       0.89    1.09     88     89      0.11
+       min(E, S)                              0.35       0.81    1.04    102    104     -0.86
+
+[OK]   Light bending push+pull (1.7512 arcsec)
+       total at the solar limb:            1.7512 arcsec  (4GM/(b c0^2) = 1.7512)
+       Model gives gamma = 1 exactly (push = pull). Cassini: gamma - 1 = 2.1e-05 +- 2.3e-05 -> mo
+
+[OK]   Speed limit / bow wave (954 km/s ladder)
+       PWC Max-P medium: rho 1.304e+15, v_cav 954 km/s = 0.32% of c0 ; Y = 0.5*rho*v^2 = 5.934e+2
+       rho_max              954 km/s (0.0032 c0)
+       Test (not failed, not passed): fastest pulsar B1508+55 1083 +103/-90 km/s vs 954 -> +1.3 s
+
+[OK]   Static-medium Hawking choke (T = hbar c0^3/8piGMkB)
+       kappa (static medium)    = c**4/(4*G*M)
+       registry kappa           = c**4/(4*G*M)   equal: True
+       T                        = c**3*hbar/(8*pi*G*M*k_B)
+
+[OK]   The fight + the neck (1.78 Msun displaced, 16.3x yield)
+       displaced mass m_ov = rho_max*V_ov = 1.78 Msun
+       FULL potential as mass: 6.90 Msun
+==========================================================================
+MICRO - the knot, the charge, the footprint
+==========================================================================
+
+[OK]   Knot equilibrium (H_trapped = s c0^2, the stretch unlocked)
+       H_trapped = s * c0^2 = 4.7303e+15 J/kg = 5.26% of the tying heat
+       -> the sealed stretch s = 1/19 IS the retained-heat fraction. The knot keeps 5.26%,
+       mass ratio from the quantization: m_p/m_e = 4 lamC_bar/R_p = 1835.79  vs 1836.15
+
+[OK]   Footprint dynamics ((pi+3s) lamC_bar, -0.085%)
+       model tube: R_h + delta = 3.2995 lamC_bar   [= pi + 3s = 3.2995]
+       bracketing compositions (reported): (pi + 3s) = 3.2995 (-0.085%)
+       residual: -0.084%
+
+[OK]   Charge as winding (q' = 0.9103e)
+       q' = sqrt(3 eps0 h c / (8 pi^3)) = 1.458490e-19 C = 0.9103 e   (paper: 1.4585e-19 = 0.91e)
+       g = (e/q')^2 = 1.2067 ;  16 pi^3 alpha / 3 = 1.2067
+
+[OK]   Five gates (medium -> matter)
+       gate density m_p/lambda^3 = 7.475e16 -> lambda = 2.82 fm = 3.3 R_p
+       1. BLOCKAGE: rho > m_p/lambda^3 = 7.475e16 (the T2 gate) - only compact cores / Max-P wall
+       The RSMBH wake runs gates 1-4 at the closing walls (blocked, fold, P* slam, heat expelled)
+
+[OK]   Dislocation core geometry (b = 0.0566 r0)
+       needed b/r0 = 0.05665  ->  b = 0.1596 fm
+       core displacement b/4 model:  (1 + b/(4 r0))^(3/2) = 1.02132  ->  b = 0.0566 r0 = 0.1595 f
+       the 2.13% as a core constant: C = 0.02132 x 4.921 = 0.1049
+
+[OK]   Slip-knot vs braid (1836 = 4 x 137.036 x 3.349)
+       reduces to: 4 x 137.036 x alpha x lamC_bar/R_p ... = 4 lamC_bar/R_p = 1835.79
+       emptiness ratio V_fold/V_tight = 134.2  vs 1/alpha = 137.0  (-2.1%)
+       proton braid density = 6.70e+17 kg/m^3 = 2.91 x rho_core
+
+[OK]   The 0.085% is the matter (residual volume)
+       volume residual: +0.2525% of the fold = 2.193e-38 m^3
+
+[OK]   Standing-wave kills (coherent 0.707, closure integers)
+       max solvable waist w0 = sqrt(lamC R / 2pi) = 0.7071 lamC_bar
+       target tube: r_t = 1.2752 pm = 3.3023 lamC_bar
+       target = 3.3020 lamC_bar - not an integer: the pure transverse closure
+==========================================================================
+WEB - stagnation, demand, supply, surface area, comet
+==========================================================================
+
+[OK]   Stagnation scale (886 km / 1,910 Msun)
+       at rho_max: R* = 886 km ;  M* = 1,910 Msun
+       At rho_max: R >= 886 km / M >= 1,910 Msun self-held.
+       column scale rho*R >= 3 a_max/(4 pi G) = 1.1553e+21 kg/m^2
+
+[OK]   Volume-to-mass friction (the V/M ladder)
+       rho = 1.304e+15 (Max-P (RCP 28 wall)): v_cap = 954 km/s = 0.0032 c0
+       if that V/M were HELD, its friction cap would be 47,954 km/s = 0.160 c0
+       1/2 rho_max v^2 = Y at v = sqrt(2Y/rho_max) = 954 km/s:
+
+[OK]   RBH-1 demand function (m = dP dV / c0^2)
+       flash light-equivalent: mdot_light = 2.114e+17 kg/s = 244.8 Msun over 73 Myr (sec 8 says ~
+       flash = 1.90e+41 erg/s -> escape fraction = 2.448e-04
+       stars 1e+06 Msun: escape fraction = 2.450e-04
+
+[OK]   RBH-1 supply cap (stars swept gas)
+       combined cap (inventory at 0.112 rho0 + swept): 15535 Msun
+       stars claimed (sec8 line 478): 1e+06 Msun -> cap/supply ratio 1.4e-02-1.8e-03 of what is n
+       stars claimed (sec8 line 478): 1e+07 Msun -> cap/supply ratio 1.4e-03-1.8e-04 of what is n
+
+[OK]   Surface-area thin skin (650 km)
+       skin thickness = Sigma_k / rho_max = 8.48e+20 / 1.30e+15 = 650 km
+       stagnation boundary (ball self-hold): R* = 886 km > skin 650 km
+
+[OK]   Comet survival map (the shallow rung)
+       over A = 1e8 m^2: max full-untying rate = 8.5e-09 kg/s = 8e-11x the observed
+==========================================================================
+RULINGS - the sealed arithmetic
+==========================================================================
+
+[OK]   Rulings formal (pull-side, coupling, row 23)
+       for expansion = the knots untying back to the tensile web (T7: tension 1.75% trigger +
+       heat draw 98.25%).
+
+[OK]   Baseline cold (T = 0, the 2.7 K exhaust)
+       -> all the 2.7 K can be booked as the RADIATED sample of tying exhaust;
+       2.725 K bath - unthermalized exhaust (RBH-1's [O III] flash is exactly this);
+==========================================================================
+THE MICRO LADDER - fold, bridge, G-chain, topology (2026-10-12)
+==========================================================================
+
+[OK]   Fold force balance (19:1:18, F_EM/F_debt = 1/s exact)
+       ratio: F_EM / F_debt = 19.0000  =  1/s = 19.0  EXACT
+       1/19 of the fold; the topology's hold (the 720-degree lock) carries the other 18/19.
+       18/19. The equation:  F_EM = F_debt + F_topology,  F_debt = s F_EM,  F_topology =
+
+[OK]   The two-regime bridge (9/(4s) = 42.75)
+       -> bridge = 9 hbar/(s c0 * 4 hbar/c0) = 9/(4s) = 42.7500
+       the measured bridge 42.7416 vs the derived 9/(4s) = 42.7500  (-0.0195%)
+       = 2.5244e-37 / 42.7500 = 5.9050e-39   (target 5.9061e-39)
+
+[OK]   The G-chain closure (f_solid^12 x 4s/81)
+       f_solid (exact) = 8.498917e-04 = 0.0850%
+       G from the chain = 6.67690828e-11 m^3/kg/s^2
+
+[OK]   The topology equation (R_loop = r_e/(5 pi^2))
+       r_e/R = 49.3535 = 5 pi^2 = 49.3480   (+0.011%)
+       target: F_topology = (18/19) F_EM = 27.5244 N
+       F = 12 pi^2 Y_bow r_e^3 / (r_e/(5 pi^2)) = 60 pi^4 Y_bow r_e^2 = 27.5244 N
+
+[OK]   The yield anchor from the fold (Y_bow = 3 alpha hbar c0/(190 pi^4 r_e^4))
+       Y_bow from the electron fold = 3 alpha hbar c0/(190 pi^4 r_e^4) = 5.9307e+26 Pa
+       locked Y_bow = 5.93e26   agreement +0.011%
+
+[OK]   The ladder (4pi closure -> 1,342 galaxies)
+       locked a0  6.6100e-11 -> scatter 0.3297
+       chain  a0  6.6110e-11 -> scatter 0.3297   (-0.0021%)
+       a0 = (c0/sqrt3) sqrt(G rho0/4) = 6.6110e-11 m/s^2   (locked 6.61e-11)
+
+==========================================================================
+SCOREBOARD: 28 sections verified, 0 failed/skipped
+Full output per script: run it directly. Combined log tail: run_full_framework_last.log

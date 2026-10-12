@@ -26,7 +26,11 @@ print(f"a0 = (c0/sqrt3) sqrt(G rho0/4) = {a0_chain:.4e} m/s^2   (locked 6.61e-11
 
 print("\nSTEP 5: the rotation formula (s_shared = 0.2264 derived, nothing fitted)")
 S = 0.2264
-d = pd.read_csv(r"C:\Users\jaden\Downloads\PWC-Check\PWC\sparc\probes\probes_accel.csv")
+import os
+_csv = os.path.join(os.path.dirname(os.path.abspath(__file__)), "probes_accel.csv")
+if not os.path.exists(_csv):
+    _csv = r"C:\Users\jaden\Downloads\PWC-Check\PWC\sparc\probes\probes_accel.csv"
+d = pd.read_csv(_csv)
 pts = lambda go, gp: float(np.sqrt(np.mean((np.log10(go) - np.log10(gp)) ** 2)))
 def run(A):
     pwc = lambda g: g.g_bar + np.sqrt(A * g.g_bar) * (1 + S * g.shared * (1 - g.locked))

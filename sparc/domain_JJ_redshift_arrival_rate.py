@@ -64,8 +64,11 @@ Twice in this project it was written before, and both times it was wrong.
 """
 import json
 import os
+import sys
 
 import numpy as np
+
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 D_OUT = os.environ.get("PWC_SPARC_DIR", os.path.dirname(os.path.abspath(__file__)))
 

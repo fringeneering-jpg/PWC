@@ -664,7 +664,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import minimize_scalar
 
-def load_and_filter_sparc(t1_path="/content/vizier_t1.txt", t2_path="/content/vizier_t2.txt"):
+def load_and_filter_sparc(t1_path="vizier_t1.txt", t2_path="vizier_t2.txt"):
     print("--- IMPORTING REAL TELESCOPE DATA ---")
     try:
         t1 = pd.read_csv(t1_path, sep=r'\t+', comment='#', engine='python', on_bad_lines='skip')
@@ -789,7 +789,7 @@ def optimize_pwc_limit(clean_data, merge_col):
     return best_a0, final_rms_point, final_rms_galaxy
 
 # Execute with local files
-data, g_count, merge_col = load_and_filter_sparc(t1_path="/content/vizier_t1.txt", t2_path="/content/vizier_t2.txt")
+data, g_count, merge_col = load_and_filter_sparc(t1_path="vizier_t1.txt", t2_path="vizier_t2.txt")
 
 if data is not None:
     a0_fitted, rms_point, rms_galaxy = optimize_pwc_limit(data, merge_col)
@@ -820,9 +820,10 @@ if data is not None:
     plt.legend(fontsize=12)
     plt.grid(True, which="both", ls="-", color="w", alpha=0.1)
 
-    # Show the plot
+    # Show the plot (headless-safe: save instead of show)
     plt.tight_layout()
-    plt.show()
+    plt.savefig("void_push_pwc_fit.png", dpi=150)
+    plt.close()
 
 """## PWC Void Push Limit: The Fundamental Baseline
 

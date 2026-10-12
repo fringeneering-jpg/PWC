@@ -20,7 +20,7 @@
 #     so "beats a rigid textbook constant" isn't a bar of one competitor.
 # =====================================================================
 
-!pip install -q gwpy scipy numpy matplotlib
+# !pip install -q gwpy scipy numpy matplotlib  (commented: not valid Python outside Colab)
 
 import logging
 import warnings
