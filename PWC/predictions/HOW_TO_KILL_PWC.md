@@ -63,6 +63,22 @@ every part of PWC or collapse GR. The claim is the measurable one: here are the
 template, normalization, sign, footprint, and exclusion criteria — test without
 retuning.
 
+**Sensitivity status (2026-10-12, preliminary):** area-scaled forecast from the
+published PR4 map-space analysis (Scott, arXiv:2502.07654, σ_global = 0.04°):
+per-template noise σ ≈ 0.23°, SNR ≈ 0.65 for the 0.15° target — the prediction
+sits just below the existing sensitivity, and the published dipole null does not
+test this template. Definitive sensitivity requires fitting the template with
+the PR4 estimator response, mask, and simulation-derived covariance — named as
+the next calculation.
+
+**The literature is converging on this exact test:** cosmic birefringence
+tomography via CMB × LSS cross-correlation (PRD, Oct 2023); anisotropic
+birefringence as a model discriminator tied to LSS (arXiv:2610.09748, Oct 2026);
+anisotropic birefringence estimators for forthcoming CMB surveys
+(arXiv:2610.03876, Oct 2026); and void-based dark-sector probes. The
+cross-correlation machinery is being built now — the frozen template predates
+all of it.
+
 ---
 
 ## 2. The bare-proton frustration line (cryogenic Penning trap, BASE-style)
