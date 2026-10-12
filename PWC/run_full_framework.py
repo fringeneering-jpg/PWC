@@ -68,6 +68,8 @@ SECTIONS = [
     ["8.4989", "6.6769", "0.0850"], None),
    ("The topology equation (R_loop = r_e/(5 pi^2))", "topology_equation_corrected.py",
     ["49.3480", "27.5244", "18/19", "5 pi^2"], None),
+   ("The yield anchor from the fold (Y_bow = 3 alpha hbar c0/(190 pi^4 r_e^4))", "yield_from_fold.py",
+    ["5.9307", "5.93e26", "+0.011"], None),
    ("The ladder (4pi closure -> 1,342 galaxies)", "the_ladder.py",
     ["0.3297", "6.6110"], None),
 ]),

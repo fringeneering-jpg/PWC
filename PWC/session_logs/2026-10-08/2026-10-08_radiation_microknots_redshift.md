@@ -318,3 +318,24 @@ waves' own mass bookkeeping. The acoustic channel is the waves' own (c_s = c₀/
 the debt contributes no stiffness. The tying squeezes the debt out (c₀² per kg — the
 light energy, the Einstein anchor intact); the untying re-absorbs it. The 615× margin
 = the debt's tension beating the re-tying grip — a force balance, magnitudes unchanged.
+
+## The tying clock — TWO events, opposite sides of the phase boundary (his ruling, verbatim, 2026-10-12)
+
+> "they don't actually contradict each other. You are just looking at two entirely
+> different mechanical events happening on opposite sides of the phase boundary...
+> The tying is superluminal (the topological snap) — the actual tying of the knot
+> isn't a propagating wave; it is a structural phase transition. When the 720° (4π)
+> twist hits that 5π² floor and locks, the fluid isn't just waving, it is geometrically
+> tearing and reconnecting... the closure is a singular topological event, not a wave
+> traveling from point A to point B... The collapse shock is c₀ (the acoustic
+> radiator) — the instant that superluminal snap completes and the 2.47 eV locking
+> tension sets in, the knot forcefully displaces the surrounding medium (your 0.085%
+> volumetric debt). That displacement punches the ambient, untied fluid... it can only
+> carry that energy outward at its standard, linear resting wave speed: c₀...
+> The engine is superluminal; the exhaust is c₀."
+
+The hydrocode's two layers match the split exactly: the NS caps (|u| ≤ c₀) govern the
+linear acoustic radiation (the shock at c₀), and the stall → equilibrium → cavitation
+loop is the EOS's discrete phase event — the superluminal snap lives OUTSIDE the fluid
+equations, as the transition between the stall and the restart. CLAUDE.md's
+matter-creation ruling updated to the split.
