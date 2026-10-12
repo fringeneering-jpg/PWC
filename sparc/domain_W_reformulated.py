@@ -393,7 +393,9 @@ def main():
         maxiter=12,
         popsize=8,
         seed=SEED,
-        disp=True
+        disp=True,
+        workers=-1,   # all cores (headless pod batch)
+        updating='deferred'
     )
 
     p_best = decode_params(res.x)
