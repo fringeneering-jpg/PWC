@@ -59,6 +59,18 @@ SECTIONS = [
   ("Baseline cold (T = 0, the 2.7 K exhaust)", "baseline_cold_formal.py",
    ["2.7", "5.3e-05"], None),
 ]),
+("THE MICRO LADDER - fold, bridge, G-chain, topology (2026-10-12)", [
+   ("Fold force balance (19:1:18, F_EM/F_debt = 1/s exact)", "squeeze_debt_balance.py",
+    ["19.0000", "18/19", "1.5291"], None),
+   ("The two-regime bridge (9/(4s) = 42.75)", "bridge_derivation.py",
+    ["42.7500", "42.7416", "9/(4s)"], None),
+   ("The G-chain closure (f_solid^12 x 4s/81)", "final_G_lock.py",
+    ["8.4989", "6.6769", "0.0850"], None),
+   ("The topology equation (R_loop = r_e/(5 pi^2))", "topology_equation_corrected.py",
+    ["49.3480", "27.5244", "18/19", "5 pi^2"], None),
+   ("The ladder (4pi closure -> 1,342 galaxies)", "the_ladder.py",
+    ["0.3297", "6.6110"], None),
+]),
 ]
 
 def run_one(script):

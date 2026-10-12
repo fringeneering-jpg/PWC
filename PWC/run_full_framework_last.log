@@ -1,27 +1,23 @@
-== 1. The tug-of-war at rest: push vs pull ==
-push (rigidity) P_g(rho0) = rho0 c0^2/3 = 2.6184e-10 Pa
-pull (tension)   Y(rho0)   = s rho0 c0^2/3 = 1.3781e-11 Pa   (s = 1/19)
-net P_net(rho0) = (1-s) rho0 c0^2/3 = 2.4806e-10 Pa  (> 0: the gas branch never
-goes negative under Y = s*rho*c0^2/3 - the 'negative pressure' is the PULL side,
-5.26% of the push; push:pull = 19:1, the same 1/19 as the stretch datum
-high/low sides: P_locked = 1.172e+32 Pa vs P_net(rho0) = 2.481e-10 Pa -
-a 41.7-decade pair, 'possibly to extremes', no tear
+================================================================================
+STEP 1: the fold's mechanical balance (19:1:18) gives the stretch's share
+F_EM / F_debt = 1/s = 19 EXACT (squeeze_debt_balance.py) -> s = 1/19 locked
 
-== 2. Cold = the pull: the tension share of tying/untying ==
-tension work per kg: Y(rho0)/rho0 = s c0^2/3 = 0.0175 c0^2 = 1.75% of the latent heat
--> the pull supplies the DIRECTION (1.75% of the bill); the heat draw pays 98.25%.
-   'the negative pressure rips the knot open' = heat loosens, pull directs.
+STEP 2: the volumetric debt f_solid (the 0.085% matter displacement)
+f_solid = 8.4989e-04 = 0.085% - the footprint's matter residual, the one datum
 
-== 3. The bath = the radiated exhaust (baseline T = 0) ==
-u_bath = 4.1748e-14 J/m^3
-cosmic escape fraction, freeze inventory (100% tied once): 5.315e-05
-cosmic escape fraction, today's matter (5% tied):          1.010e-03
-RBH-1 wake measured escape fraction: 2.45e-4  (straddled by the two)
--> all the 2.7 K can be booked as the RADIATED sample of tying exhaust;
-   the bulk is the spacer heat H0.  Baseline T = 0 needs no primordial bath.
+STEP 3: the G-chain - the wave's own count (12 = 3 dims x 4 quanta; 16/9 = (4/3)^2)
+G = (f_solid)^12 x (4s/81) x Rp^2 c0^3 / hbar = 6.676748e-11 m^3/kg/s^2
+measured G = 6.674300e-11   agreement +0.037%
 
-== 4. Local-exhaust prediction (falsifiable) ==
-Fresh tying sites (wakes, formation knots) must show a local excess ABOVE the
-2.725 K bath - unthermalized exhaust (RBH-1's [O III] flash is exactly this);
-the bath itself is smooth because it is the accumulated, thermalized ancient
-exhaust - consistent with CMB isotropy to 1e-5.
+STEP 4: the macroscopic deformation boundary a0 (T1)
+a0 = (c0/sqrt3) sqrt(G rho0/4) = 6.6110e-11 m/s^2   (locked 6.61e-11)
+
+STEP 5: the rotation formula (s_shared = 0.2264 derived, nothing fitted)
+PROBES (n=23784 points, 1342 galaxies):
+  locked a0  6.6100e-11 -> scatter 0.3297
+  chain  a0  6.6110e-11 -> scatter 0.3297   (-0.0021%)
+
+================================================================================
+THE LADDER: one wave anatomy -> G -> a0 -> 1,342 galaxies
+zero fitted parameters at every step. The microscopic knot and the macroscopic
+disk are the same fluid mechanic, scaled. The stretch and the debt carry it all.
