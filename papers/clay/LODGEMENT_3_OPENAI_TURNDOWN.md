@@ -88,7 +88,7 @@ c₀² as the mass–energy identity m = L/c₀². The yield behind the squeeze:
 
     Y_bow = 3αℏc₀/(190π⁴·r_e⁴) = 5.9307×10²⁶ Pa
 
-vs the locked 5.93×10²⁶ — +0.011% (`scripts/yield_from_fold.py`). The stall →
+vs the locked 5.93×10²⁶ — +0.011% (`scripts/yield_from_fold.py`). The topology equation fixes Y_bow from r_e, so the +0.011% is the same equation read both ways, and the locked value carries three significant figures — the residual is below its own precision. Single-counted, not a double confirmation. The stall →
 equilibrium → cavitation loop closes: the extreme flow ends in the stop, the
 stop re-cavitates, the cycle continues — bounded forever.
 
@@ -207,9 +207,10 @@ before their paper existed.
 - The tightening coefficient **T ≈ 27 = 3³ awaits data**.
 - The birefringence test's **sign is open** — a probe, not a killshot. The
   template over 1,163 Douglass+ 2023 voids is frozen (top corridor at
-  RA 142–150°, Dec +31–46°, amplitude ~0.15°); the rank-correlation with
-  the pre-specified template, sign, and exclusion criteria is pending
-  (`scripts/birefringence_void_map.py`).
+  RA 142–150°, Dec +31–46°, amplitude ~0.15°); the SIGN awaits Jaden's
+  ruling (open), and until it is locked the test is armed but not yet a
+  committed falsifier (`scripts/birefringence_void_map.py`). The committed
+  falsifiers are listed with their status stated honestly.
 - The **black-hole limits are open** — two candidate fates; the limit is
   not derived; neither fate is locked.
 - The scan's **RETAINED flag is derived** — the three clauses (forge energy

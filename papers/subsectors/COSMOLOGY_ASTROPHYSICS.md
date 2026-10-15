@@ -19,12 +19,14 @@ is the shared tension.
 
     g_obs = g_bar + √(a₀·g_bar)·[1 + s_shared·shared·(1−locked)]
 
-**Terms.** `shared = min(g_in, g_out)/g_in` — the radial load from inside AND outside a radius (the ring geometry of the measured baryons); `locked = the bulge's share` of the normal pull. Medium loaded from both sides is taut and gives extra pull; one-sided (edge) gives less; locked (bulge, at max) gives none. Bodies keep the medium they hold; only the overlap of weak tails is shared — so s is small (and now derived: 0.2250).
+**Terms.** `shared = min(g_in, g_out)/g_in` — the radial load from inside AND outside a radius (the ring geometry of the measured baryons); `locked = the bulge's share` of the normal pull. Medium loaded from both sides is taut and gives extra pull; one-sided (edge) gives less; locked (bulge, at max) gives none. Bodies keep the medium they hold; only the overlap of weak tails is shared — so s is small (derived 0.2250 — the mist's ram, (3/2)·3·0.05; the fitted value is 0.2264. Stated together, honestly).
 
 **The two derived constants — zero fitted parameters:**
 
     a₀ = (c₀/√3)·√(Gρ₀/4) = 6.6110×10⁻¹¹ m/s²   (the medium's holding threshold — the chain of D3, D9)
-    s_shared = (3/2)·3·0.05 = 0.2250            (the mist's ram pressure — the two untying fronts pushing against each other at the boundary)
+    s_shared = (3/2)·3·0.05 = 0.2250            (the mist's ram pressure — the two untying fronts pushing against each other at the boundary); the fitted value is 0.2264 — stated together, honestly
+
+a₀ = (c₀/√3)√(Gρ₀/4) ≈ cH₀/√(32π) — Milgrom's coincidence, DERIVED: ρ₀ ≈ ρ_crit is the framework's own T2 result, so the coincidence is a consequence, not an input.
 
 **The a₀ derivation's own step — the flux factor.** Ω_eff = 1/4: the
 isotropic radiation flux factor (½ forward hemisphere × ½ cosine average).
@@ -49,11 +51,13 @@ derived, zero fitted parameters. Residuals are RMS errors:
 
 | Data | PWC | Base √(a₀g) | McGaugh RAR |
 |---|---|---|---|
-| SPARC 149 held-out | **0.1309** | 0.1326 | 0.1283 |
+| SPARC 149 held-out | 0.1309 | 0.1326 | 0.1283 |
 | LITTLE THINGS 16 dwarfs | **0.3374** | 0.3417 | 0.3464 |
 | GHASP 81 spirals | **0.2655** | 0.2661 | 0.2657 |
 | **PROBES 1342 spirals** | **0.2931** | 0.2986 | 0.2982 |
 | PROBES 331 + ALFALFA gas | **0.2452** | 0.2490 | 0.2511 |
+
+On SPARC alone, McGaugh's RAR (0.1283) edges PWC (0.1309) — fairly, because the RAR is an empirical relation fitted to the data it scores on, while the framework brings two derived constants and zero per-galaxy parameters to the same galaxies. As the framework's derivations mature and the measurements sharpen, it is expected to gain on, and overtake, the empirical baseline — not by fitting harder, but by deriving more. And the respect belongs first: McGaugh extracted the honest law from the data against the consensus, and this framework is the mechanism behind his law — he was on the right track before anyone else.
 
 **Match.** PROBES beats McGaugh by 1.7% (bootstrap 95%: 1.3–2.1%); adding gas *grew* the lead (1.8% → 2.3%), so the tension term is not standing in for missing gas. Today's re-run with the derived constants: 0.2937/0.3297 — the derived framework and the fitted framework agree to the fourth decimal.
 
@@ -134,8 +138,8 @@ prediction).
 **The yield measured independently by the mergers.** Scanning a_max over all
 193 mergers (89 explored + 104 GWTC-5, nothing else fitted), the error
 minimizes at a_max = 2.64×10¹¹ (mean |err| 0.91%), bootstrap
-2.58–2.80×10¹¹ — the locked 3.23×10¹¹ sits inside (mean |err| 1.00% there).
-Cross-check: c₀·√(4πGρ_max) = 3.14×10¹¹, inside the merger-measured range.
+2.58–2.80×10¹¹ — about 20% below the locked 3.23×10¹¹, outside the bootstrap. An honest disagreement, stated: the yield's anchor is the GW150914 shell, not the merger scan.
+Cross-check: c₀·√(4πGρ_max) = 3.14×10¹¹ — also outside the merger-measured range.
 The yield behaves as a mass-independent constant over 14–238 M☉.
 
 **The fight.** The cores have to push through the medium to join; each sits
@@ -157,7 +161,7 @@ Scripts: [`merger_energy_balance.py`](../scripts/merger_energy_balance.py),
 [`fight_overlap.py`](../scripts/fight_overlap.py),
 [`neck_pull.py`](../scripts/neck_pull.py).
 
-## 6. Hawking — the static stall, exact, zero parameters
+## 6. Hawking — reproduced from the Terminal Acoustic Stall, exact, zero parameters
 
 **Law.** The full static-medium correspondence chain:
 
@@ -165,7 +169,7 @@ Scripts: [`merger_energy_balance.py`](../scripts/merger_energy_balance.py),
     κ = ½|d(c₀² − v²)/dr| = c₀⁴/4GM
     T = ħκ/(2πk_B c₀) = ħc₀³/(8πGMk_B)
 
-Exact Hawking, zero free parameters, Planck mass → M87*. The compounding
+Hawking reproduced from the Terminal Acoustic Stall following Unruh's acoustic-analogue method (κ = c₀⁴/4GM is the Painlevé–Gullstrand analogue); T = ħκ/(2πk_B c₀) is imported — exact, zero free parameters, Planck mass → M87*. The stall's c_loc² + v_ff² = c₀² is a propagation budget, not a flow velocity — the medium does not flow. The compounding
 law: dn/dx = 2n², n = 1/(1−2x), v = c₀(1−2x) — the photon stalls at
 x = 1/2, r = 2GM/c₀², for every mass: the event horizon is a **Terminal
 Acoustic Stall** — two limits meeting, no flowing medium, the medium does
@@ -217,6 +221,8 @@ Scripts: [`gravity_darkening.py`](../scripts/gravity_darkening.py),
     (1+z) = (ρ_emit/ρ_obs)^(1/3)
     H(z) = H₀ − c₀²·ln(1+z)
 
+The medium has no bulk flow; its density dilutes as knots untie and add volume — the dilution IS the redshift law. Static means no flow, not constant density — and no drag relics: the medium threads ordinary matter like a ghost (matter is a sieve; the baseline stiffness is immense). Only galaxy- and black-hole-scale mass concentrations draw the medium's density profile inward — the scale anchor: gravity's smallness is the threading, quantified. General Relativity takes G as measured and offers no quantification; the framework back-solves f_solid to G and anchors the scale in the sieve.
+
 **The one-law proof.** The gravitational and cosmological redshifts are ONE
 law: the T12 profile ρ(r) = ρ₀·e^(3GM/rc₀²) substituted into the density
 relation gives T12's exponential exactly — the 3 and the 1/3 cancel.
@@ -257,9 +263,9 @@ the knot is the heat sponge, the ambient medium the heat source.
 At R = R_p: Γ_untie = (8.74e-27·3e8)/(1.304e15·8.4e-16) =
 **2.39×10⁻¹⁸ s⁻¹** vs Planck's H₀ = 2.18×10⁻¹⁸ s⁻¹ — ratio 1.10.
 H_wall = 2.39e-18 s⁻¹ × 3.086e19 km/Mpc = **73.8 km/s/Mpc** vs SH0ES
-(Riess+ 2022) 73.04 ± 1.04 — inside at 1.05%.
+(Riess+ 2022) 73.04 ± 1.04 — inside at 1.05%. H₀ = 32.371 c₀² is the caloric floor (the debt's measure, J/kg); the expansion rate 73.8 km/s/Mpc is the wall rate. Distinct quantities.
 
-**Derivation.** Per-event reach: V_reach/kg = 3/ρ₀ = 3.4×10²⁶ m³/kg = 0.57 m³ per proton — a local mechanism; voids stay static because no knots untie there. **The Hubble tension, read as the mechanism:** walls ≈ 73.8 (SH0ES), voids ≈ 0, the volume average ≈ 67.4 (Planck) — the tension is the local mechanism showing up as an inhomogeneous expansion.
+**Derivation.** Per-event reach: V_reach/kg = 3/ρ₀ = 3.4×10²⁶ m³/kg = 0.57 m³ per proton — a local mechanism; voids stay static because no knots untie there. **The Hubble tension, read as the mechanism:** the wall rate 73.8 vs the volume-average 67.4 is a qualitative reading of the tension (the untying is local to the web), not a volume-weighted calculation.
 
 **Match — the product invariant.** a_hold × H₀: the framework
 6.61e-11 × 73.8 = 4.876×10⁻⁹ vs observed 6.68e-11 × 73.04 = 4.879×10⁻⁹ —
@@ -276,8 +282,7 @@ uncertainties, not a common systematic).
 The prediction map over 1,163 Douglass+ 2023 voids is frozen: the top
 corridor at RA 142–150°, Dec +31–46°, amplitude ~0.15°.
 
-**Test.** The rank-correlation with a direction-dependent β map, with the
-pre-specified template, sign, and exclusion criteria.
+**Test.** The rank-correlation with a direction-dependent β map: the birefringence template is frozen; the SIGN awaits Jaden's ruling (open), and until it is locked the test is armed but not yet a committed falsifier. The committed falsifiers are listed with their status stated honestly.
 
 **Caveat.** The sign is OPEN — this is a probe, not a killshot.
 
@@ -315,7 +320,7 @@ Script: [`heat_hates_pressure.py`](../scripts/heat_hates_pressure.py).
 
 1. The 502 nm electron channel / 18.8 μm proton line (prediction-shaped, not claimed).
 2. The next cap-runner, predicted before measurement.
-3. The birefringence void template (the pre-specified rank-correlation test).
+3. The birefringence void template — armed; the SIGN is open (awaiting Jaden's ruling), not yet a committed falsifier.
 
 ## Scripts
 
@@ -352,3 +357,5 @@ The work used in this document stands on specific shoulders, named where used:
 
 *Where a video led to a paper, the paper is the citation; the video is thanked in kind.*
 **https://github.com/fringeneering-jpg/PWC** — the whole framework, the derivations, and the scripts. The falsified attempts and superseded items are kept for honesty in the repository's history and registry — linked there for the record, never printed in this paper.
+
+

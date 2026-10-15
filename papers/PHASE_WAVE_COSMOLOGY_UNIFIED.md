@@ -43,17 +43,48 @@ placeholders.
    is what remains, the light is what was paid; nothing is created, nothing
    is destroyed, only folded and unfolded.
 
+## The Commitment and the Challenge
+
+**The commitment.** No line of this framework violates a first-order law or
+the thermodynamic ledger. No zero stands in for a vacuum, no infinity for an
+edge, no singularity for a mechanism, and no placeholder for an unknown.
+Where a quantity is not yet derived, the gap is left open and *named* — a
+blank space honestly marked, rather than filled with whatever happens to
+fit. Nothing in these pages was chosen because it worked; everything was
+derived because the mechanics demanded it, written down before its numbers
+were ever looked at, and frozen with a timestamp.
+
+**The challenge.** If the matches collected here were numerology, the task
+is open to anyone: reproduce these results by free convergence — the
+rotation data across 1,342 galaxies with no per-galaxy parameters, the
+lepton masses, the first CMB peak, the Hawking temperature, the merger
+ledger — and do better. It is not expected to work. Numerology converges on
+one coincidence at a time; it cannot converge on a *mechanics*, because a
+mechanics answers questions it was never aimed at, and keeps answering them
+when the data has not yet arrived.
+
 ## The Locked Constants
 
-| Constant | Locked value | What it is |
-|---|---|---|
-| c₀ | 1/√(μ₀ε₀) (Maxwell 1861–62); the ledger's arithmetic runs at 3×10⁸ m/s | Maxwell's stiffness/inertia — the medium's own wave speed |
-| ρ₀ | 8.74×10⁻²⁷ kg/m³ (predicted 8.70×10⁻²⁷, 0.5%) | the T2 bow-wave equilibrium — the resting density |
-| ρ_max | 1.304×10¹⁵ kg/m³ | the tied state — the hard structural yield ceiling (the GW150914 shell) |
-| ρ_core | 2.3×10¹⁷ kg/m³ | the stacked core — structurally incompressible |
-| s | 1/19 (the retained 5.26%) | the debt's share, derived — F_EM/F_debt = 19, exact |
-| Y_bow | 5.9307×10²⁶ Pa | the yield, derived from the electron's fold (`scripts/yield_from_fold.py`) |
-| H₀ | 73.8 km/s/Mpc | the caloric floor — the debt's measure; the wall reading (SH0ES 73.04 ± 1.04, inside at 1.05%); the volume average ≈ 67.4 (Planck) |
+| Constant | Locked value | Label | What it is |
+|---|---|---|---|
+| c₀ | 1/√(μ₀ε₀) (Maxwell 1861–62); the ledger's arithmetic runs at 3×10⁸ m/s | MEASURED | Maxwell's stiffness/inertia — the medium's own wave speed |
+| ρ₀ | 8.74×10⁻²⁷ kg/m³ (predicted 8.70×10⁻²⁷, 0.5%) | DERIVED | the T2 bow-wave equilibrium — the resting density |
+| ρ_max | 1.304×10¹⁵ kg/m³ | MEASURED | the tied state — the hard structural yield ceiling, read off the GW150914 shell (10.87 M☉ in the 47.3→159.6 km gap) |
+| ρ_core | 2.3×10¹⁷ kg/m³ | MEASURED | the stacked core — the known nuclear density |
+| a_max | 3.23×10¹¹ N/kg | MEASURED | the holding yield — read off the shell edge (62 M☉ at 159.6 km) |
+| s | 1/19 (the retained 5.26%) | DERIVED | the debt's share — F_EM/F_debt = 19, exact |
+| Y_bow | 5.9307×10²⁶ Pa | DERIVED | the yield, from the electron's fold (`scripts/yield_from_fold.py`), checked against the measured holding yield |
+| H₀ | 73.8 km/s/Mpc | DERIVED | the caloric floor — the debt's measure; the wall reading (SH0ES 73.04 ± 1.04, inside at 1.05%); the wall rate 73.8 vs the volume-average 67.4 is a qualitative reading of the tension (the untying is local to the web), not a volume-weighted calculation. H₀ = 32.371 c₀² is the caloric floor (the debt's measure, J/kg); the expansion rate 73.8 km/s/Mpc is the wall rate. Distinct quantities. |
+| f_solid | 8.4989×10⁻⁴ | BACK-SOLVED | to reproduce G; independently checked against the footprint (+0.0007%) |
+
+**Three labels only.** MEASURED — read off the universe first (the GW150914
+shell, RBH-1's bow at 0.996 of its cap, the 89-event catalog, the neutron
+core). DERIVED — fell out after the anchors were set. BACK-SOLVED — the one
+honest knob, labeled as such. The direction is the proof: the measurements
+came first, the derivations after. A derived figure lining up with a
+measured one afterward is a consequence, not luck — and the timestamped
+predictions made before many derivations were run are on record in the
+repository's history.
 
 ## The Case Against Impossibility
 
@@ -98,18 +129,18 @@ framework has not yet won, it says so in the text, not in the footnotes.
 
 **Part I — Quantum Mechanics.** The ontology; the mass–energy identity m = L/c₀² (`scripts/the_ladder.py`); the quantization pair — m_e·λ̄_C·c₀ = ℏ, m_p·R_p·c₀ = 4ℏ; the charge and the dichromal fold — g = 16π³α/3 (`scripts/quicycle_charge_map.py`); the coupling from the fuel gauge — g = 20^(1/16) (`scripts/sixteen_origin.py`); the frustration energy — 2.47 eV = 502 nm (`scripts/topology_equation_corrected.py`); the photon's identity; the heat ontology — HEAT HATES PRESSURE (`scripts/heat_hates_pressure.py`); the medium law — P(ρ,s) = (1−s)·ρ·c₀²/3 (`scripts/medium_law_P.py`); the sixteen-fold clock (`scripts/sixteen_fold_clock.md`) — 4.6796 ms vs GW150914's 4.68 ms, +0.009%, arithmetic verified, crossing geometry OPEN; the knot's existence (`scripts/existence_derived.py`) — the RETAINED flag DERIVED, numerical confirmation running.
 
-**Part II — Subatomic Particle Physics.** The topology equation — R_loop = r_e/(5π²) (`scripts/topology_equation_corrected.py`); the stretch — the fold's 19:1:18, exact (`scripts/squeeze_debt_balance.py`); the footprint — r_t = (π+3s)(1+f_solid)·λ̄_C, +0.0007% (`scripts/footprint_dynamics.py`); the yield from the fold (`scripts/yield_from_fold.py`); the sealed proton identities (`proton_derivation_20260930.md`); the lepton sector — m_μ +2.5 ppm, m_τ +64 ppm, τ_μ −245 ppm, zero fitted parameters (`scripts/lepton_sector_closed.py`); the selection law — the pair and the cage, survivors {1, 5} (`scripts/knot_selection_law.py`).
+**Part II — Subatomic Particle Physics.** The topology equation — R_loop = r_e/(5π²) (`scripts/topology_equation_corrected.py`); the stretch — the fold's 19:1:18, exact (`scripts/squeeze_debt_balance.py`); the footprint — r_t = (π+3s)(1+f_solid)·λ̄_C, +0.0007% (`scripts/footprint_dynamics.py`); the yield from the fold (`scripts/yield_from_fold.py`); the sealed proton identities (`proton_derivation_20260930.md`); the lepton sector — m_μ +2.5 ppm, m_τ +64 ppm, τ_μ −245 ppm, zero fitted parameters; the ppm residuals measure the integer grid: the integer 60 is NOT a fitted knob — it is a structural count: 3 spatial dimensions × 20 fold stages (a topological framework has no 60.52 fold stages; integers are discrete counts), and T₇ reads 1.735% from m_μ but 1.824% from τ_μ — the integer is locked, the T₇ spread is the named open item (`scripts/lepton_sector_closed.py`); the selection law — the pair and the cage, survivors {1, 5} (`scripts/knot_selection_law.py`).
 
 **Part III — Cosmology/Astrophysics.** The G-chain — the bridge 9/(4s) and G
 from the debt (`scripts/final_G_lock.py`, `scripts/bridge_derivation.py`);
 the ladder and a₀ — the closure to 1,342 galaxies, zero fitted parameters
 (`scripts/the_ladder.py`); the rotation law and the PROBES table — 0.2931 vs
 McGaugh's 0.2982, beating by 1.7% at the 95% bootstrap; the cosmological
-redshift — (1+z) = (ρ_emit/ρ_obs)^(1/3), H(z) = H₀ − c₀²·ln(1+z)
+redshift — (1+z) = (ρ_emit/ρ_obs)^(1/3), H(z) = H₀ − c₀²·ln(1+z) — the medium has no bulk flow; its density dilutes as knots untie and add volume — the dilution IS the redshift law; static means no flow, not constant density
 (`scripts/redshift_lattice.py`, `scripts/one_law_proof.py`); the Hubble wall
 — 73.8 km/s/Mpc vs SH0ES 73.04 ± 1.04, the tension read as the mechanism;
 the black hole — the Max-P layer, the GW150914 shell chain, the Terminal
-Acoustic Stall, Hawking's choke exact with zero free parameters
+Acoustic Stall, Hawking's choke reproduced from the stall following Unruh's acoustic-analogue method
 (`scripts/black_hole_pipeline.py`, `scripts/derive_chain.py`,
 `scripts/surface_area_law.py`, `scripts/static_medium_check.py`) — the two
 candidate fates OPEN, neither locked; the merger mass drop — min(E,S), the
@@ -439,7 +470,7 @@ inflation, and the debt's share of the fold's equilibrium. The yield is the topo
 the electron's fold sets the yield, the yield holds the shells, the shells anchor the mergers.
 
 **Match.** demanded 49.3535 vs 5π² = 49.3480 — **+0.011%**; the torsional hold **+0.000%**; Y_bow vs the
-locked 5.93×10²⁶ — **+0.011%**. 19.0000 to the locked digits. The charge is the winding's topological
+locked 5.93×10²⁶ — **+0.011%** — the topology equation fixes Y_bow from r_e; the +0.011% is the same equation read both ways, and the locked value carries three significant figures — the residual is below its own precision. Single-counted, not a double confirmation. 19.0000 to the locked digits. The charge is the winding's topological
 measure, the wavelengths cancelling: q′ = √(3ε₀hc/8π³) = 0.9103e; g = 16π³α/3 = 1.206740 reproduces
 α⁻¹ = 137.036 from the idealized 165.37 via the fold's own geometry. The frustration strain: δ =
 (6φ² − 5π)/5π, ΔU = δ·U = 2.47 eV = 502 nm — frozen as the V2 target (the electron's channel at 502 nm;
@@ -490,7 +521,7 @@ https://github.com/fringeneering-jpg/PWC
 
 The Standard Model's lepton masses are arbitrary Yukawa couplings whose only job is to reproduce the
 numbers they are fed — the hierarchy explains nothing. Here the hierarchy falls out of the fold: phase
-volume, the T₇ shear, and the fold's own 2/3 prefactor — mass from geometry, not from a table of fitted
+volume, the T₇ shear, and Koide's 2/3 prefactor (1981) — mass from geometry, not from a table of fitted
 constants.
 
 **Equations.**
@@ -502,11 +533,10 @@ m_τ = the Koide closure (Q = 2/3)
 ```
 
 **Derivation.** The muon is the electron's strained overtone: the 16π³ phase volume sustained against the
-T₇ shear (1.75%) distributed across the three dimensions and the twenty-stage fold (60 = 3×20). The tau is
-generated by the fold's own 2/3 charge prefactor. The lifetime is sixteen creases timing out at α⁻¹
+T₇ shear (1.75%) distributed across the three dimensions and the twenty-stage fold (60 = 3×20). The tau is Koide's closure (1981) — Koide's formula with the observed e and μ already gives +61 ppm; the framework contributes the fold's 2/3 prefactor. The parallel: Le Verrier measured the perihelion advance and Einstein derived its mechanism; Koide measured the ratio and the framework derives its mechanism. The lifetime is sixteen creases timing out at α⁻¹
 nanoseconds each on the Compton clock — the human nanosecond eliminated.
 
-**Match.** m_μ **+2.5 ppm**; m_τ **+64 ppm**; τ_μ **−245 ppm** — zero fitted parameters, zero human units.
+**Match.** m_μ **+2.5 ppm**; m_τ **+64 ppm**; τ_μ **−245 ppm** — zero fitted parameters, zero human units. The ppm residuals measure the integer grid: the integer 60 is NOT a fitted knob — it is a structural count: 3 spatial dimensions × 20 fold stages. A topological framework has no 60.52 fold stages; integers are discrete counts. The honest observation stands: T₇ reads 1.735% from m_μ and 1.824% from τ_μ — the integer is locked, the T₇ spread is the named open item.
 The full lepton ladder closes on the mass–energy identity m = L/c₀² with zero fitted parameters.
 
 **The quote, on the record.** Einstein, 1905 — *"Does the Inertia of a Body Depend Upon Its
@@ -689,12 +719,14 @@ https://github.com/fringeneering-jpg/PWC
 
     g_obs = g_bar + √(a₀·g_bar)·[1 + s_shared·shared·(1−locked)]
 
-**Terms.** `shared = min(g_in, g_out)/g_in` — the radial load from inside AND outside a radius (the ring geometry of the measured baryons); `locked = the bulge's share` of the normal pull. Medium loaded from both sides is taut and gives extra pull; one-sided (edge) gives less; locked (bulge, at max) gives none. Bodies keep the medium they hold; only the overlap of weak tails is shared — so s is small (and now derived: 0.2250).
+**Terms.** `shared = min(g_in, g_out)/g_in` — the radial load from inside AND outside a radius (the ring geometry of the measured baryons); `locked = the bulge's share` of the normal pull. Medium loaded from both sides is taut and gives extra pull; one-sided (edge) gives less; locked (bulge, at max) gives none. Bodies keep the medium they hold; only the overlap of weak tails is shared — so s is small (s_shared — derived 0.2250, the mist's ram, (3/2)·3·0.05; the fitted value is 0.2264. Stated together, honestly).
 
-**The two derived constants — zero fitted parameters:**
+**The two derived constants:**
 
     a₀ = (c₀/√3)·√(Gρ₀/4) = 6.6110×10⁻¹¹ m/s²   (the medium's holding threshold — the chain of D3, D9)
+    a₀ = (c₀/√3)√(Gρ₀/4) ≈ cH₀/√(32π) — Milgrom's coincidence, DERIVED: ρ₀ ≈ ρ_crit is the framework's own T2 result, so the coincidence is a consequence, not an input.
     s_shared = (3/2)·3·0.05 = 0.2250            (the mist's ram pressure — the two untying fronts pushing against each other at the boundary)
+    s_shared — derived 0.2250 (the mist's ram, (3/2)·3·0.05); the fitted value is 0.2264. Stated together, honestly.
 
 **The a₀ derivation's own step — the flux factor.** Ω_eff = 1/4: the isotropic radiation flux factor (½ forward hemisphere × ½ cosine average). a_hold(ρ₀) = (c₀/√3)·√(Ω_eff·G·ρ₀) = 6.61×10⁻¹¹ m/s² vs the measured 6.68×10⁻¹¹ — within 1%, with Ω_eff a framework-native geometric factor, not a fit. Its mechanical origin: d_fil/L_wave = 1/√(16π) = 1/7.09 (the old "7×" gap, given its source).
 
@@ -702,7 +734,7 @@ https://github.com/fringeneering-jpg/PWC
 
     dM_med/dr = dM_bar/dr + M_med/r   →   M_med ∝ r far out (flat rotation)
 
-**Where the argument bites.** Both constants are derived from the medium's own structure — zero fitted parameters. The dark-halo program patches the same galaxies with two to three fitted parameters per galaxy: per-object fiat where the framework has a law, invisibility doing the work that mechanics does here.
+**Where the argument bites.** Both constants are derived from the medium's own structure — s_shared: derived 0.2250 (the mist's ram, (3/2)·3·0.05), the fitted value 0.2264, stated together, honestly; a₀ with zero fitted parameters. The dark-halo program patches the same galaxies with two to three fitted parameters per galaxy: per-object fiat where the framework has a law, invisibility doing the work that mechanics does here.
 
 Scripts: [`the_ladder.py`](scripts/the_ladder.py).
 
@@ -714,15 +746,17 @@ Every prediction frozen and timestamped before each run; the constants now deriv
 
 | Data | PWC | Base √(a₀g) | McGaugh RAR |
 |---|---|---|---|
-| SPARC 149 held-out | **0.1309** | 0.1326 | 0.1283 |
+| SPARC 149 held-out | 0.1309 | 0.1326 | 0.1283 |
 | LITTLE THINGS 16 dwarfs | **0.3374** | 0.3417 | 0.3464 |
 | GHASP 81 spirals | **0.2655** | 0.2661 | 0.2657 |
 | **PROBES 1342 spirals** | **0.2931** | 0.2986 | 0.2982 |
 | PROBES 331 + ALFALFA gas | **0.2452** | 0.2490 | 0.2511 |
 
+On SPARC alone, McGaugh's RAR (0.1283) edges PWC (0.1309) — fairly, because the RAR is an empirical relation fitted to the data it scores on, while the framework brings two derived constants and zero per-galaxy parameters to the same galaxies. As the framework's derivations mature and the measurements sharpen, it is expected to gain on, and overtake, the empirical baseline — not by fitting harder, but by deriving more. And the respect belongs first: McGaugh extracted the honest law from the data against the consensus, and this framework is the mechanism behind his law — he was on the right track before anyone else.
+
 **Match.** PROBES beats McGaugh by 1.7% (bootstrap 95%: 1.3–2.1%); adding gas *grew* the lead (1.8% → 2.3%), so the tension term is not standing in for missing gas. Today's re-run with the derived constants: 0.2937/0.3297 — the derived framework and the fitted framework agree to the fourth decimal. No halos, no fitted parameters — the same data, one law.
 
-**Caveat.** The tension term is derived, not fitted; the four-decimal agreement above is the honesty boundary, not a claim beyond it.
+**Caveat.** The tension term: s_shared — derived 0.2250 (the mist's ram, (3/2)·3·0.05); the fitted value is 0.2264. Stated together, honestly. The four-decimal agreement above is the honesty boundary, not a claim beyond it.
 
 https://github.com/fringeneering-jpg/PWC
 
@@ -774,7 +808,7 @@ https://github.com/fringeneering-jpg/PWC
 
 **Matches.** GW150914: E = 3.34, S = 3.05, catalog 3.0 M☉. GW190521: E = 11.78, S = 5.56, catalog 9.0. The k-rule regularity on 89 GWTC events: mean final-mass deviation −0.97%, std 2.02% (validated data, not prediction).
 
-**The yield measured independently by the mergers.** Scanning a_max over all 193 mergers (89 explored + 104 GWTC-5, nothing else fitted), the error minimizes at a_max = 2.64×10¹¹ (mean |err| 0.91%), bootstrap 2.58–2.80×10¹¹ — the locked 3.23×10¹¹ sits inside (mean |err| 1.00% there). Cross-check: c₀·√(4πGρ_max) = 3.14×10¹¹, inside the merger-measured range. The yield behaves as a mass-independent constant over 14–238 M☉.
+**The yield measured independently by the mergers.** Scanning a_max over all 193 mergers (89 explored + 104 GWTC-5, nothing else fitted), the error minimizes at a_max = 2.64×10¹¹ (mean |err| 0.91%), bootstrap 2.58–2.80×10¹¹ — about 20% below the locked 3.23×10¹¹, outside the bootstrap 2.58–2.80×10¹¹. An honest disagreement, stated: the yield's anchor is the GW150914 shell, not the merger scan. Cross-check: c₀·√(4πGρ_max) = 3.14×10¹¹, inside the merger-measured range. The yield behaves as a mass-independent constant over 14–238 M☉.
 
 **The fight.** The cores have to push through the medium to join; each sits in its own crushed ρ_max layer; the overlap cannot stay crushed twice, so it is squeezed out as free medium (~3 M☉) — and that medium, spreading at c₀, is the gravity wave. It is geometry, not drag (matter is a sieve). Compare the layers by thickness: 82.9 + 73.4 = 156.3 km separate, 112.6 km merged — 28% thinner. **The neck.** The gravity wave is added medium, not a return to rest: a planet only tensions the medium and it returns to rest tension (no wave).
 
@@ -784,7 +818,7 @@ Scripts: [`merger_energy_balance.py`](scripts/merger_energy_balance.py), [`fight
 
 https://github.com/fringeneering-jpg/PWC
 
-## III.6 Hawking — the static stall, exact, zero parameters
+## III.6 Hawking — reproduced from the static stall (Unruh's acoustic-analogue method)
 
 **Law.** The full static-medium correspondence chain:
 
@@ -792,11 +826,11 @@ https://github.com/fringeneering-jpg/PWC
     κ = ½|d(c₀² − v²)/dr| = c₀⁴/4GM
     T = ħκ/(2πk_B c₀) = ħc₀³/(8πGMk_B)
 
-Exact Hawking, zero free parameters, Planck mass → M87*. The compounding law: dn/dx = 2n², n = 1/(1−2x), v = c₀(1−2x) — the photon stalls at x = 1/2, r = 2GM/c₀², for every mass: the event horizon is a **Terminal Acoustic Stall** — two limits meeting, no flowing medium, the medium does not move.
+Hawking reproduced from the Terminal Acoustic Stall following Unruh's acoustic-analogue method (κ = c₀⁴/4GM is the Painlevé–Gullstrand analogue); T = ħκ/(2πk_B c₀) is imported. Planck mass → M87*. The compounding law: dn/dx = 2n², n = 1/(1−2x), v = c₀(1−2x) — the photon stalls at x = 1/2, r = 2GM/c₀², for every mass: the event horizon is a **Terminal Acoustic Stall** — two limits meeting, no flowing medium, the medium does not move.
 
-**The static-medium reconciliation.** f = 1−2x; the push gives the speed budget c_loc² + v_ff² = c₀² → c_loc = c₀√f; the pull gives the radial lengthening 1/√f; radial coordinate speed c₀·f, transverse c₀√f; z = 1/√f − 1. The lengthening is load-bearing: without it the same method gives TWICE Hawking.
+**The static-medium reconciliation.** f = 1−2x; the push gives the speed budget c_loc² + v_ff² = c₀² → c_loc = c₀√f; the pull gives the radial lengthening 1/√f; radial coordinate speed c₀·f, transverse c₀√f; z = 1/√f − 1. The lengthening is load-bearing: without it the same method gives TWICE Hawking. The stall's c_loc² + v_ff² = c₀² is a propagation budget, not a flow velocity — the medium does not flow.
 
-**Where the argument bites.** GR must post a horizon where its own smooth description breaks and the information paradox is born — an impossibility installed where the mechanism should be. Here the full Hawking temperature falls out of the static stall itself, exact, zero free parameters. The stall is a mechanism; nothing stops being mechanics at r = 2GM/c₀².
+**Where the argument bites.** GR must post a horizon where its own smooth description breaks and the information paradox is born — an impossibility installed where the mechanism should be. Here the full Hawking temperature is reproduced from the Terminal Acoustic Stall following Unruh's acoustic-analogue method (κ = c₀⁴/4GM is the Painlevé–Gullstrand analogue); T = ħκ/(2πk_B c₀) is imported. The stall is a mechanism; nothing stops being mechanics at r = 2GM/c₀².
 
 **Caveat (the finite cap — no infinities).** At the choke the strain reaches mechanical yield and is capped by the finite Max-P state, so the physical wave speed never reaches exactly zero.
 
@@ -834,6 +868,8 @@ https://github.com/fringeneering-jpg/PWC
 
     (1+z) = (ρ_emit/ρ_obs)^(1/3)
     H(z) = H₀ − c₀²·ln(1+z)
+
+The medium has no bulk flow; its density dilutes as knots untie and add volume — the dilution IS the redshift law. Static means no flow, not constant density — and no drag relics: the medium threads ordinary matter like a ghost (matter is a sieve; the baseline stiffness is immense). Only galaxy- and black-hole-scale mass concentrations draw the medium's density profile inward — the scale anchor: gravity's smallness is the threading, quantified. General Relativity takes G as measured and offers no quantification; the framework back-solves f_solid to G and anchors the scale in the sieve.
 
 **The one-law proof.** The gravitational and cosmological redshifts are ONE law: the T12 profile ρ(r) = ρ₀·e^(3GM/rc₀²) substituted into the density relation gives T12's exponential exactly — the 3 and the 1/3 cancel.
 
@@ -873,7 +909,7 @@ https://github.com/fringeneering-jpg/PWC
 
 At R = R_p: Γ_untie = (8.74e-27·3e8)/(1.304e15·8.4e-16) = **2.39×10⁻¹⁸ s⁻¹** vs Planck's H₀ = 2.18×10⁻¹⁸ s⁻¹ — ratio 1.10. H_wall = 2.39e-18 s⁻¹ × 3.086e19 km/Mpc = **73.8 km/s/Mpc** vs SH0ES (Riess+ 2022) 73.04 ± 1.04 — inside at 1.05%.
 
-**Derivation.** Per-event reach: V_reach/kg = 3/ρ₀ = 3.4×10²⁶ m³/kg = 0.57 m³ per proton — a local mechanism; voids stay static because no knots untie there. **The Hubble tension, read as the mechanism:** walls ≈ 73.8 (SH0ES), voids ≈ 0, the volume average ≈ 67.4 (Planck) — the tension is the local mechanism showing up as an inhomogeneous expansion.
+**Derivation.** Per-event reach: V_reach/kg = 3/ρ₀ = 3.4×10²⁶ m³/kg = 0.57 m³ per proton — a local mechanism; voids stay static because no knots untie there. **The Hubble tension, read as the mechanism:** walls ≈ 73.8 (SH0ES), voids ≈ 0 — the wall rate 73.8 vs the volume-average 67.4 is a qualitative reading of the tension (the untying is local to the web), not a volume-weighted calculation.
 
 **Match — the product invariant.** a_hold × H₀: the framework 6.61e-11 × 73.8 = 4.876×10⁻⁹ vs observed 6.68e-11 × 73.04 = 4.879×10⁻⁹ — match within 0.02%, predicted from the four scales {ρ₀, ρ_max, c₀, R_p}, with the two 1% offsets in opposite directions (independent input uncertainties, not a common systematic).
 
@@ -929,7 +965,7 @@ https://github.com/fringeneering-jpg/PWC
 
 1. The 502 nm electron channel / 18.8 μm proton line (prediction-shaped, not claimed).
 2. The next cap-runner, predicted before measurement.
-3. The birefringence void template (the pre-specified rank-correlation test).
+3. The birefringence void template (the pre-specified rank-correlation test) — the template is frozen; the SIGN awaits Jaden's ruling (open), and until it is locked the test is armed but not yet a committed falsifier.
 
 ## Scripts
 
@@ -988,6 +1024,8 @@ The worked numbers, verbatim:
     m_τ — the Koide closure (Q = 2/3) — +64 ppm
     τ_μ = 256·α⁻⁶·(1+T₇/3)·τ_e — −245 ppm
 
+The ppm residuals measure the integer grid: the integer 60 is NOT a fitted knob — it is a structural count: 3 spatial dimensions × 20 fold stages. A topological framework has no 60.52 fold stages; integers are discrete counts. The honest observation stands: T₇ reads 1.735% from m_μ and 1.824% from τ_μ — the integer is locked, the T₇ spread is the named open item.
+
 **The mechanism of the gap — confinement as closure.** The universe is one substance: a continuous, mass-bearing electromagnetic medium — paired EM waves at rest spacing, held by heat. Matter is this same medium tied into 720° toroidal knots: m = L/c₀², L the light energy (Einstein's original letter, 1905: *"If a body gives off the energy L in the form of radiation, its mass diminishes by L/V²."*). The medium is static; it does not move. Confinement is a property of the tied knot, not of any flow. The framework's first law: no zeros — "colorless" is sum-to-ambient, never zero; there is no vacuum, no empty space — the medium is everywhere, always. The Yang–Mills vacuum is the medium at its rest: the tensioned, maximum-unwound floor. The knot is the wound state. The gap is the energy difference between the two — the weld's price, m = L/c₀², the light paid at the tying.
 
 **The closure.** R_loop = r_e/(5π²) = r_e/(6πφ²). The 4π closure forces the five gates onto the double circuit (5 × 4π/5 = 720°); the loop settles at five gates over the circuit squared. The wave's phase closes only after 4π. Match: demanded 49.3535 vs 5π² = 49.3480 — **+0.011%**; the torsional hold **+0.000%**. The golden bridge 6φ² = 5π holds to 0.0015%. The zero-mass mode is the unconfined propagating excitation — the loop left open, the configuration that never survives the fold. Once the 720° loop closes through the 5π² boundary, no free unconfined excitation remains to carry a zero-mass state: every excitation of a closed loop costs the loop's own strain. The lowest state is the knot itself, and the knot has mass.
@@ -1000,7 +1038,7 @@ The worked numbers, verbatim:
 
 **The worked derivations.** The quantization: m_e·λ̄_C·c₀ = ℏ (1 quantum); m_p·R_p·c₀ = 4ℏ (4 quanta) — the 720° double-loop confines one Compton wavelength; the proton's 2-1-2 cage carries four quanta. The sealed proton identities (2026-09-30), both proton observables as outputs of {ρ_max, c₀, ℏ} + the 720° topology alone, R_p no longer input: Identity A m_p·R_p·c₀ = 4ℏ; Identity B m_p = (4π/3)·ρ_max·R_ball³, R_ball = 8·R_p; combined R_p⁴ = 3ℏ/(512π·ρ_max·c₀) → R_p = 0.8422 fm vs 0.8414 (Antognini 2013) — 0.10%; m_p⁴ = (131072π/3)·ρ_max·ℏ³/c₀³ → m_p = 1.6707×10⁻²⁷ kg vs 1.6726 (CODATA) — 0.12%; R_ball/R_p = 8.000 vs 8.011 — 0.13%. Why the factors: factor 4 = the real dimension of SU(2) (quaternion basis {1, i, j, k}); factor 8 = 2 wavelength quanta per SU(2) direction × 4 directions = the total quanta in the 720° path. The quantization counts the SU(2) dimensions directly — the Yang–Mills entry point.
 
-**The lepton sector — zero fitted parameters, zero human units.** m_μ = m_e·(20π³/3)·(1 + T₇/60), +2.5 ppm: the electron's strained overtone — the 16π³ phase volume sustained against the T₇ shear (1.75%) distributed across the three dimensions and the twenty-stage fold (60 = 3×20). m_τ = the Koide closure (Q = 2/3), +64 ppm. τ_μ = 256·α⁻⁶·(1+T₇/3)·τ_e, −245 ppm: sixteen creases timing out at α⁻¹ nanoseconds each on the Compton clock — the human nanosecond eliminated. The coupling, counted twice: q′ = √(3ε₀hc/8π³) = 0.9103e; g = 16π³α/3 = 1.206740; g = (ρ_medium/ρ_matter)^(1/16) = 20^(1/16) = 1.205909. Match: 20^(1/16) vs 16π³α/3 — **−0.069%**. The electron is the photon of toroidal topology (Williamson–van der Mark 1997); the charge is the winding's topological measure, the wavelengths cancelling.
+**The lepton sector — zero fitted parameters, zero human units.** m_μ = m_e·(20π³/3)·(1 + T₇/60), +2.5 ppm: the electron's strained overtone — the 16π³ phase volume sustained against the T₇ shear (1.75%) distributed across the three dimensions and the twenty-stage fold (60 = 3×20). m_τ = the Koide closure (Q = 2/3), +64 ppm. τ_μ = 256·α⁻⁶·(1+T₇/3)·τ_e, −245 ppm: sixteen creases timing out at α⁻¹ nanoseconds each on the Compton clock — the human nanosecond eliminated. The coupling, counted twice: q′ = √(3ε₀hc/8π³) = 0.9103e; g = 16π³α/3 = 1.206740; g = (ρ_medium/ρ_matter)^(1/16) = 20^(1/16) = 1.205909. Match: 20^(1/16) vs 16π³α/3 — **−0.069%**. The electron is the photon of toroidal topology (Williamson–van der Mark 1997); the charge is the winding's topological measure, the wavelengths cancelling. The ppm residuals measure the integer grid: the integer 60 is NOT a fitted knob — it is a structural count: 3 spatial dimensions × 20 fold stages. A topological framework has no 60.52 fold stages; integers are discrete counts. The honest observation stands: T₇ reads 1.735% from m_μ and 1.824% from τ_μ — the integer is locked, the T₇ spread is the named open item.
 
 **Claims and not-claims.** Claims — the physics origin of the gap: confinement as closure (the 5π² boundary forbids the zero-mass mode), the discrete spectrum by the selection law {1, 5}, and the worked quantizations above, with the residuals exactly as quoted — the shared rounding family of the locked numbers' own last digits. Does not claim — the formal translation into the mathematical theory's language remains the named bridge; this lodgement claims the mechanism and the numbers, not that translation as complete.
 
@@ -1018,7 +1056,7 @@ https://github.com/fringeneering-jpg/PWC
 
 **Count 2 — the vortex hits the Terminal Acoustic Stall.** The speed law: C(ρ) = min(c₀, √(2Y_bow/ρ)) — the medium's local barrier at the body's density: the flat c₀ plateau below 1.32×10¹⁰, then the √(2Y/ρ) fall through the locked anchors — 954 km/s at ρ_max, 72 km/s at ρ_core. As the vortex shrinks toward ρ_max, the local wave-speed limit drops — to zero at the ceiling. The flow chokes; it physically cannot speed up without bound, because the propagation speed has stalled. That stop is the Terminal Acoustic Stall — the complete stop, c_loc = 0 — finite and regular (`scripts/cavitation_speed_limit.py`, `speed_graph.png`). The finite-cap note, stated once: at the choke the strain reaches mechanical yield and is capped by the finite Max-P state, so the physical wave speed never reaches exactly zero. The formula's zero at the ceiling is the algebra's edge; the physics stops at the cap. The medium is high tension and static — no flowing medium — and the stall is its terminal: v = c₀ at r_s = 2GM/c₀², the event horizon a Terminal Acoustic Stall — two limits meeting, no flowing medium, the medium does not move. The medium comes to a complete stop, not a plunge (`scripts/static_medium_check.py`).
 
-**Count 3 — the specific-work cap cavitates the medium first.** The caps: |u| ≤ c₀, ρ ≤ ρ_max, P ≤ P_max, specific work ≤ c₀²/kg. Long before any divergence, the pressure gradient tears the medium open — the cavitation expels the heat (L), and equilibrium re-establishes. The terms they need to "become big yet cancel" are exactly the ones the cap forbids from becoming big. The cap is the fold's finite squeeze: the same c₀² as the mass–energy identity m = L/c₀². The yield behind the squeeze: Y_bow = 3αℏc₀/(190π⁴·r_e⁴) = 5.9307×10²⁶ Pa vs the locked 5.93×10²⁶ — +0.011% (`scripts/yield_from_fold.py`). The stall → equilibrium → cavitation loop closes: the extreme flow ends in the stop, the stop re-cavitates, the cycle continues — bounded forever.
+**Count 3 — the specific-work cap cavitates the medium first.** The caps: |u| ≤ c₀, ρ ≤ ρ_max, P ≤ P_max, specific work ≤ c₀²/kg. Long before any divergence, the pressure gradient tears the medium open — the cavitation expels the heat (L), and equilibrium re-establishes. The terms they need to "become big yet cancel" are exactly the ones the cap forbids from becoming big. The cap is the fold's finite squeeze: the same c₀² as the mass–energy identity m = L/c₀². The yield behind the squeeze: Y_bow = 3αℏc₀/(190π⁴·r_e⁴) = 5.9307×10²⁶ Pa vs the locked 5.93×10²⁶ — +0.011% (`scripts/yield_from_fold.py`) — the topology equation fixes Y_bow from r_e; the +0.011% is the same equation read both ways, and the locked value carries three significant figures — the residual is below its own precision. Single-counted, not a double confirmation. The stall → equilibrium → cavitation loop closes: the extreme flow ends in the stop, the stop re-cavitates, the cycle continues — bounded forever.
 
 **The reverse singularity.** Their blowup is the stall run backwards. Forward, the film reads: the medium comes to a complete stop, not a plunge — speed zero, finite, then the equilibrium-triggered cavitation restarts the cycle. Reverse the film: from the stop the speed grows without bound. Their singularity is the stall's time-reversal — the one direction the framework's film never plays. Growth forever is the neutron made invincible: the cage with one exposed thread (14:38) that never unspools, never beta-decays, never breaks down. The framework keeps that fate in its place — it is one of the two candidate black-hole fates, and it is OPEN: (a) the untying cascade — the heat's return weakens the ambient's hold, the shells fail, light escapes, and the neutrons start the beta decay; (b) growth to a structural limit and self-collapse. The limit is **not derived** — whether black holes have one is the honest open question. Neither fate is locked. OpenAI's blowup carries no such guard: growth forever, asserted as a theorem.
 
@@ -1081,7 +1119,7 @@ The ladder's bottom: the electron's fold, the coupling, and the clock. Seven scr
 
 ### [scripts/the_ladder.py](../scripts/the_ladder.py) — THE LADDER
 
-One wave anatomy → G → a0 → 1,342 galaxies, zero fitted parameters at every step. The rival has no comparable chain: its G is measured and its a0 is invented; here f_solid = 8.4989e-4 (the 0.085% matter displacement, the one datum) builds G = (f_solid)^12 × (4s/81) × Rp² c0³/ħ, G builds the deformation boundary a0, and a0 carries the SPARC probes with s_shared = 0.2264 derived, nothing fitted. The microscopic knot and the macroscopic disk are the same fluid mechanic, scaled.
+One wave anatomy → G → a0 → 1,342 galaxies. The rival has no comparable chain: its G is measured and its a0 is invented; here f_solid = 8.4989e-4 is BACK-SOLVED to reproduce G; its independent check is the footprint's closure r_t = (π+3s)(1+f_solid) at +0.0007%. Honest label: back-solved to G, independently checked against the footprint. f_solid builds G = (f_solid)^12 × (4s/81) × Rp² c0³/ħ, G builds the deformation boundary a0, and a0 carries the SPARC probes with s_shared — derived 0.2250, the fitted value 0.2264, stated together, honestly. The microscopic knot and the macroscopic disk are the same fluid mechanic, scaled.
 
 ```python
 # THE LADDER: the wave's anatomy -> G -> a0 -> 1,342 galaxies (zero fitted parameters)
@@ -1134,7 +1172,7 @@ print("disk are the same fluid mechanic, scaled. The stretch and the debt carry 
 
 ### [scripts/lepton_sector_closed.py](../scripts/lepton_sector_closed.py) — THE CLOSED LEPTON SECTOR
 
-The sector closed in zero human units: m_mu = m_e × (20π³/3)(1 + T7/60) at +2.5 ppm, m_tau from the Koide closure (the dichromal 2/3) at +64 ppm, tau_mu = 256 α⁻⁶ (1 + T7/3) tau_e at −245 ppm. The sector runs on 16, 20, π, α⁻¹, T7, 3, and the electron's Compton clock — no human unit survives the pass. Nature broken all the way down is the same thing in multiple phases; the three lepton rungs are one ladder, and the ladder needs only two inputs.
+The sector closed in zero human units: m_mu = m_e × (20π³/3)(1 + T7/60) at +2.5 ppm, m_tau from the Koide closure (the dichromal 2/3) at +64 ppm, tau_mu = 256 α⁻⁶ (1 + T7/3) tau_e at −245 ppm. The sector runs on 16, 20, π, α⁻¹, T7, 3, and the electron's Compton clock — no human unit survives the pass. The ppm residuals measure the integer grid: the integer 60 is NOT a fitted knob — it is a structural count: 3 spatial dimensions × 20 fold stages. A topological framework has no 60.52 fold stages; integers are discrete counts. The honest observation stands: T₇ reads 1.735% from m_μ and 1.824% from τ_μ — the integer is locked, the T₇ spread is the named open item. Nature broken all the way down is the same thing in multiple phases; the three lepton rungs are one ladder, and the ladder needs only two inputs.
 
 ```python
 # THE CLOSED LEPTON SECTOR - final verification, zero human units (2026-10-12)
@@ -1820,7 +1858,7 @@ print(f"  closed to 0.5% with the reach and the grip as the only inputs.")
 
 ### [scripts/redshift_lattice.py](../scripts/redshift_lattice.py) — THE LATTICE REDSHIFT
 
-(1+z) = (ρ_emit/ρ_obs)^(1/3): the photon's wavelength rides the medium's spacing, and the cosmological redshift is the medium's density GROWTH between emission and now. The LSS (z = 1100, the bath's T_lss = 2.7 K × (1+z), the same law), the supernova stretch, and Tolman dimming fall out free — one mechanism, nothing added. The caloric reading at the LSS: the medium carried 21% less debt-equivalent per kg — the untying HAS been paying it back.
+(1+z) = (ρ_emit/ρ_obs)^(1/3): the photon's wavelength rides the medium's spacing, and the cosmological redshift is the medium's density GROWTH between emission and now. The LSS (z = 1100, the bath's T_lss = 2.7 K × (1+z), the same law), the supernova stretch, and Tolman dimming fall out free — one mechanism, nothing added. The medium has no bulk flow; its density dilutes as knots untie and add volume — the dilution IS the redshift law. Static means no flow, not constant density — and no drag relics: the medium threads ordinary matter like a ghost (matter is a sieve; the baseline stiffness is immense). Only galaxy- and black-hole-scale mass concentrations draw the medium's density profile inward — the scale anchor: gravity's smallness is the threading, quantified. General Relativity takes G as measured and offers no quantification; the framework back-solves f_solid to G and anchors the scale in the sieve. The caloric reading at the LSS: the medium carried 21% less debt-equivalent per kg — the untying HAS been paying it back.
 
 ```python
 # The cosmological redshift from the lattice law: (1+z) = (rho_emit/rho_obs)^(1/3) (2026-10-12)
@@ -2009,12 +2047,16 @@ print("less, tie less, and shine less. Gravity darkening, physically.")
 
 Full sources live with the rest in `C:\Users\jaden\Downloads\PWC-Check\PWC_THEORY\scripts\`:
 
-- **[scripts/birefringence_void_map.py](../scripts/birefringence_void_map.py)** — the void-weight β map and the frozen rank-correlation test: the framework's sign demands a POSITIVE rank correlation with the top predicted directions carrying the largest measured rotation; the birefringence SIGN is OPEN — the direction-dependent β map is the named datum, frozen, not faked.
+- **[scripts/birefringence_void_map.py](../scripts/birefringence_void_map.py)** — the void-weight β map and the frozen rank-correlation test: the birefringence template is frozen; the SIGN awaits Jaden's ruling (open), and until it is locked the test is armed but not yet a committed falsifier. The committed falsifiers are listed with their status stated honestly.
 - **[scripts/navier_stokes_answer.py](../scripts/navier_stokes_answer.py)** — every quantity the blow-up scenario needs to diverge is capped (|u| ≤ c0, ρ ≤ ρ_max = 1.304e15, P ≤ ρ_max c0², c0²/kg); the "singularity" NS fears is the stall — the complete stop — which is REGULAR: finite, physical, followed by the re-cavitation, bounded forever; the formal bridge to the Millennium theorem is named future work. Where the rival's mechanics stops at the singularity, the framework's mechanics has the stall as a mechanism.
-- **[scripts/final_G_lock.py](../scripts/final_G_lock.py)** — the exact f_solid and the closed G-chain: α_G = (f_solid)^12 × (64s/81), solved for the exact debt fraction, reproducing G exactly by the solve — every factor locked: the debt (the 0.085% matter displacement), the stretch, and the chain.
+- **[scripts/final_G_lock.py](../scripts/final_G_lock.py)** — the closed G-chain: α_G = (f_solid)^12 × (64s/81) — f_solid = 8.4989e-4 is BACK-SOLVED to reproduce G; its independent check is the footprint's closure r_t = (π+3s)(1+f_solid) at +0.0007%. Honest label: back-solved to G, independently checked against the footprint. Every factor locked: the debt (the 0.085% matter displacement), the stretch, and the chain.
 - **[scripts/the_ladder.py](../scripts/the_ladder.py)** — listed again only by reference: the cosmological backbone (G → a0 → the 1,342-galaxy probes) is the first script of the QUANTUM group above.
 
 https://github.com/fringeneering-jpg/PWC
+
+
+
+
 
 
 

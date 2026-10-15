@@ -33,6 +33,7 @@ repository's history and in the `work-history` branch for the record.
 | [Clay Lodgement 1 — Navier–Stokes](papers/clay/LODGEMENT_1_NAVIER_STOKES.md) | The resolution of the physical fluid question |
 | [Clay Lodgement 2 — Yang–Mills mass gap](papers/clay/LODGEMENT_2_YANG_MILLS_MASS_GAP.md) | The gap as the knot's closure |
 | [Clay Lodgement 3 — the OpenAI claim, turned down](papers/clay/LODGEMENT_3_OPENAI_TURNDOWN.md) | The referee's three counts against the announced singularity |
+| [The Neutron Lifetime — the candidate fourth solve](papers/NEUTRON_LIFETIME.md) | The beam-vs-bottle nine-second gap as the frame's signature: the shielding, the bare knot's drag, and the velocity-lifetime equation as the named derivation |
 
 ## The headline results
 
@@ -58,10 +59,18 @@ reproduces the scoreboard: `python scripts/run_full_framework.py`
 
 ## The record
 
+Every constant carries one of three labels, stated in the papers: **MEASURED**
+— read off the universe first (the GW150914 shell, RBH-1's bow at 0.996 of
+its cap, the 89-event catalog, the neutron core); **DERIVED** — fell out
+after the anchors were set; **BACK-SOLVED** — the one honest knob, labeled as
+such. The direction is the proof: the measurements came first, the
+derivations after, and the timestamped predictions made *before* many of the
+derivations were run are on record in the repository history.
+
 The full research record — including every falsified route, every withdrawn
 item, and every dead end, with its kill numbers — is kept for honesty in the
 `work-history` branch of this repository. It does not subtract from this
 branch; it is there for anyone who wants to see which paths were already
-walked.
+walked, and when every prediction was frozen.
 
 *Follow the physics, not the math. The medium does the rest.*

@@ -184,7 +184,7 @@ Nor does this lodgement claim anything about the unregularized incompressible eq
 - The sixteen-fold clock's crossing geometry is **open**: 4.6796 ms vs the GW150914 4.68 ms — +0.009% (proposed, arithmetic verified; the crossing geometry named as open).
 - The Lorentz-contraction legs are **open**: the wave-equation route checked on the sine-Gordon kink at 0.6c — residual 4×10⁻⁷, width ratio 0.800 = 1/γ; still open: Kennedy–Thorndike-level precision (10⁻¹⁷ cavity tests), stellar aberration, and Fizeau's drag 1 − 1/n².
 - The tightening coefficient T ≈ 27 = 3³ awaits data.
-- The birefringence test's sign is **open** — probe, not killshot: the void template is frozen (the prediction map over 1,163 Douglass+ 2023 voids; the top corridor at RA 142–150°, Dec +31–46°, amplitude ~0.15°), and the rank-correlation with a direction-dependent β map awaits its pre-specified template, sign, and exclusion criteria.
+- The birefringence test's sign is **open** — probe, not killshot: the void template is frozen (the prediction map over 1,163 Douglass+ 2023 voids; the top corridor at RA 142–150°, Dec +31–46°, amplitude ~0.15°), and the rank-correlation with a direction-dependent β map awaits its pre-specified template, sign, and exclusion criteria. The birefringence template is frozen; the SIGN awaits Jaden's ruling (open), and until it is locked the test is armed but not yet a committed falsifier. The committed falsifiers are listed with their status stated honestly.
 
 ## Framework link
 
