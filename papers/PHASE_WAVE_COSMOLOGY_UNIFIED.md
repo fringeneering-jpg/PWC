@@ -626,7 +626,7 @@ mechanism's; the coefficient is the last receipt.
 **The closed fold - PROPOSED, open to refinement - scripts/neutron_fold_closed.py.** The literature's weighting (NIST Eqs. 3-5): the trap population goes as phi(v)/v, so the beam estimator folds exactly to tau_beam = tau0/(1 - k.v_eff/c0) with v_eff = 3956.03/<lambda[A]>_flux m/s (the flux-weighted harmonic mean). The NIST NG-6 spectrum peaks near 5 A -> v_eff = 791 m/s; with the derived tariff k = 3059.7 (the 12): tau_beam = 886.15 s vs NIST's 887.7 +/- 2.2 s - 0.7 sigma, consistent within the measurement's uncertainty. Stated as the proposal, not certainty: the run-matched spectrum is the named refinement left open - 99% of the marathon run, the last step offered to whoever scores the goal.
 
 
-**The medium's two liquid states (the water's LDL/HDL, mapped).** The heat/untying zone is the HDL: the SAME wave-content packed tighter - HIGHER volumetric weight and MORE fluid, exactly water's high-density liquid. The voids are the LDL: the open ordered rest spread - expanded, LOWER density but STIFF, carrying the tension across distances. The density does not command either property; the packing's reorganization does: the stiff thing is the low-density ordered network, the fluid thing is the high-density tighter-packed one. The choke's saturation is the reorganization's completion; the deep field's tension is the rest spread's.
+**The medium's two field states (the water's LDL/HDL, mapped onto the field).** The heat/untying zone is the HDL: the SAME wave-content packed tighter - HIGHER volumetric weight and MORE fluid, exactly water's high-density liquid. The voids are the LDL: the open ordered rest spread - expanded, LOWER density but STIFF, carrying the tension across distances. The density does not command either property; the packing's reorganization does: the stiff thing is the low-density ordered network, the fluid thing is the high-density tighter-packed one. The choke's saturation is the reorganization's completion; the deep field's tension is the rest spread's.
 
 ## The charge ledger - the sign is the compression's direction - scripts/charge_distribution.py
 
@@ -2122,6 +2122,7 @@ Full sources live with the rest in `C:\Users\jaden\Downloads\PWC-Check\PWC_THEOR
 - **[scripts/the_ladder.py](../scripts/the_ladder.py)** — listed again only by reference: the cosmological backbone (G → a0 → the 1,342-galaxy probes) is the first script of the QUANTUM group above.
 
 https://github.com/fringeneering-jpg/PWC
+
 
 
 
