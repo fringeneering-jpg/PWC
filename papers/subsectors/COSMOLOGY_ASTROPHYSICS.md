@@ -44,6 +44,10 @@ so g = a₀·r_t/r = √(a₀·g_bar). Independently, the cascade:
 
 Scripts: [`the_ladder.py`](../scripts/the_ladder.py).
 
+
+## 2b. The controlled burn and the WHIM's load - the morning's SPARC receipts - scripts/two_limit_choke.py
+
+The inner overshoot's cure is the two-limit choke: the untying's rate is gated by the heat's acoustic-cap throughput AND the volume's pressure-relaxation, in series - the controlled burn: Gamma = Gamma0 / (1 + x + x^2), x = g_bar/18a0, zero fitted parameters. SPARC rms: the unrestricted sqrt(a0 g) at 0.1379 -> the coupled choke at 0.1342, against the RAR's fitted 0.1328. The deep field's -0.03 was the missing WHIM: the 2MRS surroundings loaded onto each galaxy's reach (shared_env) fill the outermost residual to +0.0006 - the web pressing on the galaxy's reach is the deep-field tension. The honest state: 0.1352 with the crude magnitude-limited proxy vs the RAR's fitted 0.1328; the remaining 0.0024 is the WHIM's radial shape, and the choke's final form is the DIMENSIONLESS balance (g_bar against 18a0, wave-cycles, no human second - time is the human's ruler, the clock rate is the medium's). McGaugh's law holds its home turf for now; the favour is being forged.
 ## 2. The tested table
 
 Every prediction frozen and timestamped before each run; the constants now

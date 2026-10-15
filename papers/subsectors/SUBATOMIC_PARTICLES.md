@@ -189,6 +189,10 @@ mechanism's; the coefficient is the last receipt.
 
 **The closed fold - PROPOSED, open to refinement - scripts/neutron_fold_closed.py.** The literature's weighting (NIST Eqs. 3-5): the trap population goes as phi(v)/v, so the beam estimator folds exactly to tau_beam = tau0/(1 - k.v_eff/c0) with v_eff = 3956.03/<lambda[A]>_flux m/s (the flux-weighted harmonic mean). The NIST NG-6 spectrum peaks near 5 A -> v_eff = 791 m/s; with the derived tariff k = 3059.7 (the 12): tau_beam = 886.15 s vs NIST's 887.7 +/- 2.2 s - 0.7 sigma, consistent within the measurement's uncertainty. Stated as the proposal, not certainty: the run-matched spectrum is the named refinement left open - 99% of the marathon run, the last step offered to whoever scores the goal.
 
+
+## The charge ledger - the sign is the compression's direction - scripts/charge_distribution.py
+
+The charge's magnitude is the winding's measure (q' = sqrt(3 eps0 h c / 8 pi^3) = 0.9103e, the idealized single loop; the dichromal 2/3 fold completes it to e). The SIGN is the compression's direction: the cage's base-two and top-two tighten INWARD onto the centre, so the outer charge reads POSITIVE; the electron is the single chiral crushed from outside, its compression OUTWARD, so the outer charge reads NEGATIVE - the video's own line: reverse the direction, get opposite charge. The ledger: five inward tightens sum to +1e, one outward crush to -1e, and the neutron's 0 is the sum itself - the same cancellation that makes the shield opaque. The structure is the bookkeeping; the 0.9103 -> e completion is the fold's named correction (the same 2/3 that runs the tau).
 ## The k-H0 bridge - one radius, two scales - scripts/k_h0_bridge.py
 
 **Derived.** Eliminating the common transition radius R between the untie rate H0 = (c0/R)(rho0/rho_max) and the endurance coefficient k = (lambda_C/R)(4pi/theta)/12 (theta = pi/20) gives k = (20 lambda_C rho_max / 3 c0 rho0) . H0 - the neutron's endurance and the cosmic untie rate are PROPORTIONAL through the same coordinate: siblings tied by one radius.
