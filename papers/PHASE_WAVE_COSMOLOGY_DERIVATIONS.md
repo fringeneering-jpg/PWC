@@ -1,7 +1,7 @@
 # PHASE WAVE COSMOLOGY
 ## The Complete Theoretical Framework — All Derivations, All Data Matches
 
-**Jaden Allison — Fringe Engineering — 2026-10-12**
+**Jaden Allison — Fringe Engineering — 2026-10-15** *(first drafted 2026-10-12; refined 2026-10-15)*
 
 ---
 
