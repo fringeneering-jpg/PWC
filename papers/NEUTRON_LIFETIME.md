@@ -98,7 +98,7 @@ k = 3069.87:
     own ledger, nothing fitted to 3070.0.
 
 
-**The k-H0 bridge - scripts/k_h0_bridge.py.** Eliminating the common radius between the untie rate and the endurance coefficient gives k = (20 lambda_C rho_max / 3 c0 rho0) . H0 - the neutron's endurance and the cosmic untie rate are siblings tied by one radius (DERIVED). Closing the last 0.34% requires dR = -0.002833 fm (-0.3367%), moving the untie rate to 73.94 km/s/Mpc (compatible with SH0ES at 0.86 sigma). Whether the torsion independently produces that contraction is the named open step. The bridge's H0 is the untie rate - the pressure side - not the rotation's: the rotation's a0 is the holding threshold, untouched by the lockstep.
+**The k-H0 bridge - scripts/k_h0_bridge.py.** Eliminating the common radius between the untie rate and the endurance coefficient gives k = (20 lambda_C rho_max / 3 c0 rho0) . H0 - the neutron's endurance and the cosmic untie rate are siblings tied by one radius (DERIVED). Closing the last 0.34% requires dR = -0.002833 fm (-0.3367%), moving the untie rate to 73.94 km/s/Mpc (compatible with SH0ES at 0.86 sigma). The identification alpha^2 = 19/18 is the framework's proposal, stated as such; the effective beam speed is approximate. The claim is COMPATIBLE - proposed, not proven complete. The bridge's H0 is the untie rate - the pressure side - not the rotation's: the rotation's a0 is the holding threshold, untouched by the lockstep.
 **Stated as the framework's proposal, not as certainty:** the tariff's the
 phase-change's price (the 720°/60° circuit count), the fold's the
 literature's own weighting, and the chain lands inside the error bar — but
@@ -141,5 +141,6 @@ does not — there is no third outcome.
 
 *You don't need to hide the 370 km/s on the subatomic scale. You use it
 as the smoking gun.*
+
 
 
