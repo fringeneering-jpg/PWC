@@ -624,6 +624,16 @@ tolerance ratio squared (6.4e3) sits in the right decade. The form is the
 mechanism's; the coefficient is the last receipt.
 
 **The closed fold - PROPOSED, open to refinement - scripts/neutron_fold_closed.py.** The literature's weighting (NIST Eqs. 3-5): the trap population goes as phi(v)/v, so the beam estimator folds exactly to tau_beam = tau0/(1 - k.v_eff/c0) with v_eff = 3956.03/<lambda[A]>_flux m/s (the flux-weighted harmonic mean). The NIST NG-6 spectrum peaks near 5 A -> v_eff = 791 m/s; with the derived tariff k = 3059.7 (the 12): tau_beam = 886.15 s vs NIST's 887.7 +/- 2.2 s - 0.7 sigma, consistent within the measurement's uncertainty. Stated as the proposal, not certainty: the run-matched spectrum is the named refinement left open - 99% of the marathon run, the last step offered to whoever scores the goal.
+
+## The k-H0 bridge - one radius, two scales - scripts/k_h0_bridge.py
+
+**Derived.** Eliminating the common transition radius R between the untie rate H0 = (c0/R)(rho0/rho_max) and the endurance coefficient k = (lambda_C/R)(4pi/theta)/12 (theta = pi/20) gives k = (20 lambda_C rho_max / 3 c0 rho0) . H0 - the neutron's endurance and the cosmic untie rate are PROPORTIONAL through the same coordinate: siblings tied by one radius.
+
+**Calculated.** Closing the last 0.34% (k = 3070.0) requires dR = -0.002833 fm (-0.3367%), moving the untie rate to 73.94 km/s/Mpc (vs SH0ES 73.04 +/- 1.04 - compatible at 0.86 sigma; no claim of an improved cosmological fit).
+
+**Open.** Whether the cage's torsion independently produces that contraction - the force scale and the radial stiffness from the fold's balance. Named, not hidden.
+
+**The scale's meaning.** The bridge's H0 is the framework's UNTIE rate - the pressure side, the wall's local clock - not the standard cosmology's expansion parameter, and not the rotation's: the rotation's a0 is the holding threshold (the tension pull), a different mechanism at a different scale. The lockstep moves the untie's rate; the rotational data are untouched.
 ## II.5 The forge — the knot's existence
 
 The knot's existence itself is derived — the three clauses below — not assumed. Where the rival picture

@@ -94,6 +94,8 @@ k = (λ_C/R_p)·(4π/9°)/12 = 3059.7:
     NIST measured: 887.7 ± 2.2 s
     → 0.7σ — consistent within the measurement's own uncertainty.
 
+
+**The k-H0 bridge - scripts/k_h0_bridge.py.** Eliminating the common radius between the untie rate and the endurance coefficient gives k = (20 lambda_C rho_max / 3 c0 rho0) . H0 - the neutron's endurance and the cosmic untie rate are siblings tied by one radius (DERIVED). Closing the last 0.34% requires dR = -0.002833 fm (-0.3367%), moving the untie rate to 73.94 km/s/Mpc (compatible with SH0ES at 0.86 sigma). Whether the torsion independently produces that contraction is the named open step. The bridge's H0 is the untie rate - the pressure side - not the rotation's: the rotation's a0 is the holding threshold, untouched by the lockstep.
 **Stated as the framework's proposal, not as certainty:** the tariff's the
 phase-change's price (the 720°/60° circuit count), the fold's the
 literature's own weighting, and the chain lands inside the error bar — but
