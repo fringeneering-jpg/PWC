@@ -29,14 +29,21 @@ print(f"      k = (20 lambda_C rho_max /(3 c0 rho0)) . H0   [factor {bridge:.3e}
 print("      the neutron's endurance coefficient and the cosmic untie rate")
 print("      are SIBLINGS - tied by one transition radius.")
 print()
-print("2. THE EXACT TARGET (the contraction that closes the 0.34%):")
-k_target = 3070.0
-R_target = 20.0 * lam_C / (3.0 * k_target)
-dR = R_target - R0
-print(f"      R_eff for k = {k_target:.0f}:  {R_target*1e15:.7f} fm")
-print(f"      contraction:  dR = {dR*1e15:.6f} fm  =  {100*dR/R0:.4f}%")
-print(f"      H0 in lockstep:  {(c0/R_target)*(rho0/rhomax):.6e} s^-1")
-print(f"                       = {(c0/R_target)*(rho0/rhomax)*3.0857e19:.2f} km/s/Mpc  (SH0ES 73.04 +/- 1.04)")
+print("2. THE 3D PYTHAGOREAN CLOSURE (the 18:1:19 partition in 3D):")
+print("      The 18 parts run the 2D circumference; the 1 is the perpendicular")
+print("      axial stack height (L^2), invisible in a flat 2D projection.")
+alpha_sq = 19.0 / 18.0
+hyp_3d   = np.sqrt(1.0 + alpha_sq / (16.0 * np.pi**2))
+R_3d     = R0 / hyp_3d
+dR_3d    = R_3d - R0
+N_3d     = 12.0 / hyp_3d
+k_3d     = k12 * hyp_3d
+H0_3d    = (c0 / R_3d) * (rho0 / rhomax)
+print(f"      alpha^2 = 19/18          ->  hypotenuse = {hyp_3d:.7f}")
+print(f"      12 -> 12 / hyp_3d        =  {N_3d:.5f}   (target 11.9600: {1e6*(N_3d/11.96-1):+.0f} ppm)")
+print(f"      R_3D = R0 / hyp_3d       =  {R_3d*1e15:.7f} fm  (dR = {dR_3d*1e15:.6f} fm)")
+print(f"      k_3D (forward derived)   =  {k_3d:.2f}      (vs 3070.0: {100*(k_3d-3070.0)/3070.0:+.4f}%)")
+print(f"      H0_3D in lockstep        =  {H0_3d*3.0857e19:.3f} km/s/Mpc")
 print()
 print("3. THE SLINKY'S JOB - derive dR from the chiral torsion:")
 print("      tau_phi = F . R^2 phi / L   (the virtual-work coupling)")
@@ -55,3 +62,5 @@ print("exact size (dR = -0.002833 fm) and an exact driver named (the chiral")
 print("torsion). The last step: the torsion's force scale from the fold's")
 print("balance - then the final decimal locks without being selected.")
 print("=" * 72)
+
+

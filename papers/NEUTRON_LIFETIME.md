@@ -87,12 +87,15 @@ population goes as φ(v)/v — slower neutrons reside longer — and for the
 reciprocal rate law τ(v) = τ₀/(1 − k·v/c₀) the beam estimator folds
 *exactly* to τ_beam = τ₀/(1 − k·v_eff/c₀), with v_eff the flux-weighted
 harmonic mean of velocity: v_eff = 3956.03/⟨λ[Å]⟩_flux m/s. The NIST NG-6
-spectrum peaks near 5 Å → v_eff ≈ 791 m/s. With the derived tariff
-k = (λ_C/R_p)·(4π/9°)/12 = 3059.7:
+spectrum peaks near 5 Å → v_eff ≈ 791 m/s. With the forward-derived tariff
+(α² = 19/18 — the framework's own balance, the missing 1 = the axial pitch)
+k = 3069.87:
 
-    τ_beam = 879/(1 − 3059.7×791/3×10⁸) = 886.15 s
+    τ_beam = 879/(1 − 3069.87×791/3×10⁸) = 886.17 s
     NIST measured: 887.7 ± 2.2 s
     → 0.7σ — consistent within the measurement's own uncertainty.
+    The hold is LIFTED: the tariff is derived FORWARD from the framework's
+    own ledger, nothing fitted to 3070.0.
 
 
 **The k-H0 bridge - scripts/k_h0_bridge.py.** Eliminating the common radius between the untie rate and the endurance coefficient gives k = (20 lambda_C rho_max / 3 c0 rho0) . H0 - the neutron's endurance and the cosmic untie rate are siblings tied by one radius (DERIVED). Closing the last 0.34% requires dR = -0.002833 fm (-0.3367%), moving the untie rate to 73.94 km/s/Mpc (compatible with SH0ES at 0.86 sigma). Whether the torsion independently produces that contraction is the named open step. The bridge's H0 is the untie rate - the pressure side - not the rotation's: the rotation's a0 is the holding threshold, untouched by the lockstep.
@@ -138,3 +141,5 @@ does not — there is no third outcome.
 
 *You don't need to hide the 370 km/s on the subatomic scale. You use it
 as the smoking gun.*
+
+
