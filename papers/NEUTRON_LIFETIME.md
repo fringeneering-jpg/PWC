@@ -81,6 +81,16 @@ then the moving neutrons should live *longer* than the bottled ones.
 error in the beam counters: it is the velocity-dependent signature of the
 medium itself, measured in two different holds.
 
+**The model's run — `scripts/neutron_endurance_model.py`.** τ(v) = τ₀·(1 +
+k·v/c₀), the base rate Γ_untie(R) = ρ₀·c₀/(ρ_max·R) with the lock's
+contraction R(v) = R₀/(1 + k·v/c₀). The observed gap demands
+k = 3.07×10³; over the cold-beam velocity spread the model gives **884 s vs
+the observed 888 s** (bottle 879 s, exact), with a ±2.2 s smear from the
+velocity width — a checkable signature the standard story cannot produce.
+The direction is the mechanism's own, no sign-fudging. The open item,
+named: derive k from the winding — the 720°/9° tolerance ratio squared
+(6.4×10³) sits in the right decade.
+
 ## The derivation target — the velocity-lifetime equation
 
 The honest ledger, stated first:
