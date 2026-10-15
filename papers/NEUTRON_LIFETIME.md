@@ -20,6 +20,26 @@ model calls it experimental error. The framework calls it the frame.*
 
 ## The mechanism
 
+**Three named laws, stated plainly:**
+
+1. **The shield is opacity.** The medium cannot read the neutron's internal
+   state, because nothing crosses the electron–proton envelope. Whether the
+   interior is spinning or not is unobservable from outside — the shield is
+   the spin's privacy.
+2. **The drag is a surface tax.** The drag acts only when the shield fails,
+   or when the structure is forced to expose its mechanics. The bound,
+   shielded neutron owes nothing to the flow; the bare knot owes everything.
+3. **The decay is the breach.** The lifetime is not an internal clock
+   ticking down — it is the *duration of the privacy*. Once the shield is
+   forced open, the black-box protection ends and the constituent parts pop
+   out into the standard rules, at their much higher C.
+
+**Keepy-in at the macro scale, keepy-out at the subatomic scale.** The
+black hole is the impenetrable boundary facing inward — nothing leaves the
+choke. The shielded neutron is the impenetrable boundary facing outward —
+nothing enters to read the interior. Same medium, same impenetrability,
+opposite direction. The symmetry is bulletproof.
+
 **Macroscopic instruments lie; subatomic particles don't.** Optical
 cavities and interferometers show no sign of the ~370 km/s motion through
 the medium (the CMB dipole frame) because they are *bound electromagnetic
