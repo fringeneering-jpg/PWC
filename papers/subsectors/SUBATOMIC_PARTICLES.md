@@ -148,6 +148,26 @@ exposed thread (14:38); the 2/3/4 arrangements absent from nature.
 
 Script: [knot_selection_law.py](../scripts/knot_selection_law.py).
 
+
+## The spin — from the cage's arithmetic — scripts/spin_from_cage.py
+
+**Law.** s = 1/2, by bookkeeping — no "intrinsic spin" postulate.
+
+**Derivation.** (1) The double cover: the 720° knot is a 4π circuit; the base
+wave period is 2π; under one period the state advances half its circuit —
+phase e^{iπ} = −1 — so s = π/2π = 1/2: the half-integral character IS the
+double cover. (2) The torque bookkeeping: the 2-1-2 cage's top pair shears
++½ +½, the base pair counter-rotates −½ −½, the centre receives the writhe
+as twist +½. The far-field vector sum is 0.0 — the external torque zeroes;
+the trapped total inside the closed cage is +½ ħ. (3) The shears cancel
+only in the far field; inside, the momentum has nowhere to bleed but the
+720° winding — the writhe of the counter-rotation converts into the twist
+of the centre, and the double cover traps it.
+
+**Verdict.** The 4π closure is not an arbitrary quantum number: it is the
+mechanical consequence of two opposing shears wrapping a central pivot, and
+the ½ drops out of the ratio of the closed circuit to the base wave period.
+No postulation — the cage does the counting.
 ## 5. The forge — the knot's existence
 
 **Law.** The forge requires e_avail ≥ E_lock; the retention requires the
