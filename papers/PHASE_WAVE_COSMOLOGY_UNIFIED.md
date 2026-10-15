@@ -22,6 +22,19 @@ Everything in this paper follows from exactly three quantities: **pressure,
 density, geometry.** No dark matter, no dark energy, no singularities, no
 placeholders.
 
+> **The foundational axiom.** *Everything's too large to fit in nothing,
+> and nothing is too small to be a part of everything. Therefore, the
+> answer lies in the middle.*
+
+No structure compresses to a point — the density ceiling forbids it; no
+point sits outside the medium — everything participates; and the finite
+structures of matter live in the operational middle between the two, where
+the knots and the shells actually exist. This is the Bolyai move, applied
+to scale: where Bolyai dropped the flatness axiom and a new geometry
+opened, this framework drops the zero-and-infinity axioms and the knots are
+*forced* to exist — the topological invariants do the work the brute-force
+grid cannot, and the solutions are forced, not calculated.
+
 ## The Seven Laws — non-negotiable
 
 1. **No zeros.** "Colorless" is sum-to-ambient, never zero; there is no

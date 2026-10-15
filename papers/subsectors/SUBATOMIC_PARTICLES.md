@@ -308,6 +308,10 @@ The work used in this document stands on specific shoulders, named where used:
 - Gross & Wilczek — *Phys. Rev. Lett.* 30, 1343 (1973); Wilson — *Phys. Rev.* D 10, 2445 (1974) — quark confinement
 - Dürr et al. — "Ab Initio Determination of Light Hadron Masses," *Science* 322, 1224 (2008) — 99% of mass is field energy
 - **Williamson & van der Mark — "Is the electron a photon with toroidal topology?" *Annales Fondation Louis de Broglie* 22(2), 133 (1997)** — the quicycle. PDF: https://fondationlouisdebroglie.org
+- Kelvin (Sir William Thomson) — "On Vortex Atoms," *Proc. Royal Society of Edinburgh* 6, 94–105 (1867) — atoms as stable topological knots in a continuous medium: the foundational precedent
+- Parson, A. L. — "A Magneton Theory of the Structure of the Atom," *Smithsonian Miscellaneous Collections* 65(11) (1915) — the early ring-current magnetic-soliton model of quantized angular momentum
+- Skyrme, T. H. R. — "A Non-Linear Field Theory," *Proc. Royal Society A* 260(1301), 127–138 (1961) — the mathematical foundation of topological solitons: particles as stable field configurations
+- Faddeev, L. & Niemi, A. J. — "Knots and Stable Solitons in Classical Field Theory," *Nature* 387(6628), 58–61 (1997) — Hopfions: knot invariants as stable particle-like solutions in Yang–Mills and nonlinear gauge models
 - Stodolna et al. — *Phys. Rev. Lett.* 110, 213001 (2013) — the hydrogen orbital photographed
 - Further viewing — HuygensOptics, "Are Electrons made of Light?" (YouTube, 2025); https://quicycle.com
 **https://github.com/fringeneering-jpg/PWC** — the whole framework, the
