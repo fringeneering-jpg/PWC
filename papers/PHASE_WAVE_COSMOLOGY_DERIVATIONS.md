@@ -285,6 +285,24 @@ of the centre, and the double cover traps it.
 mechanical consequence of two opposing shears wrapping a central pivot, and
 the ½ drops out of the ratio of the closed circuit to the base wave period.
 No postulation — the cage does the counting.
+
+## The neutron's endurance - the three laws and the model - scripts/neutron_endurance_model.py
+
+**The three laws.** (1) The shield is opacity: nothing crosses the
+electron-proton envelope, so the interior's state is unreadable. (2) The
+drag is a surface tax: it acts only on the exposed knot - and the moving
+knot's phase-lock is pressed INTO its channel by the flow, so the lock
+tightens and the unzip threshold RISES with velocity. (3) The decay is the
+breach: the lifetime is the duration of the privacy - tau = E_unzip(v)/P_drag.
+
+**The model's run.** tau(v) = tau0 . (1 + k . v/c0). The observed beam/bottle
+gap demands k = 3.07e3; over the cold-beam velocity spread the model gives
+884 s vs the observed 888 s (bottle 879 s, exact). The direction is the
+mechanism's own - the beam outlives the bottle, 888 > 878 - with no
+sign-fudging, and the spread (+/-2.2 s) is the velocity width's signature.
+The open item, named: derive k from the winding count - the 720 deg / 9 deg
+tolerance ratio squared (6.4e3) sits in the right decade. The form is the
+mechanism's; the coefficient is the last receipt.
 ## D15. The knot's existence — `scripts/existence_derived.py`
 **Law.** the forge requires e_avail ≥ E_lock; the retention requires the
 selection law and the heat balance.
