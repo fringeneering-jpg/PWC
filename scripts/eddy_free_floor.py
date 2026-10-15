@@ -1,0 +1,28 @@
+# The floor's no-eddy law, derived (2026-10-12)
+# At the maximum-unwound rest (max entropy), the heat still transfers —
+# and there are still no eddies. Three lines, the framework's notation.
+import numpy as np
+
+print("=" * 72)
+print("THE EDDY-FREE FLOOR")
+print("=" * 72)
+print()
+print("1. The heat hates pressure — the flux follows the gradient:")
+print("       q = -kappa * grad(P)          (the transfer is the gradient itself)")
+print("   and the drift rides the same gradient:")
+print("       u = -(1/zeta) * grad(P)       (a pure potential flow)")
+print()
+print("2. A gradient cannot curl:")
+print("       omega = curl(u) = -(1/zeta) * curl(grad(P)) = 0")
+print("   the vorticity vanishes IDENTICALLY at the floor —")
+print("   not approximately, not on average: every point, always.")
+print()
+print("3. An eddy IS circulation, and circulation needs a wound structure to roll:")
+print("       Gamma = loop-integral u.dl = area-integral omega.dA = 0")
+print("   for every loop, every area — zero eddies, even while q != 0.")
+print()
+print("the heat moves through the floor as a laminar drift along the tension;")
+print("an eddy would need a knot of winding to roll on, and at maximum unwinding")
+print("the winding is exhausted (w = 0) — there is nothing wound left to curl.")
+print()
+print("one terminal, one transfer, no rolls: the engine idles clean.")
