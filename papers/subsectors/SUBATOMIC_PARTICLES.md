@@ -195,7 +195,7 @@ mechanism's; the coefficient is the last receipt.
 
 **Calculated.** Closing the last 0.34% (k = 3070.0) requires dR = -0.002833 fm (-0.3367%), moving the untie rate to 73.94 km/s/Mpc (vs SH0ES 73.04 +/- 1.04 - compatible at 0.86 sigma; no claim of an improved cosmological fit).
 
-**CLOSED - the 3D hypotenuse - scripts/k_closed_3d.py.** The contraction is pure Pythagorean geometry: the 4pi wave climbs the cage's axial pitch, and the unrolled right triangle with the cage's own aspect ratio alpha^2 = 16/15 (the electron's 16 modes over the cage's 3x5) gives R0/R3D = sqrt(1 + 1/(15 pi^2)) = 1.0033717 - the 16s cancel inside the square root. k = 3069.98 (3070.00 at -0.0007%), the 12 -> 11.9597 (the exact 11.96), H0 = 73.94 km/s/Mpc. No fitted spring, no force balance, no working backward - the flat circle was the 2D shadow, and the cage is 3D.
+**CLOSED - the 3D hypotenuse, framework-native - scripts/k_final_19_18.py.** The contraction is pure Pythagorean geometry, and the aspect ratio is the framework's OWN balance: the locked F_EM : F_debt : F_topology = 19 : 1 : 18, read as the wave's 3D budget - 18 parts circumferential + 1 part axial = 19 total. THE MISSING 1 IS THE AXIAL PITCH: the debt went perpendicular, into the cage's height, invisible in the 2D projection. alpha^2 = 19/18 plugs straight into the 4pi hypotenuse: R0/R3D = sqrt(1 + 19/(288 pi^2)) = 1.0033366. k = 3069.87 (3070.0 at -0.004%), the 12 -> 11.96009 (8 ppm of 11.9600), H0 = 73.935 km/s/Mpc, dR = -0.002798 fm. The 16/15 family sits at -0.0007%; the 19/18 is the framework-native - the missing 1 found. No fitted spring, no force balance, no working backward - the ledger's mystery solved by its own balance.
 
 **The scale's meaning.** The bridge's H0 is the framework's UNTIE rate - the pressure side, the wall's local clock - not the standard cosmology's expansion parameter, and not the rotation's: the rotation's a0 is the holding threshold (the tension pull), a different mechanism at a different scale. The lockstep moves the untie's rate; the rotational data are untouched.
 ## 5. The forge — the knot's existence
@@ -370,6 +370,7 @@ are kept for honesty in the repository's history and registry
 (`DERIVATIONS.md`, the gap rows, and the commit history) — linked for the
 record, never printed in this paper. Every dead end has its kill numbers;
 they live in the git, where the receipts belong.
+
 
 
 
