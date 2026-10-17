@@ -416,7 +416,7 @@ formation at the 5π² boundary — is under numerical confirmation; frozen
 constants c_med = 1.900591, rho_knot = 0.8000, E_lock = 2.889796,
 delta_E = 0.144490. Eight pulses sweep drho = 0.40 … 0.47 across E_lock;
 first case confirmed: drho = 0.40 → not retained (2.6935 < E_lock), exactly
-as derived. Drivers: un_parallel_knots.py, pi_scan.py.
+as derived. Drivers: run_parallel_knots.py, pi_scan.py.
 
 ---
 
@@ -643,9 +643,11 @@ The charge's magnitude is the winding's measure (q' = sqrt(3 eps0 h c / 8 pi^3) 
 
 ## The dual-ratio engine and the heat ledger - the night's closures (2026-10-17)
 
-The atom: the 20-stage fold shapes the trench (rho ~ r^-3/20), the 19:1:18 prices the surf (rho_max/rho_shield = 100/19 = 5.26, -0.02%), and the electron rides the layer where C(r) = alpha.c0 - the forward a0 at +1.66% (the honest residual). The neutron is the same balance pinned; the sun and the black hole are one untying event at two core densities (the heat is the equilibrium's hold). The heat ledger: the web's heat x 19 = the total squeezed; the matter's 0.085%; heat:matter = 1:990; 2.753 mK per part; the thaw flux 2.253e-4 W/m^2; the CMB is the graveyard of the worn-out photons (the redshift is the luminous wearing out - the unpaired wave, not the knot). The two-border falsifier: the void borders fade smooth, the galaxy borders choke - the traffic jam vs the settling. Every ruling in the capture (the 62 entries), every number checked, the residuals named honest.
+The atom: the 20-stage fold shapes the trench (rho ~ r^-3/20), the 19:1:18 prices the surf (rho_max/rho_shield = 100/19 = 5.26, -0.02%), and the electron rides the layer where C(r) = alpha.c0 - the forward a0 at +1.66% (the honest residual). The neutron is the same balance pinned; the sun and the black hole are one untying event at two core densities (the heat is the equilibrium's hold). The heat ledger: the web's heat x 19 = the total squeezed; the matter's 0.085%; heat:matter = 1:990; 2.753 mK per part; the thaw flux 2.253e-4 W/m^2; the CMB is the graveyard of the worn-out photons (the redshift is the luminous wearing out - the unpaired wave, not the knot; the exact mathematical relationship between this unpaired-wave wear-out description and the quantitative density law (1+z) = (rho_emit/rho_obs)^(1/3) is marked OPEN for formal verification). The two-border falsifier: the void borders fade smooth, the galaxy borders choke - the traffic jam vs the settling. Every ruling in the capture (the 62 entries), every number checked, the residuals named honest.
 
 ## The strict subtraction ledger and the rate-limit friction (2026-10-17)
+
+**Scope - bidirectional field tension and the wake:** in the magnetically held electromagnetic field substrate, two opposite processes coexist: **tying** compacts extended medium into matter (shrinking the field, dropping ambient field tension, and raising internal pressure in the compacted knot), while **untying** returns matter to extended medium (expanding the field and raising its tension); neither local mechanism alone predetermines which process dominates the net global evolution. The rejection of "springs, cycles, and thermal engines" below is scoped strictly to the local SMBH wake - ruling out an artificial local ring oscillator behind the moving black hole - and does not repeal matter-medium untying elsewhere in the framework.
 
 The field is a FINITE BUDGET: matter CONSUMES the field (ties it into knots), the field SHRINKS, the tension DROPS - the untied medium is the field at its maximum (the most tension), the tied matter is the field spent. No springs, no cycles, no thermal engines, no crushing-inward: the direct 1-to-1 conservation, the field's size = the tension's amount. Tying the tension into the knot's smaller volumetric area converts it to the PRESSURE (the field runs on tension, the matter on pressure, the tie is the exchange). The wake is the CONSUMPTION's footprint: the SMBH eats the field, packs each patch, the tension drops behind each stitch - the spacing is the consumption-rate's, not a ring's. THE CAVITATION is the LUMINOUS frictional reaction: the density provides the grip, the speed provides the grind, the friction scales to the luminous, and the luminous reaction IS the forge - the 502 nm is the color of the medium's resistance. NO bow shock, NO pile-up: the friction is the RATE-LIMIT - the SMBH shears the medium faster than the locked relaxation rate (from the merger data and the compact-object derivations) can heal, it OUTRUNS the lattice's reconfigure, and the healing's failure IS the glow. The disturbance is confined to the ADVANCING WAVEFRONT - the boundary is the propagation law's own output, not an assumed broader region.
 ## II.5 The forge — the knot's existence
@@ -683,7 +685,7 @@ a RETAINED knot behind? The answer is already DERIVED — the three clauses (the
 selection law {1, 5}, the heat balance) say sub-threshold dissipates and super-threshold retains — and the
 integration is the arithmetic's confirmation, running case by case on a dedicated board, each verdict
 saved to disk as it lands. First case confirmed: drho = 0.40 → not retained (2.6935 < E_lock), exactly as
-derived. Drivers: un_parallel_knots.py, pi_scan.py.
+derived. Drivers: run_parallel_knots.py, pi_scan.py.
 
 **Match.** Sub-threshold dissipates; super-threshold (1.33× the lock) retains.
 
@@ -1048,7 +1050,7 @@ https://github.com/fringeneering-jpg/PWC
 
 The executable form of every derivation above lives in `C:\Users\jaden\Downloads\PWC-Check\PWC_THEORY\scripts\` — one command reproduces the scoreboard: `python scripts/run_full_framework.py` (28 sections, 0 failures).
 
-**The equation being solved now.** The forge's dynamic equation — the knot's formation at the 5π² boundary — is under numerical confirmation right now. Frozen constants of the scan: c_med = 1.900591, rho_knot = 0.8000, E_lock = 2.889796, delta_E = 0.144490. Eight pulses sweep the drive drho = 0.40 … 0.47 across the locking energy E_lock; each case integrates the full dynamic system and answers one question: does the pulse leave a RETAINED knot behind? The answer is already DERIVED — the three clauses (the forge's energy, the selection law {1, 5}, the heat balance) say sub-threshold dissipates and super-threshold retains — and the integration is the arithmetic's confirmation, running case by case on a dedicated board, each verdict saved to disk as it lands. First case confirmed: drho = 0.40 → not retained (2.6935 < E_lock), exactly as derived. Drivers: un_parallel_knots.py, pi_scan.py.
+**The equation being solved now.** The forge's dynamic equation — the knot's formation at the 5π² boundary — is under numerical confirmation right now. Frozen constants of the scan: c_med = 1.900591, rho_knot = 0.8000, E_lock = 2.889796, delta_E = 0.144490. Eight pulses sweep the drive drho = 0.40 … 0.47 across the locking energy E_lock; each case integrates the full dynamic system and answers one question: does the pulse leave a RETAINED knot behind? The answer is already DERIVED — the three clauses (the forge's energy, the selection law {1, 5}, the heat balance) say sub-threshold dissipates and super-threshold retains — and the integration is the arithmetic's confirmation, running case by case on a dedicated board, each verdict saved to disk as it lands. First case confirmed: drho = 0.40 → not retained (2.6935 < E_lock), exactly as derived. Drivers: run_parallel_knots.py, pi_scan.py.
 
 https://github.com/fringeneering-jpg/PWC
 
@@ -1225,7 +1227,11 @@ print("\nSTEP 4: the macroscopic deformation boundary a0 (T1)")
 a0_chain = (c0/math.sqrt(3.0)) * math.sqrt(G_chain*rho0/4.0)
 print(f"a0 = (c0/sqrt3) sqrt(G rho0/4) = {a0_chain:.4e} m/s^2   (locked 6.61e-11)")
 
-print("\nSTEP 5: the rotation formula (s_shared = 0.2264 derived, nothing fitted)")
+print(
+    "\nSTEP 5: rotation formula "
+    "(this run uses fitted s_shared = 0.2264; "
+    "framework-derived value = 0.2250)"
+)
 S = 0.2264
 import os
 _csv = os.path.join(os.path.dirname(os.path.abspath(__file__)), "probes_accel.csv")
@@ -2130,6 +2136,7 @@ Full sources live with the rest in `C:\Users\jaden\Downloads\PWC-Check\PWC_THEOR
 - **[scripts/the_ladder.py](../scripts/the_ladder.py)** — listed again only by reference: the cosmological backbone (G → a0 → the 1,342-galaxy probes) is the first script of the QUANTUM group above.
 
 https://github.com/fringeneering-jpg/PWC
+
 
 
 

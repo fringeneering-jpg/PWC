@@ -271,8 +271,7 @@ The forge's dynamic equation — the knot's formation at the 5π² boundary — 
 
     c_med = 1.900591,  rho_knot = 0.8000,  E_lock = 2.889796,  delta_E = 0.144490
 
-Eight pulses sweep the drive drho = 0.40 … 0.47 across the locking energy E_lock; each case integrates the full dynamic system and answers one question: does the pulse leave a RETAINED knot behind? The answer is already DERIVED — the three clauses (the forge's energy, the selection law {1, 5}, the heat balance) say sub-threshold dissipates and super-threshold retains — and the integration is the arithmetic's confirmation, running case by case on a dedicated board, each verdict saved to disk as it lands. First case confirmed: drho = 0.40 → not retained (2.6935 < E_lock), exactly as derived. Drivers: 
-un_parallel_knots.py, pi_scan.py.
+Eight pulses sweep the drive drho = 0.40 … 0.47 across the locking energy E_lock; each case integrates the full dynamic system and answers one question: does the pulse leave a RETAINED knot behind? The answer is already DERIVED — the three clauses (the forge's energy, the selection law {1, 5}, the heat balance) say sub-threshold dissipates and super-threshold retains — and the integration is the arithmetic's confirmation, running case by case on a dedicated board, each verdict saved to disk as it lands. First case confirmed: drho = 0.40 → not retained (2.6935 < E_lock), exactly as derived. Drivers: run_parallel_knots.py, pi_scan.py.
 
 ---
 
@@ -290,6 +289,7 @@ The work used in this document stands on specific shoulders, named where used:
 *Where a video led to a paper, the paper is the citation; the video is thanked in kind.*
 https://github.com/fringeneering-jpg/PWC — the whole framework, the falsified
 attempts kept in the repository history for honesty.
+
 
 
 

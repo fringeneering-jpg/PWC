@@ -119,7 +119,7 @@ The honest ledger, stated first:
   internal circuit count is ~10¹⁷ reflections), and the selection law's
   fold tolerance is the 9° of phase freedom. The ratio v/c₀ ≈ 10⁻⁶,
   amplified by the internal circuit count, sits in the 10⁹-range the nine
-  seconds needs — *plausible, unchecked, unwritten.*
+  seconds needs — *proposed, open to refinement - see the closed fold below.*
 - The equation to write: the bare knot's untie rate as a function of its
   velocity through the medium — the exposed thread's phase drift against
   the medium's gradient, accumulated over the internal circuits, compared
@@ -134,7 +134,7 @@ produce the right sign and land near the magnitude, the anomaly stops
 being an anomaly — it becomes the framework's measurement of the frame,
 the smoking gun it never needed to hide.
 
-**Status: candidate.** The mechanism is stated and the direction matches;
+**Status: proposed, open to refinement (`scripts/neutron_fold_closed.py`, `scripts/k_final_19_18.py`).** The mechanism is stated and the direction matches;
 the equation is the named derivation and the sharpest falsifier on the
 board. It either derives the nine seconds from locked ingredients, or it
 does not — there is no third outcome.

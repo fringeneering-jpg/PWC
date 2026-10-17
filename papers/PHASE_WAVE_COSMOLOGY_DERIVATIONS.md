@@ -202,7 +202,7 @@ quantization's clothes: the ratio of the tension's self-coupling to α_G is
 dimensions-times-quanta power (12 = 3×4) times the quanta-to-dimensions ratio
 squared (16/9) completes G from the wave's own anatomy.
 
-**Match.** G at +0.04%; the bridge 42.75 vs 42.7416 (−0.02%); the shared
+**Match.** G at +0.04% (the measured-R_p evaluation, R_p = 0.8414 fm, run in `scripts/final_G_lock.py` and `scripts/the_ladder.py`); the bridge 42.75 vs 42.7416 (−0.02%); the shared
 rounding family throughout.
 
 ## D10. The frustration energy — `scripts/topology_equation_corrected.py`
@@ -929,6 +929,7 @@ honesty in the repository's history and registry
 (`DERIVATIONS.md`, the gap rows, and the commit history) — **linked here for
 the record, never printed in this paper.** Every dead end has its kill
 numbers; they live in the git, where the receipts belong.
+
 
 
 

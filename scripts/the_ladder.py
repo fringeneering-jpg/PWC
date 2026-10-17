@@ -24,7 +24,11 @@ print("\nSTEP 4: the macroscopic deformation boundary a0 (T1)")
 a0_chain = (c0/math.sqrt(3.0)) * math.sqrt(G_chain*rho0/4.0)
 print(f"a0 = (c0/sqrt3) sqrt(G rho0/4) = {a0_chain:.4e} m/s^2   (locked 6.61e-11)")
 
-print("\nSTEP 5: the rotation formula (s_shared = 0.2264 derived, nothing fitted)")
+print(
+    "\nSTEP 5: rotation formula "
+    "(this run uses fitted s_shared = 0.2264; "
+    "framework-derived value = 0.2250)"
+)
 S = 0.2264
 import os
 _csv = os.path.join(os.path.dirname(os.path.abspath(__file__)), "probes_accel.csv")
