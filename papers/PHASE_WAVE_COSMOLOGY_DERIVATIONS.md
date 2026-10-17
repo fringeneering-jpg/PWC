@@ -315,6 +315,10 @@ mechanism's; the coefficient is the last receipt.
 **CLOSED - the 3D hypotenuse, framework-native - scripts/k_final_19_18.py.** The contraction is pure Pythagorean geometry, and the aspect ratio is the framework's OWN balance: the locked F_EM : F_debt : F_topology = 19 : 1 : 18, read as the wave's 3D budget - 18 parts circumferential + 1 part axial = 19 total. THE MISSING 1 IS THE AXIAL PITCH: the debt went perpendicular, into the cage's height, invisible in the 2D projection. alpha^2 = 19/18 plugs straight into the 4pi hypotenuse: R0/R3D = sqrt(1 + 19/(288 pi^2)) = 1.0033366. k = 3069.87 (3070.0 at -0.004%), the 12 -> 11.96009 (8 ppm of 11.9600), H0 = 73.935 km/s/Mpc, dR = -0.002798 fm. The 16/15 family sits at -0.0007%; the 19/18 is the framework-native - the missing 1 found. No fitted spring, no force balance, no working backward - the ledger's mystery solved by its own balance.
 
 **The scale's meaning.** The bridge's H0 is the framework's UNTIE rate - the pressure side, the wall's local clock - not the standard cosmology's expansion parameter, and not the rotation's: the rotation's a0 is the holding threshold (the tension pull), a different mechanism at a different scale. The lockstep moves the untie's rate; the rotational data are untouched.
+
+## D15b. The trench and the surf - the atom's dual-ratio derivation - scripts/ (2026-10-17)
+
+The proton's trench: rho(r) = rho_max . (R_p/r)^(3/20) - the exponent's the 3 spatial dims over the 20-stage fold (D_space/N_fold). The speed capacity: C(r) = 954 . (r/R_p)^(3/40). The electron surfs C(r) = alpha.c0: the shield's density 2Y_bow/(alpha c0)^2 = 2.48e14 (rho_max/rho_shield = 100/19), and the forward radius a0 = R_p.(alpha c0/C_core)^(40/3) = 5.38e-11 m vs 5.29e-11 m at +1.66% - the honest residual, the fold's 20 and the balance's 19 both running the atom. The neutron = the balance pinned (R ~ R_p); the atom = the balance open (r = a0).
 ## D15. The knot's existence — `scripts/existence_derived.py`
 **Law.** the forge requires e_avail ≥ E_lock; the retention requires the
 selection law and the heat balance.
